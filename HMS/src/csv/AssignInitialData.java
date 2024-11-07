@@ -5,10 +5,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Base64;
-import HMS.src.management.Patient;
-import HMS.src.management.User.Role;
 
-public class AssignInitialPatientData {
+import HMS.src.models.Patient;
+import HMS.src.models.User.Role;
+
+public class AssignInitialData {
 
     public void assignPatientData(Patient[] patientList, String folderPath, String fileName) {
         Path filePath = Paths.get(".", folderPath, fileName);

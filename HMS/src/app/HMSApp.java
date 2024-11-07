@@ -2,14 +2,15 @@ package HMS.src.app;
 
 import java.util.Scanner;
 
-import HMS.src.csv.AssignInitialPatientData;
-import HMS.src.management.Patient;
-import HMS.src.management.User;
-import HMS.src.ui.PatientActions;
+import HMS.src.controllers.PatientActions;
+import HMS.src.csv.AssignInitialData;
+import HMS.src.models.Patient;
+import HMS.src.models.User;
 
 import java.util.InputMismatchException;
 
 public class HMSApp {
+
     public static void main(String[] args) {
 
         // INITIALISING DATA
@@ -18,15 +19,16 @@ public class HMSApp {
         // PATIENT
         String patientFile = "patientData.csv";
         Patient[] patientList = new Patient[100];
-        AssignInitialPatientData patientAssigner = new AssignInitialPatientData();
+        AssignInitialData patientAssigner = new AssignInitialData();
         patientAssigner.assignPatientData(patientList, dataPath, patientFile);
 
         // INITIALISING GLOBAL VARIABLES
         Scanner userScanner = new Scanner(System.in);
         boolean loginSuccessful = false;
-        User currentUser = null;
         String hospitalIdCredential = null;
         String passwordCredential = null;
+
+        PatientActions patientActions = new PatientActions();
 
         // MAIN PROGRAM
 
@@ -55,31 +57,34 @@ public class HMSApp {
                     case 1:
                         userScanner.nextLine();
                         // PATIENT LOGIN INTERFACE
+                        Patient currentPatient = null;
+
                         while (!loginSuccessful) {
                             System.out.println("\nEnter your HospitalID: ");
                             hospitalIdCredential = userScanner.nextLine();
                             System.out.println("\nEnter your Password: ");
                             passwordCredential = userScanner.nextLine();
-                            
-                            // SEARCHES DATABSE FOR CORRESPONDING HOSPITALID
+
+                            // SEARCHES DATABASE FOR CORRESPONDING HOSPITALID
                             for (int patientIndex = 0; patientIndex < patientList.length; patientIndex++) {
                                 if (patientList[patientIndex].getHospitalId().equals(hospitalIdCredential)) {
                                     Patient patient = patientList[patientIndex];
                                     if (patient.verifyPassword(passwordCredential)) {
                                         loginSuccessful = true;
-                                        currentUser = patient;
+                                        currentPatient = patient;
                                         break;
                                     }
                                     ;
                                 }
                             }
 
-                            if(currentUser == null){
+                            if (currentPatient == null) {
                                 System.out.println("UserId does not exist!");
                             }
                         }
 
-                        PatientActions.showOptions();
+                        patientActions.showPatientMenu(currentPatient);
+
                         break;
                     case 2:
                         userScanner.nextLine();

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
-import HMS.src.management.Patient;
-import HMS.src.management.User.Role;
+import HMS.src.models.Patient;
+import HMS.src.models.User.Role;
 
 public class CreateInitialPatientData {
 
@@ -15,7 +15,7 @@ public class CreateInitialPatientData {
         List<Patient> patients = new ArrayList<>();
 
         for (int i = 0; i < numberOfPatients; i++) {
-            // Generate a new Patient with a unique hospital ID and a default password
+            // GENERATE A NEW PATIENT WITH A UNIQUE HOSPITALID
             String hospitalId = null; // Generate in Patient constructor
             String defaultPassword = "password"; // Initial password before hashing
             byte[] salt = null; // Salt will be generated in the constructor
@@ -24,6 +24,7 @@ public class CreateInitialPatientData {
             boolean isHashed = false;
 
             Patient patient = new Patient(hospitalId, defaultPassword, Role.PATIENT, salt, isFirstLogin, isHashed);
+
             patients.add(patient);
         }
 
@@ -54,19 +55,12 @@ public class CreateInitialPatientData {
     }
 
     public static void main(String[] args) {
-        // Generate 100 Patient objects
-        List<Patient> patients = generatePatients(100);
+        // GENERATE 10 PATIENT OBJECTS AND THEIR RESPECTIVE MEDICAL RECORDS
+        List<Patient> patients = generatePatients(10);
 
-        // Save the patients to the CSV file
+        // SAVE PATIENTS TO CSV FILE
         savePatientsToCSV(patients, "HMS/data/patientData.csv");
 
-        // Print out each patient's details to verify (optional)
-        for (Patient patient : patients) {
-            System.out.println("Hospital ID: " + patient.getHospitalId());
-            System.out.println("Role: " + patient.getRole());
-            System.out.println("First Login: " + patient.getIsFirstLogin());
-            System.out.println("====================================");
-        }
     }
 
 }

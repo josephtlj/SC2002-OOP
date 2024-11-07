@@ -1,4 +1,4 @@
-package HMS.src.management;
+package HMS.src.models;
 
 import java.security.SecureRandom;
 import java.util.Base64;

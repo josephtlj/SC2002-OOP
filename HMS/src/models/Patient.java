@@ -1,21 +1,24 @@
-package HMS.src.management;
+package HMS.src.models;
+
+import HMS.src.dao.MedicalRecordDAO;
 
 // import HMS.src.MedicalRecord;
 
 public class Patient extends User {
     // INSTANCE VARIABLES
+    private MedicalRecordDAO medicalRecordDAO = new MedicalRecordDAO();
 
     // INSTANCE METHODS
     public Patient(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin, boolean isHashed) {
         super(hospitalId, password, role, salt, isFirstLogin, isHashed);
     }
 
-    // public MedicalRecord viewMedicalRecord(){
-    //     return null;
-    // }
+    public MedicalRecord viewMedicalRecord() {
+        return medicalRecordDAO.getMedicalRecordByHospitalId(getHospitalId());
+    }
 
     // public void updatePersonalInformation(){
-        
+
     // }
 
     // public AppointmentSlot[] viewAppointmentSlot(){
@@ -35,10 +38,10 @@ public class Patient extends User {
     // }
 
     // public Appointment[] viewScheduledAppointment(){
-    //     return null;
+    // return null;
     // }
 
     // public AppointmentOutcomeRecord[] viewPastAppointmentOutcomeRecord(){
-    //     return null;
+    // return null;
     // }
 }
