@@ -1,7 +1,10 @@
+package HMS.src;
 import java.util.UUID;
 import java.util.Date;
 
 import java.util.regex.Pattern;
+
+import HMS.src.management.Patient;
 
 public class MedicalRecord {
 

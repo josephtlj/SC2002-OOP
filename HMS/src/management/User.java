@@ -1,4 +1,5 @@
-// User Model
+package HMS.src.management;
+
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.UUID;
@@ -6,35 +7,47 @@ import java.util.UUID;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
-abstract class User {
-    // Instance Variables
+// USER MODEL
+public class User {
+    public enum Role {
+        PATIENT,
+        DOCTOR,
+        PHARMACIST,
+        ADMINISTRATOR
+    }
+
+    // INSTANCE VARIABLES
     private String hospitalId;
-    private String password;
-    private final String role;
     private byte[] salt;
+    private String password;
+    private Role role;
     private boolean isFirstLogin;
 
-    // Instance Methods
-    public User() {
-        this.hospitalId = generateHospitalId(null);
-        setPassword("password");
-        this.role = null;
-        this.isFirstLogin = true;
-    }
-
-    public User(String role) {
-        this.hospitalId = generateHospitalId(role);
-        setPassword("password");
+    // INSTANCE METHODS
+    public User(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin,
+            boolean passwordHashed) {
+        this.hospitalId = (hospitalId != null) ? hospitalId : generateHospitalId(role);
+        this.salt = (salt != null) ? salt : generateSalt();
+        this.password = (password != null) ? ((passwordHashed) ? password : hashPassword(password, this.salt))
+                : hashPassword("password", this.salt);
         this.role = role;
-        this.isFirstLogin = true;
+        this.isFirstLogin = isFirstLogin;
     }
 
-    // GET Methods
+    // GET METHODS
     public String getHospitalId() {
         return this.hospitalId;
     }
 
-    public String getRole() {
+    public byte[] getSalt() {
+        return this.salt;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public Role getRole() {
         return this.role;
     }
 
@@ -42,15 +55,34 @@ abstract class User {
         return this.isFirstLogin;
     }
 
-    // SET Methods
+    // SET METHODS
+    public void setHospitalId(String hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }
+
     public void setPassword(String password) {
         this.salt = generateSalt();
         this.password = hashPassword(password, this.salt);
     }
 
-    // Supporting Methods
-    public static String generateHospitalId(String role) {
-        String prefix = role.substring(0, 2).toUpperCase();
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public void setIsFirstLogin(boolean isFirstLogin) {
+        this.isFirstLogin = isFirstLogin;
+    }
+
+    // SUPPORTING METHODS
+    public static String generateHospitalId(Role role) {
+        if (role == null) {
+            throw new IllegalArgumentException("Role cannot be null.");
+        }
+        String prefix = role.name().substring(0, 2).toUpperCase();
         String uniquePart = UUID.randomUUID().toString().replace("-", "").substring(0, 6);
         return prefix + uniquePart;
     }
@@ -78,12 +110,7 @@ abstract class User {
 
     public boolean verifyPassword(String passwordAttempt) {
         String hashedAttempt = hashPassword(passwordAttempt, this.salt);
-        if (password.equals(hashedAttempt)) {
-            return true;
-        }
-        return false;
+        return password.equals(hashedAttempt);
     }
-
-    public abstract void logout();
 
 }

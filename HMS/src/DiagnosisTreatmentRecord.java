@@ -1,3 +1,4 @@
+package HMS.src;
 import java.util.UUID;
 
 public class DiagnosisTreatmentRecord {
