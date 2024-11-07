@@ -43,7 +43,8 @@ public class PatientActions {
                         break;
 
                     case 2:
-
+                        // UPDATE PERSONAL INFORMATION
+                        updatePersonalInformation(currentPatient);
                         break;
 
                     case 3:
@@ -102,6 +103,26 @@ public class PatientActions {
                     """, medicalRecord.getName(), medicalRecord.getDob(), medicalRecord.getGender(),
                     medicalRecord.getPhoneNumber(), medicalRecord.getEmailAddress(), medicalRecord.getBloodType(),
                     medicalRecord.getPastDiagnosisTreatment()));
+        } else {
+            System.out.println("No medical record found.");
+        }
+    }
+
+    private void updatePersonalInformation(Patient patient) {
+        MedicalRecord medicalRecord = patient.viewMedicalRecord();
+        if (medicalRecord != null) {
+            System.out.println("""
+                    ==============================================
+                    |        Update Personal Information         |
+                    ==============================================
+                    Name: %s
+                    Date Of Birth: %s
+                    Gender: %s,
+                    Phone Number: %s
+                    Email Address: %s
+                    Blood Type: %s
+                    Past Diagnosis & Treatment: %s
+                    """);
         } else {
             System.out.println("No medical record found.");
         }

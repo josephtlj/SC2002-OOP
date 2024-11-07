@@ -18,7 +18,7 @@ public class HMSApp {
 
         // PATIENT
         String patientFile = "patientData.csv";
-        Patient[] patientList = new Patient[100];
+        Patient[] patientList = new Patient[10];
         AssignInitialData patientAssigner = new AssignInitialData();
         patientAssigner.assignPatientData(patientList, dataPath, patientFile);
 
@@ -66,7 +66,7 @@ public class HMSApp {
                             passwordCredential = userScanner.nextLine();
 
                             // SEARCHES DATABASE FOR CORRESPONDING HOSPITALID
-                            for (int patientIndex = 0; patientIndex < patientList.length; patientIndex++) {
+                            for (int patientIndex = 0; patientIndex < patientList.length - 1; patientIndex++) {
                                 if (patientList[patientIndex].getHospitalId().equals(hospitalIdCredential)) {
                                     Patient patient = patientList[patientIndex];
                                     if (patient.verifyPassword(passwordCredential)) {
@@ -91,11 +91,7 @@ public class HMSApp {
                         // STAFF LOGIN INTERFACE
                         break;
                     case 3:
-                        System.out.println("""
-                                =====================================================================
-                                |     Thank you for using the Hospital Management System (HMS)!     |
-                                =====================================================================
-                                    """);
+                        // EXIT PROGRAM
                         break;
 
                     default:
@@ -107,6 +103,13 @@ public class HMSApp {
                 userScanner.nextLine();
             }
         } while (userChoice != 3);
+
+        // EXITING SYSTEM
+        System.out.println("""
+                =====================================================================
+                |     Thank you for using the Hospital Management System (HMS)!     |
+                =====================================================================
+                    """);
 
         // TERMINATE USER SCANNER WHEN PROGRAM TERMINATES
         userScanner.close();

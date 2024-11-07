@@ -21,16 +21,16 @@ import HMS.src.models.MedicalRecord.BloodType;
 
 public class CreateInitialMedicalRecord {
 
-    // Reads patients from CSV file and returns a list of Patient objects
+    // READS PATIENTDATA CSV FILE AND RETURN A LIST OF PATIENT OBJECTS
     public static List<Patient> readPatientsFromCSV(String filePath) {
         List<Patient> patients = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            boolean firstRow = true; // Flag to skip header
+            boolean firstRow = true; // FLAG TO SKIP HEADER ROW
 
             while ((line = br.readLine()) != null) {
                 if (firstRow) {
-                    firstRow = false; // Skip header row
+                    firstRow = false; // SKIP HEADER ROW
                     continue;
                 }
 
@@ -44,7 +44,7 @@ public class CreateInitialMedicalRecord {
 
                     boolean isHashed = true;
 
-                    // Create a new Patient object and add it to the list
+                    // CREATE/LOAD NEW PATIENT OBJECT AND ADD IT TO THE LIST
                     Patient patient = new Patient(hospitalId, hashedPassword, role, salt, isFirstLogin, isHashed);
                     patients.add(patient);
                 }
@@ -55,11 +55,11 @@ public class CreateInitialMedicalRecord {
         return patients;
     }
 
-    // Generates Medical Records for each Patient
+    // GENERATE MEDICAL RECORDS FOR EACH PATIENT
     public static List<MedicalRecord> generateMedicalRecords(List<Patient> patients) {
         List<MedicalRecord> medicalRecords = new ArrayList<>();
 
-        // DUMMY DATA for fields other than Patient
+        // DUMMY DATA FOR FIELDS OTHER THAN PATIENT
         String[] dummyNames = { "James Hudson", "Emma Johnson", "Liam Smith", "Olivia Williams", "Noah Brown",
                 "Ava Jones", "Sophia Miller", "Isabella Davis", "Mason Garcia", "Mia Martinez" };
         Gender[] genders = { Gender.MALE, Gender.FEMALE };
@@ -67,7 +67,7 @@ public class CreateInitialMedicalRecord {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         for (int i = 0; i < patients.size(); i++) {
-            // Generate random dummy data
+            // GENERATE RANDOM DUMMY DATA
             UUID medicalRecordId = null;
             String name = dummyNames[i % dummyNames.length];
             Date dob = generateRandomDOB();
@@ -76,9 +76,9 @@ public class CreateInitialMedicalRecord {
             String emailAddress = name.toLowerCase().replace(" ", ".") + "@gmail.com";
             BloodType bloodType = bloodTypes[i % bloodTypes.length];
 
-            // Placeholder for past diagnosis and treatments
             DiagnosisTreatmentRecord[] pastDiagnosisTreatment = generatePlaceholderDiagnosisTreatment();
-            // Create a new MedicalRecord for each Patient
+           
+            // CREATE NEW MEDICALRECORD OBJECT FOR EACH PATIENT OBJECT
             MedicalRecord medicalRecord = new MedicalRecord(
                     medicalRecordId, name, dob, gender, phoneNumber, emailAddress, bloodType, pastDiagnosisTreatment,
                     patients.get(i));
@@ -159,14 +159,11 @@ public class CreateInitialMedicalRecord {
     }
 
     public static void main(String[] args) {
-        // Step 1: Read patients from CSV
         String filePath = "HMS/data/patientData.csv";
         List<Patient> patients = readPatientsFromCSV(filePath);
 
-        // Step 2: Generate Medical Records for each Patient
         List<MedicalRecord> medicalRecords = generateMedicalRecords(patients);
 
-        // SAVE PATIENTS TO CSV FILE
         saveMedicalRecordsToCSV(medicalRecords, "HMS/data/medicalRecordData.csv");
 
     }

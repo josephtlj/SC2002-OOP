@@ -11,14 +11,15 @@ import HMS.src.models.User.Role;
 
 public class CreateInitialPatientData {
 
+    // GENERATE A LIST OF PATIENT OBJECTS BASED ON THE NUMBER REQUIRED
     public static List<Patient> generatePatients(int numberOfPatients) {
         List<Patient> patients = new ArrayList<>();
 
         for (int i = 0; i < numberOfPatients; i++) {
             // GENERATE A NEW PATIENT WITH A UNIQUE HOSPITALID
-            String hospitalId = null; // Generate in Patient constructor
-            String defaultPassword = "password"; // Initial password before hashing
-            byte[] salt = null; // Salt will be generated in the constructor
+            String hospitalId = null; // GENERATED IN PATIENT CONSTRUCTOR
+            String defaultPassword = "password"; // INITIAL PASSWORD BEFORE HASHING
+            byte[] salt = null; // GENERATED IN PATIENT CONSTRUCTOR
             boolean isFirstLogin = true;
 
             boolean isHashed = false;
@@ -31,12 +32,13 @@ public class CreateInitialPatientData {
         return patients;
     }
 
+    // SAVING LIST OF PATIENT OBJECTS GENERATED AS A CSV FILE
     public static void savePatientsToCSV(List<Patient> patients, String filePath) {
         try (FileWriter writer = new FileWriter(filePath)) {
             // Write CSV header
             writer.write("hospitalId,password,role,salt,isFirstLogin\n");
 
-            // Write each patient's data to the CSV
+            // WRITE EACH PATIENT OBJECT TO CSV FILE
             for (Patient patient : patients) {
                 String hospitalId = patient.getHospitalId();
                 String password = patient.getPassword(); // Get hashed password
@@ -55,7 +57,7 @@ public class CreateInitialPatientData {
     }
 
     public static void main(String[] args) {
-        // GENERATE 10 PATIENT OBJECTS AND THEIR RESPECTIVE MEDICAL RECORDS
+        // GENERATE 10 PATIENT OBJECTS
         List<Patient> patients = generatePatients(10);
 
         // SAVE PATIENTS TO CSV FILE
