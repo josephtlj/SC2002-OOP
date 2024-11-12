@@ -1,28 +1,85 @@
+import java.time.YearMonth;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
-public class Calendar
+class Calendar
 {
-	//attributes
-	public Day[][] calendar;
-	
-	//constructor
-	public Calendar()
-	{
-		calendar= new Day[12][31];
-		
-		for(int i=0;i<12;i++)
-		{
-			for(int j=0;j<31;j++)
-			{
-				calendar[i][j]= new Day();
-				calendar[i][j].setMonth(i); // month always set first
-				calendar[i][j].setDay(j%7);
-				calendar[i][j].setDate(j+1);
-			}
-		}
-	}
+    private int year;
+    private Map<YearMonth, Map<Integer, CalendarDay>> calendarData;
 
+    // constructor to initialize the calendar for a given year
+    public Calendar(int year)
+    {
+        this.year = year;
+        this.calendarData = new HashMap<>();
+        initializeYearCalendar();
+    }
+
+    // initialize each month with the correct number of days
+    private void initializeYearCalendar()
+    {
+        for (int month = 1; month <= 12; month++)
+        {
+            YearMonth yearMonth = YearMonth.of(year, month);
+            int daysInMonth = yearMonth.lengthOfMonth();
+            Map<Integer, CalendarDay> days = new HashMap<>();
+
+            for (int day = 1; day <= daysInMonth; day++)
+            {
+                days.put(day, new CalendarDay());
+            }
+            calendarData.put(yearMonth, days);
+        }
+    }
+
+    // get a specific day
+    public Optional<CalendarDay> getDay(int month, int day)
+    {
+        YearMonth yearMonth = YearMonth.of(year, month);
+        Map<Integer, CalendarDay> days = calendarData.get(yearMonth);
+        if (days != null && days.containsKey(day))
+        {
+            return Optional.ofNullable(days.get(day));
+        }
+        return Optional.empty();
+    }
+
+    // mark a day with a specific status
+    public void updateDayStatus(int month, int day, CalendarDayStatus status)
+    {
+        YearMonth yearMonth = YearMonth.of(year, month);
+        Map<Integer, CalendarDay> days = calendarData.get(yearMonth);
+        if (days != null && days.containsKey(day))
+        {
+            days.get(day).setStatus(status);
+        }
+    }
+
+    // retrieve all free days in a given month
+    public Map<Integer, CalendarDay> getFreeDays(int month)
+    {
+        YearMonth yearMonth = YearMonth.of(year, month);
+        Map<Integer, CalendarDay> freeDays = new HashMap<>();
+        Map<Integer, CalendarDay> days = calendarData.get(yearMonth);
+
+        if (days != null)
+        {
+            for (Map.Entry<Integer, CalendarDay> entry : days.entrySet())
+            {
+                if (entry.getValue().getStatus() == CalendarDayStatus.FREE)
+                {
+                    freeDays.put(entry.getKey(), entry.getValue());
+                }
+            }
+        }
+        return freeDays;
+    }
+
+    // get the number of days in a specific month
+    public int getDaysInMonth(int month)
+    {
+        YearMonth yearMonth = YearMonth.of(year, month);
+        return yearMonth.lengthOfMonth();
+    }
 }
-/*
- * calendar is not accurate
- * ie. if 31 Jan is a Wednesday, 1 Feb restarts on Monday
- */
