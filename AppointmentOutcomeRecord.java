@@ -1,22 +1,60 @@
+import java.time.LocalDate;
 
 public class AppointmentOutcomeRecord 
 {
-	public enum ServiceType {CONSULTATION, xRAY, BLOOD_TEST, OTHERS};
+    private String appointmentId;
+    private LocalDate date;  
+    private String serviceType;
+    private String consultationNotes;
+    private String medicationStatus;
 
-	//attributes
-	private Day day;
-	private ServiceType service;
-	private String consultNotes;
-	// prescribed medication and status--> array
-	
-	//constructor
-	public AppointmentOutcomeRecord(Day day, ServiceType service, String notes)
-	{
-		this.day= day;
-		this.service= service;
-		this.consultNotes= notes;
-		
-	}
-	
-	//get and set mthods
+    // Constructor
+    public AppointmentOutcomeRecord(String appointmentId, LocalDate date, String serviceType) 
+    {
+        this.appointmentId = appointmentId;
+        this.date = date;
+        this.serviceType = serviceType;
+        this.medicationStatus = "Pending";  // Default status
+    }
+
+    // Getters and Setters for attributes
+    public String getAppointmentId() 
+    {
+        return appointmentId;
+    }
+
+    public LocalDate getDate()  
+    {
+        return date;
+    }
+
+    public void setServiceType(String serviceType) 
+    {
+        this.serviceType = serviceType;
+    }
+
+    public String getServiceType() 
+    {
+        return serviceType;
+    }
+
+    public void setConsultationNotes(String notes) 
+    {
+        this.consultationNotes = notes;
+    }
+
+    public String getConsultationNotes() 
+    {
+        return consultationNotes;
+    }
+
+    public void setMedicationStatus(String status) 
+    {
+        this.medicationStatus = status;
+    }
+
+    public String getMedicationStatus() 
+    {
+        return medicationStatus;
+    }
 }
