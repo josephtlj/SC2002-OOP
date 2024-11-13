@@ -11,8 +11,8 @@ public class Appointment {
     // Constructor
     public Appointment(UUID patientId, UUID doctorId, String type, String dateTime) {
         this.appointmentId = UUID.randomUUID(); // Generate a unique ID for each appointment
-        this.status = "pending";                // Default status
-        this.type = type;
+        this.status = "pending";                // Default 
+        this.type = type;                       //
         this.patientId = patientId;
         this.doctorId = doctorId;
         this.dateTime = dateTime;
