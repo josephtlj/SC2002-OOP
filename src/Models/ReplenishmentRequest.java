@@ -1,32 +1,64 @@
 package Models;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 public class ReplenishmentRequest {
-    private UUID requestID;
-    private String medicineName;
-    private int quantity;
-    private LocalDate requestDate;
-    private String status;
 
-    public ReplenishmentRequest(UUID requestID, String medicineName, int quantity, LocalDate requestDate, String status) {
-        this.requestID = requestID;
-        this.medicineName = medicineName;
-        this.quantity = quantity;
-        this.requestDate = requestDate;
+    // Data members
+    private UUID requestId;
+    private int requestedQuantity;
+    private String status = "Pending";  // Default value is "Pending"
+
+    // Default Constructor
+    public ReplenishmentRequest() {
+        this.requestId = UUID.randomUUID();  // Default to a random UUID
+        this.requestedQuantity = 0;          // Default requested quantity
+        // 'status' is already initialized to "Pending"
+    }
+
+    // Constructor with parameters
+    public ReplenishmentRequest(UUID requestId, int requestedQuantity, String status) {
+        this.requestId = requestId;
+        this.requestedQuantity = requestedQuantity;
         this.status = status;
     }
 
-    // Getters and Setters
-    public UUID getRequestID() {
-        return requestID;
+    // Getter for requestId
+    public UUID getRequestId() {
+        return requestId;
     }
 
-    public void setRequestID(UUID requestID) {
-        this.requestID = requestID;
+    // Setter for requestId
+    public void setRequestId(UUID requestId) {
+        this.requestId = requestId;
     }
 
+    // Getter for requestedQuantity
+    public int getRequestedQuantity() {
+        return requestedQuantity;
+    }
+
+    // Setter for requestedQuantity
+    public void setRequestedQuantity(int requestedQuantity) {
+        this.requestedQuantity = requestedQuantity;
+    }
+
+    // Getter for status
+    public String getStatus() {
+        return status;
+    }
+
+    // Setter for status
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    // Uncomment the following attributes and methods if we need currently not in mehars
+    /*
+    private String medicineName;
+    private LocalDate requestDate;
+
+    // Getter and Setter for medicineName
     public String getMedicineName() {
         return medicineName;
     }
@@ -35,14 +67,7 @@ public class ReplenishmentRequest {
         this.medicineName = medicineName;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
+    // Getter and Setter for requestDate
     public LocalDate getRequestDate() {
         return requestDate;
     }
@@ -50,22 +75,13 @@ public class ReplenishmentRequest {
     public void setRequestDate(LocalDate requestDate) {
         this.requestDate = requestDate;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+    */
 
     @Override
     public String toString() {
         return "ReplenishmentRequest{" +
-                "requestID=" + requestID +
-                ", medicineName='" + medicineName + '\'' +
-                ", quantity=" + quantity +
-                ", requestDate=" + requestDate +
+                "requestId=" + requestId +
+                ", requestedQuantity=" + requestedQuantity +
                 ", status='" + status + '\'' +
                 '}';
     }

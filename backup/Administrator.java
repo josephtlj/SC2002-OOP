@@ -1,5 +1,9 @@
 package Models;
-import java.io.*;
+
+import java.util.*;
+
+package Models;
+
 import java.util.*;
 
 public class Administrator extends User {
@@ -7,16 +11,11 @@ public class Administrator extends User {
     private List<ReplenishmentRequest> replenishmentRequests;
     private List<AdministratorMedicineLog> medicineLogs;
     private Map<String, Staff> staffList;
-    //need to subintegrate to test
     private Map<UUID, Medicine> medicineInventory;
     private Map<String, MedicalRecord> medicalRecords;
     private List<Appointment> appointments;
 
-    private static final String STAFF_DATA_FILE = "staffData.csv";
-    private static final String MEDICAL_RECORD_DATA_FILE = "medicalRecordData.csv";
-    private static final String MEDICINE_LIST_FILE = "Medicine_List.csv";
-
-    public Administrator(UUID adminId, String staffID, String name, String password) throws IOException {
+    public Administrator(UUID adminId, String staffID, String name, String password) {
         super(staffID, name, password);
         this.adminId = adminId;
         this.replenishmentRequests = new ArrayList<>();
@@ -25,11 +24,75 @@ public class Administrator extends User {
         this.medicineInventory = new HashMap<>();
         this.medicalRecords = new HashMap<>();
         this.appointments = new ArrayList<>();
-
-        loadStaffData();
-        loadMedicalRecords();
-        loadMedicineList();
+        populateSampleData();
     }
+
+    private void populateSampleData() {
+        // Medical Records
+        List<MedicalRecord> medicalRecords = new ArrayList<>();
+        medicalRecords.add(new MedicalRecord("8c49ce65-e409-467c-a21d-ca847c3c9ae4", "James Hudson", "1985-09-02", "MALE", "692-806-4334", "james.hudson@gmail.com", "A+", "", "PA6fe25d"));
+        medicalRecords.add(new MedicalRecord("6c9f0436-251a-4a03-97ad-dad69884a5ab", "Emma Johnson", "2003-11-27", "FEMALE", "488-869-1039", "emma.johnson@gmail.com", "A-", "", "PA703270"));
+        medicalRecords.add(new MedicalRecord("02c51449-bd1d-4a57-ab04-7c2c13fc088a", "Liam Smith", "1972-10-16", "MALE", "614-236-2429", "liam.smith@gmail.com", "B+", "", "PA4d3e2b"));
+        // Add these records to the map
+        for (MedicalRecord record : medicalRecords) {
+            this.medicalRecords.put(record.getId(), record);
+        }
+
+        // Medicines
+        this.medicineInventory.put(UUID.randomUUID(), new Medicine("Paracetamol", 100, 20));
+        this.medicineInventory.put(UUID.randomUUID(), new Medicine("Ibuprofen", 50, 10));
+        this.medicineInventory.put(UUID.randomUUID(), new Medicine("Amoxicillin", 75, 15));
+    }
+
+    // Method to display all medical records
+    public void displayAllMedicalRecords() {
+        medicalRecords.forEach((id, record) -> {
+            System.out.println("ID: " + id + ", Name: " + record.getName() + ", Blood Type: " + record.getBloodType());
+        });
+    }
+
+    // Method to display all medicines
+    public void displayAllMedicines() {
+        medicineInventory.forEach((id, medicine) -> {
+            System.out.println("Medicine ID: " + id + ", Name: " + medicine.getName() +
+                    ", Quantity: " + medicine.getMedicineQuantity() + ", Alert Line: " + medicine.getAlertLine());
+        });
+    }
+
+    // Additional methods to manage records and inventory could go here...
+
+    // Example hardcoded administrators
+    public static List<Administrator> createHardcodedAdministrators() {
+        List<Administrator> administrators = new ArrayList<>();
+
+        Administrator admin1 = new Administrator(
+            UUID.fromString("123e4567-e89b-12d3-a456-556642440000"),
+            "ADM001",
+            "Alice Wong",
+            "securepassword1"
+        );
+
+        Administrator admin2 = new Administrator(
+            UUID.fromString("123e4567-e89b-12d3-a456-556642440001"),
+            "ADM002",
+            "Bob Tan",
+            "securepassword2"
+        );
+
+        Administrator admin3 = new Administrator(
+            UUID.fromString("123e4567-e89b-12d3-a456-556642440002"),
+            "ADM003",
+            "Carol Lee",
+            "securepassword3"
+        );
+
+        administrators.add(admin1);
+        administrators.add(admin2);
+        administrators.add(admin3);
+
+        return administrators;
+    }
+
 
     // Approve a replenishment request
     public void approveReplenishmentRequest(UUID requestId) {
@@ -91,16 +154,20 @@ public class Administrator extends User {
         }
     }
 
-    // Display filtered list of staff by role, gender, or other criteria
-    public void displayFilteredStaff(String role, String gender, Integer age) {
+    public void displayFilteredStaff(String role, String gender, Integer age, Department department) {
         staffList.values().stream()
             .filter(staff -> (role == null || staff.getRole().equals(role)) &&
                              (gender == null || staff.getGender().equals(gender)) &&
-                             (age == null || staff.getAge() == age))
+                             (age == null || staff.getAge() == age) &&
+                             (!(staff instanceof Doctor) || 
+                             (department == null || ((Doctor) staff).getDepartment() == department)))
             .forEach(staff -> System.out.println("Staff ID: " + staff.getStaffID() +
                                                  ", Name: " + staff.getName() +
-                                                 ", Role: " + staff.getRole()));
+                                                 ", Role: " + staff.getRole() +
+                                                 (staff instanceof Doctor ? 
+                                                 ", Department: " + ((Doctor) staff).getDepartment() : "")));
     }
+    
 
     // View appointment details
     public void viewAppointment() {
