@@ -1,10 +1,10 @@
-import controllers.AdministratorController;
+//import controllers.AdministratorController;
 import managers.StaffManager;
 import managers.AdministratorAppointmentManager;
 import managers.InventoryManager;
 import Models.Staff;
 
-public class AdministratorMain {
+/*public class AdministratorMain {
     public static void main(String[] args) {
         // Initialize Managers
         StaffManager staffManager = new StaffManager();
@@ -25,5 +25,26 @@ public class AdministratorMain {
         adminController.viewInventory();
 
         // Add other test commands as needed to simulate different features
+    }
+}*/
+import controllers.AdministratorMenu;
+import managers.StaffManager;
+import managers.AdministratorAppointmentManager;
+import managers.InventoryManager;
+import managers.ReplenishmentRequestManager;
+
+public class AdministratorMain {
+    public static void main(String[] args) {
+        // Initialize Managers
+        StaffManager staffManager = new StaffManager();
+        InventoryManager inventoryManager = new InventoryManager();
+        AdministratorAppointmentManager appointmentManager = new AdministratorAppointmentManager();
+        ReplenishmentRequestManager replenishmentRequestManager = new ReplenishmentRequestManager();
+
+        // Initialize the AdministratorMenu with the managers
+        AdministratorMenu adminMenu = new AdministratorMenu(appointmentManager, inventoryManager, replenishmentRequestManager, staffManager);
+
+        // Display the menu
+        adminMenu.displayMenu();
     }
 }

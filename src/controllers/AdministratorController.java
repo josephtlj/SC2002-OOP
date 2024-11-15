@@ -1,4 +1,4 @@
-package controllers;
+/*package controllers;
 
 import managers.AdministratorAppointmentManager;
 import managers.StaffManager;
@@ -121,4 +121,4 @@ public class AdministratorController {
         inventoryManager.replenishStock(medicineId, quantityToReplenish);
         System.out.println("Stock replenished successfully.");
     }
-}
+}*/

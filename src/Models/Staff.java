@@ -41,5 +41,4 @@ public abstract class Staff extends User {
         // Logic for logging out a staff member
     }
 
-    // Other shared methods?
 }
