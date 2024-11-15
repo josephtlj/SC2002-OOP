@@ -1,0 +1,4 @@
+appointmentId,date,serviceType,consultationNotes,medicationStatus
+A01,2024-11-14,Consultation,Patient reports mild headache,Pending
+A02,2024-11-15,Follow-up,No new symptoms reported,Completed
+A03,2024-11-16,Treatment,Initial treatment started,Pending
