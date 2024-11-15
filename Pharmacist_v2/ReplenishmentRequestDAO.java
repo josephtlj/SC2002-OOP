@@ -1,10 +1,8 @@
-
 import java.io.*;
 import java.util.*;
 
 public class ReplenishmentRequestDAO {
 
-    // Data members (fields)
     private UUID requestId;
     private UUID medicineId;  // Added medicineId to link replenishment to a specific medicine
     private int requestedQuantity;
@@ -76,7 +74,6 @@ public class ReplenishmentRequestDAO {
                     continue;  // Skip invalid lines
                 }
 
-                // Parse values
                 UUID requestId = UUID.fromString(values[0].trim());
                 UUID medicineId = UUID.fromString(values[1].trim());
                 int requestedQuantity = values[2].trim().isEmpty() ? 0 : Integer.parseInt(values[2].trim());

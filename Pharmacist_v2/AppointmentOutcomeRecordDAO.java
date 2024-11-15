@@ -1,14 +1,8 @@
-
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class AppointmentOutcomeRecordDAO {
-    // Data members
     private String appointmentId;
     private LocalDate date;
     private String serviceType;
@@ -16,7 +10,7 @@ public class AppointmentOutcomeRecordDAO {
     private String medicationStatus;
 
     // Constructor
-     public AppointmentOutcomeRecordDAO(String appointmentId, LocalDate date, String serviceType) {
+    public AppointmentOutcomeRecordDAO(String appointmentId, LocalDate date, String serviceType) {
         this.appointmentId = appointmentId;
         this.date = date;
         this.serviceType = serviceType;
@@ -28,8 +22,16 @@ public class AppointmentOutcomeRecordDAO {
         return appointmentId;
     }
 
+    public void setAppointmentId(String appointmentId) {
+        this.appointmentId = appointmentId;
+    }
+
     public LocalDate getDate() {
         return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public String getServiceType() {

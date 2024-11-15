@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -60,6 +59,14 @@ public class MedicineDAO {
     public void setMedicineAlert(int medicineAlert) {
         this.medicineAlert = medicineAlert;
     }
+
+    // Override the toString() method to provide meaningful output
+    @Override
+public String toString() {
+    return String.format("| %-36s | %-15s | %-8d | %-11d |", 
+                         medicineId.toString(), medicineName, medicineQuantity, medicineAlert);
+}
+
 
     // CRUD Operations: Load medicines from CSV
     public static void loadMedicinesFromCSV() throws IOException {
