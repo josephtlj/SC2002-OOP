@@ -1,18 +1,21 @@
+package models;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class AppointmentSlot {
-    private UUID slotId;                     // Unique ID for each appointment slot
-    private String dateTime;                 // Date and time of the slot
-    private boolean isAvailable;             // Availability status of the slot
-    private UUID doctorId;                   // ID of the doctor assigned to the slot
-    private List<Appointment> appointments;  // List of appointments in this slot
+    private UUID slotId;                    // Unique ID for each appointment slot
+    private int date;                       // convention: 01 June 2024 = 01062024
+    private int time;                       // convention: 0000 to 2359
+    private boolean isAvailable;            
+    private UUID doctorId;                  // ID of the doctor assigned to the slot
+    private List<Appointment> appointments; // List of appointments in this slot (date)
 
     // Constructor
-    public AppointmentSlot(String dateTime, UUID doctorId) {
+    public AppointmentSlot(int date, int time, UUID doctorId) {
         this.slotId = UUID.randomUUID();     // Generate a unique ID for each slot
-        this.dateTime = dateTime;
+        this.date = date;
+        this.time = time;
         this.isAvailable = true;             // Default availability status
         this.doctorId = doctorId;
         this.appointments = new ArrayList<>(); // Initialize empty list of appointments
@@ -23,12 +26,20 @@ public class AppointmentSlot {
         return slotId;
     }
 
-    public String getDateTime() {
-        return dateTime;
+    public int getDate() {
+        return date;
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
+    public int getTime() {
+        return time;
+    }
+
+    public void setDate(int date){
+        this.date = date;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 
     public boolean isAvailable() {
@@ -65,17 +76,20 @@ public class AppointmentSlot {
         }
     }
 
-    // Method to display slot details
     public void displaySlotDetails() {
-        System.out.println("Slot ID: " + slotId);
-        System.out.println("Date and Time: " + dateTime);
-        System.out.println("Doctor ID: " + doctorId);
-        System.out.println("Available: " + isAvailable);
+        System.out.println("=============================================================");
+        System.out.println("| Slot ID: " + slotId);
+        System.out.println("| Date: " + date);
+        System.out.println("| Time: " + time);
+        System.out.println("| Doctor ID: " + doctorId);
+        System.out.println("| Available: " + isAvailable);
         if (!appointments.isEmpty()) {
             System.out.println("Appointments in Slot:");
             for (Appointment appointment : appointments) {
                 appointment.displayAppointment();
             }
         }
+        else
+            System.out.println("There are no more appointments slots in this day");
     }
 }

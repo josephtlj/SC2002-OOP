@@ -1,21 +1,24 @@
+package models;
 import java.util.UUID;
 
 public class Appointment {
-    private UUID appointmentId;       // Unique ID for each appointment
-    private String status;            // e.g., "pending", "confirmed", "canceled"
-    private String type;              // e.g., "consultation", "X-ray", "blood test"
-    private UUID patientId;           // Unique ID of the patient
-    private UUID doctorId;            // Unique ID of the doctor
-    private String dateTime;          // Date and time of the appointment
+    private UUID appointmentId;       
+    private String status;            // e.g. "pending", "confirmed", "canceled"
+    private String type;              // e.g. "consultation", "X-ray", "blood test"
+    private UUID patientId;           
+    private UUID doctorId;            
+    private int date;                 // convention: 01 June 2024 = 01062024
+    private int time;                 // convention: 0000 to 2359
 
     // Constructor
-    public Appointment(UUID patientId, UUID doctorId, String type, String dateTime) {
+    public Appointment(UUID patientId, UUID doctorId, String type, int date, int time) {
         this.appointmentId = UUID.randomUUID(); // Generate a unique ID for each appointment
-        this.status = "pending";                // Default 
-        this.type = type;                       //
+        this.status = "pending";                // Default status
+        this.type = type;                       
         this.patientId = patientId;
         this.doctorId = doctorId;
-        this.dateTime = dateTime;
+        this.date = date;
+        this.time = time;
     }
 
     // Getters and Setters
@@ -55,12 +58,20 @@ public class Appointment {
         this.doctorId = doctorId;
     }
 
-    public String getDateTime() {
-        return dateTime;
+    public int getDate() {
+        return date;
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 
     // Method to display appointment details
@@ -70,6 +81,6 @@ public class Appointment {
         System.out.println("Type: " + type);
         System.out.println("Patient ID: " + patientId);
         System.out.println("Doctor ID: " + doctorId);
-        System.out.println("Date and Time: " + dateTime);
+        System.out.println("Date and Time: " + date + " " + time);
     }
 }
