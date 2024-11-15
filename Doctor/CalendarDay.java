@@ -1,3 +1,4 @@
+package Doctor;
 class CalendarDay
 {
     private CalendarDayStatus status;

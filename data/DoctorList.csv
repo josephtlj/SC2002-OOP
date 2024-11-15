@@ -1,0 +1,7 @@
+ID,Name,Department,Gender,Age,Password,isFirstLogin,salt
+D001,John Smith,Cardiology,Male,45,password,true
+D002,Emily Clarke,Physiotherapy,Female,38,password,true
+D003,Ben Stone,Radiology,Male,47,password,true
+D004,Sanvi Bhal,Orthopedics,Female,27,password,true
+D005,Alex Bates,General Surgery,Male,52,password,true
+D006,Elizabeth Zott,Radiology,Female,31,password,true

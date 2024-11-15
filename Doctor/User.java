@@ -1,4 +1,4 @@
-package models;
+package Doctor;
 
 import java.security.SecureRandom;
 import java.util.Base64;
@@ -22,18 +22,23 @@ public class User {
     private String password;
     private Role role;
     private boolean isFirstLogin;
+    private String gender;
+    private int age;
 
     // INSTANCE METHODS
-    public User(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin,
-            boolean passwordHashed) {
+    public User(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin, boolean passwordHashed, String gender, int age) 
+    {
         this.hospitalId = (hospitalId != null) ? hospitalId : generateHospitalId(role);
         this.salt = (salt != null) ? salt : generateSalt();
-        this.password = (password != null) ? ((passwordHashed) ? password : hashPassword(password, this.salt))
-                : hashPassword("password", this.salt);
+        this.password = (password != null) ? ((passwordHashed) ? password : hashPassword(password, this.salt)) : hashPassword("password", this.salt);
         this.role = role;
         this.isFirstLogin = isFirstLogin;
+        this.gender= gender;
+        this.age= age;
     }
 
+
+    //GET AND SET METHODS
     public String getHospitalId() {
         return this.hospitalId;
     }
@@ -73,6 +78,22 @@ public class User {
 
     public void setIsFirstLogin(boolean isFirstLogin) {
         this.isFirstLogin = isFirstLogin;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
+    public void setGender(String gender){
+        this.gender= gender;
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public void setAge(int age){
+        this.age= age;
     }
 
     // SUPPORTING METHODS

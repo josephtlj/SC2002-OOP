@@ -1,3 +1,4 @@
+package Doctor;
 public enum Department 
 {
 	RADIOLOGY,

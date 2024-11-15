@@ -1,3 +1,4 @@
+package Doctor;
 import java.time.LocalDate;
 
 public class AppointmentOutcomeRecord 

@@ -1,19 +1,45 @@
+package Doctor;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import DoctorView.DoctorChangePasswordView;
+import daos.DoctorDao;
+
 public class Doctor extends User 
 {
-    // Attributes
-    private Calendar calendar;  // Updated to use Calendar type
+    //ATTRIBUTES
+    private DoctorDao doctorDao;
+    private Calendar calendar;  
     private Department department;
     
-    // Constructor
-    public Doctor(String role, String department) 
+    //CONSTRUCTOR
+    public Doctor(String ID, String name, String department, String gender, int age, String password, boolean IsFirstLogin, byte[] salt, boolean passwordHashed) 
     {
-        super(role);
-        this.calendar = new Calendar(LocalDate.now().getYear());  // Initialize Calendar for the current year
+        super(ID, password, Role.valueOf("Doctor"),salt, IsFirstLogin,passwordHashed, gender,age);
+        this.calendar = new Calendar(LocalDate.now().getYear());  
         this.department= Department.valueOf(department); 
+        this.doctorDao= new DoctorDao();
+    }
+
+    //GET METHODS
+    public String getDepartment()
+    {
+        return this.department.name();
+    }
+
+    //RETRIEVE ALL DOCTORS FROM DATABASE
+    public List<Doctor> getAllDoctors()
+    {
+        return doctorDao.getAllDoctors();
+    }
+
+    //UPDATE DOCTOR'S PASSWORD
+    public void updateDoctorPassword()
+    {
+        DoctorPasswordManager passwordManager= new DoctorPasswordManager(this.doctorDao);
+        DoctorChangePasswordView changePasswordView = new DoctorChangePasswordView(passwordManager);
     }
 
     // set availability for a specific date
@@ -83,7 +109,6 @@ public class Doctor extends User
         return dayOptional.isPresent() && dayOptional.get().getStatus() == CalendarDayStatus.FREE;
     }
     
-    @Override
     public void logout()
     {
         System.out.println("Doctor logged out.");
