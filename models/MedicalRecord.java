@@ -1,4 +1,4 @@
-package HMS.src.models;
+package models;
 
 import java.util.UUID;
 import java.util.Date;
