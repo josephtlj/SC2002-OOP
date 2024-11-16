@@ -1,4 +1,4 @@
-package appointment;
+package outdated;
 
 public class CancelAppointment {
     private DailyAppointmentSlots dailySlots;

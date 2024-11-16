@@ -1,4 +1,4 @@
-package appointment;
+package outdated;
 
 public class ViewAppointmentSlots {
     private DailyAppointmentSlots dailySlots;   // A reference to the daily slots container

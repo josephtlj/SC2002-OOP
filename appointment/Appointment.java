@@ -1,86 +1,91 @@
 package appointment;
-import java.util.UUID;
 
-public class Appointment {
-    private UUID appointmentId;       
-    private String status;            // e.g. "pending", "confirmed", "canceled"
-    private String type;              // e.g. "consultation", "X-ray", "blood test"
-    private UUID patientId;           
-    private UUID doctorId;            
-    private int date;                 // convention: 01 June 2024 = 01062024
-    private int time;                 // convention: 0000 to 2359
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
-    // Constructor
-    public Appointment(UUID patientId, UUID doctorId, String type, int date, int time) {
-        this.appointmentId = UUID.randomUUID(); // Generate a unique ID for each appointment
-        this.status = "pending";                // Default status
-        this.type = type;                       
-        this.patientId = patientId;
-        this.doctorId = doctorId;
-        this.date = date;
-        this.time = time;
+public class Appointment 
+{
+    //ATTRIBUTES    
+    private AppointmentStatus status;
+    private AppointmentAvailability availability;               
+    private LocalDate date;               
+    private AppointmentTimeSlot timeSlot;
+    private String patientID;
+    private String doctorID;
+
+    //CONSTRUCTOR
+    public Appointment(String status, String availability, String date, String startTime, String endTime, String patientID, String doctorID)
+    {
+        this.status= AppointmentStatus.valueOf(status);
+        this.availability= AppointmentAvailability.valueOf(availability);
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        this.date = LocalDate.parse(date, formatter);
+
+        this.timeSlot= new AppointmentTimeSlot(startTime, endTime);
+        this.patientID= patientID;
+        this.doctorID= doctorID;
     }
 
-    // Getters and Setters
-    public UUID getAppointmentId() {
-        return appointmentId;
+    //GET METHODS
+    public AppointmentTimeSlot getAppointmentTimeSlot()
+    {
+        return timeSlot;
     }
 
-    public String getStatus() {
+    public AppointmentStatus getAppointmentStatus()
+    {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public AppointmentAvailability getAppointmentAvailability()
+    {
+        return availability;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public UUID getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(UUID patientId) {
-        this.patientId = patientId;
-    }
-
-    public UUID getDoctorId() {
-        return doctorId;
-    }
-
-    public void setDoctorId(UUID doctorId) {
-        this.doctorId = doctorId;
-    }
-
-    public int getDate() {
+    public LocalDate getAppointmentDate()
+    {
         return date;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public String getPatientID()
+    {
+        return patientID;
     }
 
-    public int getTime() {
-        return time;
+    public String getDoctorID()
+    {
+        return doctorID;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    //SET METHODS
+    public void setAppointmentStatus(AppointmentStatus status)
+    {
+        this.status= status;
     }
 
-    // Method to display appointment details
-    public void displayAppointment() {
-        System.out.println("Appointment ID: " + appointmentId);
-        System.out.println("Status: " + status);
-        System.out.println("Type: " + type);
-        System.out.println("Patient ID: " + patientId);
-        System.out.println("Doctor ID: " + doctorId);
-        System.out.println("Date and Time: " + date + " " + time);
+    public void setAppointmentAvailability(AppointmentAvailability availability)
+    {
+        this.availability= availability;
+    }
+
+    public void setAppointmentTimeSlot(AppointmentTimeSlot timeSlot)
+    {
+        this.timeSlot= timeSlot;
+    }
+
+    public void setPatientID(String ID)
+    {
+        this.patientID= ID;
+    }
+
+    public void setDoctorTD(String ID)
+    {
+        this.doctorID= ID;
+    }
+
+    public void setAppointmentDate(LocalDate date)
+    {
+        this.date= date;
     }
 }
