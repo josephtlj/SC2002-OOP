@@ -1,11 +1,11 @@
-package Doctor.Calendar;
+package Calendar;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.Map;
 import java.util.Optional;
 
-import daos.DoctorCalendarDao;
+import daos.CalendarDao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,13 +13,13 @@ import java.util.List;
 public class Calendar 
 {
     //ATTRIBUTES
-    DoctorCalendarDao doctorCalendarDao;
+    private CalendarDao calendarDao;
     private final Map<Integer, Map<Integer, CalendarDay>> calendarData = new HashMap<>();
 
     //CONSTRUCTOR
     public Calendar(String ID) 
     {
-        this.doctorCalendarDao= new DoctorCalendarDao(ID);
+        this.calendarDao= new CalendarDao(ID);
         initialiseCalendar();
     }
 
@@ -27,13 +27,13 @@ public class Calendar
     public void initialiseCalendar() 
     {
         //FETCH DATES FOR EACH CALENDAR DAY STATUS
-        List<LocalDate> medicalLeaveDates = doctorCalendarDao.getMedicalLeaveDates();
-        List<LocalDate> annualLeaveDates = doctorCalendarDao.getAnnualLeaveDates();
-        List<LocalDate> meetingDates = doctorCalendarDao.getMeetingDates();
-        List<LocalDate> trainingDates = doctorCalendarDao.getTrainingDates();
-        List<LocalDate> availableDates = doctorCalendarDao.getAvailableDates();
-        List<LocalDate> othersDates = doctorCalendarDao.getOthersDates();
-        List<LocalDate> naDates = doctorCalendarDao.getNaDates();
+        List<LocalDate> medicalLeaveDates = calendarDao.getMedicalLeaveDates();
+        List<LocalDate> annualLeaveDates = calendarDao.getAnnualLeaveDates();
+        List<LocalDate> meetingDates = calendarDao.getMeetingDates();
+        List<LocalDate> trainingDates = calendarDao.getTrainingDates();
+        List<LocalDate> availableDates = calendarDao.getAvailableDates();
+        List<LocalDate> othersDates = calendarDao.getOthersDates();
+        List<LocalDate> naDates = calendarDao.getNaDates();
 
         //INITIALISE GREGORIAN CALENDAR
         for (int month = 1; month <= 12; month++) 
@@ -106,6 +106,13 @@ public class Calendar
     public void setDayStatus(int month, int day, CalendarDayStatus status) 
     {
         getDay(month, day).ifPresent(dayData -> dayData.setDayStatus(status));
+    }
+
+    //METHODS
+    public void manageCalendar()
+    {
+        CalendarManager calendarManager= new CalendarManager(calendarDao);
+        CalendarView calendarView= new CalendarView(calendarManager);
     }
     
 }

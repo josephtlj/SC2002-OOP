@@ -4,14 +4,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import Calendar.Calendar;
+import Calendar.CalendarDay;
+import Calendar.CalendarDayStatus;
+import Calendar.CalendarManager;
 import Doctor.Appointment.DoctorAppointmentActionType;
 import Doctor.Appointment.DoctorAppointmentManager;
 import Doctor.Appointment.DoctorAppointmentView;
-import Doctor.Calendar.Calendar;
-import Doctor.Calendar.CalendarDay;
-import Doctor.Calendar.CalendarDayStatus;
 import Doctor.DoctorPassword.*;
-import daos.DoctorCalendarDao;
+import daos.CalendarDao;
 import daos.DoctorDao;
 
 public class Doctor extends User 
@@ -54,6 +55,12 @@ public class Doctor extends User
     {
         DoctorAppointmentManager appointmentManager= new DoctorAppointmentManager(getHospitalId(), actionType);
         DoctorAppointmentView appointmentView= new DoctorAppointmentView(appointmentManager);
+    }
+
+    //MANAGE SCHEDULE
+    public void ManangeSchedule()
+    {
+        doctorCalendar.manageCalendar();
     }
     
     public void logout()

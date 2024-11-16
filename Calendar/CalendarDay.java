@@ -1,4 +1,4 @@
-package Doctor.Calendar;
+package Calendar;
 
 public class CalendarDay 
 {
