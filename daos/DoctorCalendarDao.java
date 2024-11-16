@@ -33,7 +33,7 @@ public class DoctorCalendarDao
         File calendarDir = new File(DOCTORCALENDARDB_PATH);
         if (calendarDir.exists() && calendarDir.isDirectory()) 
         {
-            File[] files = calendarDir.listFiles(name -> name.equals(ID + ".csv"));
+            File[] files = calendarDir.listFiles(name -> name.equals(ID + "_Cal.csv"));
             this.doctorCalendarFile = files[0]; //ASSIGN MATCHING FILE
     
         }

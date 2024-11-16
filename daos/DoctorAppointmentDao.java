@@ -31,7 +31,7 @@ public class DoctorAppointmentDao
         File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
         if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) 
         {
-            File[] files = appointmentSlotsDir.listFiles(name -> name.equals(ID + ".csv"));
+            File[] files = appointmentSlotsDir.listFiles(name -> name.equals(ID + "_appSlot.csv"));
             this.doctorAppointmentSlotsFile = files[0]; //ASSIGN MATCHING FILE
     
         }

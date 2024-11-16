@@ -64,10 +64,17 @@ public class DoctorAppointmentView
         return month;
     }
 
+    //VIEW FOR CHOOSING DAY TO DISPLAY
+    
+
 
     // VIEW UPCOMING CONFIRMED APPOINTMENTS
     public void viewUpcomingAppointments(DoctorAppointmentManager appointmentManager) 
     {
+        System.out.println("Do you want to view upcoming appointments in a day(1) or month(2)?");
+        //CODE IMPLEMENTATION FOR READING USER INPUT AND VALIDATING IT AND CALLING EITHER ViewChooseMonth() or ViewChooseDay()
+
+        //CHANGE BELOW CODE TO FACTOR IN CHANGES
         int month = ViewChooseMonth();
 
         // Filter confirmed appointments by the selected month
