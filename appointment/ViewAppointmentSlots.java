@@ -1,14 +1,12 @@
 package appointment;
 
 public class ViewAppointmentSlots {
-    private DailyAppointmentSlots dailySlots; // A reference to the daily slots container
+    private DailyAppointmentSlots dailySlots;   // A reference to the daily slots container
 
-    // Constructor
     public ViewAppointmentSlots(DailyAppointmentSlots dailySlots) {
-        this.dailySlots = dailySlots; // Link to the day's appointment slots
+        this.dailySlots = dailySlots;           // Link to the day's appointment slots
     }
 
-    // Method to view all slots
     public void viewAllSlots() {
         System.out.println("=============================================================");
         System.out.println("| Viewing Appointment Slots for Date: " + dailySlots.getDate());
@@ -16,16 +14,15 @@ public class ViewAppointmentSlots {
         System.out.println("| Hourly Slots:");
         for (DailyAppointmentSlots.HourlySlot slot : dailySlots.getHourlySlots()) {
             System.out.print("  - Time: " + slot.getTime() + " | Available: " + slot.isAvailable());
-            if (!slot.isAvailable() && slot.getAppointment() != null) {
-                System.out.print(" | Appointment Details: ");
-                slot.getAppointment().displayAppointment();
-            }
-            System.out.println();
+            // if (!slot.isAvailable() && slot.getAppointment() != null) {
+            //     System.out.print(" | Appointment Details: ");
+            //     slot.getAppointment().displayAppointment();
+            // }
+            // System.out.println();
         }
         System.out.println("=============================================================");
     }
 
-    // Method to view available slots only
     public void viewAvailableSlots() {
         System.out.println("=============================================================");
         System.out.println("| Viewing Available Appointment Slots for Date: " + dailySlots.getDate());
