@@ -1,4 +1,4 @@
-package models;
+package appointment;
 import java.util.UUID;
 
 public class Appointment {
