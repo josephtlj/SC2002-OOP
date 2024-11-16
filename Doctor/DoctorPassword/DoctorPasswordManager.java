@@ -1,6 +1,7 @@
-package Doctor;
+package Doctor.DoctorPassword;
 
 import daos.DoctorDao;
+import Doctor.*;
 
 public class DoctorPasswordManager 
 {

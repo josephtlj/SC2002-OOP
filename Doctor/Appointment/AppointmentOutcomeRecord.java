@@ -1,4 +1,4 @@
-package Doctor;
+package Doctor.Appointment;
 import java.time.LocalDate;
 
 public class AppointmentOutcomeRecord 

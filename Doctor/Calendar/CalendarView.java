@@ -1,9 +1,8 @@
-package Doctor;
+package Doctor.Calendar;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Optional;
 
 public class CalendarView {
@@ -23,7 +22,7 @@ public class CalendarView {
 
         // Start from today if the input month is the current month, otherwise start from the 1st.
         int startDay = isCurrentMonth ? today.getDayOfMonth() : 1;
-        int daysInMonth = calendar.getDaysInMonth(month);
+        int daysInMonth = calendar.getDaysInMonth(month); //how to resolve this?
 
         System.out.println("Date       | Day       | Status");
         System.out.println("---------------------------------");

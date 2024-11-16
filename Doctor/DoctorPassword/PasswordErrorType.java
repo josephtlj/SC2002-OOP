@@ -1,4 +1,4 @@
-package Doctor;
+package Doctor.DoctorPassword;
 
 public enum PasswordErrorType 
 {

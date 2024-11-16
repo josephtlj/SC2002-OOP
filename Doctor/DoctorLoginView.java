@@ -1,11 +1,10 @@
-package DoctorView;
+package Doctor;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import Doctor.Doctor;
+import Doctor.Appointment.DoctorAppointmentActionType;
 import models.Session;
-import models.MedicalRecord;
 
 public class DoctorLoginView 
 {
@@ -20,11 +19,11 @@ public class DoctorLoginView
             }
             else
             {
-                printMenu();
+                printMenu(doctor);
             }
     }
 
-    public void printMenu()
+    public void printMenu(Doctor doctor)
     {
         // FUNCTION EXECUTES TILL USER WANTS TO GO BACK TO HOMEPAGE
         int doctorChoice = 0;
@@ -54,6 +53,8 @@ public class DoctorLoginView
                 doctorChoice = doctorScanner.nextInt();
                 doctorScanner.nextLine();
 
+                DoctorAppointmentActionType actionType;
+
                 switch (doctorChoice) 
                 {
                     
@@ -61,7 +62,20 @@ public class DoctorLoginView
                         System.out.println("Enter full name of patient:");
                         String patientName= doctorScanner.nextLine();
 
+                    case 4:
+                        actionType= DoctorAppointmentActionType.SET_AVAILABILITY;
+                        doctor.ManageAppointments(actionType);
+                        break;
 
+                    case 5:
+                        actionType= DoctorAppointmentActionType.ACCEPT_OR_DECLINE;
+                        doctor.ManageAppointments(actionType);
+                        break;
+
+                    case 6:
+                        actionType= DoctorAppointmentActionType.VIEW;
+                        doctor.ManageAppointments(actionType);
+                        break;
                     
                     
                     case 8:

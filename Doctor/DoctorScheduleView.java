@@ -3,8 +3,6 @@ package Doctor;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import models.Session;
-
 public class DoctorScheduleView 
 {
     //ATTRIBUTES

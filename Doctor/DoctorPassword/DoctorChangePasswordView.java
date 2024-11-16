@@ -1,6 +1,5 @@
-package DoctorView;
+package Doctor.DoctorPassword;
 
-import Doctor.*;
 import models.Session;
 import java.util.Scanner;
 
