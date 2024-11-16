@@ -1,0 +1,77 @@
+package src.views;
+
+import java.util.Scanner;
+
+import src.controllers.UserController;
+
+public class UserView {
+    private final UserController userController;
+    private final Scanner scanner = new Scanner(System.in);
+
+    public UserView(UserController userController) {
+        this.userController = userController;
+    }
+
+    public void showWelcomeMessage() {
+        System.out.println("""
+                =============================================================
+                |                      Welcome To The                       |
+                |             Hospital Management System (HMS)!             |
+                =============================================================
+                """);
+    }
+
+    public int showInitialMenu() {
+        while (true) {
+            try {
+                System.out.println("""
+                        (1) Login
+                        (2) Exit Program
+                        """);
+                System.out.print("Enter your choice: ");
+                int choice = Integer.parseInt(scanner.nextLine());
+
+                // Validate if the choice is either 1 or 2
+                if (choice == 1 || choice == 2) {
+                    return choice; // Valid input, return the choice
+                } else {
+                    System.out.println("Invalid choice. Please enter 1 for Login or 2 to Exit.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
+    }
+
+    public void showFarewellMessage() {
+        System.out.println("""
+                =====================================================================
+                |     Thank you for using the Hospital Management System (HMS)!     |
+                =====================================================================
+                    """);
+    }
+
+    public void userLogin() {
+        boolean loginStatus = false;
+        String hospitalId;
+        String password;
+
+        while (!loginStatus) {
+            try {
+                System.out.print("Enter hospital ID: ");
+                hospitalId = scanner.nextLine();
+                System.out.print("Enter password: ");
+                password = scanner.nextLine();
+                loginStatus = userController.handleLogin(hospitalId, password);
+                if (!loginStatus) {
+                    System.out.println("Login failed. Please try again.\n");
+                }
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred: " + e.getMessage());
+            }
+        }
+
+        System.out.println("Login successful!");
+
+    }
+}
