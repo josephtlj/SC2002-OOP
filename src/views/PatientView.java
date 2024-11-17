@@ -116,6 +116,9 @@ public class PatientView {
 
             int patientChoice = 99999;
             while (patientChoice != 4) {
+
+                showMedicalRecord();
+
                 System.out.println("""
                         =============================================================
                         |             Hospital Management System (HMS)!             |
