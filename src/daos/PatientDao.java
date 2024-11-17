@@ -30,7 +30,7 @@ public class PatientDao implements PatientDaoInterface {
     }
 
     @Override
-    public Patient getPatientByHospitalId(String userHospitalId) {
+    public Patient getPatientByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(PATIENTDB_PATH))) {
             // SKIP HEADER ROW
             br.readLine();
@@ -38,7 +38,7 @@ public class PatientDao implements PatientDaoInterface {
             String line;
             while ((line = br.readLine()) != null) {
                 Patient patient = parsePatient(line);
-                if (patient != null && patient.getHospitalId().equals(userHospitalId)) {
+                if (patient != null && patient.getHospitalId().equals(hospitalId)) {
                     return patient;
                 }
             }

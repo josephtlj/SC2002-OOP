@@ -5,6 +5,7 @@ import src.models.User;
 import src.interfaces.UserServiceInterface;
 import src.interfaces.UserDaoInterface;
 import src.interfaces.PatientDaoInterface;
+import src.interfaces.PharmacistDaoInterface;
 
 import java.util.Base64;
 import java.util.Objects;
@@ -15,10 +16,12 @@ import javax.crypto.spec.PBEKeySpec;
 public class UserService implements UserServiceInterface {
     private final UserDaoInterface userDao;
     private final PatientDaoInterface patientDao;
+    private final PharmacistDaoInterface pharmacistDao;
 
-    public UserService(UserDaoInterface userDao, PatientDaoInterface patientDao) {
+    public UserService(UserDaoInterface userDao, PatientDaoInterface patientDao, PharmacistDaoInterface pharmacistDao) {
         this.userDao = userDao;
         this.patientDao = patientDao;
+        this.pharmacistDao = pharmacistDao;
     }
 
     @Override
@@ -32,7 +35,8 @@ public class UserService implements UserServiceInterface {
             case "PA":
                 user = patientDao.getPatientByHospitalId(hospitalId);
                 break;
-
+            case "PH":
+                user = pharmacistDao.getPharmacistByHospitalId(hospitalId);
             default:
                 break;
         }

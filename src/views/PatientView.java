@@ -137,19 +137,24 @@ public class PatientView {
                 if (patientChoice >= 1 && patientChoice <= 4) {
                     switch (patientChoice) {
                         case 1:
-                            System.out.println("""
-                                    =============================================================
-                                    |             Hospital Management System (HMS)!             |
-                                    |                      Update Password                      |
-                                    =============================================================
-                                    """);
+                            boolean updatePassword = false;
 
-                            System.out.println("Enter your new password:");
-                            String newPassword = scanner.nextLine();
-                            System.out.println("Confirm your new password:");
-                            String confirmPassword = scanner.nextLine();
+                            while (!updatePassword) {
+                                System.out.println("""
+                                        =============================================================
+                                        |             Hospital Management System (HMS)!             |
+                                        |                      Update Password                      |
+                                        =============================================================
+                                        """);
 
-                            patientController.handleUpdatePassword(patientHospitalId, newPassword, confirmPassword);
+                                System.out.println("Enter your new password:");
+                                String newPassword = scanner.nextLine();
+                                System.out.println("Confirm your new password:");
+                                String confirmPassword = scanner.nextLine();
+
+                                updatePassword = patientController.handleUpdatePassword(patientHospitalId, newPassword,
+                                        confirmPassword);
+                            }
 
                             System.out.println("""
                                     =============================================================
@@ -159,16 +164,19 @@ public class PatientView {
                                     """);
                             break;
                         case 2:
-                            System.out.println("""
-                                    =============================================================
-                                    |             Hospital Management System (HMS)!             |
-                                    |                   Update Email Address                    |
-                                    =============================================================
-                                    """);
-                            System.out.println("Enter your new email address:");
-                            String newEmailAddress = scanner.nextLine();
+                            boolean updateEmailAddress = false;
+                            while (!updateEmailAddress) {
+                                System.out.println("""
+                                        =============================================================
+                                        |             Hospital Management System (HMS)!             |
+                                        |                   Update Email Address                    |
+                                        =============================================================
+                                        """);
+                                System.out.println("Enter your new email address:");
+                                String newEmailAddress = scanner.nextLine();
 
-                            patientController.handleUpdateEmailAddress(patientHospitalId, newEmailAddress);
+                                patientController.handleUpdateEmailAddress(patientHospitalId, newEmailAddress);
+                            }
 
                             System.out.println("""
                                     =============================================================
@@ -178,16 +186,19 @@ public class PatientView {
                                     """);
                             break;
                         case 3:
-                            System.out.println("""
-                                    =============================================================
-                                    |             Hospital Management System (HMS)!             |
-                                    |                       Update Phone Number                        |
-                                    =============================================================
-                                    """);
-                            System.out.println("Enter your new phone number:");
-                            String newPhoneNumber = scanner.nextLine();
+                            boolean updatePhoneNumber = false;
+                            while (!updatePhoneNumber) {
+                                System.out.println("""
+                                        =============================================================
+                                        |             Hospital Management System (HMS)!             |
+                                        |                       Update Phone Number                        |
+                                        =============================================================
+                                        """);
+                                System.out.println("Enter your new phone number:");
+                                String newPhoneNumber = scanner.nextLine();
 
-                            patientController.handleUpdatePhoneNumber(patientHospitalId, newPhoneNumber);
+                                patientController.handleUpdatePhoneNumber(patientHospitalId, newPhoneNumber);
+                            }
 
                             System.out.println("""
                                     =============================================================
