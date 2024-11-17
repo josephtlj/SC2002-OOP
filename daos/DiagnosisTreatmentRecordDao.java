@@ -224,4 +224,80 @@ public class DiagnosisTreatmentRecordDao
 
     return records;
     }
+
+    //ADD NEW DIAGNOSIS TREATMENT RECORD
+    //ADD NEW DIAGNOSIS TREATMENT RECORD
+    public void addDiagnosisTreatmentRecord(DiagnosisTreatmentRecord treatRec) {
+    File tempFile = new File(diagnosisTreatmentRecordFile.getParent(), "temp.csv");
+
+    try (
+        BufferedReader br = new BufferedReader(new FileReader(diagnosisTreatmentRecordFile));
+        PrintWriter pw = new PrintWriter(tempFile)
+    ) {
+        // Read the header and write it to the temp file
+        String header = br.readLine();
+        pw.println(header);
+
+        // Collect all existing rows and add the new record
+        List<String> allRecords = new ArrayList<>();
+        String line;
+        while ((line = br.readLine()) != null) {
+            allRecords.add(line);
+        }
+
+        // Format the new DiagnosisTreatmentRecord as a CSV row
+        Appointment appointment = treatRec.getAppointment();
+        String newRecord = String.join(",",
+            appointment.getDoctorID(),
+            appointment.getAppointmentDate(),
+            appointment.getStartTime() + " - " + appointment.getEndTime(),
+            treatRec.getDiagnosis() != null ? treatRec.getDiagnosis() : "NA",
+            treatRec.getPrescription() != null ? treatRec.getPrescription() : "NA",
+            treatRec.getTreatmentPlan() != null ? treatRec.getTreatmentPlan() : "NA"
+        );
+
+        // Add the new record to the list
+        allRecords.add(newRecord);
+
+        // Sort all records in ascending order based on date and time
+        allRecords.sort((record1, record2) -> {
+            String[] parts1 = record1.split(",");
+            String[] parts2 = record2.split(",");
+            
+            LocalDate date1 = LocalDate.parse(parts1[1].trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            LocalDate date2 = LocalDate.parse(parts2[1].trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+            if (!date1.equals(date2)) {
+                return date1.compareTo(date2); // Compare by date
+            }
+
+            // Compare by start time if dates are the same
+            String[] timeSlot1 = parts1[2].split(" - ");
+            String[] timeSlot2 = parts2[2].split(" - ");
+            LocalTime startTime1 = LocalTime.parse(timeSlot1[0].trim(), DateTimeFormatter.ofPattern("HH:mm"));
+            LocalTime startTime2 = LocalTime.parse(timeSlot2[0].trim(), DateTimeFormatter.ofPattern("HH:mm"));
+
+            return startTime1.compareTo(startTime2);
+        });
+
+        // Write sorted records to the temp file
+        for (String record : allRecords) {
+            pw.println(record);
+        }
+
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    // Replace the original file with the updated file
+    if (!diagnosisTreatmentRecordFile.delete()) {
+        System.err.println("Failed to delete the original file.");
+        return;
+    }
+
+    if (!tempFile.renameTo(diagnosisTreatmentRecordFile)) {
+        System.err.println("Failed to rename the temporary file.");
+    }
+}
+
 }

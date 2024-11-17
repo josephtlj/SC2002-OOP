@@ -10,7 +10,6 @@ import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordView;
 import Doctor.DoctorPassword.*;
 import daos.DiagnosisTreatmentRecordDao;
 import daos.DoctorDao;
-import daos.MedicalRecordDao;
 import Doctor.MedicalRecord.*;
 
 public class Doctor extends User
@@ -60,7 +59,8 @@ public class Doctor extends User
     //MANAGE APPOINTMENTS
     public void ManageAppointments(DoctorAppointmentActionType actionType)
     {
-        DoctorAppointmentManager appointmentManager= new DoctorAppointmentManager(getHospitalId(), actionType);
+        DiagnosisTreatmentRecordManager treatmentRecordManager= new DiagnosisTreatmentRecordManager(treatmentRecordDao);
+        DoctorAppointmentManager appointmentManager= new DoctorAppointmentManager(getHospitalId(), actionType,treatmentRecordManager);
         DoctorAppointmentView appointmentView= new DoctorAppointmentView(appointmentManager);
     }
 

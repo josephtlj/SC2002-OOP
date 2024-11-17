@@ -41,10 +41,14 @@ public class DoctorAppointmentView
         System.out.println("Please view pending appointments before accepting or declining them.");
         viewPendingAppointments();
 
-        //INPUT VALIDATION
-        //REDIRECT TO CORRECT METHOD AFTER THAT
+        
+        int doctorChoice = 0;
 
-        System.out.println("""
+        do
+        {
+            try
+            {
+                System.out.println("""
                         =============================================================
                         |             Hospital Management System (HMS)!             |
                         =============================================================
@@ -54,76 +58,186 @@ public class DoctorAppointmentView
                         (3) Go back to previous page
                         """);
 
+                // RETRIEVE USER'S CHOICE
+                System.out.println("Your Choice: ");
+                doctorChoice = doctorScanner.nextInt();
+                doctorScanner.nextLine();
+
+                switch (doctorChoice) 
+                {
+                    
+                    case 1:
+                        viewAcceptAppointment();
+                        break;
+
+                    case 2:
+                        viewDeclineAppointment();
+                        break;
+
+                    case 3:
+                        return;
+
+                    default:
+                        System.out.println("Please enter a valid choice!\n");
+                        break;
+                }
+
+            } 
+            catch (InputMismatchException inputMismatchException) 
+            {
+                System.out.println("Please enter a valid integer only!\n");
+                doctorScanner.nextLine();
+            }
+
+        } while (doctorChoice != 9);
+
     }
 
     //VIEW PENDING ASSIGNMENTS
     public void viewPendingAppointments()
     {
-        System.out.println("Do you want to view upcoming appointments in a day(1) or month(2)?");
-        //CODE IMPLEMENTATION FOR READING USER INPUT AND VALIDATING IT AND CALLING EITHER ViewChooseMonth() or ViewChooseDay()
-
-        
-        int month = ViewChooseMonth();
-
-        // Filter confirmed appointments by the selected month
-        List<Appointment> pendingAppointments = this.appointmentManager.getPendingAppointments();
-        List<Appointment> filteredAppointments = new ArrayList<>();
-
-        for (Appointment appointment : pendingAppointments) 
+        int viewBy= viewByDayOrMonth();
+        List<Appointment> appointments;
+        if(viewBy==1)
         {
-            if (appointment.getAppointmentDate().getMonthValue() == month) 
-            {
-                filteredAppointments.add(appointment);
+            appointments=viewPendingAppointmentsByDay();
+        }
+        else
+        {
+            appointments=viewPendingAppointmentsByMonth();
+        }
+
+        if (appointments.isEmpty()) 
+        {
+            System.out.println("No pending appointments found for the selected date.");
+        } 
+        else 
+        {
+            // Print header
+            String headerFormat = "| %-15s | %-12s |\n";
+            String rowFormat = "| %-15s | %-12s |\n";
+            System.out.println("+-----------------+--------------+");
+            System.out.printf(headerFormat, "Time Slot", "Patient ID");
+            System.out.println("+-----------------+--------------+");
+    
+            // Print each appointment
+            for (Appointment appointment : appointments) {
+                String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
+                                + appointment.getAppointmentTimeSlot().getEndTime();
+                String patientID = appointment.getPatientID();
+                System.out.printf(rowFormat, timeSlot, patientID);
             }
-        }
-
-        // Sort appointments by date and time for better organization
-        filteredAppointments.sort(Comparator.comparing(Appointment::getAppointmentDate)
-                                            .thenComparing(a -> a.getAppointmentTimeSlot().getStartTime()));
-
-        // Print header
-        String headerFormat = "| %-12s | %-15s | %-12s |\n";
-        String rowFormat = "| %-12s | %-15s | %-12s |\n";
-
-        System.out.println("+--------------+-----------------+--------------+");
-        System.out.printf(headerFormat, "Date", "Time Slot", "Patient ID");
-        System.out.println("+--------------+-----------------+--------------+");
-
-        // Print each appointment
-        for (Appointment appointment : filteredAppointments) 
-        {
-            LocalDate date = appointment.getAppointmentDate();
-            String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
-                            + appointment.getAppointmentTimeSlot().getEndTime();
-            String patientID = appointment.getPatientID();
-
-            System.out.printf(rowFormat, date, timeSlot, patientID);
-        }
-
-        // Footer line
-        System.out.println("+--------------+-----------------+--------------+");
-
-        if (filteredAppointments.isEmpty()) 
-        {
-            System.out.println("No pending appointments found for the selected month.");
+    
+            // Footer line
+            System.out.println("+-----------------+--------------+");
         }
     }
+
+    //CHOOSE TO VIEW DAY OR MONTH
+    public int viewByDayOrMonth()
+    {
+        int choice=-1;
+        do
+        {
+            try
+            {
+                System.out.println("Do you want to view by (1) Date or (2) Month? ");
+                choice= doctorScanner.nextInt();
+                doctorScanner.nextLine();
+
+                switch(choice)
+                {
+                    case 1:
+                        return 1;
+                    case 2:
+                        return 2;
+                    default:
+                        System.out.println("Please enter a valid choice!");
+                        break;
+                }
+            }
+            catch (InputMismatchException inputMismatchException) 
+            {
+                System.out.println("Please enter a valid integer only!\n");
+                doctorScanner.nextLine();
+            }
+        }while(choice!=3);
+        return 0; //never reach here
+    }
+
+    //VIEW PENDING APPOINTMENTS BY DAY
+    public List<Appointment> viewPendingAppointmentsByDay()
+    {
+        boolean validInput= false;
+        LocalDate date=null;
+        do
+        {
+            try
+            {
+                System.out.print("Enter the date (dd/MM/yyyy): ");
+                String dateInput = doctorScanner.nextLine().trim();
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                date = LocalDate.parse(dateInput, dateFormatter);
+                validInput=true;
+            }
+            catch (Exception e) 
+            {
+                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+                validInput=false;
+            }
+        }while(!validInput);
+
+        List<Appointment> appointments= appointmentManager.getPendingAppointments(date);
+        return appointments;
+    }
+
+    //VIEW PENDING APPOINTMENTS BY MONTH
+    public List<Appointment> viewPendingAppointmentsByMonth()
+    {
+        boolean validInput= false;
+        int month=-1;
+        do
+        {
+            try
+            {
+                System.out.print("Enter the month(1 for Jan and 12 for Dec): ");
+                month= doctorScanner.nextInt();
+                doctorScanner.nextLine();
+                validInput=true;
+            }
+            catch (Exception e) 
+            {
+                System.out.println("Invalid input for month.");
+                validInput=false;
+            }
+        }while(!validInput);
+
+        List<Appointment> appointments= appointmentManager.getPendingAppointments(month);
+        return appointments;
+    }
+
+
 
     public void viewAcceptAppointment() {
         System.out.println("To accept an appointment, please provide the following details:");
     
         // Get and validate the appointment date
         LocalDate date = null;
-        while (date == null) {
-            System.out.print("Enter the appointment date (dd/MM/yyyy): ");
-            String dateInput = doctorScanner.nextLine().trim();
+        boolean validInput=false;
+        do{
             try {
+                System.out.print("Enter the appointment date (dd/MM/yyyy):");
+                String dateInput = doctorScanner.nextLine().trim();
                 DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 date = LocalDate.parse(dateInput, dateFormatter);
+                validInput=true;
             } catch (Exception e) {
                 System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+                validInput=false;
             }
-        }
+        }while(!validInput);
+        final LocalDate Date=date;
+
     
         // Get and validate the start time
         String startTime = null;
@@ -137,6 +251,7 @@ public class DoctorAppointmentView
                 System.out.println("Invalid time format. Please use HH:mm.");
             }
         }
+        final String StartTime=startTime;
     
         // Get and validate the end time
         String endTime = null;
@@ -150,6 +265,7 @@ public class DoctorAppointmentView
                 System.out.println("Invalid time format. Please use HH:mm.");
             }
         }
+        final String EndTime=endTime;
     
         // Get the patient ID
         System.out.print("Enter the patient ID: ");
@@ -159,9 +275,9 @@ public class DoctorAppointmentView
         List<Appointment> pendingAppointments = this.appointmentManager.getPendingAppointments();
     
         Optional<Appointment> appointmentOptional = pendingAppointments.stream()
-                .filter(a -> a.getAppointmentDate().equals(date) // Ensure this matches
-                        && a.getAppointmentTimeSlot().getStartTime().equals(startTime)
-                        && a.getAppointmentTimeSlot().getEndTime().equals(endTime)
+                .filter(a -> a.getAppointmentDate().equals(Date) 
+                        && a.getAppointmentTimeSlot().getStartTime().equals(StartTime)
+                        && a.getAppointmentTimeSlot().getEndTime().equals(EndTime)
                         && a.getPatientID().equals(patientID))
                 .findFirst();
     
@@ -186,65 +302,76 @@ public class DoctorAppointmentView
         System.out.println("To decline an appointment, please provide the following details:");
 
         // Get and validate the appointment date
-        System.out.print("Enter the appointment date (dd/MM/yyyy): ");
-        String dateInput = doctorScanner.nextLine().trim();
-        LocalDate date;
-        try {
-            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            date = LocalDate.parse(dateInput, dateFormatter);
-        } catch (Exception e) {
-            System.out.println("Invalid date format. Please try again.");
+        LocalDate date = null;
+        boolean validInput=false;
+        do{
+            try {
+                System.out.print("Enter the appointment date (dd/MM/yyyy):");
+                String dateInput = doctorScanner.nextLine().trim();
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                date = LocalDate.parse(dateInput, dateFormatter);
+                validInput=true;
+            } catch (Exception e) {
+                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+                validInput=false;
+            }
+        }while(!validInput);
+        final LocalDate Date=date;
+
+    
+        // Get and validate the start time
+        String startTime = null;
+        while (startTime == null) {
+            System.out.print("Enter the time slot start time (HH:mm): ");
+            String startTimeInput = doctorScanner.nextLine().trim();
+            try {
+                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+                startTime = timeFormatter.format(timeFormatter.parse(startTimeInput));
+            } catch (Exception e) {
+                System.out.println("Invalid time format. Please use HH:mm.");
+            }
+        }
+        final String StartTime=startTime;
+    
+        // Get and validate the end time
+        String endTime = null;
+        while (endTime == null) {
+            System.out.print("Enter the time slot end time (HH:mm): ");
+            String endTimeInput = doctorScanner.nextLine().trim();
+            try {
+                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+                endTime = timeFormatter.format(timeFormatter.parse(endTimeInput));
+            } catch (Exception e) {
+                System.out.println("Invalid time format. Please use HH:mm.");
+            }
+        }
+        final String EndTime=endTime;
+    
+        // Get the patient ID
+        System.out.print("Enter the patient ID: ");
+        String patientID = doctorScanner.nextLine().trim();
+    
+        // Validate that the appointment exists in pending appointments
+        List<Appointment> pendingAppointments = this.appointmentManager.getPendingAppointments();
+    
+        Optional<Appointment> appointmentOptional = pendingAppointments.stream()
+                .filter(a -> a.getAppointmentDate().equals(Date) 
+                        && a.getAppointmentTimeSlot().getStartTime().equals(StartTime)
+                        && a.getAppointmentTimeSlot().getEndTime().equals(EndTime)
+                        && a.getPatientID().equals(patientID))
+                .findFirst();
+    
+        if (appointmentOptional.isEmpty()) {
+            System.out.println("No matching appointment found in pending appointments. Please check your input.");
             return;
         }
 
-    // Get and validate the start time
-    System.out.print("Enter the time slot start time (HH:mm): ");
-    String startTimeInput = doctorScanner.nextLine().trim();
-    String startTime;
-    try {
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        startTime = timeFormatter.format(timeFormatter.parse(startTimeInput));
-    } catch (Exception e) {
-        System.out.println("Invalid time format for start time. Please use HH:mm format.");
-        return;
-    }
+        // Update the appointment status
+        Appointment appointment = appointmentOptional.get();
+        appointment.setAppointmentStatus(AppointmentStatus.DECLINED);
+        appointmentManager.updateAppointmentStatus(appointment);
 
-    // Get and validate the end time
-    System.out.print("Enter the time slot end time (HH:mm): ");
-    String endTimeInput = doctorScanner.nextLine().trim();
-    String endTime;
-    try {
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        endTime = timeFormatter.format(timeFormatter.parse(endTimeInput));
-    } catch (Exception e) {
-        System.out.println("Invalid time format for end time. Please use HH:mm format.");
-        return;
-    }
-
-    // Get the patient ID
-    System.out.print("Enter the patient ID: ");
-    String patientID = doctorScanner.nextLine().trim();
-
-    // Validate that the appointment exists in pending appointments
-    List<Appointment> pendingAppointments = this.appointmentManager.getPendingAppointments();
-    Optional<Appointment> appointmentOptional = pendingAppointments.stream()
-            .filter(a -> a.getAppointmentDate().equals(date)
-                    && a.getAppointmentTimeSlot().getStartTime().equals(startTime)
-                    && a.getAppointmentTimeSlot().getEndTime().equals(endTime)
-                    && a.getPatientID().equals(patientID))
-            .findFirst();
-
-    if (appointmentOptional.isEmpty()) {
-        System.out.println("No matching appointment found in pending appointments. Please check your input.");
-        return;
-    }
-
-    // Update the appointment status
-    Appointment appointment = appointmentOptional.get();
-    appointment.setAppointmentStatus(AppointmentStatus.DECLINED);
-    appointmentManager.updateAppointmentStatus(appointment);
-
-    System.out.println("Appointment successfully declined.");
+        System.out.println("Appointment successfully declined.");
     }
 
     // VIEW FOR CHOOSING MONTH TO DISPLAY
@@ -279,7 +406,6 @@ public class DoctorAppointmentView
         return month;
     }
 
-    //VIEW FOR CHOOSING DAY TO DISPLAY
     
 
 

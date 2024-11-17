@@ -1,6 +1,8 @@
 package Doctor.DiagnosisTreatmentRecord;
 
 import daos.DiagnosisTreatmentRecordDao;
+import models.DiagnosisTreatmentRecord;
+
 import java.time.*;
 
 public class DiagnosisTreatmentRecordManager 
@@ -17,6 +19,12 @@ public class DiagnosisTreatmentRecordManager
     //METHODS
 
     //EDIT DIAGNOSIS TREATMENT RECORD
+
+    //ADD DIAGNOSIS TREATMENT RECORD
+    public void addDiagnosisTreatmentRecord(DiagnosisTreatmentRecord treatRec)
+    {
+        treatRecDao.addDiagnosisTreatmentRecord(treatRec);
+    }
 
     //EDIT DIAGNOSIS
     public void editDiagnosis(String diagnosis)
