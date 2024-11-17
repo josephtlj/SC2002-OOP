@@ -1,31 +1,34 @@
 package appointment;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class PatientAppointmentView {
     private Scanner patientScanner = new Scanner(System.in);
+    PatientAppointmentManager appointmentManager;
 
     public PatientAppointmentView(PatientAppointmentManager appointmentManager)
     {
         PatientAppointmentActionType actionType= appointmentManager.actionType;
+        this.appointmentManager= appointmentManager;
 
         switch(actionType)
         {
             case VIEW:
-                viewAvailableAppointments(appointmentManager);
+                viewAvailableAppointments(); // with available doctors
                 break;
             case SCHEDULE:
-                scheduleAppointments(appointmentManager);
+                scheduleAppointments();
                 break;
             case RESCHEDULE:
-                rescheduleAppointments(appointmentManager);
+                rescheduleAppointments();
                 break;
             case CANCEL:
-                cancelAppointments(appointmentManager);
+                cancelAppointments();
                 break;
             case VIEW_SCHEDULED:
-                viewScheduledAppointments(appointmentManager);
+                viewScheduledAppointments();
                 break;
             default:
                 break;
@@ -105,71 +108,113 @@ public class PatientAppointmentView {
         return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
-    public void viewAvailableAppointments(PatientAppointmentManager appointmentManager) 
+    public int viewByDayOrMonth()
     {
-        System.out.println("Do you want to view available appointments in a day(1) or month(2)?");
-        //CODE IMPLEMENTATION FOR READING USER INPUT AND VALIDATING IT AND CALLING EITHER ViewChooseMonth() or ViewChooseDay()
-
-        //CHANGE BELOW CODE TO FACTOR IN CHANGES
-        int month = ViewChooseMonth();
-
-        // Filter available appointments by the selected month
-        List<Appointment> availableAppointments = appointmentManager.getAvailableAppointments();
-        List<Appointment> filteredAppointments = new ArrayList<>();
-
-        for (Appointment appointment : availableAppointments) 
+        int choice=-1;
+        do
         {
-            if (appointment.getAppointmentAvailability().getMonthValue() == month) 
+            try
             {
-                filteredAppointments.add(appointment);
+                System.out.println("Do you want to view by (1) Date or (2) Month? ");
+                choice= patientScanner.nextInt();
+                patientScanner.nextLine();
+
+                switch(choice)
+                {
+                    case 1:
+                        return 1;
+                    case 2:
+                        return 2;
+                    default:
+                        System.out.println("Please enter a valid choice!");
+                        break;
+                }
             }
-        }
+            catch (InputMismatchException inputMismatchException) 
+            {
+                System.out.println("Please enter a valid integer only!\n");
+                patientScanner.nextLine();
+            }
+        }while(choice!=3);
+        return 0; //never reach here
+    }
 
-        // Sort appointments by date and time for better organization
-        filteredAppointments.sort(Comparator.comparing(Appointment::getAppointmentDate)
-                                            .thenComparing(a -> a.getAppointmentTimeSlot().getStartTime()));
-
-        // Print header
-        String headerFormat = "| %-12s | %-15s | %-12s |\n";
-        String rowFormat = "| %-12s | %-15s | %-12s |\n";
-
-        System.out.println("+--------------+-----------------+--------------+");
-        System.out.printf(headerFormat, "Date", "Time Slot", "Patient ID");
-        System.out.println("+--------------+-----------------+--------------+");
-
-        // Print each appointment
-        for (Appointment appointment : filteredAppointments) 
+    public List<Appointment> viewAvailableAppointmentsByDay()
+    {
+        boolean validInput= false;
+        LocalDate date=null;
+        do
         {
-            LocalDate date = appointment.getAppointmentDate();
-            String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
-                            + appointment.getAppointmentTimeSlot().getEndTime();
-            String patientID = appointment.getPatientID();
+            try
+            {
+                System.out.print("Enter the date (dd/MM/yyyy): ");
+                String dateInput = patientScanner.nextLine().trim();
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                date = LocalDate.parse(dateInput, dateFormatter);
+                validInput=true;
+            }
+            catch (Exception e) 
+            {
+                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
+                validInput=false;
+            }
+        }while(!validInput);
 
-            System.out.printf(rowFormat, date, timeSlot, patientID);
-        }
+        List<Appointment> appointments= appointmentManager.getAvailableAppointments(date);
+        return appointments;
+    }
 
-        // Footer line
-        System.out.println("+--------------+-----------------+--------------+");
-
-        if (filteredAppointments.isEmpty()) 
+    public List<Appointment> viewAvailableAppointmentsByMonth()
+    {
+        boolean validInput= false;
+        int month=-1;
+        do
         {
-            System.out.println("No confirmed appointments found for the selected month.");
-        }
+            try
+            {
+                System.out.print("Enter the month(1 for Jan and 12 for Dec): ");
+                month= patientScanner.nextInt();
+                patientScanner.nextLine();
+                validInput=true;
+            }
+            catch (Exception e) 
+            {
+                System.out.println("Invalid input for month.");
+                validInput=false;
+            }
+        }while(!validInput);
+
+        List<Appointment> appointments= appointmentManager.getAvailableAppointments(month);
+        return appointments;
     }
 
-    public void scheduleAppointment(PatientAppointmentManager appointmentManager){
+
+
+
+
+
+
+
+
+
+    public void viewAvailableAppointments() 
+    {
+        
+    }
+
+    public void scheduleAppointment(){
 
     }
 
-    public void rescheduleAppointment(PatientAppointmentManager appointmentManager){
+    public void rescheduleAppointment(){
 
     }
 
-    public void cancelAppointment(PatientAppointmentManager appointmentManager){
+    public void cancelAppointment(){
 
     }
 
-    public void viewScheduledAppointment(PatientAppointmentManager appointmentManager){
+    public void viewScheduledAppointment(){
 
     }
 }

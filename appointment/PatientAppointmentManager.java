@@ -11,12 +11,12 @@ public class PatientAppointmentManager{
     public PatientAppointmentManager(String ID, PatientAppointmentActionType actionType){
         this.patientAppointmentSlotsDAO = new PatientAppointmentDAO(ID);
         this.actionType = actionType;
-        this.appointments = getALLAppointments(ID);
+        this.appointments = getAllAppointments(ID);
     }
 
     public List<Appointment> getAllAppointments(String ID)
     {
-        return patientAppointmentSlotsDao.getAllAppointments(ID);
+        return patientAppointmentSlotsDAO.getAllAppointments(ID);
     }
 
     public List<Appointment> getAvailableAppointments()
@@ -34,7 +34,7 @@ public class PatientAppointmentManager{
     }
 
     
-
+    
 
     public boolean updateAppointmentAvailability(LocalDate date, String availability)
     {

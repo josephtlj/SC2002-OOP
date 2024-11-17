@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import appointment.AppointmentSlot;
+
 public class Patient {
     private UUID patientId;                       // Unique ID for each patient
     private String name;

@@ -13,9 +13,8 @@ public class PatientAppointmentDAO {
     private static String PATIENTAPPOINTMENTSLOTSDB_PATH;
     private File patientAppointmentSlotsFile;
 
-    public PatientAppointmentDAO(String ID) 
+    public PatientAppointmentDAO(String ID) // MAKE SURE TO REDO THE FILE PATH DURING INTEGRATION
     {
-        //LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
         try (InputStream input = new FileInputStream("resources/config.properties")) 
         {
             Properties prop = new Properties();
@@ -38,7 +37,7 @@ public class PatientAppointmentDAO {
 
     }
 
-    public List<Appointment> getAllAppointments(String doctorID) 
+    public List<Appointment> getAllAppointments() 
     {
         List<Appointment> appointments = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile)))
@@ -65,7 +64,7 @@ public class PatientAppointmentDAO {
                     if(appointmentYesNo.equals("Yes"))
                     {
                         //Create a Appointment object and add to the list
-                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime,patientID, doctorID );
+                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID );
                         appointments.add(newAppointment);
                     }
                 }
@@ -82,7 +81,7 @@ public class PatientAppointmentDAO {
     {
         List<String> updatedLines = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) 
+        try (BufferedReader reader = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) // may need to change?
         {
             // Read the header and add it to updatedLines
             String header = reader.readLine();
@@ -215,4 +214,6 @@ public class PatientAppointmentDAO {
             return false;
         }
 }
+
+
 }
