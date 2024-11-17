@@ -31,11 +31,10 @@ public class UserView {
                 System.out.print("Enter your choice: ");
                 int choice = Integer.parseInt(scanner.nextLine());
 
-                // Validate if the choice is either 1 or 2
                 if (choice == 1 || choice == 2) {
-                    return choice; // Valid input, return the choice
+                    return choice;
                 } else {
-                    System.out.println("Invalid choice. Please enter 1 for Login or 2 to Exit.");
+                    System.out.println("Invalid choice. Please enter a choice between 1 and 2.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");

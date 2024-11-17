@@ -5,8 +5,6 @@ import src.models.User;
 public interface UserDaoInterface {
     User getUserByHospitalId(String hospitalId);
 
-    User getPatientByHospitalId(String hospitalId);
-
     void updateUser(User user);
 
     void deleteUser(String hospitalId);
