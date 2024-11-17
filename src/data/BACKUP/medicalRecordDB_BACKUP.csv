@@ -1,11 +1,11 @@
 medicalRecordId,name,dob,gender,phonenumber,emailAddress,bloodType,pastDiagnosisTreatment,hospitalId
-8c49ce65-e409-467c-a21d-ca847c3c9ae4,James Hudson,1985-09-02,MALE,692-806-4334,james.hudson@gmail.com,A+,,PA6fe25d
-6c9f0436-251a-4a03-97ad-dad69884a5ab,Emma Johnson,2003-11-27,FEMALE,488-869-1039,emma.johnson@gmail.com,A-,,PA703270
-02c51449-bd1d-4a57-ab04-7c2c13fc088a,Liam Smith,1972-10-16,MALE,614-236-2429,liam.smith@gmail.com,B+,,PA4d3e2b
-50b18f38-c2d9-4e00-8680-fd75a7f1048b,Olivia Williams,1984-08-05,FEMALE,881-597-1650,olivia.williams@gmail.com,B-,,PA03c629
-808fc338-c335-411a-a9ef-502db09726ea,Noah Brown,2001-07-02,MALE,142-136-8613,noah.brown@gmail.com,AB+,,PA440eab
-896020ab-51c4-4a6e-b7a5-fd7ec34ccdd9,Ava Jones,1977-12-17,FEMALE,181-281-4740,ava.jones@gmail.com,AB-,,PA672bda
-6600432b-18c4-46ed-a6f4-aa5b59f63b74,Sophia Miller,1985-06-06,MALE,406-991-6299,sophia.miller@gmail.com,O+,,PA698316
-d7a8a0ed-8402-4aec-8f0b-29e995564a66,Isabella Davis,2002-01-27,FEMALE,206-345-3176,isabella.davis@gmail.com,O-,,PA7345d6
-a622bc7f-8830-44f3-a7e4-b28b2bf4cc3a,Mason Garcia,1978-10-12,MALE,542-165-5345,mason.garcia@gmail.com,A+,,PA42a038
-12a181e6-eeb0-43d8-a2d4-fc81e305fa48,Mia Martinez,1991-10-26,FEMALE,590-579-1549,mia.martinez@gmail.com,A-,,PA96a4df
+8c49ce65-e409-467c-a21d-ca847c3c9ae4,Aaron Tan,1990-05-15,MALE,91234567,aaron.tan@example.com,A+,null,PA6fe25d
+6c9f0436-251a-4a03-97ad-dad69884a5ab,Beatrice Lim,1985-09-12,FEMALE,92345678,beatrice.lim@example.com,B-,,PA703270
+02c51449-bd1d-4a57-ab04-7c2c13fc088a,Caleb Ong,1977-11-02,MALE,93456789,caleb.ong@example.com,AB+,,PA4d3e2b
+50b18f38-c2d9-4e00-8680-fd75a7f1048b,Diana Ng,2003-08-25,FEMALE,94567890,diana.ng@example.com,O-,,PA03c629
+808fc338-c335-411a-a9ef-502db09726ea,Ethan Lee,1995-02-19,MALE,95678901,ethan.lee@example.com,O+,,PA440eab
+896020ab-51c4-4a6e-b7a5-fd7ec34ccdd9,Fiona Goh,1992-12-11,FEMALE,96789012,fiona.goh@example.com,A-,,PA672bda
+6600432b-18c4-46ed-a6f4-aa5b59f63b74,Gabriel Chua,1988-03-22,MALE,97890123,gabriel.chua@example.com,B+,,PA698316
+d7a8a0ed-8402-4aec-8f0b-29e995564a66,Hannah Yeo,2000-06-05,FEMALE,98901234,hannah.yeo@example.com,AB-,,PA7345d6
+a622bc7f-8830-44f3-a7e4-b28b2bf4cc3a,Isaac Tan,1999-09-15,MALE,99012345,isaac.tan@example.com,A+,,PA42a038
+12a181e6-eeb0-43d8-a2d4-fc81e305fa48,Jasmine Low,1983-07-28,FEMALE,90123456,jasmine.low@example.com,O-,,PA96a4df

@@ -1,15 +1,11 @@
 package src.daos;
 
 import src.models.User;
-import src.models.Patient;
 import src.interfaces.UserDaoInterface;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Base64;
 import java.util.Properties;
 
 public class UserDao implements UserDaoInterface {
