@@ -13,7 +13,7 @@ public class PatientAppointmentDAO {
     private static String PATIENTAPPOINTMENTSLOTSDB_PATH;
     private File patientAppointmentSlotsFile;
 
-    public PatientAppointmentDAO(String ID) // MAKE SURE TO REDO THE FILE PATH DURING INTEGRATION
+    public PatientAppointmentDAO(String ID) // REDO THE FILE PATH DURING INTEGRATION
     {
         try (InputStream input = new FileInputStream("resources/config.properties")) 
         {
