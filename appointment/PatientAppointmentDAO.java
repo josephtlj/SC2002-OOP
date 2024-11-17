@@ -9,46 +9,38 @@ import java.util.List;
 import java.util.Properties;
 
 public class PatientAppointmentDAO {
-    
+
     private static String PATIENTAPPOINTMENTSLOTSDB_PATH;
     private File patientAppointmentSlotsFile;
 
     public PatientAppointmentDAO(String ID) // REDO THE FILE PATH DURING INTEGRATION
     {
-        try (InputStream input = new FileInputStream("resources/config.properties")) 
-        {
+        try (InputStream input = new FileInputStream("resources/config.properties")) {
             Properties prop = new Properties();
             prop.load(input);
             PATIENTAPPOINTMENTSLOTSDB_PATH = prop.getProperty("PATIENTAPPOINTMENTSLOTSDB_PATH", "data/Patient/AppointmentSlots");
-        } 
-        catch (IOException ex) 
-        {
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
 
         //LOCATE THE CORRECT CSV FILE WITH MATCHING ID
         File appointmentSlotsDir = new File(PATIENTAPPOINTMENTSLOTSDB_PATH);
-        if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) 
-        {
+        if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
             File[] files = appointmentSlotsDir.listFiles(name -> name.equals(ID + "_appSlot.csv"));
             this.patientAppointmentSlotsFile = files[0]; //ASSIGN MATCHING FILE
-    
-        }
 
+        }
     }
 
-    public List<Appointment> getAllAppointments() 
-    {
+    public List<Appointment> getAllAppointments(String ID) {
         List<Appointment> appointments = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile)))
-        {
+        try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) {
             // Skip the header row
             br.readLine();
 
             // Read each line from the CSV and create a Appointment object
             String line;
-            while ((line = br.readLine()) != null) 
-            {
+            while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Split the line by commas
                 if (parts.length == 7) // Ensure the correct number of columns
                 {
@@ -58,27 +50,106 @@ public class PatientAppointmentDAO {
                     String endTime = parts[2];
                     String availability = parts[3];
                     String appointmentYesNo = parts[4];
-                    String patientID= parts[5];
-                    String status= parts[6];
+                    String patientID = parts[5];
+                    String status = parts[6];
 
-                    if(appointmentYesNo.equals("Yes"))
-                    {
+                    if (appointmentYesNo.equals("Yes")) {
                         //Create a Appointment object and add to the list
-                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID );
+                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID);
                         appointments.add(newAppointment);
                     }
                 }
             }
-        } 
-    catch (IOException e) 
-    {
-        e.printStackTrace();
-    }
-    return appointments;
+            return appointments;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public boolean updateAppointmentAvailability(LocalDate date, String availability) 
-    {
+    public List<Appointment> getAllAvailableAppointmentsByDay(LocalDate inputDate) {
+        List<Appointment> appointments = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) {
+            // Skip the header row
+            br.readLine();
+
+            // Read each line from the CSV and create a Appointment object
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(","); // Split the line by commas
+                if (parts.length == 7) // Ensure the correct number of columns
+                {
+
+                    // Create a DateTimeFormatter with the matching format
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+                    // Parse CSV fields
+                    LocalDate date = LocalDate.parse(parts[0], formatter);
+                    LocalTime startTime = LocalTime.parse(parts[1]);
+                    LocalTime endTime = LocalTime.parse(parts[2]);
+                    AppointmentAvailability availability = AppointmentAvailability.valueOf(parts[3]);
+                    String appointmentYesNo = parts[4];
+                    String patientID = parts[5];
+                    String status = parts[6];
+                    //add in doctor id later
+                    // String doctorId = parts[7]
+
+                    if (availability == AppointmentAvailability.Yes) {
+                        //Create a Appointment object and add to the list
+                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID);
+                        appointments.add(newAppointment);
+                    }
+                }
+            }
+            return appointments;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Appointment> getAllAvailableAppointmentsByMonth(int month) {
+        List<Appointment> appointments = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) {
+            // Skip the header row
+            br.readLine();
+
+            // Read each line from the CSV and create a Appointment object
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(","); // Split the line by commas
+                if (parts.length == 7) // Ensure the correct number of columns
+                {
+
+                    // Create a DateTimeFormatter with the matching format
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+                    // Parse CSV fields
+                    LocalDate date = LocalDate.parse(parts[0], formatter);
+                    LocalTime startTime = LocalTime.parse(parts[1]);
+                    LocalTime endTime = LocalTime.parse(parts[2]);
+                    AppointmentAvailability availability = AppointmentAvailability.valueOf(parts[3]);
+                    String appointmentYesNo = parts[4];
+                    String patientID = parts[5];
+                    String status = parts[6];
+                    //add in doctor id later
+                    // String doctorId = parts[7]
+
+                    if (availability == AppointmentAvailability.Yes && date.getMonth().equals(month)) {
+                        //Create a Appointment object and add to the list
+                        Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID);
+                        appointments.add(newAppointment);
+                    }
+                }
+            }
+            return appointments;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public boolean updateAppointmentAvailability(LocalDate date, String availability) {
         List<String> updatedLines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) // may need to change?
@@ -89,8 +160,7 @@ public class PatientAppointmentDAO {
 
             // Iterate through the file and update the availability for the given date
             String line;
-            while ((line = reader.readLine()) != null) 
-            {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(","); // Split the line by commas
 
                 if (parts.length == 7) // Ensure the correct number of columns
@@ -99,13 +169,11 @@ public class PatientAppointmentDAO {
                     LocalDate lineDate = LocalDate.parse(parts[0], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
                     // If the date matches, update the availability column
-                    if (lineDate.equals(date)) 
-                    {
+                    if (lineDate.equals(date)) {
                         parts[3] = availability; // Update the "Availability" column
 
                         // If availability is set to "No", set dependent columns to "NA"
-                        if (availability.equalsIgnoreCase("No")) 
-                        {
+                        if (availability.equalsIgnoreCase("No")) {
                             parts[4] = "NA"; // Appointment
                             parts[5] = "NA"; // PatientID
                             parts[6] = "NA"; // Status
@@ -117,25 +185,20 @@ public class PatientAppointmentDAO {
             }
 
             // Write updated data back to the file
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(patientAppointmentSlotsFile))) 
-            {
-                for (String updatedLine : updatedLines) 
-                {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(patientAppointmentSlotsFile))) {
+                for (String updatedLine : updatedLines) {
                     writer.write(updatedLine);
                     writer.newLine();
                 }
             }
             return true;
-        } 
-        catch (IOException e) 
-        {
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public boolean updateAppointmentStatus(Appointment appointment) 
-    {
+    public boolean updateAppointmentStatus(Appointment appointment) {
         // Retrieve appointment details
         AppointmentStatus status = appointment.getAppointmentStatus();
         LocalDate date = appointment.getAppointmentDate();
@@ -144,16 +207,14 @@ public class PatientAppointmentDAO {
 
         List<String> updatedLines = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) 
-        {
+        try (BufferedReader reader = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) {
             // Read the header and add it to updatedLines
             String header = reader.readLine();
             updatedLines.add(header);
 
             // Iterate through the file to find the matching appointment
             String line;
-            while ((line = reader.readLine()) != null) 
-            {
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(","); // Split the line by commas
 
                 if (parts.length == 7) // Ensure the correct number of columns
@@ -164,12 +225,10 @@ public class PatientAppointmentDAO {
                     LocalTime endTime = LocalTime.parse(parts[2], DateTimeFormatter.ofPattern("HH:mm"));
 
                     // If the appointment matches the date and time slot, update fields
-                    if (lineDate.equals(date) && 
-                        startTime.equals(timeSlot.getStartTime()) && 
-                        endTime.equals(timeSlot.getEndTime())) 
-                    {
-                        switch (status) 
-                        {
+                    if (lineDate.equals(date)
+                            && startTime.equals(timeSlot.getStartTime())
+                            && endTime.equals(timeSlot.getEndTime())) {
+                        switch (status) {
                             case PENDING:
                                 parts[3] = "No"; // Availability
                                 parts[4] = "Yes"; // Appointment
@@ -198,22 +257,17 @@ public class PatientAppointmentDAO {
             }
 
             // Write the updated data back to the file
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(patientAppointmentSlotsFile))) 
-            {
-                for (String updatedLine : updatedLines) 
-                {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(patientAppointmentSlotsFile))) {
+                for (String updatedLine : updatedLines) {
                     writer.write(updatedLine);
                     writer.newLine();
                 }
             }
             return true;
-        } 
-        catch (IOException e) 
-        {
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
-}
-
+    }
 
 }
