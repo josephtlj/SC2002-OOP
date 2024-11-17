@@ -7,7 +7,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
 import src.models.Patient;
-import src.models.MedicalRecord;
 import src.interfaces.PatientServiceInterface;
 import src.interfaces.PatientDaoInterface;
 
