@@ -10,12 +10,13 @@ public class AppointmentOutcomeRecord
     private String medicationStatus;
 
     // Constructor
-    public AppointmentOutcomeRecord(String appointmentId, LocalDate date, String serviceType) 
+    public AppointmentOutcomeRecord(String appointmentId, LocalDate date, String serviceType, String notes) 
     {
         this.appointmentId = appointmentId;
         this.date = date;
         this.serviceType = serviceType;
         this.medicationStatus = "Pending";  // Default status
+        this.consultationNotes=notes;
     }
 
     // Getters and Setters for attributes

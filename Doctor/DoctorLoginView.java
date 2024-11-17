@@ -90,7 +90,10 @@ public class DoctorLoginView
                         doctor.ManageAppointments(appointmentActionType);
                         break;
                     
-                    
+                    case 7:
+                        doctor.ManageAppointmentOutcomeRecord();
+                        break;
+
                     case 8:
                         Session.logout();
                         break;

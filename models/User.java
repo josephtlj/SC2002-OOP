@@ -26,15 +26,13 @@ public class User {
     private int age;
 
     // INSTANCE METHODS
-    public User(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin, boolean passwordHashed, String gender, int age) 
+    public User(String hospitalId, String password, Role role, byte[] salt, boolean isFirstLogin) 
     {
         this.hospitalId = (hospitalId != null) ? hospitalId : generateHospitalId(role);
         this.salt = (salt != null) ? salt : generateSalt();
-        this.password = (password != null) ? ((passwordHashed) ? password : hashPassword(password, this.salt)) : hashPassword("password", this.salt);
+        this.password = password;
         this.role = role;
         this.isFirstLogin = isFirstLogin;
-        this.gender= gender;
-        this.age= age;
     }
 
 

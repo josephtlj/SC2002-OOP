@@ -1,5 +1,6 @@
 package Doctor.Appointment;
 
+import daos.AppointmentOutcomeRecordDao;
 import daos.DoctorAppointmentDao;
 import models.DiagnosisTreatmentRecord;
 
@@ -13,6 +14,7 @@ public class DoctorAppointmentManager
 {
     //ATTRIBUTES
     DoctorAppointmentDao doctorAppointmentSlotsDao;
+    AppointmentOutcomeRecordDao outcomeRecordDao;
     DiagnosisTreatmentRecordManager treatRecManager;
     DoctorAppointmentActionType actionType;
     List <Appointment> appointments;
@@ -110,6 +112,12 @@ public class DoctorAppointmentManager
         if(appointment.getAppointmentStatus()==AppointmentStatus.CONFIRMED)
         {
             //CREATE APPOINTMENT OUTCOME RECORD
+            String appointmentID= UUID.randomUUID().toString();
+            AppointmentOutcomeRecord outcomeRecord
+            = new AppointmentOutcomeRecord(appointmentID, appointment.getAppointmentDate(), null, null);
+            AppointmentOutcomeRecordManager manager = new AppointmentOutcomeRecordManager(outcomeRecordDao);
+            
+            //CREATE DIAGNOSIS TREATMENT RECORD
             DiagnosisTreatmentRecord treatRec= new DiagnosisTreatmentRecord(null, null, null, appointment);
             this.treatRecManager.addDiagnosisTreatmentRecord(treatRec);
         }

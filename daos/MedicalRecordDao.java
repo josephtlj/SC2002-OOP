@@ -13,12 +13,14 @@ import java.util.Properties;
 import java.util.UUID;
 
 import models.MedicalRecord;
+import models.Patient;
 import models.DiagnosisTreatmentRecord;
 
 public class MedicalRecordDao 
 {
     // LOAD NECESSARY PATHS FROM CONFIG.PROPERTIES
     private static String MEDICALRECORDDB_PATH;
+    private PatientDao patientDao;
 
     static {
         // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE

@@ -52,7 +52,7 @@ public class DoctorDao
                     byte[] salt= Base64.getDecoder().decode(parts[7]);
 
                     // Create Doctor object and add to the list
-                    Doctor doctor = new Doctor(id,name,department,gender,age,password,isFirstLogin,salt,true);
+                    Doctor doctor = new Doctor(id,name,department,password,isFirstLogin,salt);
                     doctors.add(doctor);
                 }
             }
@@ -89,7 +89,7 @@ public class DoctorDao
 
                     // IF HOSPITALID FOUND, RETURN DOCTOR DATA AS USER OBJECT
                     if (id.equals(doctorHospitalId)) {
-                        return new Doctor(id,name,department,gender,age,password,isFirstLogin,salt,true);
+                        return new Doctor(id,name,department,password,isFirstLogin,salt);
                     }
                 }
             }

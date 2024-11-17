@@ -68,6 +68,7 @@ public class DoctorAppointmentView
                     
                     case 1:
                         viewAcceptAppointment();
+                        System.out.println("Note: Remember to update patient's Medical Record after the appointment!");
                         break;
 
                     case 2:

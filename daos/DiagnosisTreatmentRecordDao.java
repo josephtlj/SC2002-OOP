@@ -14,6 +14,7 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 import Doctor.Appointment.Appointment;
+import Doctor.Appointment.AppointmentTimeSlot;
 import models.DiagnosisTreatmentRecord;
 
 public class DiagnosisTreatmentRecordDao 
@@ -225,9 +226,8 @@ public class DiagnosisTreatmentRecordDao
     return records;
     }
 
-    //ADD NEW DIAGNOSIS TREATMENT RECORD
-    //ADD NEW DIAGNOSIS TREATMENT RECORD
-    public void addDiagnosisTreatmentRecord(DiagnosisTreatmentRecord treatRec) {
+    // ADD NEW DIAGNOSIS TREATMENT RECORD
+public void addDiagnosisTreatmentRecord(DiagnosisTreatmentRecord treatRec) {
     File tempFile = new File(diagnosisTreatmentRecordFile.getParent(), "temp.csv");
 
     try (
@@ -247,15 +247,15 @@ public class DiagnosisTreatmentRecordDao
 
         // Format the new DiagnosisTreatmentRecord as a CSV row
         Appointment appointment = treatRec.getAppointment();
-        String newRecord = String.join(",",
-            appointment.getDoctorID(),
-            appointment.getAppointmentDate(),
-            appointment.getStartTime() + " - " + appointment.getEndTime(),
-            treatRec.getDiagnosis() != null ? treatRec.getDiagnosis() : "NA",
-            treatRec.getPrescription() != null ? treatRec.getPrescription() : "NA",
-            treatRec.getTreatmentPlan() != null ? treatRec.getTreatmentPlan() : "NA"
-        );
+        AppointmentTimeSlot timeSlot = appointment.getAppointmentTimeSlot(); 
+        String diagnosis = treatRec.getDiagnosis() != null ? treatRec.getDiagnosis() : "NA";
+        String prescription = treatRec.getPrescription() != null ? treatRec.getPrescription() : "NA";
+        String treatmentPlan = treatRec.getTreatmentPlan() != null ? treatRec.getTreatmentPlan() : "NA";
 
+        String newRecord= appointment.getDoctorID()+","+appointment.getAppointmentDate()+","+
+        timeSlot.getStartTime().toString() + " - " + timeSlot.getEndTime().toString()+","+diagnosis+","+prescription+
+        ","+treatmentPlan;
+        
         // Add the new record to the list
         allRecords.add(newRecord);
 
@@ -299,5 +299,7 @@ public class DiagnosisTreatmentRecordDao
         System.err.println("Failed to rename the temporary file.");
     }
 }
+
+    
 
 }

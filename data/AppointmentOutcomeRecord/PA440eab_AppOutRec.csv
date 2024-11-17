@@ -1,0 +1,422 @@
+Doctor ID,Appointment ID,Date,Service Type,Medication Status,Consultation Notes
+DoctorID,e3aef8d8-c55d-4686-9800-864a73af6d28,Appointment Date,General Consultation,Dispensed,NIL
+D003,321701c6-3104-4566-ac3a-fd4c4c96b674,02/01/2024,General Consultation,Dispensed,NIL
+D003,4323eeb5-02db-4427-b6e4-1123b248c900,03/01/2024,General Consultation,Dispensed,Need follow up appointment
+D003,0bbac6fa-f8b7-44d2-9c5a-5e08afaad9a0,03/01/2024,General Consultation,Dispensed,NIL
+D006,97a95804-0724-4667-ad7d-41616d51c5db,04/01/2024,General Consultation,Dispensed,NIL
+D005,a09cbc71-1e38-4f3e-a4e3-fa4af34bebb2,04/01/2024,General Consultation,Dispensed,NIL
+D003,f7dc4300-130f-4b90-aec5-98f5324a7ece,04/01/2024,General Consultation,Dispensed,NIL
+D002,751160f0-226a-466d-af85-9b845809abf4,05/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,2eaf1bdf-de9e-4bae-bf5b-96c1170ccd62,08/01/2024,General Consultation,Dispensed,NIL
+D001,c3c44e52-6acf-4463-bc34-e4e4da146986,08/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,6e458ee6-1546-43b4-a293-7fbbd679717d,08/01/2024,General Consultation,Dispensed,NIL
+D001,ce8eede6-323b-4df8-b74b-eebd1df3cf94,09/01/2024,General Consultation,Dispensed,Need follow up appointment
+D003,6f384c16-b889-422f-afe7-ed7ef09b687e,10/01/2024,General Consultation,Dispensed,Need follow up appointment
+D006,bfa871fe-dc6d-4706-86b7-ce052a431bb0,10/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,3bb4de0e-a4f3-451a-967c-c34df37c1ad4,10/01/2024,General Consultation,Dispensed,NIL
+D006,2d020a86-2998-4653-bce8-4effecbfbbf9,11/01/2024,General Consultation,Dispensed,NIL
+D004,e4774a6a-62e8-405f-9ff9-f852b28c1285,11/01/2024,General Consultation,Dispensed,NIL
+D002,8765896f-6b03-4b68-985b-0df57751f16a,12/01/2024,General Consultation,Dispensed,Need follow up appointment
+D003,4f574290-c566-4fa9-bc74-0069eff9a1f1,15/01/2024,General Consultation,Dispensed,NIL
+D002,b421210b-34b2-4bf2-a173-e8e5aab21ed8,15/01/2024,General Consultation,Dispensed,NIL
+D002,6996a124-f6e1-421e-a2d2-3dec0ed84316,16/01/2024,General Consultation,Dispensed,NIL
+D005,873f3d4a-ac63-4780-8533-217da626cfa4,16/01/2024,General Consultation,Dispensed,NIL
+D003,5e9c2ecb-5cb9-41cd-816c-0789ce1b7346,16/01/2024,General Consultation,Dispensed,NIL
+D003,e9dd9fa8-b1ee-4872-ae7c-37fcc82e6cf0,16/01/2024,General Consultation,Dispensed,NIL
+D005,4bdd48d5-1d72-4a50-974b-0c29ba8bb9b0,16/01/2024,General Consultation,Dispensed,Need follow up appointment
+D004,3de9e47e-b3c7-4ca1-bc39-2819b24d0e3a,17/01/2024,General Consultation,Dispensed,NIL
+D004,9c349312-10b2-4b46-88fb-e02556577bbe,17/01/2024,General Consultation,Dispensed,NIL
+D006,95a690ba-6b68-4327-8290-8e7fbfaabd33,17/01/2024,General Consultation,Dispensed,NIL
+D002,9dbb627c-b1cc-4ae9-bb83-3aaee89a8978,18/01/2024,General Consultation,Dispensed,NIL
+D001,784d0fea-3f0b-4622-bd27-1ec9d45ea882,22/01/2024,General Consultation,Dispensed,NIL
+D005,fe97690e-1eb4-4ef4-8475-4e7f85c5ab8a,22/01/2024,General Consultation,Dispensed,Need follow up appointment
+D005,a59ba748-cc7f-45ca-8ac1-5ed246e800b7,22/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,180a3d15-93ea-4b2a-9e15-a44358110806,23/01/2024,General Consultation,Dispensed,Need follow up appointment
+D005,66c6794c-ba0a-4d42-a49e-d321cd8913fc,23/01/2024,General Consultation,Dispensed,NIL
+D001,89d0cbb6-2c94-4931-b470-165e15e52273,25/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,1355fa0d-ca00-4498-8a96-e55eda1a6985,25/01/2024,General Consultation,Dispensed,NIL
+D004,b759ff76-befe-4c0a-8a28-3d60149af794,25/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,8cbb6d6a-ef0a-445d-a515-1218d185b233,25/01/2024,General Consultation,Dispensed,Need follow up appointment
+D004,a93cf68e-3447-474d-8813-cdbbffcd080c,25/01/2024,General Consultation,Dispensed,Need follow up appointment
+D001,f97c9998-ec79-4bd9-9866-4c8675f4782c,26/01/2024,General Consultation,Dispensed,Need follow up appointment
+D002,e695101b-1db3-4586-8029-51a0c828761e,26/01/2024,General Consultation,Dispensed,Need follow up appointment
+D005,3e1b18ea-d7d4-4508-95e0-eb5f3fd1fd07,29/01/2024,General Consultation,Dispensed,NIL
+D002,7a4a884f-b284-4d6d-8d2e-d1dfd2899ab6,31/01/2024,General Consultation,Dispensed,NIL
+D001,40939114-dcd6-4d52-b7ee-39e7ccc07686,01/02/2024,General Consultation,Dispensed,NIL
+D006,a82d6c06-65a8-46e6-9b8c-4902375d05db,02/02/2024,General Consultation,Dispensed,NIL
+D003,9230619f-243f-447a-9a35-d602e55939a4,05/02/2024,General Consultation,Dispensed,Need follow up appointment
+D006,5a38df12-15c3-4459-9a41-dd78a71a8fa9,06/02/2024,General Consultation,Dispensed,NIL
+D005,68d925b2-e04e-409d-bcdc-e143e8b195cf,06/02/2024,General Consultation,Dispensed,NIL
+D001,6b2f15f2-5e98-4850-90b9-acdca247351c,07/02/2024,General Consultation,Dispensed,NIL
+D006,eedce80b-301a-40a7-852b-071ab37dd53a,09/02/2024,General Consultation,Dispensed,Need follow up appointment
+D006,6fa133eb-eb8f-49a6-bebb-314ad2f54d94,09/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,d7a4a617-b5aa-4640-be26-4c9d6ec661c0,13/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,724611fc-57df-4433-a52d-b1e55d578bb8,15/02/2024,General Consultation,Dispensed,NIL
+D006,302c869b-d366-4d32-bfb4-06dd2c1981e7,16/02/2024,General Consultation,Dispensed,NIL
+D003,f986a928-632b-43c9-885c-941187a68e04,16/02/2024,General Consultation,Dispensed,Need follow up appointment
+D005,cca9425f-b1c9-4969-9bee-99e61d777153,19/02/2024,General Consultation,Dispensed,NIL
+D004,8c8b4ef7-06d5-4564-863b-4122360d1679,19/02/2024,General Consultation,Dispensed,NIL
+D001,ed5209f4-afbf-4dd9-a972-12206aa16ca6,19/02/2024,General Consultation,Dispensed,Need follow up appointment
+D003,6ee86178-e02d-40d0-9851-4c6d157c4bcd,19/02/2024,General Consultation,Dispensed,NIL
+D004,1ec5eecc-bb85-4cf2-ad46-ffbc64ce4c49,19/02/2024,General Consultation,Dispensed,NIL
+D002,1110c39e-8fbe-4d5d-8579-85acf3c56ef7,21/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,55ad5077-5710-4f88-ab9c-7a03c4791c20,23/02/2024,General Consultation,Dispensed,NIL
+D005,de84f335-ffb2-47a7-9b20-5844b463aca7,26/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,cd6b95c8-c1ab-4cc7-9acd-9f60b9dc1369,26/02/2024,General Consultation,Dispensed,NIL
+D004,ff54c954-c4cf-49c5-aa05-30d11e8c4e90,26/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,98071ef2-1fc8-4ea0-b574-084e83fa8c55,26/02/2024,General Consultation,Dispensed,Need follow up appointment
+D004,64e3ea75-9f57-424b-a1b2-94d871198271,27/02/2024,General Consultation,Dispensed,NIL
+D005,15a1f025-8320-48c8-a271-86647ac28694,27/02/2024,General Consultation,Dispensed,Need follow up appointment
+D003,4685d260-0375-4d05-b5f0-ff32381fd54f,28/02/2024,General Consultation,Dispensed,Need follow up appointment
+D001,5b78afdd-bb0b-4b27-910f-edb35b51debd,28/02/2024,General Consultation,Dispensed,Need follow up appointment
+D005,5e417d04-bda8-41ab-bb5c-d52382d8baec,28/02/2024,General Consultation,Dispensed,Need follow up appointment
+D003,7b1994a9-f051-4015-a4cd-7071414165dc,29/02/2024,General Consultation,Dispensed,Need follow up appointment
+D005,3aad41bb-a3b0-4dfe-a6e2-c8948fa96de9,01/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,c4368f4e-d39f-4950-be17-82c6b257d4c9,01/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,0e4c8d0b-8fce-4e3b-82fc-29fcb78f9ca4,04/03/2024,General Consultation,Dispensed,NIL
+D005,32d28b90-5c59-427d-ad76-fdd8e33f3822,04/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,bc6b4b89-6b48-4629-8d0e-c9d7642a052f,05/03/2024,General Consultation,Dispensed,NIL
+D006,11a2cf18-285a-404a-9a9e-b5215cd10cad,05/03/2024,General Consultation,Dispensed,Need follow up appointment
+D006,57c45ae2-4351-41c8-b22b-f17ebdb7f769,05/03/2024,General Consultation,Dispensed,NIL
+D004,70ee3b10-fa0d-49e2-9716-895a57ca06c5,05/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,bf50f70f-6932-4f70-b46c-75a6d0afdafb,05/03/2024,General Consultation,Dispensed,Need follow up appointment
+D004,c63912dd-aa8c-4806-9697-c03f9d2dc647,05/03/2024,General Consultation,Dispensed,NIL
+D006,caf1817f-8837-4ed7-bf5e-381f36c1c359,05/03/2024,General Consultation,Dispensed,Need follow up appointment
+D002,008e0140-b8fa-4c18-a2ba-c815450feba4,06/03/2024,General Consultation,Dispensed,Need follow up appointment
+D002,03935682-b92b-49ba-a74d-93d8d73b208b,06/03/2024,General Consultation,Dispensed,NIL
+D005,e92d9351-cb58-464e-8841-1ed883928d69,07/03/2024,General Consultation,Dispensed,NIL
+D005,9cae8859-f172-4796-8f82-d69a33175fd7,07/03/2024,General Consultation,Dispensed,NIL
+D001,cdfe43c4-61ec-4f83-9c4a-d4cc099e2d80,07/03/2024,General Consultation,Dispensed,Need follow up appointment
+D002,24dc0db2-deb7-4c42-a866-5f7c1a2f18f0,08/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,7c04bfb2-781b-4283-b138-23a3859049ef,08/03/2024,General Consultation,Dispensed,Need follow up appointment
+D006,14451498-1758-45e4-901b-8c760071ada5,11/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,cf596d09-9a77-4249-85e0-749fc4bd658d,11/03/2024,General Consultation,Dispensed,Need follow up appointment
+D006,786f89cd-1f62-4ded-bad5-2d5fba131732,12/03/2024,General Consultation,Dispensed,NIL
+D003,a433dd86-61cc-4e99-b478-2eb37feb2f45,12/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,0f38acf1-d194-41e2-b65a-edee40d38fff,13/03/2024,General Consultation,Dispensed,NIL
+D003,4155ba01-cb8c-4d09-bec8-8e8e82220398,13/03/2024,General Consultation,Dispensed,NIL
+D005,a88d68a1-f1c2-4dd9-ba2e-1a6972943644,14/03/2024,General Consultation,Dispensed,NIL
+D003,30709a00-4eae-47d0-abeb-7f684ead93f9,18/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,392e26f2-a46f-40de-a95f-a199e253a2f1,19/03/2024,General Consultation,Dispensed,NIL
+D001,4b0c9a98-88f3-41fe-b923-5e253fedf642,19/03/2024,General Consultation,Dispensed,NIL
+D004,f802599c-7fb5-4d98-a1f4-6b53286824fa,19/03/2024,General Consultation,Dispensed,NIL
+D001,90eb3ddb-41dc-4a6b-80a3-39558c1897d4,19/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,63a6dd88-8c6e-45b2-8172-910ea5477fa6,19/03/2024,General Consultation,Dispensed,Need follow up appointment
+D001,104030ee-bdf3-4f9a-835d-e3db211a37e2,19/03/2024,General Consultation,Dispensed,Need follow up appointment
+D006,f0e15308-0ac0-4a21-affe-893fc55978dd,19/03/2024,General Consultation,Dispensed,Need follow up appointment
+D001,e1b16eda-a255-4288-8653-2f0139e67bb7,20/03/2024,General Consultation,Dispensed,Need follow up appointment
+D005,56025cb2-457e-445d-b8f6-c2da7a89a737,21/03/2024,General Consultation,Dispensed,Need follow up appointment
+D003,cd143f8e-bc95-4718-96cf-1b701cfe3b2f,22/03/2024,General Consultation,Dispensed,NIL
+D006,46f52978-cfbf-4b90-a7af-f8f4d2339c33,22/03/2024,General Consultation,Dispensed,Need follow up appointment
+D004,b4c9ec4c-9fc6-4480-a3b1-e51c105cde49,25/03/2024,General Consultation,Dispensed,Need follow up appointment
+D004,b94eb933-70bb-434f-bd33-785cfd8ce677,28/03/2024,General Consultation,Dispensed,Need follow up appointment
+D005,69972ee6-f11e-464c-9f3c-2a2c9202688c,28/03/2024,General Consultation,Dispensed,Need follow up appointment
+D001,11bf126c-1a9a-4544-9872-29987a2f1521,01/04/2024,General Consultation,Dispensed,NIL
+D006,6ed6d322-26a1-44d2-afdc-da85cf0a8c3e,01/04/2024,General Consultation,Dispensed,NIL
+D004,9155b446-efbf-4fd2-aebf-69c2c9df882b,01/04/2024,General Consultation,Dispensed,NIL
+D006,bb5e98ec-e49c-4731-9621-ec9bc434a2b3,03/04/2024,General Consultation,Dispensed,NIL
+D004,f3697eba-7d62-4afb-adfb-f0c8f04b509b,03/04/2024,General Consultation,Dispensed,NIL
+D005,f8dd0abb-a0ad-460e-8f9d-1fc48987e76c,03/04/2024,General Consultation,Dispensed,Need follow up appointment
+D004,67183c0a-8bd7-45f8-b689-5f39d130698d,03/04/2024,General Consultation,Dispensed,NIL
+D001,07932df2-e23f-4ea4-a82b-27aa70ab4396,04/04/2024,General Consultation,Dispensed,NIL
+D003,0adf8008-f472-4a4f-af96-ebae9daf19b6,04/04/2024,General Consultation,Dispensed,NIL
+D006,72dc1801-3a9d-476c-beac-c1e7afa92dc1,04/04/2024,General Consultation,Dispensed,NIL
+D005,7684bda1-d8c2-47b7-b076-e54a3cb92e50,08/04/2024,General Consultation,Dispensed,Need follow up appointment
+D001,4e71e96b-0d0f-4a9a-afd1-f5562aa7dc89,08/04/2024,General Consultation,Dispensed,Need follow up appointment
+D006,0e597af8-fb4c-4b4e-8520-f00b2b10250f,08/04/2024,General Consultation,Dispensed,NIL
+D003,e644c9d0-fc67-4b26-aba4-e802e39a9748,09/04/2024,General Consultation,Dispensed,NIL
+D004,73aed501-335e-4729-a5fe-65a6ecf9d2cb,09/04/2024,General Consultation,Dispensed,NIL
+D004,0c639189-37f1-4967-8149-f714b574e542,10/04/2024,General Consultation,Dispensed,Need follow up appointment
+D006,7762b4ac-ac1d-460d-9117-c06822dfe188,10/04/2024,General Consultation,Dispensed,Need follow up appointment
+D003,17b4f12f-59fa-4228-ab6a-23c53d86cdc5,11/04/2024,General Consultation,Dispensed,NIL
+D005,e69be255-bbd2-48f4-942d-6526cbebb217,12/04/2024,General Consultation,Dispensed,Need follow up appointment
+D002,cc32f59c-e74c-4fc8-8047-7c590165d9ba,12/04/2024,General Consultation,Dispensed,NIL
+D001,5bd42ffa-0b3e-4ea6-ac9d-ddc65f31536d,12/04/2024,General Consultation,Dispensed,Need follow up appointment
+D004,a9b75547-cb3e-4a98-935a-435859cfaab8,15/04/2024,General Consultation,Dispensed,Need follow up appointment
+D005,ec3c745d-9a84-4ae1-b084-10014e1ef9ad,15/04/2024,General Consultation,Dispensed,NIL
+D005,02dc81dc-a5d9-4b4f-82ac-60655c23be1a,15/04/2024,General Consultation,Dispensed,NIL
+D005,56982d21-ae98-4b93-aadc-22f879d61cc5,15/04/2024,General Consultation,Dispensed,NIL
+D001,83e6fa6b-def2-4e3d-97fc-77d060ec8b45,16/04/2024,General Consultation,Dispensed,Need follow up appointment
+D004,3af082cc-7aec-4f30-ab1b-3836718b1070,16/04/2024,General Consultation,Dispensed,Need follow up appointment
+D004,03da8f57-33cf-4233-8a46-ac8a7caf3f61,16/04/2024,General Consultation,Dispensed,NIL
+D002,8981f1ba-aea9-4a21-9865-5056c2d5a1ca,16/04/2024,General Consultation,Dispensed,NIL
+D004,545d52a3-f3e3-43cb-877a-09855884ec97,17/04/2024,General Consultation,Dispensed,Need follow up appointment
+D004,e9c9eddc-5111-497d-94c7-58744b2a6504,18/04/2024,General Consultation,Dispensed,NIL
+D005,ecdc2385-6759-471e-8c12-4160bce7e3c6,18/04/2024,General Consultation,Dispensed,Need follow up appointment
+D001,b2562e99-8d0c-468f-9270-59c50e636d77,19/04/2024,General Consultation,Dispensed,NIL
+D002,16843fd6-04d7-4d41-9aac-7063017c9901,22/04/2024,General Consultation,Dispensed,Need follow up appointment
+D006,a208f244-6e01-4e7e-a342-281ef211219c,23/04/2024,General Consultation,Dispensed,NIL
+D002,63255e0f-714e-4bb5-b853-25b62453136e,24/04/2024,General Consultation,Dispensed,NIL
+D001,07445348-6040-4a05-b605-20d60b98335b,24/04/2024,General Consultation,Dispensed,NIL
+D001,581fee6e-ee0c-4c7e-bdab-2d17c1db4019,25/04/2024,General Consultation,Dispensed,Need follow up appointment
+D001,a7197043-a48e-4bb0-8972-1bd3e448ec2c,26/04/2024,General Consultation,Dispensed,Need follow up appointment
+D002,4e403b05-2077-4b22-b4a3-181db9559b69,26/04/2024,General Consultation,Dispensed,Need follow up appointment
+D001,343e378d-da30-4b87-9f20-78962a9f5fb6,26/04/2024,General Consultation,Dispensed,Need follow up appointment
+D006,0bfb1681-2b09-4672-8143-99fac571680a,30/04/2024,General Consultation,Dispensed,Need follow up appointment
+D002,7a5c9ab8-5607-43f6-b1bf-19bf47e69fa7,30/04/2024,General Consultation,Dispensed,Need follow up appointment
+D003,34db6d19-530e-4856-aa6c-9544a1ec48bc,30/04/2024,General Consultation,Dispensed,Need follow up appointment
+D003,d0096eca-1961-4950-a149-76ae9adbd48c,30/04/2024,General Consultation,Dispensed,NIL
+D003,ebb74f59-3de4-497c-8374-56c432efabb1,02/05/2024,General Consultation,Dispensed,Need follow up appointment
+D006,f4c1a1fe-0257-4aac-9057-7cf4acc41478,02/05/2024,General Consultation,Dispensed,NIL
+D004,93cce8d7-5335-4fe2-ae8f-7e2cc01e4a00,03/05/2024,General Consultation,Dispensed,NIL
+D004,713ea8c0-6918-4449-91fa-adf7f239d01f,03/05/2024,General Consultation,Dispensed,Need follow up appointment
+D002,ab52eddc-04df-4faf-9736-fe5900192537,03/05/2024,General Consultation,Dispensed,Need follow up appointment
+D003,bdd50225-14cd-45e3-a8ed-70f17788b814,03/05/2024,General Consultation,Dispensed,NIL
+D005,073433d5-6b74-41fe-b799-e41f37dc77db,03/05/2024,General Consultation,Dispensed,NIL
+D006,2dab2fe4-f77d-4614-87d9-c003d58301ca,06/05/2024,General Consultation,Dispensed,NIL
+D004,902ee592-f4fd-4c4f-b4ed-1f22b97f11d9,06/05/2024,General Consultation,Dispensed,Need follow up appointment
+D004,4a1cd1cf-11f4-4038-b679-48e092f4ca7a,06/05/2024,General Consultation,Dispensed,Need follow up appointment
+D003,67ec017e-a45b-457c-851e-1753872a019c,06/05/2024,General Consultation,Dispensed,NIL
+D004,424e64c6-da14-4817-908b-319590810a6f,07/05/2024,General Consultation,Dispensed,NIL
+D001,5ae9e60d-1027-4d63-9e5c-271567d877cf,07/05/2024,General Consultation,Dispensed,Need follow up appointment
+D001,dff2c30f-d143-46db-898c-f180c80e7577,07/05/2024,General Consultation,Dispensed,NIL
+D001,ec7b2073-b780-4c26-bfed-ad790b659402,07/05/2024,General Consultation,Dispensed,Need follow up appointment
+D003,bd928361-6aaf-4cb3-977b-ea881d447457,07/05/2024,General Consultation,Dispensed,Need follow up appointment
+D005,e019c2ea-bc16-4ba0-a0f1-f455b11869e1,08/05/2024,General Consultation,Dispensed,NIL
+D001,cd9f1d70-fcb8-400f-bc18-95ae690c7458,09/05/2024,General Consultation,Dispensed,NIL
+D001,0cca6a91-a258-45a3-ac4e-d3abe6406818,10/05/2024,General Consultation,Dispensed,NIL
+D003,82b12200-ec10-4ff6-ac25-c6cced7a63ff,13/05/2024,General Consultation,Dispensed,NIL
+D001,bb301dce-8882-46d2-b437-42706fc9b458,14/05/2024,General Consultation,Dispensed,NIL
+D004,3c110ca1-ebb3-4575-8adb-8650f3263208,14/05/2024,General Consultation,Dispensed,Need follow up appointment
+D001,04d1ca69-c8b3-40be-a578-68cb0023ffca,14/05/2024,General Consultation,Dispensed,NIL
+D001,d8906af6-2960-41fc-b199-b4072c76704e,14/05/2024,General Consultation,Dispensed,Need follow up appointment
+D004,0e8f579d-259e-4d67-950d-63c53664539c,14/05/2024,General Consultation,Dispensed,NIL
+D001,4871f81a-3f3a-4121-8b5f-87fa75146eaa,15/05/2024,General Consultation,Dispensed,NIL
+D002,0c0f5d88-9aec-4e93-8eca-1fb54abb2bde,15/05/2024,General Consultation,Dispensed,NIL
+D006,7a396ede-ca5a-4a22-a9f7-4f28b892c67a,16/05/2024,General Consultation,Dispensed,Need follow up appointment
+D003,85c4b75a-287e-49c7-97ac-6e3d7b4b466c,16/05/2024,General Consultation,Dispensed,Need follow up appointment
+D001,02ab7d24-f855-4fec-89f8-9585bf0f2a31,16/05/2024,General Consultation,Dispensed,NIL
+D006,d2d7cff3-5839-474a-a09e-e7d34ce97304,20/05/2024,General Consultation,Dispensed,Need follow up appointment
+D002,a0745791-046c-4d37-bb1d-0afe26f6081a,20/05/2024,General Consultation,Dispensed,NIL
+D002,885ca610-6e53-4d42-ae7d-2f3fd4de21e1,21/05/2024,General Consultation,Dispensed,NIL
+D006,67bffc0b-14d0-4c6a-b8a1-fc1855596291,21/05/2024,General Consultation,Dispensed,NIL
+D002,5b44aa45-43cc-4ec3-96ed-3e59668a4986,24/05/2024,General Consultation,Dispensed,Need follow up appointment
+D003,712230f8-d1a0-4494-b5db-347710e5f063,27/05/2024,General Consultation,Dispensed,Need follow up appointment
+D006,d786072d-c822-4b8d-9f83-d83eaa637e2b,27/05/2024,General Consultation,Dispensed,Need follow up appointment
+D001,c765ab0f-f131-4686-a0c6-f06a335ff81e,27/05/2024,General Consultation,Dispensed,NIL
+D005,86e37528-faa2-4813-a3fd-4b4d17023129,27/05/2024,General Consultation,Dispensed,Need follow up appointment
+D005,b453339a-254f-465f-8ecf-2622a031b397,28/05/2024,General Consultation,Dispensed,Need follow up appointment
+D006,a59c0275-8500-43f6-a5df-5e6300f9e4d6,29/05/2024,General Consultation,Dispensed,Need follow up appointment
+D002,0ff5c59e-dc6a-4f7d-afe0-d031bcf115a6,30/05/2024,General Consultation,Dispensed,Need follow up appointment
+D002,062e6782-5c48-4060-b2f3-432d9c5e691c,30/05/2024,General Consultation,Dispensed,Need follow up appointment
+D004,8184554e-e88a-406e-8ef1-e7aeb22613d5,30/05/2024,General Consultation,Dispensed,Need follow up appointment
+D006,8f9fae7c-ba15-49a2-86d0-22dfc5ead683,31/05/2024,General Consultation,Dispensed,Need follow up appointment
+D002,29168eec-a03a-4dd4-a7ba-53de22ef1d76,31/05/2024,General Consultation,Dispensed,Need follow up appointment
+D005,17779af4-0731-4322-ba3a-895331f87a8d,03/06/2024,General Consultation,Dispensed,Need follow up appointment
+D006,11b46816-f792-4119-a0c2-273aa52d6d51,03/06/2024,General Consultation,Dispensed,Need follow up appointment
+D004,18a3a050-1f65-4985-9fc7-e3a1437d8747,03/06/2024,General Consultation,Dispensed,Need follow up appointment
+D001,43c3a1c9-2eb7-499d-a098-b0af984a22d8,03/06/2024,General Consultation,Dispensed,NIL
+D004,5fe33611-4a54-4af9-8223-32260854332b,04/06/2024,General Consultation,Dispensed,NIL
+D004,520cf4fb-43d4-4a90-9af2-6180dc14be3f,04/06/2024,General Consultation,Dispensed,Need follow up appointment
+D003,1a958e80-4479-4a41-bcdc-ed464af17104,04/06/2024,General Consultation,Dispensed,NIL
+D001,5665e88c-5dd4-433e-a3a1-7303db8fcc49,05/06/2024,General Consultation,Dispensed,NIL
+D002,199642ed-2229-403d-b686-b37aaf43eb9d,05/06/2024,General Consultation,Dispensed,Need follow up appointment
+D005,0308f195-b3e9-4411-ad12-a92cde2beb98,05/06/2024,General Consultation,Dispensed,Need follow up appointment
+D005,a105741d-d326-4d0f-be65-cbc30dd9c79f,05/06/2024,General Consultation,Dispensed,Need follow up appointment
+D002,c9d8ba1c-64dd-4be9-b1f2-589e0829b798,06/06/2024,General Consultation,Dispensed,NIL
+D006,9fd63ef0-1eee-4dda-9879-6cb6823e9836,07/06/2024,General Consultation,Dispensed,NIL
+D006,3873b368-946d-4915-9852-3b3886acffda,07/06/2024,General Consultation,Dispensed,Need follow up appointment
+D004,7fbf7df7-7897-4be1-b7b5-2148850e7919,10/06/2024,General Consultation,Dispensed,Need follow up appointment
+D006,76627ea7-477f-4291-b737-dbc266c892bd,10/06/2024,General Consultation,Dispensed,Need follow up appointment
+D005,332adff9-e356-40ac-8a19-0698212b0600,11/06/2024,General Consultation,Dispensed,Need follow up appointment
+D002,a034c508-893c-4d57-ad6f-9d62d64a0606,11/06/2024,General Consultation,Dispensed,NIL
+D002,9ddf06d5-4f48-44aa-8a09-22710f39472d,13/06/2024,General Consultation,Dispensed,NIL
+D003,f277ef21-937e-42f4-ac7a-0f15ff106ccf,13/06/2024,General Consultation,Dispensed,Need follow up appointment
+D003,c151fde0-6ab9-48ae-8926-b54b86333bb9,17/06/2024,General Consultation,Dispensed,Need follow up appointment
+D005,18672dda-bc93-4c4d-87f6-751bf4bf8b86,18/06/2024,General Consultation,Dispensed,Need follow up appointment
+D006,710fd668-478b-43f7-a9dd-973d76271dce,18/06/2024,General Consultation,Dispensed,Need follow up appointment
+D004,e1e21701-9e37-4181-8f52-408a9891d825,18/06/2024,General Consultation,Dispensed,Need follow up appointment
+D001,17d7b286-5130-4730-b43e-8a70be282703,18/06/2024,General Consultation,Dispensed,Need follow up appointment
+D006,d3a9203b-e4c3-463c-9246-75d6b63ec8fd,18/06/2024,General Consultation,Dispensed,Need follow up appointment
+D003,343a38cb-7b84-47ab-b8ce-895fdc17bc21,19/06/2024,General Consultation,Dispensed,NIL
+D002,da46d764-db4c-45fb-b0c8-ba000a6ac01a,20/06/2024,General Consultation,Dispensed,NIL
+D006,7df9bc54-047b-45b4-8566-cca8c1a40f71,20/06/2024,General Consultation,Dispensed,NIL
+D005,54ac70a0-48d5-4739-a2ff-f1e091da8510,21/06/2024,General Consultation,Dispensed,Need follow up appointment
+D006,2ded9a9d-6b75-4e9f-81fe-16262ed286cb,21/06/2024,General Consultation,Dispensed,NIL
+D005,0c9838c1-8ced-4a58-a95c-9a4bb596d2f8,21/06/2024,General Consultation,Dispensed,Need follow up appointment
+D003,4cc1d1b1-b385-4370-a847-3841a7b93f50,24/06/2024,General Consultation,Dispensed,NIL
+D002,afec9183-a405-4d65-bbe8-9c2d5b6b6c37,25/06/2024,General Consultation,Dispensed,Need follow up appointment
+D002,ac471abb-cbc3-4c9e-9992-0e6a7dc58ae5,26/06/2024,General Consultation,Dispensed,NIL
+D002,67367442-4d16-4f5d-9390-fc21aa0e1eb4,27/06/2024,General Consultation,Dispensed,NIL
+D003,d9f3ffe9-8bac-4122-a6ab-ae89998640cd,27/06/2024,General Consultation,Dispensed,Need follow up appointment
+D003,085adf52-6731-4019-94ff-4b235e162c86,27/06/2024,General Consultation,Dispensed,Need follow up appointment
+D004,822a3d16-f54a-432b-a445-0f221d078fe5,02/07/2024,General Consultation,Dispensed,NIL
+D004,693f6586-b23f-4b65-9b0e-0c746d18b40a,02/07/2024,General Consultation,Dispensed,NIL
+D002,bf58b023-b492-406a-a7e2-1c5f4e14c77f,03/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,333e46b1-15b2-4098-9068-8bb5388da92c,05/07/2024,General Consultation,Dispensed,Need follow up appointment
+D004,8f076f8c-2a58-4726-abb0-275f56ba7452,05/07/2024,General Consultation,Dispensed,NIL
+D004,5f931ed3-23b4-4fc9-9c3d-77e3f922ddd9,05/07/2024,General Consultation,Dispensed,Need follow up appointment
+D003,47204748-b8c7-4858-b3a6-ab785c95f0b8,05/07/2024,General Consultation,Dispensed,NIL
+D006,ed1f95a7-68b3-4921-949e-00d65a198577,05/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,cd0e2a60-b987-4ea9-8c30-6aef55e3c015,08/07/2024,General Consultation,Dispensed,NIL
+D001,626ea9fb-14c1-4144-ad50-7f03409727b8,09/07/2024,General Consultation,Dispensed,NIL
+D004,62afcd33-9b28-4708-bb77-3967cfc07376,09/07/2024,General Consultation,Dispensed,Need follow up appointment
+D001,2ed2b12e-398a-4654-9ba7-6b088fe286a4,11/07/2024,General Consultation,Dispensed,Need follow up appointment
+D004,c5c8d5fc-e355-490b-b18c-449768a529ea,11/07/2024,General Consultation,Dispensed,NIL
+D006,2d10b123-4304-4c01-8dc0-10294e91a3e7,11/07/2024,General Consultation,Dispensed,NIL
+D001,a0ba8e04-9fd8-4840-aeb1-e34533e25167,12/07/2024,General Consultation,Dispensed,Need follow up appointment
+D003,21dcf486-349b-4a0d-b7ee-943a003cb50e,12/07/2024,General Consultation,Dispensed,NIL
+D004,fee77ad9-e618-4383-9ccf-2bde57955e13,12/07/2024,General Consultation,Dispensed,NIL
+D004,5d897952-9122-455d-93f8-0d2df125c831,15/07/2024,General Consultation,Dispensed,Need follow up appointment
+D006,ccfbbfb4-31d5-4d36-aa9f-99e8335e9714,15/07/2024,General Consultation,Dispensed,Need follow up appointment
+D004,6244fb6a-b0f5-4fc2-8e5b-7280d7720206,15/07/2024,General Consultation,Dispensed,Need follow up appointment
+D006,03011cba-9d13-42f1-88e0-a04e8b169cc1,16/07/2024,General Consultation,Dispensed,NIL
+D005,761ba640-7cdf-41c6-873e-44d1bc7b285e,17/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,02ec34e5-283e-4464-b408-c109fdd7555c,17/07/2024,General Consultation,Dispensed,Need follow up appointment
+D002,0af8f75d-812d-461a-b975-329f6555df0a,19/07/2024,General Consultation,Dispensed,NIL
+D003,0edeebee-be2d-460a-8001-3a38fd6e8c89,19/07/2024,General Consultation,Dispensed,Need follow up appointment
+D002,4cc6e5b8-1dfd-467c-ad35-1b7d9350fa08,22/07/2024,General Consultation,Dispensed,Need follow up appointment
+D003,206c24eb-6419-4c18-857b-444ba01a3890,23/07/2024,General Consultation,Dispensed,NIL
+D005,9b14c673-b0c3-40e0-b32c-96e20716d2df,23/07/2024,General Consultation,Dispensed,NIL
+D003,ac833d7c-06f7-4d9a-90ac-8b4a0e07053f,24/07/2024,General Consultation,Dispensed,NIL
+D003,40b42353-6138-4760-807a-31eb057303c0,24/07/2024,General Consultation,Dispensed,Need follow up appointment
+D001,8abdbb1f-8198-4e27-9278-6f1099daafea,24/07/2024,General Consultation,Dispensed,Need follow up appointment
+D006,1344f339-d01f-4ed7-8ef0-aeabc8287781,24/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,0045e0ca-d0f7-4851-a447-32ce354973f4,24/07/2024,General Consultation,Dispensed,Need follow up appointment
+D001,5c9a757a-ec3e-47e2-9f40-34106a815a4d,24/07/2024,General Consultation,Dispensed,Need follow up appointment
+D006,027d135d-560e-4274-a23d-e424fb1059a0,25/07/2024,General Consultation,Dispensed,NIL
+D003,7ba3b830-842b-4937-a7c7-9be20e7dbc02,25/07/2024,General Consultation,Dispensed,NIL
+D004,8d22f580-d41e-4ef1-829c-ac9288259472,25/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,fe1a4594-b48f-4087-becd-ba1f8eed4f2a,29/07/2024,General Consultation,Dispensed,Need follow up appointment
+D002,f9eeeb43-9fd0-44f3-bb80-237de5ac7156,29/07/2024,General Consultation,Dispensed,NIL
+D003,4f975239-8866-4977-ad5f-f61c1ca1f12d,29/07/2024,General Consultation,Dispensed,Need follow up appointment
+D005,301abc16-0828-4f8a-8a76-95af68162221,29/07/2024,General Consultation,Dispensed,NIL
+D001,f8a52ebe-c7f0-4e47-a645-0e259fa7b5ea,30/07/2024,General Consultation,Dispensed,NIL
+D001,d91fe207-2852-440a-962b-1f0df53e3b39,31/07/2024,General Consultation,Dispensed,NIL
+D001,6749d17f-3885-4085-b001-796e6f1758b5,01/08/2024,General Consultation,Dispensed,Need follow up appointment
+D006,6c51039c-9bef-49ea-bd85-823bc831a095,06/08/2024,General Consultation,Dispensed,NIL
+D005,21226528-b9e4-40b2-bde2-895dc3696209,06/08/2024,General Consultation,Dispensed,NIL
+D002,e063c840-8532-4adf-bb20-7605f0f81aad,06/08/2024,General Consultation,Dispensed,NIL
+D001,a4031ef7-fd5b-4869-b547-97cd6d46e516,07/08/2024,General Consultation,Dispensed,NIL
+D002,80f38b4b-b0ca-4d58-ad89-4bab7bf5788d,08/08/2024,General Consultation,Dispensed,Need follow up appointment
+D001,de8a529f-f68e-4e20-bd07-138205d13c5c,08/08/2024,General Consultation,Dispensed,NIL
+D003,262d269c-d7cc-43e5-ac15-8ee6ce9702dd,12/08/2024,General Consultation,Dispensed,NIL
+D005,c82673ec-1a4a-4273-ad87-705d9cb84e46,13/08/2024,General Consultation,Dispensed,Need follow up appointment
+D003,31f412ef-1359-410e-9c97-d078e932a5ca,13/08/2024,General Consultation,Dispensed,Need follow up appointment
+D005,0ba48eb3-2107-42af-bcc7-70f6d896bd66,14/08/2024,General Consultation,Dispensed,Need follow up appointment
+D004,108601d6-d999-4f18-974d-7b40654c2e67,15/08/2024,General Consultation,Dispensed,Need follow up appointment
+D005,d9ddd333-c6c1-41db-849f-7b2ef8fa9ffe,15/08/2024,General Consultation,Dispensed,Need follow up appointment
+D005,2d4b86d7-4d68-44fd-b525-4848c773bc08,15/08/2024,General Consultation,Dispensed,Need follow up appointment
+D002,89379ea4-e3e5-4cdf-bc91-3641030aa2dc,15/08/2024,General Consultation,Dispensed,Need follow up appointment
+D006,7663a1f3-4adc-4239-ba5d-6eb8f560006e,16/08/2024,General Consultation,Dispensed,NIL
+D002,e20293a7-5d31-43ea-a127-10134eb38c52,16/08/2024,General Consultation,Dispensed,NIL
+D004,98d4867c-c3a2-4be6-9db4-3441b52e615c,19/08/2024,General Consultation,Dispensed,Need follow up appointment
+D004,15906f19-4d66-49d6-8732-db67d871799b,19/08/2024,General Consultation,Dispensed,Need follow up appointment
+D002,09b6fd97-0d5e-413b-827f-3268bfdc2f27,20/08/2024,General Consultation,Dispensed,Need follow up appointment
+D003,f61e4431-5a0b-44ae-a5dd-b90ea552931f,20/08/2024,General Consultation,Dispensed,NIL
+D002,740b805d-5166-4865-8d4f-04cd17f0f0d9,20/08/2024,General Consultation,Dispensed,NIL
+D001,ab3f5235-ff15-451d-9c64-f2ce05642d5c,21/08/2024,General Consultation,Dispensed,NIL
+D004,ce626834-a15f-4b0f-b534-380e845195bb,23/08/2024,General Consultation,Dispensed,NIL
+D002,ee4e1fc5-d715-42dc-8400-a3b54ed3ca41,26/08/2024,General Consultation,Dispensed,NIL
+D003,968fef14-4738-465f-a359-afd2255e5d1c,27/08/2024,General Consultation,Dispensed,Need follow up appointment
+D004,80c5e86c-5e8a-4191-b1e0-81b3c4e38918,27/08/2024,General Consultation,Dispensed,NIL
+D006,31e322d4-d8c8-42c8-b0cc-1b719950670c,28/08/2024,General Consultation,Dispensed,Need follow up appointment
+D006,c2e34036-10e8-4754-8451-22b78577245b,29/08/2024,General Consultation,Dispensed,NIL
+D001,6b444970-722d-472d-b844-94e3ae9479c9,29/08/2024,General Consultation,Dispensed,NIL
+D004,8a2777a4-8486-4d0c-9a77-124a59d73d07,29/08/2024,General Consultation,Dispensed,Need follow up appointment
+D001,1fa25503-a6f7-4f57-9638-4c70e1b520f7,30/08/2024,General Consultation,Dispensed,NIL
+D006,3ce1fbd2-c9a2-4566-9346-b81592dbe33f,03/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,2fec9416-36bb-4483-a29d-a50a8aca33d6,04/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,e2a560fa-7aad-4df6-907d-6931f7f0e443,04/09/2024,General Consultation,Dispensed,NIL
+D001,f61ee584-7685-422e-ae63-91664181f032,04/09/2024,General Consultation,Dispensed,NIL
+D006,28ad9b95-ecec-4ec0-9b45-68d2fcb0f8ed,04/09/2024,General Consultation,Dispensed,Need follow up appointment
+D002,31cec651-d753-4f51-9948-48edadbdefda,05/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,667efbe7-eadb-4c3d-983c-17583efe4e28,06/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,9e810cc6-9290-403c-bab7-f139cd3fbb1c,06/09/2024,General Consultation,Dispensed,Need follow up appointment
+D005,d8d6083d-fa5d-4d9e-88bc-a015fa3732d8,09/09/2024,General Consultation,Dispensed,NIL
+D002,e7ba30fc-58dc-43ae-a238-4086536d4c50,09/09/2024,General Consultation,Dispensed,Need follow up appointment
+D001,3e8c9bca-d753-431f-80b0-2e78934fcf4a,09/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,555f7cae-3f72-471c-8c9c-7ed02b6bf1a0,09/09/2024,General Consultation,Dispensed,NIL
+D001,54b233dd-c8ae-45eb-898d-99063ad488f2,10/09/2024,General Consultation,Dispensed,Need follow up appointment
+D001,1be65977-ff70-48fd-a6be-5a215a1ef13a,11/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,356708d9-6b14-485a-944a-3e52a870f99f,11/09/2024,General Consultation,Dispensed,Need follow up appointment
+D002,71d5c1d2-f522-4516-8f27-388b21c41cdc,11/09/2024,General Consultation,Dispensed,Need follow up appointment
+D005,85e9c040-af13-4bf5-8d10-a0d2fafbfab3,11/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,7e24e192-3f48-4585-bb86-026c02337572,11/09/2024,General Consultation,Dispensed,NIL
+D003,d1f882a7-6d41-456f-a655-894180006b12,11/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,9ffca23b-e98d-4a1c-88a2-44ecb2fb7be7,12/09/2024,General Consultation,Dispensed,NIL
+D005,9fe7a014-a2e9-4462-ab58-6c452cd5e2a2,13/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,f33d567c-e96d-41b6-9015-6c4aa96e4f89,13/09/2024,General Consultation,Dispensed,NIL
+D001,847ef0b5-66e8-4c3e-8de6-123f9647b704,16/09/2024,General Consultation,Dispensed,Need follow up appointment
+D002,032b6881-bb2b-4d34-a1f1-866f74e0b6ab,16/09/2024,General Consultation,Dispensed,Need follow up appointment
+D006,f3388ad3-1a43-417d-9b98-d3e2dc26b962,16/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,3152c3ef-9c83-4261-8254-7ae120f2b264,16/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,1af44722-81e7-4f05-822d-c2a899fc75b4,17/09/2024,General Consultation,Dispensed,Need follow up appointment
+D001,8ee95afd-3d09-4295-a826-5039b3de3346,17/09/2024,General Consultation,Dispensed,NIL
+D002,62aeeeb5-0e38-47c5-a0eb-ee262303c633,18/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,ae28a159-88ef-45ee-9ec4-8ee17f4862be,18/09/2024,General Consultation,Dispensed,NIL
+D005,a07423ed-2516-4c5c-92f7-12d632b6b815,18/09/2024,General Consultation,Dispensed,NIL
+D003,14a4959b-8fbd-4a29-a703-0f2b54093d6c,19/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,a2b389fc-9f07-40bc-976d-3e06e3b5f987,19/09/2024,General Consultation,Dispensed,Need follow up appointment
+D005,e6a79d24-0005-4d23-9d5c-8cdf841d10c6,20/09/2024,General Consultation,Dispensed,NIL
+D004,c20d8496-ef43-41ea-9969-4a1037fdc21e,20/09/2024,General Consultation,Dispensed,Need follow up appointment
+D002,e43a5525-4ce4-42b1-8409-832cc24418a8,23/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,a7adea93-3c07-4073-b411-5d28a031ed5a,23/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,86d616be-526f-412e-8291-623768f62c01,23/09/2024,General Consultation,Dispensed,NIL
+D004,8e9ee54f-b8f6-4a95-a96f-e76f9d145236,23/09/2024,General Consultation,Dispensed,NIL
+D004,49bae17c-81ca-4180-84f9-7ab30da8b9a8,23/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,39527f39-f48d-45fd-8d73-e7474576bc08,24/09/2024,General Consultation,Dispensed,NIL
+D004,c876c952-8d9c-4d9a-a15d-e3453aa734bc,24/09/2024,General Consultation,Dispensed,Need follow up appointment
+D002,ef6fd7ec-2ffa-4b12-a5cd-57a681e78793,25/09/2024,General Consultation,Dispensed,Need follow up appointment
+D004,8d72ff46-dded-48d6-866d-5db8c3c20891,25/09/2024,General Consultation,Dispensed,Need follow up appointment
+D003,f5399596-d55d-4095-b893-dbdfaa479d70,30/09/2024,General Consultation,Dispensed,Need follow up appointment
+D001,844a9fc7-c84f-4ab8-b098-d6a2644723eb,30/09/2024,General Consultation,Dispensed,NIL
+D002,8ba1382b-5172-449f-ae89-8effc6f7c0e2,01/10/2024,General Consultation,Dispensed,NIL
+D001,8719c2c2-3b0e-44fa-9232-78db3af5547a,02/10/2024,General Consultation,Dispensed,Need follow up appointment
+D001,dc401d30-996e-4baa-884e-4b87dcebcb5b,04/10/2024,General Consultation,Dispensed,NIL
+D002,20b86965-6ded-4529-9cf4-f8d859d3359b,07/10/2024,General Consultation,Dispensed,Need follow up appointment
+D006,efe30f61-d8cc-4e5a-9e20-62442c68cfb0,07/10/2024,General Consultation,Dispensed,NIL
+D002,2ab64ee6-f5d6-403b-a9b9-7f81dce5559a,09/10/2024,General Consultation,Dispensed,Need follow up appointment
+D005,5f77ffcb-1035-4f96-9325-446001763492,09/10/2024,General Consultation,Dispensed,Need follow up appointment
+D002,c4596e8a-b218-415f-ab37-a9b23aa13e55,10/10/2024,General Consultation,Dispensed,NIL
+D001,cca72bbd-a0b1-4726-82ac-078a3c71328d,10/10/2024,General Consultation,Dispensed,Need follow up appointment
+D004,b4da01af-02b0-44cc-9967-3bf9aeced295,11/10/2024,General Consultation,Dispensed,NIL
+D006,4a26b50b-88b7-49d1-94f6-4947a85d2e75,11/10/2024,General Consultation,Dispensed,NIL
+D001,9e4f47f0-0137-42c9-96f6-f5f9bf59aa3a,14/10/2024,General Consultation,Dispensed,Need follow up appointment
+D005,643978f7-9853-498e-a4d6-f3f88b5af73c,14/10/2024,General Consultation,Dispensed,Need follow up appointment
+D002,969bebad-0c92-4710-9840-26c4ba843184,14/10/2024,General Consultation,Dispensed,Need follow up appointment
+D004,d34088bc-0bd4-4750-9977-2a66695e61db,15/10/2024,General Consultation,Dispensed,NIL
+D003,056fddba-81ed-42d4-a6da-0015703d4b9f,15/10/2024,General Consultation,Dispensed,Need follow up appointment
+D003,d77ab96f-8ee4-4a4f-975b-737a6b460d05,16/10/2024,General Consultation,Dispensed,Need follow up appointment
+D001,b3c4caaf-cb68-4f94-9b5f-822b46719ea1,17/10/2024,General Consultation,Dispensed,Need follow up appointment
+D003,ca5abb74-418a-4160-b2ee-85373c403244,17/10/2024,General Consultation,Dispensed,NIL
+D002,7cc41418-b9df-43d8-ae02-413be702410d,17/10/2024,General Consultation,Dispensed,NIL
+D002,ad557f84-78bf-4680-b6a4-efab5d145f1f,18/10/2024,General Consultation,Dispensed,Need follow up appointment
+D002,324b1d33-fbad-4655-8b3c-cf18148aa1f9,21/10/2024,General Consultation,Dispensed,NIL
+D002,f7998911-b5b7-4737-a03e-ba30a98e848c,21/10/2024,General Consultation,Dispensed,NIL
+D002,c3ccf852-1a06-4387-83dd-95e0c62f4b03,21/10/2024,General Consultation,Dispensed,Need follow up appointment
+D005,af00100e-5d8b-48ec-9615-55e57ce8e940,22/10/2024,General Consultation,Dispensed,Need follow up appointment
+D004,527e9a75-2825-4975-9def-8ac5e6fd6cf1,22/10/2024,General Consultation,Dispensed,Need follow up appointment
+D002,e3f2aa11-5c9c-4166-ace7-10102be780e0,22/10/2024,General Consultation,Dispensed,NIL
+D006,d825bdff-219e-46cb-bf4f-95589755fa5a,23/10/2024,General Consultation,Dispensed,NIL
+D003,2673f33f-5365-45a2-bfd3-a611190dbb7c,23/10/2024,General Consultation,Dispensed,NIL
+D001,ef8dad09-b660-420b-9485-16569c2a1400,24/10/2024,General Consultation,Dispensed,Need follow up appointment
+D006,edac57a6-52ed-45a0-8903-6492f8e22afe,24/10/2024,General Consultation,Dispensed,Need follow up appointment
+D005,6fc0f2e7-a9ff-4b89-b539-668bffc45ca8,25/10/2024,General Consultation,Dispensed,NIL
+D005,495ca766-0d3d-4bb7-94de-d21e25db2a42,25/10/2024,General Consultation,Dispensed,NIL
+D002,061cd98b-464b-4fbf-b68f-d9b7043a82d8,29/10/2024,General Consultation,Dispensed,NIL
+D002,4deacaf5-d55e-4e12-85b9-5dc727021b9a,29/10/2024,General Consultation,Dispensed,NIL
+D004,f9ec6d41-ce41-4c6b-8297-8e09e89ac28d,30/10/2024,General Consultation,Dispensed,Need follow up appointment
+D004,c44202b1-08de-4d01-b7f4-449738a5bb6d,01/11/2024,General Consultation,Dispensed,NIL
+D003,c98232ff-d388-410e-b226-dcc1255a8ab3,01/11/2024,General Consultation,Dispensed,Need follow up appointment
+D003,215ccaec-b062-471c-bddf-16d02a0eef56,01/11/2024,General Consultation,Dispensed,NIL
+D001,31b97422-b763-4ad5-b0af-0fd887fb06a1,04/11/2024,General Consultation,Dispensed,Need follow up appointment
+D003,1365ccee-5e2e-4881-a94c-e865b70429ea,04/11/2024,General Consultation,Dispensed,NIL
+D001,14c943c1-631b-4a78-bb93-42349b558f8e,05/11/2024,General Consultation,Dispensed,Need follow up appointment
+D001,01ea1724-f3a8-41e2-91b9-94c2ac516311,06/11/2024,General Consultation,Dispensed,Need follow up appointment
+D001,b83d2bbb-9bb1-4fcc-96e0-5b4068dc4c62,06/11/2024,General Consultation,Dispensed,Need follow up appointment
+D004,cbe80f8b-62a2-40f8-8dcc-624dc4319d4c,07/11/2024,General Consultation,Dispensed,Need follow up appointment
+D002,e1b86a4e-1513-4261-96d6-239116541fc0,08/11/2024,General Consultation,Dispensed,Need follow up appointment
+D004,c3ff6738-39fb-43ee-a6da-d9ada090e060,11/11/2024,General Consultation,Dispensed,Need follow up appointment
+D002,9c792b9d-95e0-42b1-b035-b3c11768a7c2,11/11/2024,General Consultation,Dispensed,Need follow up appointment
+D006,2b1ba17c-7bb4-450a-95cf-86581773b21a,11/11/2024,General Consultation,Dispensed,Need follow up appointment
+D006,f4252590-d553-49ea-94f6-d31c8456e81a,12/11/2024,General Consultation,Dispensed,Need follow up appointment
+D003,71bdfb18-b586-4b5a-be7c-3a9c2cd743d9,12/11/2024,General Consultation,Dispensed,Need follow up appointment
+D002,8844566d-acbc-440a-9f85-d31d34821464,12/11/2024,General Consultation,Dispensed,Need follow up appointment
+D004,ad40fdb4-1ed6-463c-b141-175ff2c8701b,12/11/2024,General Consultation,Dispensed,Need follow up appointment
+D001,05abc9ff-8252-4294-8510-7295eebedfae,13/11/2024,General Consultation,Dispensed,Need follow up appointment
+D004,6432e66e-18b1-4483-a0dd-2d823c543c37,13/11/2024,General Consultation,Dispensed,NIL
+D002,35b827ac-9a53-4db7-b16a-e5dabeed895d,13/11/2024,General Consultation,Dispensed,Need follow up appointment
+D006,41d8a1ff-e3c7-4e7e-b8d7-a7c123050855,14/11/2024,General Consultation,Dispensed,NIL
+D004,7d380a3a-ffd9-4470-a4b3-207dc5347ce1,14/11/2024,General Consultation,Dispensed,NIL
+D002,0b8d0077-bc62-4061-95b0-1728096e1453,14/11/2024,General Consultation,Dispensed,NIL
