@@ -32,28 +32,33 @@ public class PatientAppointmentDAO {
         }
     }
 
-    public List<Appointment> getAllAppointments(String ID) {
+    public List<Appointment> getScheduledAppointmentsById(String ID) {
         List<Appointment> appointments = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(patientAppointmentSlotsFile))) {
             // Skip the header row
             br.readLine();
 
-            // Read each line from the CSV and create a Appointment object
+            // Read each line from the CSV and create an Appointment object
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Split the line by commas
                 if (parts.length == 7) // Ensure the correct number of columns
                 {
+                    // Create a DateTimeFormatter with the matching format
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
                     // Parse CSV fields
-                    String date = parts[0];
-                    String startTime = parts[1];
-                    String endTime = parts[2];
-                    String availability = parts[3];
+                    LocalDate date = LocalDate.parse(parts[0], formatter);
+                    LocalTime startTime = LocalTime.parse(parts[1]);
+                    LocalTime endTime = LocalTime.parse(parts[2]);
+                    AppointmentAvailability availability = AppointmentAvailability.valueOf(parts[3]);
                     String appointmentYesNo = parts[4];
                     String patientID = parts[5];
                     String status = parts[6];
+                    //add in doctor id later
+                    // String doctorId = parts[7]
 
-                    if (appointmentYesNo.equals("Yes")) {
+                    if (patientID == ID) {
                         //Create a Appointment object and add to the list
                         Appointment newAppointment = new Appointment(status, availability, date, startTime, endTime, patientID, doctorID);
                         appointments.add(newAppointment);

@@ -15,8 +15,9 @@ public class PatientAppointmentManager {
         this.appointments = getAllAppointments(ID);
     }
 
-    public List<Appointment> getAllAppointments(String ID) {
-        return patientAppointmentSlotsDAO.getAllAppointments(ID);
+    // BY ID
+    public List<Appointment> getAppointments(String ID) {
+        return patientAppointmentSlotsDAO.getScheduledAppointmentsById(ID);
     }
 
     // BY DAY
