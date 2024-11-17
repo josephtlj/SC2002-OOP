@@ -1,14 +1,14 @@
 package src.services;
 
-import src.models.Patient;
-import src.interfaces.PatientServiceInterface;
-
 import java.security.SecureRandom;
 import java.util.Base64;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
+import src.models.Patient;
+import src.models.MedicalRecord;
+import src.interfaces.PatientServiceInterface;
 import src.interfaces.PatientDaoInterface;
 
 public class PatientService implements PatientServiceInterface {

@@ -50,7 +50,7 @@ public class UserView {
                     """);
     }
 
-    public void userLogin() {
+    public void showUserLogin() {
         boolean loginStatus = false;
         String hospitalId;
         String password;
