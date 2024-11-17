@@ -1,5 +1,7 @@
 import java.util.List;
 
+import done.MedicineDAO;
+
 public class InventoryService {
     public void viewInventory() {
         try {

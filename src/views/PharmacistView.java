@@ -40,7 +40,7 @@ public class PharmacistView {
                             showUpdatePassword();
                             break;
                         case 2:
-
+                            showAppointmentOutcomeRecord();
                             break;
                         case 3:
 
@@ -95,5 +95,9 @@ public class PharmacistView {
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
         }
+    }
+
+    private void showAppointmentOutcomeRecord(){
+        
     }
 }

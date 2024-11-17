@@ -1,6 +1,5 @@
 import java.security.SecureRandom;
 import java.util.Base64;
-import java.util.UUID;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
