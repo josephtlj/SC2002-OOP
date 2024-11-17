@@ -6,30 +6,35 @@ import src.views.PharmacistView;
 import src.views.PatientView;
 import src.views.UserView;
 
+import src.controllers.PrescriptionController;
 import src.controllers.MedicalRecordController;
 import src.controllers.MedicineController;
 import src.controllers.PharmacistController;
 import src.controllers.PatientController;
 import src.controllers.UserController;
 
-import src.interfaces.MedicalRecordServiceInterface;
-import src.interfaces.MedicineDaoInterface;
+import src.interfaces.PrescriptionServiceInterface;
 import src.interfaces.MedicineServiceInterface;
+import src.interfaces.MedicalRecordServiceInterface;
 import src.interfaces.PharmacistServiceInterface;
 import src.interfaces.PatientServiceInterface;
 import src.interfaces.UserServiceInterface;
 
+import src.services.PrescriptionService;
+import src.services.MedicineService;
+import src.services.MedicalRecordService;
+import src.services.PharmacistService;
+import src.services.PatientService;
+import src.services.UserService;
+
+import src.interfaces.PrescriptionDaoInterface;
+import src.interfaces.MedicineDaoInterface;
 import src.interfaces.MedicalRecordDaoInterface;
 import src.interfaces.PharmacistDaoInterface;
 import src.interfaces.PatientDaoInterface;
 import src.interfaces.UserDaoInterface;
 
-import src.services.MedicalRecordService;
-import src.services.MedicineService;
-import src.services.PharmacistService;
-import src.services.PatientService;
-import src.services.UserService;
-
+import src.daos.PrescriptionDao;
 import src.daos.MedicineDao;
 import src.daos.MedicalRecordDao;
 import src.daos.PharmacistDao;
@@ -39,22 +44,24 @@ import src.daos.UserDao;
 public class HMSApp {
     public static void main(String[] args) {
         // INSTANTIATE DEPENDENCIES
-
+        PrescriptionDaoInterface prescriptionDao = new PrescriptionDao();
         MedicineDaoInterface medicineDao = new MedicineDao();
         MedicalRecordDaoInterface medicalRecordDao = new MedicalRecordDao();
         PharmacistDaoInterface pharmacistDao = new PharmacistDao();
         PatientDaoInterface patientDao = new PatientDao();
         UserDaoInterface userDao = new UserDao();
 
+        PrescriptionServiceInterface prescriptionService = new PrescriptionService(prescriptionDao);
         MedicineServiceInterface medicineService = new MedicineService(medicineDao);
         MedicalRecordServiceInterface medicalRecordService = new MedicalRecordService(medicalRecordDao);
         PharmacistServiceInterface pharmacistService = new PharmacistService(pharmacistDao);
         PatientServiceInterface patientService = new PatientService(patientDao);
         UserServiceInterface userService = new UserService(userDao, patientDao, pharmacistDao);
 
+        PrescriptionController prescriptionController = new PrescriptionController(prescriptionService);
         MedicineController medicineController = new MedicineController(medicineService);
         MedicalRecordController medicalRecordController = new MedicalRecordController(medicalRecordService);
-        PharmacistController pharmacistController = new PharmacistController(pharmacistService);
+        PharmacistController pharmacistController = new PharmacistController(pharmacistService, medicineService);
         PatientController patientController = new PatientController(patientService, medicalRecordController);
         UserController userController = new UserController(userService);
 

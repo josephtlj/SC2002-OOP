@@ -1,9 +1,11 @@
 package src.views;
 
+import java.util.List;
 import java.util.Scanner;
 
-import src.controllers.PharmacistController;
 import src.models.Session;
+import src.models.Medicine;
+import src.controllers.PharmacistController;
 
 public class PharmacistView {
     private final PharmacistController pharmacistController;
@@ -46,7 +48,7 @@ public class PharmacistView {
 
                             break;
                         case 4:
-
+                            showMedicationInventory();
                             break;
                         case 5:
                             break;
@@ -97,7 +99,24 @@ public class PharmacistView {
         }
     }
 
-    private void showAppointmentOutcomeRecord(){
-        
+    private void showAppointmentOutcomeRecord() {
+
+    }
+
+    private void showMedicationInventory() {
+        System.out.println("""
+                =============================================================
+                |             Hospital Management System (HMS)!             |
+                |                View Medication Inventory                  |
+                =============================================================
+                """);
+        List<Medicine> medicineList = pharmacistController.handleViewMedicationInventory();
+
+        for(Medicine medicine: medicineList){
+            System.out.printf("%-25s %-25s\n", "Medicine Name:", medicine.getMedicineName());
+            System.out.printf("%-25s %-25s\n", "Medicine Quantity:", medicine.getMedicineQuantity());
+            System.out.printf("%-25s %-25s\n", "Medicine Alert:", medicine.getMedicineAlert());
+            System.out.println("-".repeat(51));
+        }
     }
 }
