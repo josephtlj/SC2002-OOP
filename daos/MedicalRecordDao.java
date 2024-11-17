@@ -12,33 +12,31 @@ import java.util.List;
 import java.util.Properties;
 import java.util.UUID;
 
-import models.Patient;
 import models.MedicalRecord;
 import models.DiagnosisTreatmentRecord;
 
-public class MedicalRecordDao {
-    private PatientDao patientDao;
-
-    public MedicalRecordDao() {
-        this.patientDao = new PatientDao();
-    }
-
+public class MedicalRecordDao 
+{
     // LOAD NECESSARY PATHS FROM CONFIG.PROPERTIES
     private static String MEDICALRECORDDB_PATH;
 
     static {
         // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
-        try (InputStream input = new FileInputStream("HMS/src/resources/config.properties")) {
+        try (InputStream input = new FileInputStream("resources/config.properties")) 
+        {
             Properties prop = new Properties();
             prop.load(input);
             MEDICALRECORDDB_PATH = prop.getProperty("MEDICALRECORDDB_PATH", "medicalRecordDB.csv");
-        } catch (IOException ex) {
+        } 
+        catch (IOException ex) 
+        {
             ex.printStackTrace();
         }
     }
 
     // READ ALL MEDICAL RECORDS
-    public List<MedicalRecord> getAllMedicalRecords() {
+    public List<MedicalRecord> getAllMedicalRecords() 
+    {
         List<MedicalRecord> medicalRecords = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(MEDICALRECORDDB_PATH))) {
             // Skip header row

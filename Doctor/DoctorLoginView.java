@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Doctor.Appointment.DoctorAppointmentActionType;
+import Doctor.MedicalRecord.DoctorMedicalRecordActionType;
+import models.Doctor;
 import models.Session;
 
 public class DoctorLoginView 
@@ -40,7 +42,7 @@ public class DoctorLoginView
                         Please select an option:
                         (1) View Patient Medical Records
                         (2) Update Patient Medical Records
-                        (3) View Personal Schedule
+                        (3) Manage Personal Schedule
                         (4) Set Availability for Appointments
                         (5) Accept or Decline Appointment Requests
                         (6) View Upcoming Appointments
@@ -53,28 +55,39 @@ public class DoctorLoginView
                 doctorChoice = doctorScanner.nextInt();
                 doctorScanner.nextLine();
 
-                DoctorAppointmentActionType actionType;
+                DoctorAppointmentActionType appointmentActionType;
+                DoctorMedicalRecordActionType medicalRecordActionType;
 
                 switch (doctorChoice) 
                 {
                     
                     case 1:
-                        System.out.println("Enter full name of patient:");
-                        String patientName= doctorScanner.nextLine();
+                        medicalRecordActionType= DoctorMedicalRecordActionType.VIEW;
+                        doctor.ManageMedicalRecord(medicalRecordActionType);
+                        break;
+
+                    case 2:
+                        medicalRecordActionType= DoctorMedicalRecordActionType.UPDATE;
+                        doctor.ManageMedicalRecord(medicalRecordActionType);
+                        break;
+
+                    case 3:
+                        doctor.ManangeSchedule();
+                        break;
 
                     case 4:
-                        actionType= DoctorAppointmentActionType.SET_AVAILABILITY;
-                        doctor.ManageAppointments(actionType);
+                        appointmentActionType= DoctorAppointmentActionType.SET_AVAILABILITY;
+                        doctor.ManageAppointments(appointmentActionType);
                         break;
 
                     case 5:
-                        actionType= DoctorAppointmentActionType.ACCEPT_OR_DECLINE;
-                        doctor.ManageAppointments(actionType);
+                        appointmentActionType= DoctorAppointmentActionType.ACCEPT_OR_DECLINE;
+                        doctor.ManageAppointments(appointmentActionType);
                         break;
 
                     case 6:
-                        actionType= DoctorAppointmentActionType.VIEW;
-                        doctor.ManageAppointments(actionType);
+                        appointmentActionType= DoctorAppointmentActionType.VIEW;
+                        doctor.ManageAppointments(appointmentActionType);
                         break;
                     
                     

@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 import Doctor.*;
+import models.Doctor;
 
 public class DoctorDao
 {
@@ -17,7 +18,7 @@ public class DoctorDao
         {
             Properties prop = new Properties();
             prop.load(input);
-            DOCTORDB_PATH = prop.getProperty("DOCTORDB_PATH", "DoctorList.csv");
+            DOCTORDB_PATH = prop.getProperty("DOCTORDB_PATH", "DoctorDB.csv");
         } catch (IOException ex) 
         {
             ex.printStackTrace();

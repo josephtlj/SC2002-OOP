@@ -1,24 +1,31 @@
-package Doctor;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+package models;
 
+import java.util.List;
 import Calendar.Calendar;
-import Calendar.CalendarDay;
-import Calendar.CalendarDayStatus;
-import Calendar.CalendarManager;
 import Doctor.Appointment.DoctorAppointmentActionType;
 import Doctor.Appointment.DoctorAppointmentManager;
 import Doctor.Appointment.DoctorAppointmentView;
+import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordManager;
+import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordView;
 import Doctor.DoctorPassword.*;
-import daos.CalendarDao;
+import daos.DiagnosisTreatmentRecordDao;
 import daos.DoctorDao;
+import daos.MedicalRecordDao;
+import Doctor.MedicalRecord.*;
 
-public class Doctor extends User 
+public class Doctor extends User
 {
+    private enum Department 
+    {
+	    RADIOLOGY,
+	    CARDIOLOGY,
+	    ORTHOPEDICS,
+	    GENERAL_SURGERY,
+	    PHYSIOTHERAPY
+    }
     //ATTRIBUTES
     private DoctorDao doctorDao;
+    private DiagnosisTreatmentRecordDao treatmentRecordDao;
     private Calendar doctorCalendar;
     private Department department;
     
@@ -61,6 +68,20 @@ public class Doctor extends User
     public void ManangeSchedule()
     {
         doctorCalendar.manageCalendar();
+    }
+
+    //MANAGE MEDICAL RECORD
+    public void ManageMedicalRecord(DoctorMedicalRecordActionType medicalRecordActionType)
+    {
+        if(medicalRecordActionType== DoctorMedicalRecordActionType.VIEW)
+        {
+            //TO BE IMPLEMENTED WHEN INTEGRATING WITH PATIENT
+        }
+        else
+        {
+            DiagnosisTreatmentRecordManager treatmentRecordManager= new DiagnosisTreatmentRecordManager(treatmentRecordDao);
+            DiagnosisTreatmentRecordView treatmentRecordView= new DiagnosisTreatmentRecordView(treatmentRecordManager);
+        }
     }
     
     public void logout()

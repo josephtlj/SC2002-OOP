@@ -40,6 +40,25 @@ public class CalendarDao
 
     }
 
+    //METHOD TO GET STATUS FOR SPECIFIC DATE
+    public CalendarDayStatus getStatus(LocalDate date)
+    {
+        try (BufferedReader br = new BufferedReader(new FileReader(CalendarFile))) {
+            String line;
+            br.readLine(); // Skip header line
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                LocalDate existingDate = LocalDate.parse(parts[0], java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                if (existingDate.equals(date)) {
+                    return CalendarDayStatus.valueOf(parts[1]); // Return the status if the date matches
+                }
+            }
+        } catch (IOException | IllegalArgumentException ex) {
+            ex.printStackTrace();
+        }
+        return CalendarDayStatus.NA; // Date will always be found
+    }
+
     // METHOD TO READ DATES FOR SPECIFIC STATUS
     private List<LocalDate> getDatesByStatus(File calendarFile, CalendarDayStatus status) 
     {
@@ -126,30 +145,30 @@ public class CalendarDao
     }
 
     // METHOD TO APPLY ANNUAL LEAVE AND UPDATE CSV FILE
-    public boolean applyAnnualLeave(LocalDate date)
+    public void applyAnnualLeave(LocalDate date)
     {
-        return changeStatus(date, CalendarDayStatus.ANNUAL_LEAVE);
+        changeStatus(date, CalendarDayStatus.ANNUAL_LEAVE);
     }
 
     // METHOD TO APPLY MEDICAL LEAVE AND UPDATE CSV FILE
-    public boolean applyMedicalLeave(LocalDate date)
+    public void applyMedicalLeave(LocalDate date)
     {
-        return changeStatus(date, CalendarDayStatus.MEDICAL_LEAVE);
+        changeStatus(date, CalendarDayStatus.MEDICAL_LEAVE);
     }
 
     //METHOD TO CANCEL ANNUAL LEAVE AND UPDATE CSV FILE
-    public boolean cancelAnnualLeave(LocalDate date)
+    public void cancelAnnualLeave(LocalDate date)
     {
-        return changeStatus(date, CalendarDayStatus.AVAILABLE);
+        changeStatus(date, CalendarDayStatus.AVAILABLE);
     }
 
     //METHOD TO CANCEL MEDICAL LEAVE AND UPDATE CSV FILE
-    public boolean cancelMedicalLeave(LocalDate date)
+    public void cancelMedicalLeave(LocalDate date)
     {
-        return changeStatus(date, CalendarDayStatus.AVAILABLE);
+        changeStatus(date, CalendarDayStatus.AVAILABLE);
     }
 
-    // GENERAL METHOD TO APPLY LEAVE AND UPDATE THE CSV FILE
+    // GENERAL METHOD TO CHANGE STATUS AND UPDATE THE CSV FILE
     private boolean changeStatus(LocalDate date, CalendarDayStatus status)
     {
         boolean isUpdated = false;

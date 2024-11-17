@@ -20,22 +20,26 @@ public class CalendarManager
     //METHODS
 
     //APPLY ANNUAL LEAVE
-    public boolean applyAnnualLeave(LocalDate date)
+    public ApplyAnnualLeaveError applyAnnualLeave(LocalDate date)
     {
         int balanceAL= ANNUAL_LEAVE_DAYS-calendarDao.getAnnualLeaveDates().size();
         if(balanceAL==0)
         {
-            return false;
+            ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.INSUFFICIENT_AL_DAYS;
+            return errorType;
         }
         else
         {
             if(calendarDao.getNumberOfAnnualLeaveDays(date)>AL_THRESHOLD)
             {
-                return false;
+                ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.STAFF_SHORTAGE;
+                return errorType;
             }
             else
             {
-                return calendarDao.applyAnnualLeave(date);
+                calendarDao.applyAnnualLeave(date);
+                ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.NO_ERROR;
+                return errorType;
             }
         }
     }
@@ -56,15 +60,21 @@ public class CalendarManager
     }
 
     //CANCEL ANNUAL LEAVE
-    public boolean cancelAnnualLeave(LocalDate date)
+    public void cancelAnnualLeave(LocalDate date)
     {
-        return calendarDao.cancelAnnualLeave(date);
+        calendarDao.cancelAnnualLeave(date);
     }
 
     //CANCEL MEDICAL LEAVE
-    public boolean cancelMedicalLeave(LocalDate date)
+    public void cancelMedicalLeave(LocalDate date)
     {
-        return calendarDao.cancelMedicalLeave(date);
+        calendarDao.cancelMedicalLeave(date);
+    }
+
+    //GET METHODS
+    public CalendarDayStatus getStatusForDate(LocalDate date)
+    {
+        return calendarDao.getStatus(date);
     }
     
 }

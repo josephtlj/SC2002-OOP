@@ -1,6 +1,7 @@
 package Doctor.DoctorPassword;
 
 import daos.DoctorDao;
+import models.Doctor;
 import Doctor.*;
 
 public class DoctorPasswordManager 

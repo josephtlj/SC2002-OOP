@@ -1,9 +1,0 @@
-package Doctor;
-public enum Department 
-{
-	RADIOLOGY,
-	CARDIOLOGY,
-	ORTHOPEDICS,
-	GENERAL_SURGERY,
-	PHYSIOTHERAPY
-}

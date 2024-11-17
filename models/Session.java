@@ -1,7 +1,5 @@
 package models;
 
-import Doctor.User;
-
 // import HMS.src.models.User;
 
 public class Session {
