@@ -26,21 +26,12 @@ public class UserController {
         System.out.println("Logged out successfully!");
     }
 
-    public void showCurrentUser() {
-        if (Session.getCurrentSession().isLoggedIn()) {
-            User currentUser = Session.getCurrentSession().getCurrentUser();
-            System.out.println("Current User: " + currentUser.getHospitalId());
-        } else {
-            System.out.println("No user is logged in.");
-        }
-    }
-
-    // public void handlePasswordReset(String hospitalId) {
-    // try {
-    // userService.resetPassword(hospitalId);
-    // System.out.println("Password reset successfully!");
-    // } catch (IllegalArgumentException e) {
-    // System.out.println(e.getMessage());
+    // public void showCurrentUser() {
+    // if (Session.getCurrentSession().isLoggedIn()) {
+    // User currentUser = Session.getCurrentSession().getCurrentUser();
+    // System.out.println("Current User: " + currentUser.getHospitalId());
+    // } else {
+    // System.out.println("No user is logged in.");
     // }
     // }
 }
