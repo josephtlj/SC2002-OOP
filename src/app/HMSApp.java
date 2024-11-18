@@ -81,7 +81,7 @@ public class HMSApp {
                 replenishmentRequestService, medicineController);
         MedicalRecordController medicalRecordController = new MedicalRecordController(medicalRecordService);
         AdministratorController administratorController = new AdministratorController(administratorService,
-                replenishmentRequestController);
+                replenishmentRequestController, medicineController);
         PharmacistController pharmacistController = new PharmacistController(pharmacistService, medicineController,
                 replenishmentRequestController);
         PatientController patientController = new PatientController(patientService, medicalRecordController);

@@ -31,6 +31,25 @@ public class MedicineDao implements MedicineDaoInterface {
     }
 
     @Override
+    public void createMedicine(String medicineName, int medicineQuantity, int medicineAlert) {
+        Medicine medicine = new Medicine(UUID.randomUUID(), medicineName, medicineQuantity, medicineAlert);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(MEDICINEDB_PATH, true))) {
+
+            String csvLine = formatMedicineToCSV(medicine);
+
+            // WRITE NEW MEDICINE OBJECT TO MEDICINEDB.CSV
+            writer.write(csvLine);
+            writer.newLine();
+
+            System.out.println("Medicine successfully added.");
+        } catch (IOException e) {
+            System.err.println("Error writing to the medicine database: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public List<Medicine> getAllMedicine() {
         List<Medicine> medicines = new ArrayList<>();
 
@@ -107,7 +126,49 @@ public class MedicineDao implements MedicineDaoInterface {
             }
 
         } catch (IOException e) {
-            System.err.println("Error reading the medical record database: " + e.getMessage());
+            System.err.println("Error reading the medicine database: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        // UPDATE MEDICINEDB.CSV
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(MEDICINEDB_PATH))) {
+            for (String outputLine : lines) {
+                bw.write(outputLine);
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to the medicine database: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteMedicineByMedicineId(UUID medicineId) {
+        List<String> lines = new ArrayList<>();
+        boolean medicineFound = false;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(MEDICINEDB_PATH))) {
+            // READ HEADER ROW
+            String header = br.readLine();
+            lines.add(header);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(",");
+                if (fields.length == 4 && UUID.fromString(fields[0]).equals(medicineId)) {
+                    // SKIP MATCHING MEDICINE WITH CORRESPONDING MEDICINEID
+                    medicineFound = true;
+                    continue;
+                }
+                lines.add(line);
+            }
+
+            if (!medicineFound) {
+                throw new IllegalArgumentException("Medicine with medicineId " + medicineId + " not found.");
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error reading the medicine database: " + e.getMessage());
             e.printStackTrace();
         }
 
@@ -153,5 +214,4 @@ public class MedicineDao implements MedicineDaoInterface {
                 String.valueOf(medicine.getMedicineQuantity()),
                 String.valueOf(medicine.getMedicineAlert()));
     }
-
 }

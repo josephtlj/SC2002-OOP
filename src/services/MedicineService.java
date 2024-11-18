@@ -27,7 +27,50 @@ public class MedicineService implements MedicineServiceInterface {
     }
 
     @Override
-    public void updateMedicine(int requestedQuantity, UUID medicineId) {
+    public void createNewMedicine(String medicineName, int medicineQuantity, int medicineAlert) {
+        List<Medicine> medicineList = medicineDao.getAllMedicine();
+
+        if (medicineList == null || medicineList.isEmpty()) {
+            throw new IllegalArgumentException("Medicine not found.");
+        }
+
+        boolean medicineFound = false;
+
+        for (Medicine medicine : medicineList) {
+            if (medicine.getMedicineName().equals(medicineName)) {
+                medicineFound = true;
+                break;
+            }
+        }
+
+        if (medicineFound) {
+            throw new IllegalArgumentException("Medicine with name '" + medicineName + "' already exists.");
+        }
+
+        medicineDao.createMedicine(medicineName, medicineQuantity, medicineAlert);
+    }
+
+    @Override
+    public void updateMedicine(int medicineQuantity, int medicineAlert, UUID medicineId) {
+        try {
+            Medicine medicine = medicineDao.getMedicineByMedicineId(medicineId);
+
+            if (medicine == null) {
+                throw new IllegalArgumentException("Medicine not found.");
+            }
+
+            medicine.setMedicineQuantity(medicineQuantity);
+            medicine.setMedicineAlert(medicineAlert);
+
+            medicineDao.updateMedicine(medicine);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
+
+    @Override
+    public void updateMedicineByReplenishmentRequest(int requestedQuantity, UUID medicineId) {
         try {
             Medicine medicine = medicineDao.getMedicineByMedicineId(medicineId);
 
@@ -40,6 +83,15 @@ public class MedicineService implements MedicineServiceInterface {
             medicine.setMedicineQuantity(newQuantity);
 
             medicineDao.updateMedicine(medicine);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
+
+    public void deleteMedicineByMedicineId(UUID medicineId) {
+        try {
+            medicineDao.deleteMedicineByMedicineId(medicineId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
 

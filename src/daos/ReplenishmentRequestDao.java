@@ -52,7 +52,7 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
     }
 
     @Override
-    public ReplenishmentRequest getReplenishmentRequestByRequestId(UUID requestId){
+    public ReplenishmentRequest getReplenishmentRequestByRequestId(UUID requestId) {
         try (BufferedReader br = new BufferedReader(new FileReader(REPLENISHMENTREQUESTDB_PATH))) {
             // SKIP HEADER ROW
             br.readLine();
@@ -101,7 +101,7 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
     }
 
     @Override
-    public void updateReplenishmentRequest(ReplenishmentRequest replenishmentRequest){
+    public void updateReplenishmentRequest(ReplenishmentRequest replenishmentRequest) {
         List<String> lines = new ArrayList<>();
         boolean replenishmentRequestFound = false;
 
@@ -146,6 +146,53 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public void deleteReplenishmentRequestsByMedicineId(UUID medicineId) {
+        List<String> lines = new ArrayList<>();
+        boolean requestFound = false;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(REPLENISHMENTREQUESTDB_PATH))) {
+            // READ HEADER ROW
+            String header = br.readLine();
+            lines.add(header);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                ReplenishmentRequest replenishmentRequest = parseReplenishmentRequest(line);
+
+                if (replenishmentRequest != null
+                        && replenishmentRequest.getMedicineId().equals(medicineId)
+                        && replenishmentRequest.getStatus() == ReplenishmentRequest.Status.PENDING) {
+                    // EXCLUDE MATCHING REPLENISHMENTREQUEST OBJECT WITH CORRESPONDING STATUS AND MEDICINEID
+                    requestFound = true;
+                    continue;
+                }
+
+                
+                lines.add(line);
+            }
+
+            if (!requestFound) {
+                System.out.println("No matching replenishment requests found for medicineId: " + medicineId);
+            }
+
+        } catch (IOException e) {
+            System.err.println("Error reading the replenishment request database: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        // REWRITE TO REPLENISHMENTREQUESTDB.CSV
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(REPLENISHMENTREQUESTDB_PATH))) {
+            for (String outputLine : lines) {
+                bw.write(outputLine);
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to the replenishment request database: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     // HELPER METHOD TO FORMAT REPLENISHMENTREQUEST OBJECT INTO CSV LINE

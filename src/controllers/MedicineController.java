@@ -22,9 +22,33 @@ public class MedicineController {
         }
     }
 
-    public void handleUpdateMedicine(int requestedQuantity, UUID medicineId) {
+    public void handleAddNewMedication(String medicineName, int medicineQuantity, int medicineAlert) {
         try {
-            medicineService.updateMedicine(requestedQuantity, medicineId);
+            medicineService.createNewMedicine(medicineName, medicineQuantity, medicineAlert);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void handleUpdateMedication(int medicineQuantity, int medicineAlert, UUID medicineId) {
+        try {
+            medicineService.updateMedicine(medicineQuantity, medicineAlert, medicineId);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void handleDeleteMedication(UUID medicineId) {
+        try {
+            medicineService.deleteMedicineByMedicineId(medicineId);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void handleUpdateMedicineByReplenishmentRequest(int requestedQuantity, UUID medicineId) {
+        try {
+            medicineService.updateMedicineByReplenishmentRequest(requestedQuantity, medicineId);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

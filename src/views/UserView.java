@@ -66,7 +66,7 @@ public class UserView {
                     System.out.println("Login failed. Please try again.\n");
                 }
             } catch (Exception e) {
-                System.out.println("An unexpected error occurred: " + e.getMessage());
+                System.out.println("Invalid Login Credentials.");
             }
         }
 

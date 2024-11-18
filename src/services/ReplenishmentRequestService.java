@@ -67,6 +67,10 @@ public class ReplenishmentRequestService implements ReplenishmentRequestServiceI
         replenishmentRequest.setStatus(status);
         
         replenishmentRequestDao.updateReplenishmentRequest(replenishmentRequest);
+    }
 
+    @Override
+    public void deleteReplenishmentRequestsByMedicineId(UUID medicineId){
+        replenishmentRequestDao.deleteReplenishmentRequestsByMedicineId(medicineId);
     }
 }

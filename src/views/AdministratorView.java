@@ -8,6 +8,8 @@ import src.models.Session;
 import src.models.Administrator;
 import src.models.Pharmacist;
 import src.models.ReplenishmentRequest;
+import src.models.Medicine;
+
 import src.controllers.AdministratorController;
 
 public class AdministratorView {
@@ -52,7 +54,7 @@ public class AdministratorView {
                             // showViewAppointmentDetails();
                             break;
                         case 4:
-                            // showViewAndManageMedicationInventory();
+                            showViewAndManageMedicationInventory();
                             break;
                         case 5:
                             showApproveReplenishmentRequests();
@@ -111,6 +113,8 @@ public class AdministratorView {
                 |             Hospital Management System (HMS)!             |
                 |              View and Manage Hospital Staff               |
                 =============================================================
+                (1) View Hospital Staff
+                (2) Manage Hospital Staff
                 """);
         // List<Administrator> administratorList;
         // List<Pharmacist> pharmacistList;
@@ -126,6 +130,239 @@ public class AdministratorView {
         // }
     }
 
+    private void showViewAndManageMedicationInventory() {
+        int administratorChoice = 99999;
+        while (administratorChoice != 5) {
+            try {
+                System.out.println("""
+                        =============================================================
+                        |             Hospital Management System (HMS)!             |
+                        |           View and Manage Medication Inventory            |
+                        =============================================================
+                        (1) View Medicine Inventory
+                        (2) Add New Medication
+                        (3) Update Medication
+                        (4) Delete Medication
+                        (5) Go back to previous page
+                        """);
+
+                System.out.print("Your choice: ");
+                String input = scanner.nextLine();
+                try {
+                    administratorChoice = Integer.parseInt(input);
+
+                    if (administratorChoice >= 1 && administratorChoice <= 5) {
+                        switch (administratorChoice) {
+                            case 1:
+                                showViewMedicineInventory();
+                                break;
+
+                            case 2:
+                                boolean addNewMedicine = false;
+                                while (!addNewMedicine) {
+                                    try {
+                                        System.out.println("Enter Medicine Name:");
+                                        String medicineName = scanner.nextLine();
+
+                                        System.out.println("Enter Medicine Quantity:");
+                                        int medicineQuantity;
+                                        try {
+                                            medicineQuantity = Integer.parseInt(scanner.nextLine());
+                                            if (medicineQuantity <= 0) {
+                                                System.out.println("Medicine quantity must be a positive number.");
+                                                continue;
+                                            }
+                                        } catch (NumberFormatException e) {
+                                            System.out.println(
+                                                    "Invalid input. Please enter a valid number for Medicine Quantity.");
+                                            continue;
+                                        }
+
+                                        System.out.println("Enter Medicine Alert Quantity:");
+                                        int medicineAlert;
+                                        try {
+                                            medicineAlert = Integer.parseInt(scanner.nextLine());
+                                            if (medicineAlert <= 0) {
+                                                System.out
+                                                        .println("Medicine alert quantity must be a positive number.");
+                                                continue;
+                                            }
+                                        } catch (NumberFormatException e) {
+                                            System.out.println(
+                                                    "Invalid input. Please enter a valid number for Medicine Alert Quantity.");
+                                            continue;
+                                        }
+
+                                        addNewMedicine = administratorController.handleAddNewMedication(medicineName,
+                                                medicineQuantity, medicineAlert);
+                                    } catch (Exception e) {
+                                        System.out.println("An unexpected error occurred. Please try again.");
+                                        e.printStackTrace();
+                                    }
+
+                                }
+
+                                System.out.println("""
+                                        =============================================================
+                                        |             Hospital Management System (HMS)!             |
+                                        |             Successfully added new medicine!              |
+                                        =============================================================
+                                        """);
+
+                                break;
+
+                            case 3:
+                                administratorChoice = 99999;
+                                while (administratorChoice != 0) {
+                                    List<Medicine> medicineList = showViewMedicineInventory();
+                                    System.out.println("""
+                                            Please enter the Medicine Number (#) you wish to update, OR
+                                            Please enter 0 to go back to the previous page.
+                                            """);
+                                    try {
+                                        System.out.print("Enter your choice: ");
+                                        input = scanner.nextLine();
+
+                                        administratorChoice = Integer.parseInt(input);
+
+                                        if (administratorChoice < 0 || administratorChoice > medicineList.size()) {
+                                            System.out.printf(
+                                                    "Invalid choice. Please enter a choice between 0 and %d.\n",
+                                                    medicineList.size());
+                                            continue;
+                                        }
+
+                                        if (administratorChoice == 0) {
+                                            break;
+                                        }
+
+                                        Medicine selectedMedicine = medicineList.get(administratorChoice - 1);
+
+                                        boolean updateMedicine = false;
+
+                                        while (!updateMedicine) {
+                                            try {
+                                                System.out.println("Enter Medicine Quantity:");
+                                                int medicineQuantity = Integer.parseInt(scanner.nextLine());
+
+                                                if (medicineQuantity <= 0) {
+                                                    System.out.println(
+                                                            "Invalid input. Medicine quantity must be a positive number.");
+                                                    continue;
+                                                }
+
+                                                System.out.println("Enter Medicine Alert Quantity:");
+                                                int medicineAlert = Integer.parseInt(scanner.nextLine());
+
+                                                if (medicineAlert <= 0) {
+                                                    System.out.println(
+                                                            "Invalid input. Medicine alert quantity must be a positive number.");
+                                                    continue;
+                                                }
+
+                                                updateMedicine = administratorController.handleUpdateMedication(
+                                                        medicineQuantity, medicineAlert,
+                                                        selectedMedicine.getMedicineId());
+                                            } catch (NumberFormatException e) {
+                                                System.out.println("Invalid input. Please enter a valid number.");
+                                            }
+                                        }
+
+                                        System.out.println("""
+                                                =============================================================
+                                                |             Hospital Management System (HMS)!             |
+                                                |              Successfully updated medicine!               |
+                                                =============================================================
+                                                """);
+
+                                    } catch (NumberFormatException e) {
+                                        System.out.println("Invalid input. Please enter a valid number.");
+                                    }
+                                }
+
+                                break;
+                            case 4:
+
+                                administratorChoice = 99999;
+                                while (administratorChoice != 0) {
+                                    List<Medicine> medicineList = showViewMedicineInventory();
+                                    System.out.println("""
+                                            Please enter the Medicine Number (#) you wish to delete, OR
+                                            Please enter 0 to go back to the previous page.
+                                            """);
+                                    try {
+                                        System.out.print("Enter your choice: ");
+                                        input = scanner.nextLine();
+
+                                        administratorChoice = Integer.parseInt(input);
+
+                                        if (administratorChoice < 0 || administratorChoice > medicineList.size()) {
+                                            System.out.printf(
+                                                    "Invalid choice. Please enter a choice between 0 and %d.\n",
+                                                    medicineList.size());
+                                            continue;
+                                        }
+
+                                        if (administratorChoice == 0) {
+                                            break;
+                                        }
+
+                                        Medicine selectedMedicine = medicineList.get(administratorChoice - 1);
+
+                                        administratorController
+                                                .handleDeleteMedication(selectedMedicine.getMedicineId());
+
+                                        System.out.println("""
+                                                =============================================================
+                                                |             Hospital Management System (HMS)!             |
+                                                |              Successfully deleted medicine!               |
+                                                =============================================================
+                                                """);
+
+                                    } catch (NumberFormatException e) {
+                                        System.out.println("Invalid input. Please enter a valid number.");
+                                    } catch (Exception e) {
+                                        System.out.println("An unexpected error occurred. Please try again.");
+                                        e.printStackTrace();
+                                    }
+                                }
+
+                                break;
+                            case 5:
+
+                                break;
+                        }
+                    } else {
+                        System.out.println("Invalid choice. Please enter a choice between 1 and 5.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                }
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred. Please try again.");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private List<Medicine> showViewMedicineInventory() {
+        List<Medicine> medicineList = administratorController.handleViewMedicationInventory();
+
+        for (int medicineCount = 0; medicineCount < medicineList.size(); medicineCount++) {
+            Medicine medicine = medicineList.get(medicineCount);
+
+            System.out.println("-".repeat(60));
+            System.out.printf("Medicine #%d\n", medicineCount + 1);
+            System.out.printf("%-25s %-25s\n", "Medicine Name:", medicine.getMedicineName());
+            System.out.printf("%-25s %-25s\n", "Medicine Quantity:",
+                    medicine.getMedicineQuantity());
+            System.out.printf("%-25s %-25s\n", "Medicine Alert:", medicine.getMedicineAlert());
+            System.out.println("-".repeat(60));
+        }
+
+        return medicineList;
+    }
+
     private void showApproveReplenishmentRequests() {
         int administratorChoice = 99999;
         while (administratorChoice != 0) {
@@ -139,6 +376,11 @@ public class AdministratorView {
 
                 List<ReplenishmentRequest> replenishmentRequestList = administratorController
                         .handleGetReplenishmentRequestsByStatus(ReplenishmentRequest.Status.PENDING);
+
+                if (replenishmentRequestList.isEmpty()) {
+                    System.out.println("No pending replenishment requests at this time.");
+                    return;
+                }
 
                 System.out.printf("There are %d Pending Replenishment Request(s):\n", replenishmentRequestList.size());
                 System.out.println("-".repeat(60));
@@ -163,9 +405,16 @@ public class AdministratorView {
                         Please enter 0 to go back to the previous page.
                         """);
 
-                administratorChoice = scanner.nextInt();
+                try {
+                    System.out.print("Enter your choice: ");
+                    administratorChoice = Integer.parseInt(scanner.nextLine());
 
-                if (administratorChoice >= 0 && administratorChoice <= replenishmentRequestList.size()) {
+                    if (administratorChoice < 0 || administratorChoice > replenishmentRequestList.size()) {
+                        System.out.printf("Invalid choice. Please enter a choice between 0 and %d.\n",
+                                replenishmentRequestList.size());
+                        continue;
+                    }
+
                     if (administratorChoice == 0) {
                         break;
                     }
@@ -179,62 +428,49 @@ public class AdministratorView {
                             Reject:   Please enter 2
                             """);
 
-                    System.out.println("-".repeat(60));
-                    System.out.printf("%-25s %-25s\n", "Request Id:", selectedReplenishmentRequest.getRequestId());
-                    System.out.printf("%-25s %-25s\n", "Medicine Name:",
-                            selectedReplenishmentRequest.getMedicineName());
-                    System.out.printf("%-25s %-25s\n", "Request Quantity:",
-                            selectedReplenishmentRequest.getRequestedQuantity());
-                    System.out.printf("%-25s %-25s\n", "Request Status:", selectedReplenishmentRequest.getStatus());
-                    System.out.printf("%-25s %-25s\n", "Medicine Id:", selectedReplenishmentRequest.getMedicineId());
-                    System.out.println("-".repeat(60));
+                    try {
+                        System.out.print("Your choice: ");
+                        int actionChoice = Integer.parseInt(scanner.nextLine());
 
-                    System.out.print("Your choice: ");
-                    administratorChoice = scanner.nextInt();
+                        if (actionChoice == 1) {
+                            administratorController.handleReplenishmentRequest(
+                                    selectedReplenishmentRequest.getRequestId(),
+                                    selectedReplenishmentRequest.getRequestedQuantity(),
+                                    ReplenishmentRequest.Status.APPROVED,
+                                    selectedReplenishmentRequest.getMedicineId());
 
-                    if (administratorChoice >= 1 && administratorChoice <= 2) {
-                        switch (administratorChoice) {
-                            case 1:
-                                administratorController.handleReplenishmentRequest(
-                                        selectedReplenishmentRequest.getRequestId(),
-                                        selectedReplenishmentRequest.getRequestedQuantity(),
-                                        ReplenishmentRequest.Status.APPROVED,
-                                        selectedReplenishmentRequest.getMedicineId());
+                            System.out.println("""
+                                    =============================================================
+                                    |             Hospital Management System (HMS)!             |
+                                    |       Successfully approved replenishment request!        |
+                                    =============================================================
+                                    """);
+                        } else if (actionChoice == 2) {
+                            administratorController.handleReplenishmentRequest(
+                                    selectedReplenishmentRequest.getRequestId(),
+                                    ReplenishmentRequest.Status.REJECTED);
 
-                                System.out.println("""
-                                        =============================================================
-                                        |             Hospital Management System (HMS)!             |
-                                        |       Successfully approved replenishment request!        |
-                                        =============================================================
-                                        """);
-                                break;
-
-                            case 2:
-                                administratorController.handleReplenishmentRequest(
-                                        selectedReplenishmentRequest.getRequestId(),
-                                        ReplenishmentRequest.Status.REJECTED);
-                                System.out.println("""
-                                        =============================================================
-                                        |             Hospital Management System (HMS)!             |
-                                        |       Successfully rejected replenishment request!        |
-                                        =============================================================
-                                        """);
-                                break;
+                            System.out.println("""
+                                    =============================================================
+                                    |             Hospital Management System (HMS)!             |
+                                    |       Successfully rejected replenishment request!        |
+                                    =============================================================
+                                    """);
+                        } else {
+                            System.out.println("Invalid choice. Please enter 1 to approve or 2 to reject.");
                         }
-                    } else {
-                        System.out.println("Invalid choice. Please enter a choice between 1 and 2");
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number (1 or 2).");
                     }
 
-                } else {
-                    System.out.printf("Invalid choice. Please enter a choice between 0 and %d",
-                            replenishmentRequestList.size());
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
                 }
 
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred. Please try again.");
+                e.printStackTrace();
             }
-
         }
     }
-
 }

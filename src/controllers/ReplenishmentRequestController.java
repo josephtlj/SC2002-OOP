@@ -35,11 +35,11 @@ public class ReplenishmentRequestController {
         }
     }
 
-    // ACCEPTED REPLENSIHMENT REQUEST
+    // ACCEPTED REPLENISHMENT REQUEST
     public void handleReplenishmentRequest(UUID requestId, int requestedQuantity, ReplenishmentRequest.Status status, UUID medicineId){
         try {
             replenishmentRequestService.updateReplenishmentRequest(requestId, status);
-            medicineController.handleUpdateMedicine(requestedQuantity, medicineId);
+            medicineController.handleUpdateMedicineByReplenishmentRequest(requestedQuantity, medicineId);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             
@@ -55,4 +55,13 @@ public class ReplenishmentRequestController {
 
         }
     };
+
+    public void handleDeleteReplenishmentRequestsByMedicineId(UUID medicineId){
+        try {
+            replenishmentRequestService.deleteReplenishmentRequestsByMedicineId(medicineId);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
 }

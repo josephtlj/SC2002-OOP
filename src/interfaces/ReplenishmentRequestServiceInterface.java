@@ -11,4 +11,6 @@ public interface ReplenishmentRequestServiceInterface {
     List<ReplenishmentRequest> readAllReplenishmentRequestsByStatus(ReplenishmentRequest.Status status);
 
     void updateReplenishmentRequest(UUID requestId, ReplenishmentRequest.Status status);
+
+    void deleteReplenishmentRequestsByMedicineId(UUID medicineId);
 }

@@ -14,5 +14,5 @@ public interface ReplenishmentRequestDaoInterface {
 
     void updateReplenishmentRequest(ReplenishmentRequest replenishmentRequest);
 
-    
+    void deleteReplenishmentRequestsByMedicineId(UUID medicineId);
 }
