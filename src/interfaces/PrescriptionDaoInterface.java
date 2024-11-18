@@ -1,5 +1,9 @@
 package src.interfaces;
 
-public interface PrescriptionDaoInterface {
+import java.util.List;
 
+import src.models.Prescription;
+
+public interface PrescriptionDaoInterface {
+    List<Prescription> getAllPrescriptions();
 }

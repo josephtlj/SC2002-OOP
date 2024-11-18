@@ -17,7 +17,7 @@ public class PharmacistView {
 
     public void showMainMenu() {
         int pharmacistChoice = 99999;
-        while (pharmacistChoice != 9) {
+        while (pharmacistChoice != 6) {
             try {
                 System.out.println("""
                         =============================================================
@@ -51,6 +51,7 @@ public class PharmacistView {
                             showMedicationInventory();
                             break;
                         case 5:
+                            showSubmitReplenishmentRequest();
                             break;
                         case 6:
                             Session.getCurrentSession().logout();
@@ -85,7 +86,8 @@ public class PharmacistView {
                 System.out.println("Confirm your new password:");
                 String confirmPassword = scanner.nextLine();
 
-                pharmacistController.handleUpdatePassword(pharmacistHospitalId, newPassword, confirmPassword);
+                updatePassword = pharmacistController.handleUpdatePassword(pharmacistHospitalId, newPassword,
+                        confirmPassword);
             }
 
             System.out.println("""
@@ -112,11 +114,50 @@ public class PharmacistView {
                 """);
         List<Medicine> medicineList = pharmacistController.handleViewMedicationInventory();
 
-        for(Medicine medicine: medicineList){
+        for (Medicine medicine : medicineList) {
             System.out.printf("%-25s %-25s\n", "Medicine Name:", medicine.getMedicineName());
             System.out.printf("%-25s %-25s\n", "Medicine Quantity:", medicine.getMedicineQuantity());
             System.out.printf("%-25s %-25s\n", "Medicine Alert:", medicine.getMedicineAlert());
             System.out.println("-".repeat(51));
+        }
+    }
+
+    private void showSubmitReplenishmentRequest() {
+        try {
+            boolean submitReplenishmentRequest = false;
+
+            while (!submitReplenishmentRequest) {
+                showMedicationInventory();
+
+                System.out.println("Enter the name of the medicine to be replenished:");
+                String medicineName = scanner.nextLine();
+
+                System.out.println("Enter the quantity to be replenished:");
+                int replenishmentQuantity;
+
+                try {
+                    replenishmentQuantity = Integer.parseInt(scanner.nextLine());
+                    if (replenishmentQuantity <= 0) {
+                        System.out.println("Quantity must be a positive number. Please try again.");
+                        continue;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid quantity. Please enter a valid number.");
+                    continue;
+                }
+
+                submitReplenishmentRequest = pharmacistController.handleSubmitReplenishmentRequest(medicineName,
+                        replenishmentQuantity);
+            }
+            System.out.println("""
+                    =============================================================
+                    |             Hospital Management System (HMS)!             |
+                    |       Successfully submitted replenishment request!       |
+                    =============================================================
+                    """);
+        } catch (Exception e) {
+            System.out.println("An unexpected error occurred. Please try again.");
+            e.printStackTrace();
         }
     }
 }

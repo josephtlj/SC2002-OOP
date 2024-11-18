@@ -49,7 +49,7 @@ public class MedicineDao implements MedicineDaoInterface {
         return medicines;
     }
 
-    // HELPER METHOD TO PARSE A PATIENT OBJECT FROM A CSV LINE
+    // HELPER METHOD TO PARSE A MEDICINE OBJECT FROM A CSV LINE
     private Medicine parseMedicine(String line) {
         try {
             String[] fields = line.split(",");
