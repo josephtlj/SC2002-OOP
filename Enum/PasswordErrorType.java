@@ -1,4 +1,4 @@
-package Doctor.DoctorPassword;
+package Enum;
 
 public enum PasswordErrorType 
 {
@@ -6,3 +6,4 @@ public enum PasswordErrorType
     SAME_AS_OLD,
     NILL;
 }
+

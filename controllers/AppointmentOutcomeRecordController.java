@@ -4,9 +4,9 @@ import services.AppointmentOutcomeRecordServices;
 import java.time.*;
 import java.util.*;
 
-import Doctor.Appointment.Appointment;
-import Doctor.Appointment.AppointmentTimeSlot;
+import models.Appointment;
 import models.AppointmentOutcomeRecord;
+import models.AppointmentTimeSlot;
 
 public class AppointmentOutcomeRecordController 
 {

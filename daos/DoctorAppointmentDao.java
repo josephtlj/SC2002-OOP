@@ -2,11 +2,15 @@ package daos;
 
 import java.io.*;
 import java.util.*;
-import Doctor.Appointment.*;
+import Enum.AppointmentStatus;
+import interfaces.DoctorAppointmentDaoInterface;
+import models.Appointment;
+import models.AppointmentTimeSlot;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-public class DoctorAppointmentDao 
+public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface
 {
     // ATTRIBUTES
     private static String DOCTORAPPOINTMENTSLOTSDB_PATH;

@@ -1,7 +1,9 @@
-package Doctor.Appointment;
+package models;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import Enum.AppointmentStatus;
 
 public class Appointment 
 {

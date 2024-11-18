@@ -1,17 +1,18 @@
 package services;
 
 
-import Doctor.Appointment.AppointmentTimeSlot;
-import Doctor.Appointment.Appointment;
 import daos.AppointmentOutcomeRecordDao;
+import interfaces.AppointmentOutcomeRecordServiceInterface;
+import models.Appointment;
 import models.AppointmentOutcomeRecord;
+import models.AppointmentTimeSlot;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class AppointmentOutcomeRecordServices 
+public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecordServiceInterface
 {
     //ATTRIBUTES
     AppointmentOutcomeRecordDao appointmentOutcomeRecordDao;

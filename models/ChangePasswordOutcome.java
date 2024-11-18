@@ -1,7 +1,9 @@
-package Doctor.DoctorPassword;
+package models;
 
+import Enum.PasswordErrorType;
 public class ChangePasswordOutcome 
 {
+    
     //ATTRIBUTES
     private boolean outcome;
     private PasswordErrorType errorType;

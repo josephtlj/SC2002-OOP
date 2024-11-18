@@ -2,44 +2,36 @@ package models;
 
 import java.util.List;
 import Calendar.Calendar;
-import Doctor.Appointment.DoctorAppointmentActionType;
-import Doctor.Appointment.DoctorAppointmentManager;
-import Doctor.Appointment.DoctorAppointmentView;
-import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordManager;
-import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordView;
-import Doctor.DoctorPassword.*;
 import daos.AppointmentOutcomeRecordDao;
 import daos.DiagnosisTreatmentRecordDao;
 import daos.DoctorDao;
 import daos.MedicalRecordDao;
 import views.AppointmentOutcomeRecordView;
+import views.DiagnosisTreatmentRecordView;
+import views.DoctorAppointmentView;
+import views.DoctorChangePasswordView;
 import Doctor.MedicalRecord.*;
 import controllers.AppointmentOutcomeRecordController;
-import daos.AppointmentOutcomeRecordDao;
+import controllers.DiagnosisTreatmentRecordController;
+import controllers.DoctorAppointmentController;
+import controllers.DoctorPasswordController;
+import services.DoctorAppointmentServices;
+import Enum.DoctorAppointmentActionType;
+import Enum.DoctorDepartment;
 
 public class Doctor extends User
 {
-    private enum Department 
-    {
-	    RADIOLOGY,
-	    CARDIOLOGY,
-	    ORTHOPEDICS,
-	    GENERAL_SURGERY,
-	    PHYSIOTHERAPY
-    }
     //ATTRIBUTES
     private DoctorDao doctorDao;
-    private DiagnosisTreatmentRecordDao treatmentRecordDao;
     private MedicalRecordDao medicalRecordDao;
-    private AppointmentOutcomeRecordDao outcomeRecordDao;
     private Calendar doctorCalendar;
-    private Department department;
+    private DoctorDepartment department;
     
     //CONSTRUCTOR
     public Doctor(String ID, String name, String department,String password, boolean IsFirstLogin, byte[] salt) 
     {
         super(ID, password, Role.valueOf("Doctor"),salt, IsFirstLogin); 
-        this.department= Department.valueOf(department); 
+        this.department= DoctorDepartment.valueOf(department); 
         this.doctorDao= new DoctorDao();
         this.doctorCalendar= new Calendar(ID);
     }
@@ -59,16 +51,14 @@ public class Doctor extends User
     //UPDATE DOCTOR'S PASSWORD
     public void updateDoctorPassword()
     {
-        DoctorPasswordManager passwordManager= new DoctorPasswordManager(this.doctorDao);
+        DoctorPasswordController passwordManager= new DoctorPasswordController(this.doctorDao);
         DoctorChangePasswordView changePasswordView = new DoctorChangePasswordView(passwordManager);
     }
 
     //MANAGE APPOINTMENTS
     public void ManageAppointments(DoctorAppointmentActionType actionType)
     {
-        DiagnosisTreatmentRecordManager treatmentRecordManager= new DiagnosisTreatmentRecordManager(treatmentRecordDao);
-        DoctorAppointmentManager appointmentManager= new DoctorAppointmentManager(getHospitalId(), actionType,treatmentRecordManager);
-        DoctorAppointmentView appointmentView= new DoctorAppointmentView(appointmentManager);
+        DoctorAppointmentView doctorAppointmentView= new DoctorAppointmentView(super.getHospitalId(), actionType);
     }
 
     //MANAGE SCHEDULE
@@ -87,7 +77,7 @@ public class Doctor extends User
         }
         else
         {
-            DiagnosisTreatmentRecordManager treatmentRecordManager= new DiagnosisTreatmentRecordManager(treatmentRecordDao);
+            DiagnosisTreatmentRecordController treatmentRecordManager= new DiagnosisTreatmentRecordController(treatmentRecordDao);
             DiagnosisTreatmentRecordView treatmentRecordView= new DiagnosisTreatmentRecordView(treatmentRecordManager);
         }
     }
@@ -95,8 +85,7 @@ public class Doctor extends User
     //MANAGE APPOINTMENT OUTCOME RECORD
     public void ManageAppointmentOutcomeRecord()
     {
-        AppointmentOutcomeRecordController manager= new AppointmentOutcomeRecordController(super.getHospitalId());
-        AppointmentOutcomeRecordView outcomeRecordView= new AppointmentOutcomeRecordView(manager,super.getHospitalId());
+        AppointmentOutcomeRecordView outcomeRecordView= new AppointmentOutcomeRecordView(super.getHospitalId());
     }
     
     public void logout()

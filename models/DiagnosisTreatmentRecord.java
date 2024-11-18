@@ -1,7 +1,5 @@
 package models;
 
-import Doctor.Appointment.Appointment;
-
 public class DiagnosisTreatmentRecord 
 {
     // Attributes

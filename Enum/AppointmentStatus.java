@@ -1,4 +1,4 @@
-package Doctor.Appointment;
+package Enum;
 
 public enum AppointmentStatus 
 {

@@ -1,9 +1,9 @@
-package Doctor;
+package views;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import Doctor.Appointment.DoctorAppointmentActionType;
+import Enum.DoctorAppointmentActionType;
 import Doctor.MedicalRecord.DoctorMedicalRecordActionType;
 import models.Doctor;
 import models.Session;

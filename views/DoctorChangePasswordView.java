@@ -1,7 +1,11 @@
-package Doctor.DoctorPassword;
+package views;
 
+import models.ChangePasswordOutcome;
 import models.Session;
 import java.util.Scanner;
+
+import Enum.PasswordErrorType;
+import controllers.DoctorPasswordController;
 
 public class DoctorChangePasswordView 
 {
@@ -9,13 +13,13 @@ public class DoctorChangePasswordView
     private Scanner doctorScanner = new Scanner(System.in);
 
     //CONSTRUCTOR
-    public DoctorChangePasswordView(DoctorPasswordManager passwordManager)
+    public DoctorChangePasswordView(DoctorPasswordController passwordManager)
     {
         ChangePasswordView(passwordManager);
     }
 
     //METHODS
-    public void ChangePasswordView(DoctorPasswordManager passwordManager)
+    public void ChangePasswordView(DoctorPasswordController passwordManager)
     {
         System.out.println("""
                 =====================================================================================
@@ -64,12 +68,12 @@ public class DoctorChangePasswordView
         
     }
 
-    public void PasswordErrorNoMatchView(DoctorPasswordManager passwordManager)
+    public void PasswordErrorNoMatchView(DoctorPasswordController passwordManager)
     {
         System.out.println("Passwords do not match. Kindly try again.");
     }
 
-    public void PasswordErrorSameAsOldView(DoctorPasswordManager passwordManager)
+    public void PasswordErrorSameAsOldView(DoctorPasswordController passwordManager)
     {
         System.out.println("New password must not be the same as old password. Kindly try again.");
     }

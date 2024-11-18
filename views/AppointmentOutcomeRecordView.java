@@ -2,25 +2,24 @@ package views;
 
 import java.util.*;
 
-import Doctor.Appointment.Appointment;
-import Doctor.Appointment.AppointmentTimeSlot;
 import controllers.AppointmentOutcomeRecordController;
+import models.Appointment;
 import models.AppointmentOutcomeRecord;
+import models.AppointmentTimeSlot;
 
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 
 public class AppointmentOutcomeRecordView 
 {
     //ATTRIBUTES
     Scanner scanner= new Scanner(System.in);
+    InputForDateMonthTimeSlotView viewInputForDateMonthTimeSlot= new InputForDateMonthTimeSlotView();
+    AppointmentView appointmentView= new AppointmentView();
     AppointmentOutcomeRecordController manager;
-    ViewInputForDateMonthTimeSlot viewInputForDateMonthTimeSlot= new ViewInputForDateMonthTimeSlot();
 
     //CONSTRUCTOR
-    public AppointmentOutcomeRecordView(AppointmentOutcomeRecordController manager, String doctorID)
+    public AppointmentOutcomeRecordView(String doctorID)
     {
-        this.manager=manager;
         printAppointmentOutcomeRecordView(doctorID);
     }
 
@@ -131,6 +130,8 @@ public class AppointmentOutcomeRecordView
         System.out.print("Enter the patient ID: ");
         String patientID = scanner.nextLine().trim();
 
+        this.manager= new AppointmentOutcomeRecordController(patientID);
+
         AppointmentOutcomeRecord outcomeRecord= manager.findOutcomeRecord(patientID, date, timeSlot);
         if(outcomeRecord==null)
         {
@@ -155,80 +156,14 @@ public class AppointmentOutcomeRecordView
         
         if(choice==1)
         {
-            viewByDay(appointments);
+            appointmentView.printAppointmentOnADateView(appointments);
         }
         else
         {
-            viewByMonth(appointments);
+            appointmentView.printAppointmentInAMonthView(appointments);
         }
 
     }
 
-    public void viewByDay(List<Appointment> appointments)
-    {
-        LocalDate date= viewInputForDateMonthTimeSlot.viewWhichDate();
-        List<Appointment> sievedAppointments= manager.getCompletedAppointmentsInDay(date, appointments);
-
-        if (sievedAppointments.isEmpty()) 
-        {
-            System.out.println("No completed appointments found for the selected date.");
-        } 
-        else 
-        {
-            // Print header
-            String headerFormat = "| %-15s | %-12s |\n";
-            String rowFormat = "| %-15s | %-12s |\n";
-            System.out.println("+-----------------+--------------+");
-            System.out.printf(headerFormat, "Time Slot", "Patient ID");
-            System.out.println("+-----------------+--------------+");
-    
-            // Print each appointment
-            for (Appointment appointment : sievedAppointments) {
-                String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
-                                + appointment.getAppointmentTimeSlot().getEndTime();
-                String patientID = appointment.getPatientID();
-                System.out.printf(rowFormat, timeSlot, patientID);
-            }
-    
-            // Footer line
-            System.out.println("+-----------------+--------------+");
-        }
-
-
-    }
-
-    public void viewByMonth(List<Appointment> appointments)
-    {
-        int month= viewInputForDateMonthTimeSlot.viewWhichMonth();
-
-        List<Appointment> sievedAppointments= manager.getCompletedAppointmentsInMonth(month, appointments);
-
-        if (sievedAppointments.isEmpty()) 
-        {
-            System.out.println("No completed appointments found for the selected month.");
-        } 
-        else 
-        {
-            //Print header
-            String headerFormat = "| %-15s | %-21s | %-15s |\n";
-            String rowFormat = "| %-15s | %-21s | %-15s |\n";
-
-            System.out.println("+-----------------+-----------------------+-----------------+");
-            System.out.printf(headerFormat, "Date", "Time Slot", "Patient ID");
-            System.out.println("+-----------------+-----------------------+-----------------+");
-
-            // Print each appointment
-            for (Appointment appointment : sievedAppointments) {
-            String date = appointment.getAppointmentDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-            String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
-                        + appointment.getAppointmentTimeSlot().getEndTime();
-            String patientID = appointment.getPatientID();
-            System.out.printf(rowFormat, date, timeSlot, patientID);
-            }
-
-            // Footer line
-            System.out.println("+-----------------+-----------------------+-----------------+");
-        }
-    }
 
 }

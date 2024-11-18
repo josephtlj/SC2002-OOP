@@ -1,4 +1,4 @@
-package Doctor.Appointment;
+package models;
 
 import java.time.LocalTime;
 

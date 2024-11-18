@@ -1,16 +1,18 @@
-package Doctor.DoctorPassword;
+package controllers;
 
 import daos.DoctorDao;
+import models.ChangePasswordOutcome;
 import models.Doctor;
-import Doctor.*;
+import Enum.PasswordErrorType;
 
-public class DoctorPasswordManager 
+
+public class DoctorPasswordController 
 {
     //ATTRIBUTES
     private DoctorDao doctorDao;
 
     //CONSTRUCTOR
-    public DoctorPasswordManager(DoctorDao doctorDao)
+    public DoctorPasswordController(DoctorDao doctorDao)
     {
         this.doctorDao= doctorDao;
     }
@@ -18,7 +20,7 @@ public class DoctorPasswordManager
     //METHODS
     public ChangePasswordOutcome updateDoctorPassword(String newPassword, String confirmPassword, String ID)
     {
-        ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);
+        ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);//why is there an error here
         if(!newPassword.equals(confirmPassword))
         {
             passwordOutcome.setPasswordErrorType(PasswordErrorType.NO_MATCH);

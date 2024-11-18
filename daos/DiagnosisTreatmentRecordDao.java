@@ -13,8 +13,8 @@ import java.util.Properties;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-import Doctor.Appointment.Appointment;
-import Doctor.Appointment.AppointmentTimeSlot;
+import models.Appointment;
+import models.AppointmentTimeSlot;
 import models.DiagnosisTreatmentRecord;
 
 public class DiagnosisTreatmentRecordDao 
@@ -50,7 +50,7 @@ public class DiagnosisTreatmentRecordDao
     }
 
     //UPDATE DIAGNOSIS TREATMENT RECORD FOR PATIENT ON SPECIFIC DATE
-    public void updateDiagnosisTreatmentRecord(String diagnosis, String prescription, String treatmentPlan, LocalDate date)
+    public boolean updateDiagnosisTreatmentRecord(String diagnosis, String prescription, String treatmentPlan, LocalDate date)
     {
         File tempFile = new File(diagnosisTreatmentRecordFile.getParent(), "temp.csv");
     
@@ -107,25 +107,27 @@ public class DiagnosisTreatmentRecordDao
 
             if (!recordUpdated) 
             {
-            System.out.println("No matching record found for the specified date.");
+                return false;
             }
 
         } catch (IOException e) 
         {
             e.printStackTrace();
+            return false;
         }
 
         // Replace the original file with the updated file
         if (!diagnosisTreatmentRecordFile.delete()) 
         {
-            System.err.println("Failed to delete the original file.");
-            return;
+            return false;
         }
 
         if (!tempFile.renameTo(diagnosisTreatmentRecordFile)) 
         {
-            System.err.println("Failed to rename the temporary file.");
+            return false;
         }
+
+        return true;
     }
 
     //READ DIAGNOSIS TREATMENT RECORD FOR PATIENT ON SPECIFIC DATE

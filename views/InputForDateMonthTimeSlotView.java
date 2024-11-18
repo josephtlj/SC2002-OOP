@@ -2,12 +2,12 @@ package views;
 
 import java.util.*;
 
-import Doctor.Appointment.AppointmentTimeSlot;
+import models.AppointmentTimeSlot;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-public class ViewInputForDateMonthTimeSlot
+public class InputForDateMonthTimeSlotView
 {
 
     //ATTRIBUTES

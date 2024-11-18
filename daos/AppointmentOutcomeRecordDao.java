@@ -11,11 +11,13 @@ import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import Doctor.Appointment.Appointment;
-import Doctor.Appointment.AppointmentTimeSlot;
-import models.AppointmentOutcomeRecord;
 
-public class AppointmentOutcomeRecordDao 
+import interfaces.AppointmentOutcomeRecordDaoInterface;
+import models.Appointment;
+import models.AppointmentOutcomeRecord;
+import models.AppointmentTimeSlot;
+
+public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoInterface
 {
     // ATTRIBUTES
     private static String APPOINTMENTOUTCOMERECORDDB_PATH;
