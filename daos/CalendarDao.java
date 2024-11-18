@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import Calendar.CalendarDayStatus;
+import Enum.CalendarDayStatus;
+import interfaces.CalendarDaoInterface;
 
-public class CalendarDao 
+public class CalendarDao implements CalendarDaoInterface 
 {
     // ATTRIBUTES
     private static String CALENDARDB_PATH;
@@ -60,7 +61,7 @@ public class CalendarDao
     }
 
     // METHOD TO READ DATES FOR SPECIFIC STATUS
-    private List<LocalDate> getDatesByStatus(File calendarFile, CalendarDayStatus status) 
+    public List<LocalDate> getDatesByStatus(File calendarFile, CalendarDayStatus status)
     {
         List<LocalDate> dates = new ArrayList<>();
         
@@ -169,7 +170,7 @@ public class CalendarDao
     }
 
     // GENERAL METHOD TO CHANGE STATUS AND UPDATE THE CSV FILE
-    private boolean changeStatus(LocalDate date, CalendarDayStatus status)
+    public boolean changeStatus(LocalDate date, CalendarDayStatus status)
     {
         boolean isUpdated = false;
 
@@ -211,9 +212,24 @@ public class CalendarDao
         catch (IOException ex)
         {
             ex.printStackTrace();
+            return false;
         }
 
-        return true; // Successfully updated the status
+        /* 
+        //CHECK IF USER IS A DOCTOR, IF YES APPOINTMENT AVAILABILITY HAS TO BE CHANGED
+        if(CalendarFile.getName().startsWith("D"))
+        {
+            switch(status)
+            {
+                case ANNUAL_LEAVE:
+                    break;
+                case MEDICAL_LEAVE:
+                    break;
+            }
+        }
+        */
+
+        return true; 
     }
 
     //RETURN MEDICAL_LEAVE DATES

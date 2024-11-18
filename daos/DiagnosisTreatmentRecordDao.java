@@ -10,6 +10,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import interfaces.DiagnosisTreatmentRecordDaoInterface;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
@@ -17,7 +20,7 @@ import models.Appointment;
 import models.AppointmentTimeSlot;
 import models.DiagnosisTreatmentRecord;
 
-public class DiagnosisTreatmentRecordDao 
+public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoInterface
 {
     // ATTRIBUTES
     private static String DIAGNOSISTREATMENTRECORDDB_PATH;

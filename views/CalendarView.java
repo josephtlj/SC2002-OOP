@@ -1,21 +1,24 @@
-package Calendar;
+package views;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import Enum.ApplyAnnualLeaveError;
+import Enum.CalendarDayStatus;
+import controllers.CalendarController;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 public class CalendarView 
 {
     //ATTRIBUTES
     private Scanner calendarScanner = new Scanner(System.in);
-    private CalendarManager calendarManager;
+    private CalendarController calendarManager;
+    InputForDateMonthTimeSlotView inputForDateMonthTimeSlotView= new InputForDateMonthTimeSlotView();
 
     //CONSTRUCTOR
-    public CalendarView(CalendarManager calendarManager)
+    public CalendarView(String ID)
     {
-        this.calendarManager= calendarManager;
+        this.calendarManager= new CalendarController(ID);
         printCalendarManagement();
     }
 
@@ -84,45 +87,19 @@ public class CalendarView
     //PRINT CALENDAR
     public void printCalendar()
     {
-        System.out.println("Would you like to view a specific date or an entire month?");
-        System.out.println("1: View a specific date");
-        System.out.println("2: View an entire month");
-        System.out.print("Enter your choice (1 or 2): ");
+        int choice= inputForDateMonthTimeSlotView.viewByDateOrMonth();
 
-        int choice = -1;
-        while (choice != 1 && choice != 2) {
-            try {
-                choice = Integer.parseInt(calendarScanner.nextLine());
-                if (choice != 1 && choice != 2) {
-                    System.out.print("Invalid choice. Please enter 1 or 2: ");
-                }
-            } catch (NumberFormatException e) {
-                System.out.print("Invalid input. Please enter 1 or 2: ");
-            }
+        if(choice==1)
+        {
+            LocalDate date=inputForDateMonthTimeSlotView.viewWhichDate();
+            printCalendarDate(date);
+        }
+        else
+        {
+            int month= inputForDateMonthTimeSlotView.viewWhichMonth();
+            printCalendarMonth(month);
         }
 
-        if (choice == 1) {
-            System.out.print("Enter the date (yyyy-MM-dd): ");
-            try {
-                String inputDate = calendarScanner.nextLine();
-                LocalDate date = LocalDate.parse(inputDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                printCalendarDate(date);
-            } catch (DateTimeParseException e) {
-                System.out.println("❌ Invalid date format. Please try again.");
-            }
-        } else if (choice == 2) {
-            System.out.print("Enter the month (1 for January, 12 for December): ");
-            try {
-                int month = Integer.parseInt(calendarScanner.nextLine());
-                if (month < 1 || month > 12) {
-                    System.out.println("❌ Invalid month. Please enter a value between 1 and 12.");
-                } else {
-                    printCalendarMonth(month);
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("❌ Invalid input. Please enter a number between 1 and 12.");
-            }
-        }
     }
 
     public void printCalendarDate(LocalDate date)
@@ -212,83 +189,41 @@ public class CalendarView
     //APPLY FOR ANNUAL LEAVE
     public void printApplyAnnualLeave()
     {
-        LocalDate date = null;
-        boolean validInput = false;
 
-        do {
-            try {
-                System.out.println("Enter the date you want to apply for annual leave (yyyy-MM-dd):");
-                String input = calendarScanner.nextLine();
+        LocalDate date= inputForDateMonthTimeSlotView.viewWhichDate();
+        // Apply for annual leave
+        ApplyAnnualLeaveError errorType = calendarManager.applyAnnualLeave(date);
     
-                // Validate and parse input date
-                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                validInput = true;
+        // Handle different outcomes
+        switch (errorType) 
+        {
+            case INSUFFICIENT_AL_DAYS:
+                System.out.println("Sorry, you do not have enough annual leave days left.");
+                break;
     
-                // Apply for annual leave
-                ApplyAnnualLeaveError errorType = calendarManager.applyAnnualLeave(date);
+            case STAFF_SHORTAGE:
+                System.out.println("Your leave request could not be approved due to staff shortages on the selected date.");
+                break;
     
-                // Handle different outcomes
-                switch (errorType) 
-                {
-                    case INSUFFICIENT_AL_DAYS:
-                        System.out.println("Sorry, you do not have enough annual leave days left.");
-                        break;
+            case NO_ERROR:
+                System.out.println("Your annual leave has been successfully applied.");
+                break;
     
-                    case STAFF_SHORTAGE:
-                        System.out.println("Your leave request could not be approved due to staff shortages on the selected date.");
-                        break;
-    
-                    case NO_ERROR:
-                        System.out.println("Your annual leave has been successfully applied.");
-                        validInput = false; // Exit loop after successful application
-                        break;
-    
-                    default:
-                        break;
-                }
-            } 
-            catch (DateTimeParseException e) 
-            {
-                System.out.println("Invalid date format. Please enter the date in the format yyyy-MM-dd.");
-            }
-            catch (Exception e) 
-            {
-                System.out.println("An error occurred: " + e.getMessage());
-            }
-        } while (validInput);
+            default:
+                break;
+        }
 
-    }
+            
+    } 
+
 
     //APPLY FOR MEDICAL LEAVE
     public void printApplyMedicalLeave()
     {
-        LocalDate date = null;
-        boolean validInput = false;
+        LocalDate date= inputForDateMonthTimeSlotView.viewWhichDate();
+        calendarManager.applyMedicalLeave(date);
+        System.out.println("Your medical leave has been successfully applied.");
 
-        do {
-            try {
-                System.out.println("Enter the date you want to apply for medical leave (yyyy-MM-dd):");
-                String input = calendarScanner.nextLine();
-    
-                // Validate and parse input date
-                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                validInput = true;
-    
-                // Apply for annual leave
-                calendarManager.applyMedicalLeave(date);
-    
-                System.out.println("Your medical leave has been successfully applied.");
-                validInput= false;
-            } 
-            catch (DateTimeParseException e) 
-            {
-                System.out.println("Invalid date format. Please enter the date in the format yyyy-MM-dd.");
-            }
-            catch (Exception e) 
-            {
-                System.out.println("An error occurred: " + e.getMessage());
-            }
-        } while (validInput);
     }
 
     //PRINT CANCEL LEAVE
@@ -347,65 +282,19 @@ public class CalendarView
     //PRINT CANCEL ANNUAL LEAVE
     public void printCancelAnnualLeave()
     {
-        LocalDate date = null;
-        boolean validInput = false;
-
-        do {
-            try 
-            {
-                System.out.println("Enter the date you want to cancel annual leave (yyyy-MM-dd):");
-                String input = calendarScanner.nextLine();
-    
-                // Validate and parse input date
-                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                validInput = true;
-
-                calendarManager.cancelAnnualLeave(date);
-                System.out.println("Annual Leave has been successfully canceled.:");
-                validInput= false;
-    
-            }    
-            catch (DateTimeParseException e) 
-            {
-                System.out.println("Invalid date format. Please enter the date in the format yyyy-MM-dd.");
-            }
-            catch (Exception e) 
-            {
-                System.out.println("An error occurred: " + e.getMessage());
-            }
-        } while (validInput);
+        LocalDate date= inputForDateMonthTimeSlotView.viewWhichDate();
+        calendarManager.cancelAnnualLeave(date);
+        System.out.println("Annual Leave has been successfully canceled.:");
+                
     }
 
     //PRINT CANCEL MEDICAL LEAVE
     public void printCancelMedicalLeave()
     {
-        LocalDate date = null;
-        boolean validInput = false;
-
-        do {
-            try 
-            {
-                System.out.println("Enter the date you want to cancel medical leave (yyyy-MM-dd):");
-                String input = calendarScanner.nextLine();
+        LocalDate date= inputForDateMonthTimeSlotView.viewWhichDate();
+        calendarManager.cancelAnnualLeave(date);
+        System.out.println("Medical Leave has been successfully canceled.:");
     
-                // Validate and parse input date
-                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                validInput = true;
-
-                calendarManager.cancelAnnualLeave(date);
-                System.out.println("Medical Leave has been successfully canceled.:");
-                validInput= false;
-    
-            }    
-            catch (DateTimeParseException e) 
-            {
-                System.out.println("Invalid date format. Please enter the date in the format yyyy-MM-dd.");
-            }
-            catch (Exception e) 
-            {
-                System.out.println("An error occurred: " + e.getMessage());
-            }
-        } while (validInput);
     }
 
     

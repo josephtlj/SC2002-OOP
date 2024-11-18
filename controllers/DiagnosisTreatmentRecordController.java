@@ -11,9 +11,9 @@ public class DiagnosisTreatmentRecordController
     DiagnosisTreatmentRecordService diagnosisTreatmentRecordService;
 
     //CONSTRUCTOR
-    public DiagnosisTreatmentRecordController(DiagnosisTreatmentRecordService diagnosisTreatmentRecordService)
+    public DiagnosisTreatmentRecordController(String patientID)
     {
-        this.diagnosisTreatmentRecordService= diagnosisTreatmentRecordService;
+        this.diagnosisTreatmentRecordService= new DiagnosisTreatmentRecordService(patientID);
     }
 
     //METHODS

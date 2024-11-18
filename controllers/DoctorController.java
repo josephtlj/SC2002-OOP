@@ -1,30 +1,27 @@
-package models;
+package controllers;
 
 import java.util.List;
-import daos.DoctorDao;
+
+import Enum.DoctorAppointmentActionType;
+import Enum.DoctorMedicalRecordActionType;
+import models.Doctor;
 import views.AppointmentOutcomeRecordView;
 import views.DiagnosisTreatmentRecordView;
 import views.DoctorAppointmentView;
 import views.DoctorChangePasswordView;
 import views.DoctorMedicalRecordView;
-import Enum.DoctorAppointmentActionType;
-import Enum.DoctorDepartment;
-import Enum.DoctorMedicalRecordActionType;
+import services.DoctorService;
 
-public class Doctor extends User
+public class DoctorController 
 {
     //ATTRIBUTES
-    private Calendar doctorCalendar;
-    private DoctorDepartment department;
-    
-    //CONSTRUCTOR
-    public Doctor(String ID, String name, String department,String password, boolean IsFirstLogin, byte[] salt) 
-    {
-        super(ID, password, Role.valueOf("Doctor"),salt, IsFirstLogin); 
-        this.department= DoctorDepartment.valueOf(department); 
-        this.doctorCalendar= new Calendar(ID);
-    }
+    DoctorService doctorService;
 
+    //CONSTRUCTOR
+    public DoctorController(String ID)
+    {
+        this.doctorService= new DoctorService(ID);
+    }
     //GET METHODS
     public String getDepartment()
     {
@@ -34,7 +31,7 @@ public class Doctor extends User
     //RETRIEVE ALL DOCTORS FROM DATABASE
     public List<Doctor> getAllDoctors()
     {
-        return doctorDao.getAllDoctors();
+        return doctorService.getAllDoctors();
     }
 
     //UPDATE DOCTOR'S PASSWORD

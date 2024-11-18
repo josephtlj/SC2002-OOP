@@ -4,11 +4,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import controllers.DiagnosisTreatmentRecordController;
+import controllers.DoctorMedicalRecordController;
+import interfaces.DiagnosisTreatmentRecordViewInterface;
+import models.MedicalRecord;
 
 import java.time.*;
-import java.time.format.DateTimeFormatter;
 
-public class DiagnosisTreatmentRecordView 
+public class DiagnosisTreatmentRecordView implements DiagnosisTreatmentRecordViewInterface
 {
     //ATTRIBUTES
     private Scanner scanner = new Scanner(System.in);
@@ -16,14 +18,13 @@ public class DiagnosisTreatmentRecordView
     InputForDateMonthTimeSlotView inputForDateMonthTimeSlotView= new InputForDateMonthTimeSlotView();
 
     //CONSTRUCTOR
-    public DiagnosisTreatmentRecordView(DiagnosisTreatmentRecordController treatmentRecordManager)
+    public DiagnosisTreatmentRecordView()
     {
-        this.treatmentRecordManager= treatmentRecordManager;
-        printView();
+        printGetPatientID();
     }
 
     //METHODS
-    public void printView()
+    public void printUpdateDiagnosisTreatmentRecordView()
     {
         
         LocalDate date= inputForDateMonthTimeSlotView.viewWhichDate();
@@ -99,5 +100,41 @@ public class DiagnosisTreatmentRecordView
         String treatmentPlan = scanner.nextLine().trim(); // Trim whitespace
         treatmentRecordManager.setTreatmentPlan(treatmentPlan, date); 
         System.out.println("Treatment plan has been successfully updated.");
+    }
+
+    public void printGetPatientID()
+    {
+        String patientID=null;
+        boolean validInput=false;
+        MedicalRecord medicalRecord;
+        do
+        {
+            try
+            {
+                System.out.println("Enter patient ID:");
+                patientID= scanner.nextLine().trim(); //remove any whitespaces
+
+                //CHECK IF PATIENTID IS IN DATABASE
+                DoctorMedicalRecordController doctorMedicalRecordController= new DoctorMedicalRecordController();
+                medicalRecord= doctorMedicalRecordController.getMedicalRecord(patientID);
+                if(medicalRecord==null)
+                {
+                    System.out.println("Invalid patient ID.Please try again.");
+                    validInput=false;
+                }
+                else
+                {
+                    validInput=true;
+                    this.treatmentRecordManager= new DiagnosisTreatmentRecordController(patientID);
+                    printUpdateDiagnosisTreatmentRecordView();
+                }
+
+            }
+            catch(InputMismatchException inputMismatchException)
+            {
+                System.out.println("Invalid format for patientID");
+                validInput=false;
+            }
+        }while(!validInput);
     }
 }

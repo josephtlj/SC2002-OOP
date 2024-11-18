@@ -12,11 +12,12 @@ import java.util.List;
 import java.util.Properties;
 import java.util.UUID;
 
+import interfaces.MedicalRecordDaoInterface;
 import models.MedicalRecord;
 import models.Patient;
 import models.DiagnosisTreatmentRecord;
 
-public class MedicalRecordDao 
+public class MedicalRecordDao implements MedicalRecordDaoInterface
 {
     // LOAD NECESSARY PATHS FROM CONFIG.PROPERTIES
     private static String MEDICALRECORDDB_PATH;

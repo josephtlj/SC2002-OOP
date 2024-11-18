@@ -1,4 +1,4 @@
-package Doctor.MedicalRecord;
+package Enum;
 
 public enum DoctorMedicalRecordActionType 
 {

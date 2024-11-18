@@ -1,22 +1,22 @@
-package Doctor.MedicalRecord;
+package views;
 
 import java.text.SimpleDateFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+import interfaces.DoctorMedicalRecordViewInterface;
+import controllers.DoctorMedicalRecordController;
 import models.MedicalRecord;
 
-public class DoctorMedicalRecordView 
+public class DoctorMedicalRecordView implements DoctorMedicalRecordViewInterface
 {
     //ATTRIBUTES
     Scanner scanner= new Scanner(System.in);
-    DoctorMedicalRecordManager manager;
+    DoctorMedicalRecordController manager= new DoctorMedicalRecordController();
 
     //CONSTRUCTOR
-    public DoctorMedicalRecordView(DoctorMedicalRecordManager manager)
+    public DoctorMedicalRecordView()
     {
         printViewFindPatient();
-        this.manager= manager;
     }
 
     //METHODS

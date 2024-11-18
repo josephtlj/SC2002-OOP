@@ -1,20 +1,23 @@
-package Calendar;
+package controllers;
 
 import daos.CalendarDao;
 import java.time.*;
+import services.CalendarService;
+import Enum.ApplyAnnualLeaveError;
+import Enum.CalendarDayStatus;
 
-public class CalendarManager 
+public class CalendarController 
 {
     static final int ANNUAL_LEAVE_DAYS= 14;
     static final int MEDICAL_LEAVE_DAYS= 14;
     static final int AL_THRESHOLD=3;
     //ATTRIBUTES
-    CalendarDao calendarDao;
+    CalendarService calendarService;
 
     //CONSTRUCTOR
-    public CalendarManager(CalendarDao calendarDao)
+    public CalendarController(String ID)
     {
-        this.calendarDao= calendarDao;
+        this.calendarService= new CalendarService(ID);
     }
 
     //METHODS
@@ -22,7 +25,7 @@ public class CalendarManager
     //APPLY ANNUAL LEAVE
     public ApplyAnnualLeaveError applyAnnualLeave(LocalDate date)
     {
-        int balanceAL= ANNUAL_LEAVE_DAYS-calendarDao.getAnnualLeaveDates().size();
+        int balanceAL= ANNUAL_LEAVE_DAYS-calendarService.getAnnualLeaveDates().size();
         if(balanceAL==0)
         {
             ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.INSUFFICIENT_AL_DAYS;
@@ -30,14 +33,14 @@ public class CalendarManager
         }
         else
         {
-            if(calendarDao.getNumberOfAnnualLeaveDays(date)>AL_THRESHOLD)
+            if(calendarService.getNumberOfAnnualLeaveDays(date)>AL_THRESHOLD)
             {
                 ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.STAFF_SHORTAGE;
                 return errorType;
             }
             else
             {
-                calendarDao.applyAnnualLeave(date);
+                calendarService.applyAnnualLeave(date);
                 ApplyAnnualLeaveError errorType = ApplyAnnualLeaveError.NO_ERROR;
                 return errorType;
             }
@@ -47,14 +50,14 @@ public class CalendarManager
     //APPLY MEDICAL LEAVE
     public boolean applyMedicalLeave(LocalDate date)
     {
-        int balanceML= MEDICAL_LEAVE_DAYS-calendarDao.getMedicalLeaveDates().size();
+        int balanceML= MEDICAL_LEAVE_DAYS-calendarService.getMedicalLeaveDates().size();
         if(balanceML==0)
         {
             return false;
         }
         else
         {
-            calendarDao.applyMedicalLeave(date);
+            calendarService.applyMedicalLeave(date);
             return true;
         }
     }
@@ -62,19 +65,19 @@ public class CalendarManager
     //CANCEL ANNUAL LEAVE
     public void cancelAnnualLeave(LocalDate date)
     {
-        calendarDao.cancelAnnualLeave(date);
+        calendarService.cancelAnnualLeave(date);
     }
 
     //CANCEL MEDICAL LEAVE
     public void cancelMedicalLeave(LocalDate date)
     {
-        calendarDao.cancelMedicalLeave(date);
+        calendarService.cancelMedicalLeave(date);
     }
 
     //GET METHODS
     public CalendarDayStatus getStatusForDate(LocalDate date)
     {
-        return calendarDao.getStatus(date);
+        return calendarService.getStatus(date);
     }
     
 }

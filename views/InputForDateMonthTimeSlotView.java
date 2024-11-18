@@ -2,12 +2,13 @@ package views;
 
 import java.util.*;
 
+import interfaces.InputForDateMonthTimeSlotViewInterface;
 import models.AppointmentTimeSlot;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-public class InputForDateMonthTimeSlotView
+public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotViewInterface
 {
 
     //ATTRIBUTES
@@ -49,29 +50,33 @@ public class InputForDateMonthTimeSlotView
 
 
     //CHOOSE MONTH
-    public LocalDate viewWhichDate()
+    public LocalDate viewWhichDate() 
     {
-        boolean validInput= false;
-        LocalDate date=null;
-        do
-        {
-            try
-            {
+        boolean validInput = false;
+        LocalDate date = null;
+    
+        do {
+            try {
                 System.out.print("Enter the date (dd/MM/yyyy): ");
                 String dateInput = scanner.nextLine().trim();
                 DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 date = LocalDate.parse(dateInput, dateFormatter);
-                validInput=true;
+    
+                // Check if the date is in the current year
+                if (date.getYear() == LocalDate.now().getYear()) {
+                    validInput = true;
+                } else {
+                    System.out.println("❌ The date is not in the current year. Please try again.");
+                }
+            } catch (Exception e) {
+                System.out.println("❌ Invalid date format. Please use dd/MM/yyyy.");
+                validInput = false;
             }
-            catch (Exception e) 
-            {
-                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
-                validInput=false;
-            }
-        }while(!validInput);
-
+        } while (!validInput);
+    
         return date;
     }
+    
 
     //CHOOSE MONTH
     public int viewWhichMonth()
@@ -89,7 +94,7 @@ public class InputForDateMonthTimeSlotView
             }
             catch (Exception e) 
             {
-                System.out.println("Invalid input for month.");
+                System.out.println("❌ Invalid input for month.");
                 validInput=false;
             }
         }while(!validInput);
@@ -108,7 +113,7 @@ public class InputForDateMonthTimeSlotView
                 DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
                 startTime = timeFormatter.format(timeFormatter.parse(startTimeInput));
             } catch (Exception e) {
-                System.out.println("Invalid time format. Please use HH:mm.");
+                System.out.println("❌ Invalid time format. Please use HH:mm.");
             }
         }
         final String StartTime=startTime;
@@ -122,7 +127,7 @@ public class InputForDateMonthTimeSlotView
                 DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
                 endTime = timeFormatter.format(timeFormatter.parse(endTimeInput));
             } catch (Exception e) {
-                System.out.println("Invalid time format. Please use HH:mm.");
+                System.out.println("❌ Invalid time format. Please use HH:mm.");
             }
         }
         final String EndTime=endTime;

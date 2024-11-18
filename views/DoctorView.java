@@ -4,28 +4,30 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Enum.DoctorAppointmentActionType;
-import Doctor.MedicalRecord.DoctorMedicalRecordActionType;
+import Enum.DoctorMedicalRecordActionType;
 import models.Doctor;
 import models.Session;
+import controllers.DoctorController;
 
-public class DoctorLoginView 
+public class DoctorView 
 {
     private Scanner doctorScanner = new Scanner(System.in);
 
-    public void displayDoctorLoginView(Doctor doctor) 
+    public void displayDoctorLoginView(DoctorController doctorController) 
     {
+
         // PROMPT DOCTOR TO RESET PASSWORD SHOULD IT BE THEIR FIRST TIME LOGGING IN
         if (Session.getCurrentUser().getIsFirstLogin()) 
             {
-                doctor.updateDoctorPassword();
+                doctorController.updateDoctorPassword();
             }
             else
             {
-                printMenu(doctor);
+                printMenu(doctorController);
             }
     }
 
-    public void printMenu(Doctor doctor)
+    public void printMenu(DoctorController doctorController)
     {
         // FUNCTION EXECUTES TILL USER WANTS TO GO BACK TO HOMEPAGE
         int doctorChoice = 0;
@@ -63,35 +65,35 @@ public class DoctorLoginView
                     
                     case 1:
                         medicalRecordActionType= DoctorMedicalRecordActionType.VIEW;
-                        doctor.ManageMedicalRecord(medicalRecordActionType);
+                        doctorController.ManageMedicalRecord(medicalRecordActionType);
                         break;
 
                     case 2:
                         medicalRecordActionType= DoctorMedicalRecordActionType.UPDATE;
-                        doctor.ManageMedicalRecord(medicalRecordActionType);
+                        doctorController.ManageMedicalRecord(medicalRecordActionType);
                         break;
 
                     case 3:
-                        doctor.ManangeSchedule();
+                        doctorController.ManangeSchedule();
                         break;
 
                     case 4:
                         appointmentActionType= DoctorAppointmentActionType.SET_AVAILABILITY;
-                        doctor.ManageAppointments(appointmentActionType);
+                        doctorController.ManageAppointments(appointmentActionType);
                         break;
 
                     case 5:
                         appointmentActionType= DoctorAppointmentActionType.ACCEPT_OR_DECLINE;
-                        doctor.ManageAppointments(appointmentActionType);
+                        doctorController.ManageAppointments(appointmentActionType);
                         break;
 
                     case 6:
                         appointmentActionType= DoctorAppointmentActionType.VIEW;
-                        doctor.ManageAppointments(appointmentActionType);
+                        doctorController.ManageAppointments(appointmentActionType);
                         break;
                     
                     case 7:
-                        doctor.ManageAppointmentOutcomeRecord();
+                        doctorController.ManageAppointmentOutcomeRecord();
                         break;
 
                     case 8:

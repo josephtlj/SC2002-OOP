@@ -1,4 +1,6 @@
-package Calendar;
+package models;
+
+import Enum.CalendarDayStatus;
 
 public class CalendarDay 
 {

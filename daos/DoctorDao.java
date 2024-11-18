@@ -3,10 +3,10 @@ package daos;
 import java.io.*;
 import java.util.*;
 
-import Doctor.*;
+import interfaces.DoctorDaoInterface;
 import models.Doctor;
 
-public class DoctorDao
+public class DoctorDao implements DoctorDaoInterface
 {
     // LOAD NECESSARY PATHS FROM CONFIG.PROPERTIES
     private static String DOCTORDB_PATH;

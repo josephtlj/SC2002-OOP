@@ -11,10 +11,12 @@ public class DoctorChangePasswordView
 {
     //ATTRIBUTES
     private Scanner doctorScanner = new Scanner(System.in);
+    DoctorPasswordController passwordManager;
 
     //CONSTRUCTOR
-    public DoctorChangePasswordView(DoctorPasswordController passwordManager)
+    public DoctorChangePasswordView(String ID)
     {
+        this.passwordManager= new DoctorPasswordController(ID);
         ChangePasswordView(passwordManager);
     }
 

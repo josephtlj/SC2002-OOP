@@ -1,19 +1,14 @@
-package Doctor.MedicalRecord;
+package services;
+
+import java.util.List;
 
 import daos.MedicalRecordDao;
 import models.MedicalRecord;
-import java.util.*;
 
-public class DoctorMedicalRecordManager 
+public class DoctorMedicalRecordServices 
 {
     //ATTRIBUTES
-    MedicalRecordDao medicalRecordDao;
-
-    //CONSTRUCTOR
-    public DoctorMedicalRecordManager(MedicalRecordDao medicalRecordDao)
-    {
-        this.medicalRecordDao= medicalRecordDao;
-    }
+    MedicalRecordDao medicalRecordDao= new MedicalRecordDao();
 
     //METHODS
     public MedicalRecord getMedicalRecord(String patientID)
@@ -25,5 +20,4 @@ public class DoctorMedicalRecordManager
     {
         return medicalRecordDao.getAllMedicalRecords();
     }
-
 }

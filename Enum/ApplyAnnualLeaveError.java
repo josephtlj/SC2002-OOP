@@ -1,4 +1,4 @@
-package Calendar;
+package Enum;
 
 public enum ApplyAnnualLeaveError 
 {

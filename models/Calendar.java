@@ -1,11 +1,14 @@
-package Calendar;
+package models;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.Map;
 import java.util.Optional;
 
+import Enum.CalendarDayStatus;
+import controllers.CalendarController;
 import daos.CalendarDao;
+import views.CalendarView;
 
 import java.util.HashMap;
 import java.util.List;
@@ -109,10 +112,9 @@ public class Calendar
     }
 
     //METHODS
-    public void manageCalendar()
+    public void manageCalendar(String ID)
     {
-        CalendarManager calendarManager= new CalendarManager(calendarDao);
-        CalendarView calendarView= new CalendarView(calendarManager);
+        CalendarView calendarView= new CalendarView(ID);
     }
     
 }
