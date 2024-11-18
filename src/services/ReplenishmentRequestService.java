@@ -1,9 +1,10 @@
 package src.services;
 
 import java.util.List;
+import java.util.UUID;
 
 import src.models.Medicine;
-
+import src.models.ReplenishmentRequest;
 import src.interfaces.ReplenishmentRequestServiceInterface;
 import src.interfaces.ReplenishmentRequestDaoInterface;
 
@@ -41,6 +42,31 @@ public class ReplenishmentRequestService implements ReplenishmentRequestServiceI
             throw new IllegalArgumentException("Medicine with name '" + medicineName + "' not found.");
         }
 
-        replenishmentRequestDao.createReplenishmentRequest(replenishmentQuantity, medicineFound.getMedicineId());
+        replenishmentRequestDao.createReplenishmentRequest(medicineName, replenishmentQuantity,
+                medicineFound.getMedicineId());
+    }
+
+    @Override
+    public List<ReplenishmentRequest> readAllReplenishmentRequestsByStatus(ReplenishmentRequest.Status status) {
+        try {
+            return replenishmentRequestDao.getAllReplenishmentRequestsByStatus(status);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public void updateReplenishmentRequest(UUID requestId, ReplenishmentRequest.Status status){
+        ReplenishmentRequest replenishmentRequest = replenishmentRequestDao.getReplenishmentRequestByRequestId(requestId);
+
+        if (replenishmentRequest == null){
+            throw new IllegalArgumentException("Replenishment Request not found.");
+        }
+
+        replenishmentRequest.setStatus(status);
+        
+        replenishmentRequestDao.updateReplenishmentRequest(replenishmentRequest);
+
     }
 }

@@ -6,27 +6,17 @@ import java.util.Base64;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
-import src.models.Patient;
+import src.models.Administrator;
 
-import src.interfaces.PatientServiceInterface;
+import src.interfaces.AdministratorServiceInterface;
 
-import src.interfaces.PatientDaoInterface;
+import src.interfaces.AdministratorDaoInterface;
 
-public class PatientService implements PatientServiceInterface {
-    private final PatientDaoInterface patientDao;
+public class AdministratorService implements AdministratorServiceInterface {
+    private final AdministratorDaoInterface administratorDao;
 
-    public PatientService(PatientDaoInterface patientDao) {
-        this.patientDao = patientDao;
-    }
-
-    @Override
-    public Patient readPatientByHospitalId(String hospitalId) {
-        Patient patient = patientDao.getPatientByHospitalId(hospitalId);
-        if (patient == null) {
-            throw new IllegalArgumentException("Medical Record not found.");
-        }
-
-        return patient;
+    public AdministratorService(AdministratorDaoInterface administratorDao) {
+        this.administratorDao = administratorDao;
     }
 
     @Override
@@ -35,21 +25,31 @@ public class PatientService implements PatientServiceInterface {
             throw new IllegalArgumentException("The new passwords do not match.");
         }
 
-        Patient patient = patientDao.getPatientByHospitalId(hospitalId);
+        Administrator administrator = administratorDao.getAdministratorByHospitalId(hospitalId);
 
-        if (patient == null) {
-            throw new IllegalArgumentException("Patient not found.");
+        if (administrator == null) {
+            throw new IllegalArgumentException("Administrator not found.");
         }
 
-        if (hashPassword(newPassword, patient.getSalt()).equals(patient.getPassword())) {
+        if (hashPassword(newPassword, administrator.getSalt()).equals(administrator.getPassword())) {
             throw new IllegalArgumentException("The new password cannot be the same as the old password.");
         }
 
         byte[] newSalt = generateSalt();
         String hashedPassword = hashPassword(newPassword, newSalt);
-        patient.setSalt(newSalt);
-        patient.setPassword(hashedPassword);
-        patientDao.updatePatient(patient);
+        administrator.setSalt(newSalt);
+        administrator.setPassword(hashedPassword);
+        administratorDao.updateAdministrator(administrator);
+    }
+
+    @Override
+    public Administrator readAdministratorByHospitalId(String hospitalId) {
+        Administrator administrator = administratorDao.getAdministratorByHospitalId(hospitalId);
+        if (administrator == null) {
+            throw new IllegalArgumentException("Administrator not found.");
+        }
+
+        return administrator;
     }
 
     // SUPPORTING METHODS

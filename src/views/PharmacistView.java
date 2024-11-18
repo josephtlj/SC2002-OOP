@@ -42,10 +42,10 @@ public class PharmacistView {
                             showUpdatePassword();
                             break;
                         case 2:
-                            showAppointmentOutcomeRecord();
+                            // showAppointmentOutcomeRecord();
                             break;
                         case 3:
-
+                            // showUpdatePrescriptionStatus();
                             break;
                         case 4:
                             showMedicationInventory();
@@ -118,7 +118,7 @@ public class PharmacistView {
             System.out.printf("%-25s %-25s\n", "Medicine Name:", medicine.getMedicineName());
             System.out.printf("%-25s %-25s\n", "Medicine Quantity:", medicine.getMedicineQuantity());
             System.out.printf("%-25s %-25s\n", "Medicine Alert:", medicine.getMedicineAlert());
-            System.out.println("-".repeat(51));
+            System.out.println("-".repeat(60));
         }
     }
 

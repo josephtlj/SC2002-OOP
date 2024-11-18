@@ -32,7 +32,7 @@ public class PatientView {
                         (5) Reschedule Appointment
                         (6) Cancel Appointment
                         (7) View Scheduled Appointments
-                        (8) View Past AppointmentOutcome Records
+                        (8) View Past Appointment Outcome Records
                         (9) Logout
                         """);
 

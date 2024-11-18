@@ -8,7 +8,4 @@ public interface PatientDaoInterface {
 
     void updatePatient(Patient patient);
 
-    void deletePatient(String hospitalId);
-
-    void createPatient(Patient patient);
 }

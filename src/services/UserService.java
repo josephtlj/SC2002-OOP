@@ -2,10 +2,16 @@ package src.services;
 
 import src.models.Session;
 import src.models.User;
+
 import src.interfaces.UserServiceInterface;
+import src.interfaces.PatientServiceInterface;
+import src.interfaces.PharmacistServiceInterface;
+import src.interfaces.AdministratorServiceInterface;
+
 import src.interfaces.UserDaoInterface;
 import src.interfaces.PatientDaoInterface;
 import src.interfaces.PharmacistDaoInterface;
+import src.interfaces.AdministratorDaoInterface;
 
 import java.util.Base64;
 import java.util.Objects;
@@ -15,13 +21,16 @@ import javax.crypto.spec.PBEKeySpec;
 
 public class UserService implements UserServiceInterface {
     private final UserDaoInterface userDao;
-    private final PatientDaoInterface patientDao;
-    private final PharmacistDaoInterface pharmacistDao;
+    private final PatientServiceInterface patientService;
+    private final PharmacistServiceInterface pharmacistService;
+    private final AdministratorServiceInterface administratorService;
 
-    public UserService(UserDaoInterface userDao, PatientDaoInterface patientDao, PharmacistDaoInterface pharmacistDao) {
+    public UserService(UserDaoInterface userDao, PatientServiceInterface patientService,
+            PharmacistServiceInterface pharmacistService, AdministratorServiceInterface administratorService) {
         this.userDao = userDao;
-        this.patientDao = patientDao;
-        this.pharmacistDao = pharmacistDao;
+        this.patientService = patientService;
+        this.pharmacistService = pharmacistService;
+        this.administratorService = administratorService;
     }
 
     @Override
@@ -33,10 +42,14 @@ public class UserService implements UserServiceInterface {
 
         switch (rolePrefix) {
             case "PA":
-                user = patientDao.getPatientByHospitalId(hospitalId);
+                user = patientService.readPatientByHospitalId(hospitalId);
                 break;
             case "PH":
-                user = pharmacistDao.getPharmacistByHospitalId(hospitalId);
+                user = pharmacistService.readPharmacistByHospitalId(hospitalId);
+                break;
+            case "AD":
+                user = administratorService.readAdministratorByHospitalId(hospitalId);
+                break;
             default:
                 break;
         }

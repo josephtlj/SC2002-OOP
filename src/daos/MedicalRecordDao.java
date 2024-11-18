@@ -60,8 +60,6 @@ public class MedicalRecordDao implements MedicalRecordDaoInterface {
         List<String> lines = new ArrayList<>();
         boolean medicalRecordFound = false;
 
-        System.out.println(true);
-
         try (BufferedReader br = new BufferedReader(new FileReader(MEDICALRECORDDB_PATH))) {
             // SKIP HEADER ROW
             String header = br.readLine();

@@ -99,14 +99,6 @@ public class PatientDao implements PatientDaoInterface {
         }
     }
 
-    public void deletePatient(String hospitalId) {
-
-    }
-
-    public void createPatient(Patient patient) {
-
-    }
-
     // HELPER METHOD TO PARSE A PATIENT OBJECT FROM A CSV LINE
     private Patient parsePatient(String line) {
         try {

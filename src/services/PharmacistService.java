@@ -20,6 +20,16 @@ public class PharmacistService implements PharmacistServiceInterface {
     }
 
     @Override
+    public Pharmacist readPharmacistByHospitalId(String hospitalId){
+        Pharmacist pharmacist = pharmacistDao.getPharmacistByHospitalId(hospitalId);
+        if (pharmacist == null) {
+            throw new IllegalArgumentException("Pharmacist not found.");
+        }
+
+        return pharmacist;
+    }
+
+    @Override
     public void updatePassword(String hospitalId, String newPassword, String confirmPassword) {
 
         if (!newPassword.equals(confirmPassword)) {
