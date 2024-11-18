@@ -1,10 +1,10 @@
-package daos;
-
-import Models.Staff;
+package Administrator.src.daos;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.Staff;
 
 public class StaffDAO {
     private static final String FILE_NAME = "staffData.csv";

@@ -1,9 +1,10 @@
-package managers;
+package Administrator.src.managers;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import Models.ReplenishmentRequest;
+
+import models.ReplenishmentRequest;
 
 public class ReplenishmentRequestManager {
 

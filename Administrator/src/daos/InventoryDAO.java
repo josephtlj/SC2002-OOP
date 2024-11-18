@@ -1,10 +1,11 @@
-package daos;
+package Administrator.src.daos;
 
-import Models.Inventory;  // Changed to use Inventory instead of InventoryItem
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import models.Inventory;
 
 public class InventoryDAO {
     private static final String FILE_NAME = "Medicine_List.csv"; // The name of your CSV file

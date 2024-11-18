@@ -1,4 +1,4 @@
-package Models;
+package Administrator.src.Modelsdels;
 import java.util.UUID;
 
 public class Appointment {

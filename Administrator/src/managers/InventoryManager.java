@@ -1,7 +1,7 @@
-package managers;
+package Administrator.src.managers;
 
 import daos.InventoryDAO;
-import Models.Inventory;
+import models.Inventory;
 
 import java.util.List;
 

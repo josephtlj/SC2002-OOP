@@ -128,15 +128,15 @@ public class AdministratorMenu {
     }
 }
 */
-package controllers;
+package Administrator.src.controllers;
 
 import java.util.Scanner;
 import java.util.UUID;
 import managers.AdministratorAppointmentManager;
 import managers.StaffManager;
+import models.Staff;
 import managers.InventoryManager;
 import managers.ReplenishmentRequestManager;
-import Models.Staff;
 
 public class AdministratorMenu {
     private AdministratorAppointmentManager appointmentManager;

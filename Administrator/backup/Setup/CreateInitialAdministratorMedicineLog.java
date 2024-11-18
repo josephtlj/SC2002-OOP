@@ -1,9 +1,10 @@
-package Setup;
+package Administrator.backup.Setup;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import Models.AdministratorMedicineLog; // Add this import at the top of the CreateInitialAdministratorMedicineLog class
+
+import models.AdministratorMedicineLog;
 
 
 public class CreateInitialAdministratorMedicineLog {

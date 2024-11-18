@@ -1,8 +1,8 @@
-package managers;
+package Administrator.src.managers;
 
 // currently an error at filter method since staff class extends from user class attributes like Role, Gender and Age and dont have user class to integrate yet
 import daos.StaffDAO;
-import Models.Staff;
+import models.Staff;
 
 import java.util.List;
 

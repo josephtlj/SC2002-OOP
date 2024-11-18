@@ -1,4 +1,4 @@
-package Models;
+package Administrator.src.Models;
 
 // Inventory.java
 

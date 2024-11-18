@@ -1,7 +1,8 @@
-package managers;
+package Administrator.src.managers;
 
-import Models.Appointment;
 import java.util.List;
+
+import models.Appointment;
 //assuming there is an appointmentManager from whoever is doing appointment and it is being stored
 public class AdministratorAppointmentManager {
     private AppointmentManager appointmentManager; // AppointmentManager will hold and manage appointments
