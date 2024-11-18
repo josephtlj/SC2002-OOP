@@ -16,6 +16,7 @@ public class Doctor extends User
     //ATTRIBUTES
     private Calendar doctorCalendar;
     private DoctorDepartment department;
+    private DoctorDao doctorDao;
     
     //CONSTRUCTOR
     public Doctor(String ID, String name, String department,String password, boolean IsFirstLogin, byte[] salt) 
