@@ -2,8 +2,6 @@ package models;
 
 import java.util.List;
 import Calendar.Calendar;
-import Doctor.Appointment.AppointmentOutcomeRecord;
-import Doctor.Appointment.AppointmentOutcomeRecordManager;
 import Doctor.Appointment.DoctorAppointmentActionType;
 import Doctor.Appointment.DoctorAppointmentManager;
 import Doctor.Appointment.DoctorAppointmentView;
@@ -14,9 +12,10 @@ import daos.AppointmentOutcomeRecordDao;
 import daos.DiagnosisTreatmentRecordDao;
 import daos.DoctorDao;
 import daos.MedicalRecordDao;
+import views.AppointmentOutcomeRecordView;
 import Doctor.MedicalRecord.*;
+import controllers.AppointmentOutcomeRecordController;
 import daos.AppointmentOutcomeRecordDao;
-import Doctor.Appointment.AppointmentOutcomeRecordView;
 
 public class Doctor extends User
 {
@@ -96,7 +95,7 @@ public class Doctor extends User
     //MANAGE APPOINTMENT OUTCOME RECORD
     public void ManageAppointmentOutcomeRecord()
     {
-        AppointmentOutcomeRecordManager manager= new AppointmentOutcomeRecordManager(outcomeRecordDao);
+        AppointmentOutcomeRecordController manager= new AppointmentOutcomeRecordController(super.getHospitalId());
         AppointmentOutcomeRecordView outcomeRecordView= new AppointmentOutcomeRecordView(manager,super.getHospitalId());
     }
     

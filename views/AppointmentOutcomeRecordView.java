@@ -1,0 +1,234 @@
+package views;
+
+import java.util.*;
+
+import Doctor.Appointment.Appointment;
+import Doctor.Appointment.AppointmentTimeSlot;
+import controllers.AppointmentOutcomeRecordController;
+import models.AppointmentOutcomeRecord;
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class AppointmentOutcomeRecordView 
+{
+    //ATTRIBUTES
+    Scanner scanner= new Scanner(System.in);
+    AppointmentOutcomeRecordController manager;
+    ViewInputForDateMonthTimeSlot viewInputForDateMonthTimeSlot= new ViewInputForDateMonthTimeSlot();
+
+    //CONSTRUCTOR
+    public AppointmentOutcomeRecordView(AppointmentOutcomeRecordController manager, String doctorID)
+    {
+        this.manager=manager;
+        printAppointmentOutcomeRecordView(doctorID);
+    }
+
+    //METHODS
+    public void printAppointmentOutcomeRecordView(String doctorID)
+    {
+        int choice = -1;
+        boolean validInput=false;
+
+        do
+        {
+            try
+            {
+                System.out.println("""
+                        =============================================================
+                        |             Hospital Management System (HMS)!             |
+                        |             Update Appointment Outcome Record             |
+                        =============================================================
+                        Please note that the Appointment Outcome Record can ONLY be
+                        updated after the scheduled Appointment.
+                        Do you wish to proceed?
+
+                        Please select an option:
+                        (1) Yes
+                        (2) Go back to previous page
+                        """);
+
+                // RETRIEVE USER'S CHOICE
+                System.out.println("Your Choice: ");
+                choice = scanner.nextInt();
+                scanner.nextLine();
+                validInput=true;
+
+                switch (choice) 
+                {
+                    
+                    case 1:
+                        viewUpdateOutcomeRecord(doctorID);
+                        break;
+
+                    case 2:
+                       return;
+
+                    default:
+                        System.out.println("Please enter a valid choice!\n");
+                        validInput=false;
+                        break;
+                }
+
+            } 
+            catch (InputMismatchException inputMismatchException) 
+            {
+                System.out.println("Please enter a valid integer only!");
+                validInput=false;
+            }
+
+        } while (!validInput);
+    }
+
+    public void viewUpdateOutcomeRecord(String doctorID)
+    {
+        viewCompletedAppointments(doctorID);
+        AppointmentOutcomeRecord appointmentOutcomeRecord= viewFindOutcomeRecord(doctorID);
+
+        if(appointmentOutcomeRecord==null)
+        {
+            System.out.println("Unable to find requested Appointment Outcome Record.");
+            return;
+        }
+
+        System.out.println("To update the appointment outcome record, please provide the following details:");
+
+        System.out.println("Enter service type:");
+        String serviceType= scanner.nextLine();
+
+        System.out.println("Enter consulation notes:");
+        String notes= scanner.nextLine();
+
+        boolean outcome= manager.updateOutcomeRecord(appointmentOutcomeRecord,serviceType,notes);
+        if(outcome)
+        {
+            System.out.println("Appointment Outcome Record succcessfully updated.");
+        }
+        else
+        {
+            System.out.println("Unable to update Appointment Outcome Record."); 
+        }
+    }
+
+    public AppointmentOutcomeRecord viewFindOutcomeRecord(String ID)
+    {
+
+        viewCompletedAppointments(ID);
+
+        System.out.println("To find the Appointment Outcome Record requested, please provide the following details:");
+    
+        LocalDate date= viewInputForDateMonthTimeSlot.viewWhichDate();
+
+        boolean isDateOk= manager.checkDate(date);
+        if(!isDateOk)
+        {
+            System.out.println("You have entered a date in the future. The date today is 16/11/2024.");
+            return null;
+        }
+
+        AppointmentTimeSlot timeSlot= viewInputForDateMonthTimeSlot.viewWhichTimeSlot();
+
+        System.out.print("Enter the patient ID: ");
+        String patientID = scanner.nextLine().trim();
+
+        AppointmentOutcomeRecord outcomeRecord= manager.findOutcomeRecord(patientID, date, timeSlot);
+        if(outcomeRecord==null)
+        {
+            System.out.println("Unable to find requested Appointment Outcome Record.");
+        }
+        else
+        {
+            System.out.println("Requested Appointment Outcome Record found.");
+        }
+        return outcomeRecord;
+
+    }
+
+    public void viewCompletedAppointments(String doctorID)
+    {
+        System.out.println("Before updating an Appointment Outcome Record(AOR), please view the completed appointments.");
+        System.out.println("Note: You are ONLY allowed to update an AOR AFTER the scheduled appointment");
+
+        int choice=viewInputForDateMonthTimeSlot.viewByDateOrMonth();
+
+        List<Appointment> appointments= manager.getCompletedAppointments(doctorID);
+        
+        if(choice==1)
+        {
+            viewByDay(appointments);
+        }
+        else
+        {
+            viewByMonth(appointments);
+        }
+
+    }
+
+    public void viewByDay(List<Appointment> appointments)
+    {
+        LocalDate date= viewInputForDateMonthTimeSlot.viewWhichDate();
+        List<Appointment> sievedAppointments= manager.getCompletedAppointmentsInDay(date, appointments);
+
+        if (sievedAppointments.isEmpty()) 
+        {
+            System.out.println("No completed appointments found for the selected date.");
+        } 
+        else 
+        {
+            // Print header
+            String headerFormat = "| %-15s | %-12s |\n";
+            String rowFormat = "| %-15s | %-12s |\n";
+            System.out.println("+-----------------+--------------+");
+            System.out.printf(headerFormat, "Time Slot", "Patient ID");
+            System.out.println("+-----------------+--------------+");
+    
+            // Print each appointment
+            for (Appointment appointment : sievedAppointments) {
+                String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
+                                + appointment.getAppointmentTimeSlot().getEndTime();
+                String patientID = appointment.getPatientID();
+                System.out.printf(rowFormat, timeSlot, patientID);
+            }
+    
+            // Footer line
+            System.out.println("+-----------------+--------------+");
+        }
+
+
+    }
+
+    public void viewByMonth(List<Appointment> appointments)
+    {
+        int month= viewInputForDateMonthTimeSlot.viewWhichMonth();
+
+        List<Appointment> sievedAppointments= manager.getCompletedAppointmentsInMonth(month, appointments);
+
+        if (sievedAppointments.isEmpty()) 
+        {
+            System.out.println("No completed appointments found for the selected month.");
+        } 
+        else 
+        {
+            //Print header
+            String headerFormat = "| %-15s | %-21s | %-15s |\n";
+            String rowFormat = "| %-15s | %-21s | %-15s |\n";
+
+            System.out.println("+-----------------+-----------------------+-----------------+");
+            System.out.printf(headerFormat, "Date", "Time Slot", "Patient ID");
+            System.out.println("+-----------------+-----------------------+-----------------+");
+
+            // Print each appointment
+            for (Appointment appointment : sievedAppointments) {
+            String date = appointment.getAppointmentDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            String timeSlot = appointment.getAppointmentTimeSlot().getStartTime() + " - " 
+                        + appointment.getAppointmentTimeSlot().getEndTime();
+            String patientID = appointment.getPatientID();
+            System.out.printf(rowFormat, date, timeSlot, patientID);
+            }
+
+            // Footer line
+            System.out.println("+-----------------+-----------------------+-----------------+");
+        }
+    }
+
+}

@@ -2,11 +2,13 @@ package Doctor.Appointment;
 
 import daos.AppointmentOutcomeRecordDao;
 import daos.DoctorAppointmentDao;
+import models.AppointmentOutcomeRecord;
 import models.DiagnosisTreatmentRecord;
 
 import java.util.*;
 
 import Doctor.DiagnosisTreatmentRecord.DiagnosisTreatmentRecordManager;
+import controllers.AppointmentOutcomeRecordController;
 
 import java.time.*;
 
@@ -115,7 +117,7 @@ public class DoctorAppointmentManager
             String appointmentID= UUID.randomUUID().toString();
             AppointmentOutcomeRecord outcomeRecord
             = new AppointmentOutcomeRecord(appointmentID, appointment.getAppointmentDate(), null, null);
-            AppointmentOutcomeRecordManager manager = new AppointmentOutcomeRecordManager(outcomeRecordDao);
+            AppointmentOutcomeRecordController manager = new AppointmentOutcomeRecordController(outcomeRecordDao);
             
             //CREATE DIAGNOSIS TREATMENT RECORD
             DiagnosisTreatmentRecord treatRec= new DiagnosisTreatmentRecord(null, null, null, appointment);

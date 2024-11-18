@@ -12,9 +12,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import Doctor.Appointment.Appointment;
-
-import Doctor.Appointment.AppointmentOutcomeRecord;
 import Doctor.Appointment.AppointmentTimeSlot;
+import models.AppointmentOutcomeRecord;
 
 public class AppointmentOutcomeRecordDao 
 {
@@ -25,7 +24,7 @@ public class AppointmentOutcomeRecordDao
     private File doctorAppointmentSlotsFile;
 
     //CONSTRUCTOR
-    public AppointmentOutcomeRecordDao(String ID)
+    public AppointmentOutcomeRecordDao(String patientID)
     {
         //LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
         try (InputStream input = new FileInputStream("resources/config.properties")) 
@@ -43,7 +42,7 @@ public class AppointmentOutcomeRecordDao
         File treatmentRecDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
         if (treatmentRecDir.exists() && treatmentRecDir.isDirectory()) 
         {
-            File[] files = treatmentRecDir.listFiles(name -> name.equals(ID + "_AppOutRec.csv"));
+            File[] files = treatmentRecDir.listFiles(name -> name.equals(patientID + "_AppOutRec.csv"));
             this.appointmentOutcomeRecordFile = files[0]; //ASSIGN MATCHING FILE
     
         }
@@ -51,11 +50,8 @@ public class AppointmentOutcomeRecordDao
 
     
 
-    public void updateAppointmentOutcomeRecord(AppointmentOutcomeRecord record) {
-        if (appointmentOutcomeRecordFile == null) {
-            System.err.println("Appointment outcome record file not initialized.");
-            return;
-        }
+    public boolean updateAppointmentOutcomeRecord(AppointmentOutcomeRecord record) 
+    {
     
         List<String> updatedLines = new ArrayList<>();
         boolean recordUpdated = false;
@@ -77,12 +73,7 @@ public class AppointmentOutcomeRecordDao
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return;
-        }
-    
-        if (!recordUpdated) {
-            System.err.println("No matching record found for Appointment ID: " + record.getAppointmentId());
-            return;
+            return false;
         }
     
         // Overwrite the file with updated content
@@ -93,7 +84,10 @@ public class AppointmentOutcomeRecordDao
             }
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
+
+        return true;
     }
     
 
@@ -138,15 +132,13 @@ public class AppointmentOutcomeRecordDao
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
-        System.err.println("No matching appointment outcome record found.");
-        return null;
+        return null; //WILL NEVER REACH HERE AS SERVICES ENSURES VALIDITY
     }
     
     
 
     //RETURN LIST OF COMPLETED APPOINTMENTS
-    public List<Appointment> completedAppointments(String ID) {
+    public List<Appointment> getCompletedAppointments(String doctorID) {
         List<Appointment> completedAppointments = new ArrayList<>();
         
         // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
@@ -162,11 +154,11 @@ public class AppointmentOutcomeRecordDao
         // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
         File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
         if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
-            File[] files = appointmentSlotsDir.listFiles(name -> name.getName().equals(ID + "_appSlot.csv"));
+            File[] files = appointmentSlotsDir.listFiles(name -> name.getName().equals(doctorID + "_appSlot.csv"));
             if (files != null && files.length > 0) {
                 doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
             } else {
-                System.err.println("No matching file found for ID: " + ID);
+                System.err.println("No matching file found for ID: " + doctorID);
                 return completedAppointments; // Return empty list if file is not found
             }
         } else {
@@ -193,13 +185,13 @@ public class AppointmentOutcomeRecordDao
                     String startTime = parts[2].trim();
                     String endTime = parts[3].trim();
                     String patientID = parts[4].trim();
-                    String doctorID = parts[5].trim();
+                    String DoctorID = parts[5].trim();
 
                     // Parse date and check if it's before cutoff date and CONFIRMED
                     LocalDate appointmentDate = LocalDate.parse(date, formatter);
                     if (appointmentDate.isBefore(cutoffDate) && status.equals("CONFIRMED")) {
                         Appointment appointment = new Appointment(
-                                status, date, startTime, endTime, patientID, doctorID);
+                                status, date, startTime, endTime, patientID, DoctorID);
                         completedAppointments.add(appointment);
                     }
                 }
