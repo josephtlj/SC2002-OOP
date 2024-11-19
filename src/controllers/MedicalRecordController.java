@@ -10,7 +10,7 @@ public class MedicalRecordController {
         this.medicalRecordService = medicalRecordService;
     }
 
-    public MedicalRecord handelViewMedicalRecord(String hospitalId){
+    public MedicalRecord handleViewMedicalRecord(String hospitalId){
         try {
             
             return medicalRecordService.readMedicalRecord(hospitalId);

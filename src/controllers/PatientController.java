@@ -14,7 +14,7 @@ public class PatientController {
 
     public MedicalRecord handleViewMedicalRecord(String hospitalId) {
         try {
-            return medicalRecordController.handelViewMedicalRecord(hospitalId);
+            return medicalRecordController.handleViewMedicalRecord(hospitalId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;

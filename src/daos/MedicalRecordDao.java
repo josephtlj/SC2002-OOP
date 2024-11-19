@@ -32,6 +32,26 @@ public class MedicalRecordDao implements MedicalRecordDaoInterface {
     }
 
     @Override
+    public List<MedicalRecord> getAllMedicalRecords() {
+        List<MedicalRecord> medicalRecords = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(MEDICALRECORDDB_PATH))) {
+            // Skip header row
+            br.readLine();
+
+            String line;
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+            while ((line = br.readLine()) != null) {
+                MedicalRecord medicalRecord = parseMedicalRecord(line);
+                medicalRecords.add(medicalRecord);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return medicalRecords;
+    }
+
+    @Override
     public MedicalRecord getMedicalRecordByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(MEDICALRECORDDB_PATH))) {
             // SKIP HEADER ROW

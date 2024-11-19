@@ -1,0 +1,415 @@
+DoctorID,Appointment Date,Appointment Time Slot,Diagnosis,Prescription,Treatment Plan
+D002,02/01/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,04/01/2024,09:30 - 10:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,05/01/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D001,05/01/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,05/01/2024,11:00 - 11:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,05/01/2024,11:30 - 12:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,05/01/2024,15:30 - 16:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,05/01/2024,17:00 - 17:30,COVID,Panadol,Take 1 tablet 3 times a day
+D006,05/01/2024,17:00 - 17:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,08/01/2024,10:00 - 10:30,Cough,Panadol,Take 1 tablet 3 times a day
+D005,08/01/2024,12:00 - 12:30,COVID,Panadol,Take 1 tablet 3 times a day
+D002,09/01/2024,09:00 - 09:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,09/01/2024,09:00 - 09:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,09/01/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D005,09/01/2024,16:30 - 17:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,10/01/2024,10:30 - 11:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,10/01/2024,16:00 - 16:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,11/01/2024,11:30 - 12:00,COVID,Panadol,Take 1 tablet 3 times a day
+D001,11/01/2024,15:30 - 16:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,11/01/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,11/01/2024,17:00 - 17:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,12/01/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,15/01/2024,12:00 - 12:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,18/01/2024,15:30 - 16:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,19/01/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,19/01/2024,16:30 - 17:00,Cough,Panadol,Take 1 tablet 3 times a day
+D002,22/01/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,22/01/2024,11:00 - 11:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D001,22/01/2024,16:00 - 16:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,23/01/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D005,24/01/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,24/01/2024,10:00 - 10:30,Cough,Panadol,Take 1 tablet 3 times a day
+D003,24/01/2024,15:30 - 16:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,24/01/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,25/01/2024,09:00 - 09:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,25/01/2024,15:00 - 15:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,25/01/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,26/01/2024,09:00 - 09:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,26/01/2024,09:30 - 10:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,29/01/2024,09:00 - 09:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,29/01/2024,10:00 - 10:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,29/01/2024,12:00 - 12:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,29/01/2024,15:30 - 16:00,Headache,Panadol,Take 1 tablet 3 times a day
+D003,30/01/2024,09:30 - 10:00,Cough,Panadol,Take 1 tablet 3 times a day
+D004,30/01/2024,10:30 - 11:00,Cough,Panadol,Take 1 tablet 3 times a day
+D002,30/01/2024,17:00 - 17:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,01/02/2024,12:00 - 12:30,Headache,Panadol,Take 1 tablet 3 times a day
+D001,01/02/2024,12:30 - 13:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,01/02/2024,16:00 - 16:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,02/02/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,05/02/2024,10:00 - 10:30,Fever,Panadol,Take 1 tablet 3 times a day
+D005,05/02/2024,11:00 - 11:30,Fever,Panadol,Take 1 tablet 3 times a day
+D006,06/02/2024,09:00 - 09:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,06/02/2024,16:00 - 16:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D005,12/02/2024,12:00 - 12:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D001,12/02/2024,15:00 - 15:30,Fever,Panadol,Take 1 tablet 3 times a day
+D005,14/02/2024,09:00 - 09:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,15/02/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,15/02/2024,10:30 - 11:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D006,15/02/2024,15:00 - 15:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,15/02/2024,16:30 - 17:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,19/02/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,19/02/2024,11:00 - 11:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,19/02/2024,11:30 - 12:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,19/02/2024,15:30 - 16:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D004,20/02/2024,12:00 - 12:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D005,20/02/2024,12:30 - 13:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,20/02/2024,15:30 - 16:00,Fever,Panadol,Take 1 tablet 3 times a day
+D002,21/02/2024,09:00 - 09:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,21/02/2024,10:30 - 11:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,21/02/2024,15:00 - 15:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,22/02/2024,12:30 - 13:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,23/02/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,23/02/2024,16:30 - 17:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,26/02/2024,10:30 - 11:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,26/02/2024,11:30 - 12:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,26/02/2024,15:00 - 15:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,27/02/2024,16:00 - 16:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,28/02/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,28/02/2024,11:00 - 11:30,Fever,Panadol,Take 1 tablet 3 times a day
+D003,28/02/2024,12:30 - 13:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,28/02/2024,15:00 - 15:30,Fever,Panadol,Take 1 tablet 3 times a day
+D006,29/02/2024,09:30 - 10:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,29/02/2024,12:30 - 13:00,COVID,Panadol,Take 1 tablet 3 times a day
+D001,29/02/2024,16:30 - 17:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,29/02/2024,16:30 - 17:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,01/03/2024,10:00 - 10:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,01/03/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,04/03/2024,10:30 - 11:00,Fever,Panadol,Take 1 tablet 3 times a day
+D004,04/03/2024,15:00 - 15:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,04/03/2024,15:30 - 16:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,05/03/2024,11:00 - 11:30,Fever,Panadol,Take 1 tablet 3 times a day
+D006,05/03/2024,11:00 - 11:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,05/03/2024,12:30 - 13:00,Cough,Panadol,Take 1 tablet 3 times a day
+D002,06/03/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D001,06/03/2024,12:30 - 13:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,07/03/2024,10:30 - 11:00,Fever,Panadol,Take 1 tablet 3 times a day
+D001,07/03/2024,11:30 - 12:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,07/03/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,08/03/2024,11:00 - 11:30,COVID,Panadol,Take 1 tablet 3 times a day
+D006,11/03/2024,09:00 - 09:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,11/03/2024,09:30 - 10:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,11/03/2024,11:00 - 11:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,12/03/2024,12:00 - 12:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,12/03/2024,12:00 - 12:30,COVID,Panadol,Take 1 tablet 3 times a day
+D004,14/03/2024,11:00 - 11:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,14/03/2024,15:30 - 16:00,Fever,Panadol,Take 1 tablet 3 times a day
+D003,14/03/2024,16:00 - 16:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,14/03/2024,16:30 - 17:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,15/03/2024,12:00 - 12:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,15/03/2024,15:30 - 16:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,18/03/2024,12:00 - 12:30,Fever,Panadol,Take 1 tablet 3 times a day
+D001,18/03/2024,16:00 - 16:30,Cough,Panadol,Take 1 tablet 3 times a day
+D001,20/03/2024,09:00 - 09:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,20/03/2024,10:30 - 11:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,20/03/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,21/03/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,21/03/2024,16:30 - 17:00,Fever,Panadol,Take 1 tablet 3 times a day
+D002,22/03/2024,09:30 - 10:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,25/03/2024,15:30 - 16:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,27/03/2024,12:30 - 13:00,Fever,Panadol,Take 1 tablet 3 times a day
+D003,27/03/2024,12:30 - 13:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,27/03/2024,15:30 - 16:00,Fever,Panadol,Take 1 tablet 3 times a day
+D001,28/03/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D006,28/03/2024,16:00 - 16:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,01/04/2024,10:30 - 11:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,01/04/2024,11:00 - 11:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,01/04/2024,11:00 - 11:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,02/04/2024,09:30 - 10:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,02/04/2024,15:00 - 15:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,03/04/2024,10:00 - 10:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,03/04/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,03/04/2024,12:30 - 13:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,03/04/2024,15:30 - 16:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,03/04/2024,15:30 - 16:00,COVID,Panadol,Take 1 tablet 3 times a day
+D002,03/04/2024,17:00 - 17:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,08/04/2024,12:00 - 12:30,COVID,Panadol,Take 1 tablet 3 times a day
+D003,08/04/2024,12:30 - 13:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,08/04/2024,15:30 - 16:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,09/04/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,09/04/2024,15:30 - 16:00,Cough,Panadol,Take 1 tablet 3 times a day
+D004,09/04/2024,17:00 - 17:30,Headache,Panadol,Take 1 tablet 3 times a day
+D002,10/04/2024,10:00 - 10:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,10/04/2024,12:30 - 13:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,11/04/2024,10:00 - 10:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,11/04/2024,10:00 - 10:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,11/04/2024,12:00 - 12:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,11/04/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,12/04/2024,12:30 - 13:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,15/04/2024,12:00 - 12:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,16/04/2024,12:30 - 13:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,17/04/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D004,18/04/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,18/04/2024,17:00 - 17:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,19/04/2024,09:30 - 10:00,COVID,Panadol,Take 1 tablet 3 times a day
+D004,22/04/2024,10:30 - 11:00,COVID,Panadol,Take 1 tablet 3 times a day
+D004,22/04/2024,15:00 - 15:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,22/04/2024,15:00 - 15:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,23/04/2024,09:00 - 09:30,COVID,Panadol,Take 1 tablet 3 times a day
+D005,23/04/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,23/04/2024,09:30 - 10:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,23/04/2024,10:30 - 11:00,COVID,Panadol,Take 1 tablet 3 times a day
+D004,23/04/2024,10:30 - 11:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,23/04/2024,17:00 - 17:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D006,24/04/2024,10:30 - 11:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,25/04/2024,09:00 - 09:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,26/04/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,29/04/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D005,29/04/2024,09:30 - 10:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,29/04/2024,11:00 - 11:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,29/04/2024,12:00 - 12:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D004,29/04/2024,17:00 - 17:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,30/04/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D005,03/05/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,03/05/2024,09:30 - 10:00,Fever,Panadol,Take 1 tablet 3 times a day
+D001,03/05/2024,15:00 - 15:30,Headache,Panadol,Take 1 tablet 3 times a day
+D004,03/05/2024,16:00 - 16:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,03/05/2024,17:00 - 17:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,06/05/2024,10:00 - 10:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,06/05/2024,12:00 - 12:30,Headache,Panadol,Take 1 tablet 3 times a day
+D006,07/05/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,07/05/2024,10:30 - 11:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,07/05/2024,15:30 - 16:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,08/05/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,08/05/2024,11:30 - 12:00,Headache,Panadol,Take 1 tablet 3 times a day
+D004,10/05/2024,09:00 - 09:30,Cough,Panadol,Take 1 tablet 3 times a day
+D003,10/05/2024,09:30 - 10:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,10/05/2024,10:30 - 11:00,COVID,Panadol,Take 1 tablet 3 times a day
+D002,13/05/2024,09:30 - 10:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,13/05/2024,09:30 - 10:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,13/05/2024,11:00 - 11:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,13/05/2024,11:30 - 12:00,Headache,Panadol,Take 1 tablet 3 times a day
+D005,13/05/2024,16:30 - 17:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,14/05/2024,10:00 - 10:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,14/05/2024,12:30 - 13:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,14/05/2024,15:00 - 15:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,14/05/2024,16:00 - 16:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,15/05/2024,10:30 - 11:00,COVID,Panadol,Take 1 tablet 3 times a day
+D003,15/05/2024,11:30 - 12:00,Headache,Panadol,Take 1 tablet 3 times a day
+D003,15/05/2024,12:00 - 12:30,COVID,Panadol,Take 1 tablet 3 times a day
+D002,16/05/2024,11:30 - 12:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,16/05/2024,15:30 - 16:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,17/05/2024,09:30 - 10:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,17/05/2024,16:00 - 16:30,Fever,Panadol,Take 1 tablet 3 times a day
+D001,20/05/2024,12:00 - 12:30,Cough,Panadol,Take 1 tablet 3 times a day
+D005,20/05/2024,12:00 - 12:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D004,21/05/2024,09:00 - 09:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,22/05/2024,15:00 - 15:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,22/05/2024,17:00 - 17:30,Headache,Panadol,Take 1 tablet 3 times a day
+D004,24/05/2024,11:00 - 11:30,COVID,Panadol,Take 1 tablet 3 times a day
+D001,24/05/2024,12:30 - 13:00,COVID,Panadol,Take 1 tablet 3 times a day
+D003,24/05/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,27/05/2024,11:00 - 11:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,27/05/2024,15:30 - 16:00,Fever,Panadol,Take 1 tablet 3 times a day
+D003,27/05/2024,17:00 - 17:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D004,28/05/2024,09:30 - 10:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,29/05/2024,11:30 - 12:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,29/05/2024,15:30 - 16:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,30/05/2024,10:30 - 11:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,30/05/2024,11:30 - 12:00,Headache,Panadol,Take 1 tablet 3 times a day
+D002,30/05/2024,15:30 - 16:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,31/05/2024,11:30 - 12:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,31/05/2024,15:30 - 16:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,04/06/2024,17:00 - 17:30,Cough,Panadol,Take 1 tablet 3 times a day
+D002,05/06/2024,09:30 - 10:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,05/06/2024,11:00 - 11:30,COVID,Panadol,Take 1 tablet 3 times a day
+D006,07/06/2024,11:00 - 11:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,10/06/2024,09:30 - 10:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,10/06/2024,12:30 - 13:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,12/06/2024,09:00 - 09:30,COVID,Panadol,Take 1 tablet 3 times a day
+D006,12/06/2024,15:00 - 15:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,12/06/2024,17:00 - 17:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,14/06/2024,09:00 - 09:30,Cough,Panadol,Take 1 tablet 3 times a day
+D006,14/06/2024,16:30 - 17:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,17/06/2024,12:30 - 13:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,17/06/2024,15:00 - 15:30,Headache,Panadol,Take 1 tablet 3 times a day
+D006,18/06/2024,15:30 - 16:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,18/06/2024,17:00 - 17:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,20/06/2024,15:30 - 16:00,Headache,Panadol,Take 1 tablet 3 times a day
+D006,21/06/2024,15:30 - 16:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,24/06/2024,12:30 - 13:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,24/06/2024,15:00 - 15:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,25/06/2024,10:30 - 11:00,Headache,Panadol,Take 1 tablet 3 times a day
+D005,25/06/2024,11:00 - 11:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D006,25/06/2024,11:00 - 11:30,COVID,Panadol,Take 1 tablet 3 times a day
+D005,26/06/2024,11:00 - 11:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,26/06/2024,16:00 - 16:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,27/06/2024,10:30 - 11:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,27/06/2024,12:00 - 12:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,27/06/2024,15:00 - 15:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,01/07/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,01/07/2024,15:00 - 15:30,Fever,Panadol,Take 1 tablet 3 times a day
+D004,02/07/2024,12:00 - 12:30,Cough,Panadol,Take 1 tablet 3 times a day
+D004,02/07/2024,16:30 - 17:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,04/07/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,04/07/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,05/07/2024,09:30 - 10:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,08/07/2024,09:00 - 09:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,08/07/2024,09:30 - 10:00,Headache,Panadol,Take 1 tablet 3 times a day
+D006,08/07/2024,15:30 - 16:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,12/07/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,12/07/2024,10:30 - 11:00,Fever,Panadol,Take 1 tablet 3 times a day
+D005,12/07/2024,11:00 - 11:30,Fever,Panadol,Take 1 tablet 3 times a day
+D003,12/07/2024,15:00 - 15:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,12/07/2024,15:00 - 15:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,15/07/2024,12:30 - 13:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,16/07/2024,11:00 - 11:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D001,17/07/2024,09:00 - 09:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,17/07/2024,10:00 - 10:30,Cough,Panadol,Take 1 tablet 3 times a day
+D004,17/07/2024,11:00 - 11:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,18/07/2024,10:30 - 11:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,18/07/2024,15:00 - 15:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,18/07/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,19/07/2024,15:00 - 15:30,Fever,Panadol,Take 1 tablet 3 times a day
+D001,19/07/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,22/07/2024,11:00 - 11:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,22/07/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,23/07/2024,10:00 - 10:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,23/07/2024,11:30 - 12:00,Cough,Panadol,Take 1 tablet 3 times a day
+D004,24/07/2024,15:00 - 15:30,Cough,Panadol,Take 1 tablet 3 times a day
+D003,24/07/2024,16:00 - 16:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,24/07/2024,16:00 - 16:30,Headache,Panadol,Take 1 tablet 3 times a day
+D002,26/07/2024,09:00 - 09:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,26/07/2024,10:00 - 10:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,26/07/2024,12:30 - 13:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,29/07/2024,15:30 - 16:00,Fever,Panadol,Take 1 tablet 3 times a day
+D006,29/07/2024,15:30 - 16:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,31/07/2024,10:30 - 11:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D004,01/08/2024,16:30 - 17:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,02/08/2024,15:00 - 15:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,05/08/2024,11:30 - 12:00,Cough,Panadol,Take 1 tablet 3 times a day
+D004,05/08/2024,12:30 - 13:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,05/08/2024,15:00 - 15:30,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,05/08/2024,17:00 - 17:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,06/08/2024,09:30 - 10:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,07/08/2024,10:30 - 11:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,08/08/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,08/08/2024,10:30 - 11:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,12/08/2024,10:00 - 10:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,12/08/2024,16:00 - 16:30,Fever,Panadol,Take 1 tablet 3 times a day
+D002,12/08/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,13/08/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,13/08/2024,11:00 - 11:30,Cough,Panadol,Take 1 tablet 3 times a day
+D004,14/08/2024,10:30 - 11:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,14/08/2024,12:30 - 13:00,Cough,Panadol,Take 1 tablet 3 times a day
+D006,14/08/2024,15:00 - 15:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,15/08/2024,17:00 - 17:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,16/08/2024,16:30 - 17:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,16/08/2024,17:00 - 17:30,Fever,Panadol,Take 1 tablet 3 times a day
+D005,19/08/2024,12:30 - 13:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,20/08/2024,16:00 - 16:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,21/08/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,21/08/2024,09:30 - 10:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,23/08/2024,09:00 - 09:30,COVID,Panadol,Take 1 tablet 3 times a day
+D004,23/08/2024,11:30 - 12:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,26/08/2024,16:30 - 17:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,27/08/2024,11:30 - 12:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,28/08/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,28/08/2024,15:00 - 15:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D006,30/08/2024,11:30 - 12:00,Cough,Panadol,Take 1 tablet 3 times a day
+D001,30/08/2024,15:00 - 15:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,30/08/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,02/09/2024,10:00 - 10:30,COVID,Panadol,Take 1 tablet 3 times a day
+D002,03/09/2024,10:30 - 11:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D006,03/09/2024,15:30 - 16:00,COVID,Panadol,Take 1 tablet 3 times a day
+D003,04/09/2024,12:30 - 13:00,COVID,Panadol,Take 1 tablet 3 times a day
+D001,04/09/2024,15:00 - 15:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,05/09/2024,16:00 - 16:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,06/09/2024,16:00 - 16:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D006,09/09/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,09/09/2024,10:00 - 10:30,Headache,Panadol,Take 1 tablet 3 times a day
+D005,09/09/2024,11:00 - 11:30,COVID,Panadol,Take 1 tablet 3 times a day
+D003,10/09/2024,15:30 - 16:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,11/09/2024,11:30 - 12:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,11/09/2024,17:00 - 17:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,12/09/2024,09:30 - 10:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D003,12/09/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,12/09/2024,17:00 - 17:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,13/09/2024,11:30 - 12:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,13/09/2024,15:00 - 15:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,16/09/2024,09:30 - 10:00,Headache,Panadol,Take 1 tablet 3 times a day
+D003,16/09/2024,11:00 - 11:30,Cough,Panadol,Take 1 tablet 3 times a day
+D006,16/09/2024,12:00 - 12:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,16/09/2024,15:30 - 16:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,16/09/2024,16:30 - 17:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D002,17/09/2024,16:00 - 16:30,Fever,Panadol,Take 1 tablet 3 times a day
+D002,19/09/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,20/09/2024,09:30 - 10:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D004,20/09/2024,12:30 - 13:00,Fever,Panadol,Take 1 tablet 3 times a day
+D006,20/09/2024,16:00 - 16:30,Cough,Panadol,Take 1 tablet 3 times a day
+D001,24/09/2024,15:30 - 16:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,25/09/2024,10:30 - 11:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,26/09/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,26/09/2024,11:00 - 11:30,Headache,Panadol,Take 1 tablet 3 times a day
+D004,26/09/2024,11:30 - 12:00,Fever,Panadol,Take 1 tablet 3 times a day
+D006,27/09/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D002,27/09/2024,11:30 - 12:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,27/09/2024,12:00 - 12:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,27/09/2024,15:00 - 15:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,30/09/2024,12:00 - 12:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,30/09/2024,12:00 - 12:30,Headache,Panadol,Take 1 tablet 3 times a day
+D003,30/09/2024,12:30 - 13:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D003,01/10/2024,09:00 - 09:30,COVID,Panadol,Take 1 tablet 3 times a day
+D001,01/10/2024,12:00 - 12:30,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,02/10/2024,15:30 - 16:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,03/10/2024,12:30 - 13:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,03/10/2024,16:00 - 16:30,Headache,Panadol,Take 1 tablet 3 times a day
+D001,03/10/2024,17:00 - 17:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,04/10/2024,11:30 - 12:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,08/10/2024,10:00 - 10:30,COVID,Panadol,Take 1 tablet 3 times a day
+D003,08/10/2024,11:00 - 11:30,Cough,Panadol,Take 1 tablet 3 times a day
+D001,08/10/2024,15:00 - 15:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,08/10/2024,15:30 - 16:00,Cough,Panadol,Take 1 tablet 3 times a day
+D003,08/10/2024,16:30 - 17:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D002,09/10/2024,12:00 - 12:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,09/10/2024,17:00 - 17:30,Fever,Panadol,Take 1 tablet 3 times a day
+D006,10/10/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,10/10/2024,17:00 - 17:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,11/10/2024,09:00 - 09:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,11/10/2024,09:00 - 09:30,Fever,Panadol,Take 1 tablet 3 times a day
+D004,11/10/2024,15:00 - 15:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,15/10/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D001,15/10/2024,16:30 - 17:00,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,16/10/2024,11:00 - 11:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,17/10/2024,11:00 - 11:30,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D005,18/10/2024,16:30 - 17:00,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D001,18/10/2024,17:00 - 17:30,Fever,Panadol,Take 1 tablet 3 times a day
+D004,21/10/2024,09:30 - 10:00,Headache,Panadol,Take 1 tablet 3 times a day
+D004,21/10/2024,11:30 - 12:00,Cough,Panadol,Take 1 tablet 3 times a day
+D005,21/10/2024,12:00 - 12:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,21/10/2024,17:00 - 17:30,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D002,22/10/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D005,22/10/2024,15:00 - 15:30,COVID,Panadol,Take 1 tablet 3 times a day
+D003,24/10/2024,09:00 - 09:30,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D006,24/10/2024,12:00 - 12:30,Headache,Panadol,Take 1 tablet 3 times a day
+D002,25/10/2024,09:30 - 10:00,COVID,Panadol,Take 1 tablet 3 times a day
+D006,25/10/2024,17:00 - 17:30,Headache,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,28/10/2024,15:00 - 15:30,COVID,Panadol,Take 1 tablet 3 times a day
+D006,29/10/2024,10:30 - 11:00,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,29/10/2024,11:30 - 12:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D003,01/11/2024,09:30 - 10:00,COVID,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,01/11/2024,11:00 - 11:30,Headache,Panadol,Take 1 tablet 3 times a day
+D005,01/11/2024,11:30 - 12:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D001,04/11/2024,09:00 - 09:30,Headache,Panadol,Take 1 tablet 3 times a day
+D004,04/11/2024,10:00 - 10:30,Conjunctivitis,Eye Drops,Put 2 to 3 drops in affected eye 3 times a day
+D004,04/11/2024,11:30 - 12:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,06/11/2024,12:00 - 12:30,Fever,Panadol,Take 1 tablet 3 times a day
+D003,07/11/2024,16:30 - 17:00,Cough,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D005,08/11/2024,10:00 - 10:30,Headache,Panadol,Take 1 tablet 3 times a day
+D002,08/11/2024,16:30 - 17:00,Fever,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D003,11/11/2024,11:00 - 11:30,Runny Nose,Ibuprofen,"Take 1 tablet 2 times a day, in the morning and at night"
+D004,13/11/2024,09:30 - 10:00,Runny Nose,Panadol,Take 1 tablet 3 times a day
+D006,15/11/2024,12:30 - 13:00,Diarrhea,Laxative,Mix with water and consume 3 times a day for 2 days
+D001,15/11/2024,15:30 - 16:00,COVID,Panadol,Take 1 tablet 3 times a day
