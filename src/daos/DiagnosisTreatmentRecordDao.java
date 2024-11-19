@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.UUID;
 
 import src.interfaces.DiagnosisTreatmentRecordDaoInterface;
 
@@ -216,7 +217,7 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
                 Appointment appointment = new Appointment("confirmed", appointmentDateStrTrimmed, startTimeStr, endTimeStr, patientID, doctorID);
 
                 // Create a DiagnosisTreatmentRecord object
-                DiagnosisTreatmentRecord treatRec = new DiagnosisTreatmentRecord(diagnosis, prescription, treatmentPlan, appointment);
+                DiagnosisTreatmentRecord treatRec = new DiagnosisTreatmentRecord(, diagnosis, prescription, treatmentPlan, appointment);
 
                 // Add the record to the list
                 records.add(treatRec);

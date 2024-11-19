@@ -35,7 +35,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             Properties prop = new Properties();
             prop.load(input);
             APPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("APPOINTMENTOUTCOMERECORDDB_PATH",
-                    "src/data/AppointmentOutComeRecord");
+                    "src/data/AppointmentOutcomeRecord");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
