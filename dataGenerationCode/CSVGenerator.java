@@ -1,4 +1,4 @@
-package data;
+package dataGenerationCode;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

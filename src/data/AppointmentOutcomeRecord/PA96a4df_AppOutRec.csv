@@ -1,418 +1,734 @@
 Doctor ID,Appointment ID,Date,Service Type,Medication Status,Consultation Notes
-DoctorID,f55650f0-4de6-48b4-b129-76ccb1556c05,Appointment Date,General Consultation,Dispensed,Need follow up appointment
-D003,2b291fe4-12bd-4845-b46e-98476e081bf2,02/01/2024,General Consultation,Dispensed,Need follow up appointment
-D001,97c782a9-31f9-44e2-9af1-81ec3658cd19,03/01/2024,General Consultation,Dispensed,NIL
-D004,f9facc91-438b-4e48-a7c3-ba1a5a5c6bce,03/01/2024,General Consultation,Dispensed,NIL
-D005,b8131810-8be1-45b9-a36a-b7e9d6539e3b,03/01/2024,General Consultation,Dispensed,Need follow up appointment
-D002,a16c976d-f0f6-4082-a209-278c5e013df6,05/01/2024,General Consultation,Dispensed,NIL
-D003,9c10bf83-221f-4873-bd04-bad0acfdc9ee,05/01/2024,General Consultation,Dispensed,Need follow up appointment
-D002,9c7e6d20-6af3-46a3-b6fb-57cf978cecb1,05/01/2024,General Consultation,Dispensed,Need follow up appointment
-D003,70ac54cb-4ee1-471f-a79a-cbfd150fe7e7,05/01/2024,General Consultation,Dispensed,Need follow up appointment
-D001,7c30bb23-7666-4a12-97a9-1be72ea7895d,08/01/2024,General Consultation,Dispensed,NIL
-D001,ab6e8ac6-2938-4158-88b7-7d23cb65a9b9,08/01/2024,General Consultation,Dispensed,NIL
-D004,f5128a00-e512-44fb-90d2-b73d316966bf,08/01/2024,General Consultation,Dispensed,NIL
-D004,28d6462b-9aa4-4bb7-8818-dcd8d245111b,10/01/2024,General Consultation,Dispensed,NIL
-D003,d87fdd1b-7cfd-4c84-968a-e377e8ce459e,11/01/2024,General Consultation,Dispensed,Need follow up appointment
-D002,944c657c-b1d9-430c-a970-c6b2fdb4419b,15/01/2024,General Consultation,Dispensed,Need follow up appointment
-D002,963b6e33-dcad-4bff-ac62-31c631afb2f1,16/01/2024,General Consultation,Dispensed,NIL
-D005,01c6890c-1a90-4360-9328-77faf1a9c811,17/01/2024,General Consultation,Dispensed,Need follow up appointment
-D001,548a90d0-b5e2-444c-914b-e54b1bb7e63f,17/01/2024,General Consultation,Dispensed,Need follow up appointment
-D003,4740a893-bc1d-4e78-aacf-13a12bf308c4,18/01/2024,General Consultation,Dispensed,Need follow up appointment
-D003,fdc6786d-3cd5-4fcd-b79d-31a91bafd491,19/01/2024,General Consultation,Dispensed,Need follow up appointment
-D004,d77acce3-d548-4267-a671-6aeefd297bdd,22/01/2024,General Consultation,Dispensed,Need follow up appointment
-D003,adc6fe2c-df70-4c81-949b-581d75ef22da,23/01/2024,General Consultation,Dispensed,Need follow up appointment
-D003,737e579f-9154-417b-9e14-242c7a322d40,23/01/2024,General Consultation,Dispensed,Need follow up appointment
-D001,ccfe5e66-acf1-4163-b818-e96cfe224091,23/01/2024,General Consultation,Dispensed,NIL
-D005,43afedaf-c72d-4fde-9bca-65138e12590d,23/01/2024,General Consultation,Dispensed,Need follow up appointment
-D001,d9eb610a-4951-48a5-a4a3-4a4eb8b78bde,24/01/2024,General Consultation,Dispensed,Need follow up appointment
-D005,c821207c-2e53-4bde-af6b-3a90a2fffdb7,25/01/2024,General Consultation,Dispensed,NIL
-D005,cf3ad562-a3c3-4469-8b16-1e45e6c8adb0,26/01/2024,General Consultation,Dispensed,NIL
-D005,6a9bc97e-4eff-4a5d-95a0-591a37d33a13,29/01/2024,General Consultation,Dispensed,NIL
-D002,ee1e8532-ce9b-49c8-925c-eea1cfc1e6aa,29/01/2024,General Consultation,Dispensed,NIL
-D001,317fc42b-6f3d-455e-97e1-7beb0f883172,30/01/2024,General Consultation,Dispensed,Need follow up appointment
-D002,a8428a37-dbac-417d-92f0-459d4f459b67,30/01/2024,General Consultation,Dispensed,NIL
-D003,34cba8b7-ba16-4714-9fad-64067757b1fb,30/01/2024,General Consultation,Dispensed,NIL
-D004,48c4aa1b-a45f-4241-bd3f-e24a67622aa1,30/01/2024,General Consultation,Dispensed,Need follow up appointment
-D004,940382e7-bb9c-4bd0-b677-76ea8dc73ff6,01/02/2024,General Consultation,Dispensed,Need follow up appointment
-D003,b3dad793-d8d9-48fc-9b89-2bcb8b335325,02/02/2024,General Consultation,Dispensed,NIL
-D006,7d15a382-88dd-4917-9521-b109cfdc974d,02/02/2024,General Consultation,Dispensed,NIL
-D002,d4692407-f6cf-4c96-a25f-4ca1253b5ad7,02/02/2024,General Consultation,Dispensed,NIL
-D004,f03169a0-a4b8-4c36-83c9-4712e3cd3e06,05/02/2024,General Consultation,Dispensed,NIL
-D005,fbaadf9f-56a1-4aa5-9960-cb2bbdd66865,05/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,273e3a38-937b-432c-a886-5f2cd44478f6,06/02/2024,General Consultation,Dispensed,Need follow up appointment
-D002,e11e19c3-4415-4b5f-88b9-b4901a25c114,07/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,d33e0f77-49f5-437d-af13-ec0faffc7f02,07/02/2024,General Consultation,Dispensed,NIL
-D003,08229348-bb85-4f33-be5a-1f4b43d80a3b,08/02/2024,General Consultation,Dispensed,NIL
-D005,d536087b-efc1-4a24-98f4-0f5275213090,08/02/2024,General Consultation,Dispensed,Need follow up appointment
-D002,720fb2d8-dc20-4dcc-b518-1de0133f38c6,08/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,299dbac2-0a70-45e4-8846-87e01627cc9d,08/02/2024,General Consultation,Dispensed,NIL
-D005,891c991b-9f98-4cf0-bcbd-f905f0222e97,12/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,2ad8ef80-d337-496f-846b-012ed6c3cee7,12/02/2024,General Consultation,Dispensed,Need follow up appointment
-D001,3afe0b6d-e530-4bd0-98d3-dbb43807a455,13/02/2024,General Consultation,Dispensed,Need follow up appointment
-D001,97d60a00-1a42-480d-b888-0fece729affb,14/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,e2f3aa07-9ef6-4299-a367-88a444b06465,15/02/2024,General Consultation,Dispensed,Need follow up appointment
-D005,bcf605dc-c84b-492e-9c1c-8d5ad738314d,15/02/2024,General Consultation,Dispensed,NIL
-D005,bc2400cb-524e-4bec-bc99-70c74f045300,16/02/2024,General Consultation,Dispensed,NIL
-D005,1b3af82f-a429-4b21-9c0a-80af3f8324f0,16/02/2024,General Consultation,Dispensed,Need follow up appointment
-D001,653699eb-93dc-44bb-ac23-9ca3c026e26f,19/02/2024,General Consultation,Dispensed,Need follow up appointment
-D005,f72ce8e0-badd-4d3d-8f93-1fc0fab69009,19/02/2024,General Consultation,Dispensed,NIL
-D005,a029a012-8322-4e12-b3f0-245b248c2977,20/02/2024,General Consultation,Dispensed,Need follow up appointment
-D002,44b7565e-0d36-4ee9-85c1-6c5bafe85ccd,20/02/2024,General Consultation,Dispensed,NIL
-D003,a3409d72-de5a-4e32-b60e-0c99c6434726,20/02/2024,General Consultation,Dispensed,NIL
-D001,9a444490-664a-442e-b0dd-35f456b4cf6c,20/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,ec448b20-345e-4a71-a0e2-b42f5fc8911e,22/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,23bc9bc4-644d-4f96-9724-da92b99ad481,23/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,c735eab7-f02e-4080-abd3-29acf2aaf276,23/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,1d15618d-05a4-4cf3-a87f-33f5cacad9fc,23/02/2024,General Consultation,Dispensed,NIL
-D002,f54ff885-aabd-4bb5-bf17-9c3907fff948,26/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,e4202f91-a466-45cd-8e7d-d41a5f1a3ee6,26/02/2024,General Consultation,Dispensed,NIL
-D001,9b403583-e7f8-4595-9ce3-4c71cdb53ca3,27/02/2024,General Consultation,Dispensed,NIL
-D002,a287e8dc-d137-40c9-a882-fc71ffe42b67,27/02/2024,General Consultation,Dispensed,Need follow up appointment
-D005,ccf1f7f6-b31a-4eb1-a236-6102999ab794,28/02/2024,General Consultation,Dispensed,Need follow up appointment
-D006,cdbfe244-b03f-40d4-b16b-29c3e96f1b55,28/02/2024,General Consultation,Dispensed,Need follow up appointment
-D005,7fb158d6-cef7-4ffe-9916-881d46055398,28/02/2024,General Consultation,Dispensed,NIL
-D006,05cfea78-438d-4bf2-8527-e00713464921,29/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,837b0b4a-f2a8-49c4-abc1-8c5cd88492d4,29/02/2024,General Consultation,Dispensed,Need follow up appointment
-D004,a6bd10bc-ec2c-49e1-88cf-75f789b1107e,01/03/2024,General Consultation,Dispensed,Need follow up appointment
-D004,fa9f723d-5819-4cd0-84a4-89975658af4e,01/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,feb9a52f-015c-4461-a93d-6188bfce5d17,01/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,2dcc23fd-335a-4457-a061-839fa9e27c24,04/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,f2dba099-3c62-43a7-905f-85a4676d3527,04/03/2024,General Consultation,Dispensed,NIL
-D004,9fdc0410-aaa0-44e9-adaf-30b8afeef9d9,05/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,5f91026c-7573-4d38-b92b-cf44bef636ea,06/03/2024,General Consultation,Dispensed,NIL
-D003,b253c62b-1cc2-4f5f-a033-e9761124f7cc,08/03/2024,General Consultation,Dispensed,NIL
-D004,55569eaa-8982-4bf0-a792-fa70258839e3,08/03/2024,General Consultation,Dispensed,NIL
-D005,172ef30c-2ae6-45f6-97c4-ebba9d553d47,08/03/2024,General Consultation,Dispensed,NIL
-D006,27de0548-aaf9-4a27-9553-faaf18166d67,08/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,44f2e4dc-e2ed-4d14-a796-5eb80f7754af,11/03/2024,General Consultation,Dispensed,NIL
-D006,ddae61b6-1884-458f-a139-186d23ad59cb,11/03/2024,General Consultation,Dispensed,NIL
-D001,65b76fef-a5d0-43d4-af35-727c989d194c,11/03/2024,General Consultation,Dispensed,Need follow up appointment
-D002,6535a17e-7a90-4540-88e9-8dc905b45b53,11/03/2024,General Consultation,Dispensed,NIL
-D005,84f15333-555e-4941-8631-9cb5cd9c1ada,12/03/2024,General Consultation,Dispensed,Need follow up appointment
-D002,5cc2f725-08a2-419d-8c0e-75e12745c106,13/03/2024,General Consultation,Dispensed,Need follow up appointment
-D006,77a6f1a6-b30e-478a-9d9f-98dc8bc75d65,14/03/2024,General Consultation,Dispensed,NIL
-D003,13940b00-9a11-40d4-a4de-d6263eafa04e,15/03/2024,General Consultation,Dispensed,Need follow up appointment
-D004,eac56e75-70ca-43b7-8446-38a57fbd75b2,15/03/2024,General Consultation,Dispensed,NIL
-D006,ad0a0cf0-da4d-4edc-bbc1-099836adc66e,18/03/2024,General Consultation,Dispensed,Need follow up appointment
-D003,09c8f7e8-413d-4d10-92f6-a25bcf7cacd6,18/03/2024,General Consultation,Dispensed,NIL
-D005,2a1c71d5-8da2-47a6-a8be-bbf13a156372,19/03/2024,General Consultation,Dispensed,Need follow up appointment
-D005,f2ed4b29-e740-41d7-a302-49c3f77e3430,19/03/2024,General Consultation,Dispensed,NIL
-D001,0694a4e2-c8e0-48ae-85d0-1fd0c17abbfd,20/03/2024,General Consultation,Dispensed,Need follow up appointment
-D005,1ae14f9c-2171-44b2-abbd-89715bd8246a,20/03/2024,General Consultation,Dispensed,Need follow up appointment
-D005,3bfe4f1f-b326-49a6-a700-84d066c8b8f4,21/03/2024,General Consultation,Dispensed,Need follow up appointment
-D001,aa04aa31-1c58-4594-9e87-3d9deee8f9c5,22/03/2024,General Consultation,Dispensed,NIL
-D004,d8c72b20-e330-4411-b5cf-e6ef2c1d5a6f,22/03/2024,General Consultation,Dispensed,Need follow up appointment
-D006,b47b0f2b-bc5b-49ad-a74f-0f90420e1a83,22/03/2024,General Consultation,Dispensed,Need follow up appointment
-D001,421359c9-30d8-4d85-9796-972ead4c1f12,26/03/2024,General Consultation,Dispensed,NIL
-D002,02c51319-c06e-4305-ab49-7cf44b4b3aae,26/03/2024,General Consultation,Dispensed,NIL
-D001,5b08b4bf-1ece-46a6-81c7-e9001056742c,27/03/2024,General Consultation,Dispensed,Need follow up appointment
-D006,a4e6a8ac-64aa-42af-9dd7-8de4ccb17ea9,27/03/2024,General Consultation,Dispensed,NIL
-D002,9787481a-a29c-4a6a-9fdc-c452284a7fc4,28/03/2024,General Consultation,Dispensed,Need follow up appointment
-D006,7c291d77-b51f-40a9-819a-d838cd525333,28/03/2024,General Consultation,Dispensed,Need follow up appointment
-D005,73c250a7-a3b6-4439-984f-390e2206d7d1,28/03/2024,General Consultation,Dispensed,Need follow up appointment
-D002,c9badc1b-43fb-4176-b81a-3ea3728a292d,28/03/2024,General Consultation,Dispensed,NIL
-D006,a93570fd-b84b-471c-85cd-f69161aa662a,01/04/2024,General Consultation,Dispensed,NIL
-D002,57d2332b-5beb-45b5-986e-7accfc0303dc,01/04/2024,General Consultation,Dispensed,NIL
-D006,1e23a20a-388c-4ccb-a736-f28fb1a54c69,02/04/2024,General Consultation,Dispensed,NIL
-D005,99fe9bcd-0164-43e8-ace1-10a88873e589,02/04/2024,General Consultation,Dispensed,NIL
-D002,92030a10-20f4-4036-ae9e-7d6ffce3b388,02/04/2024,General Consultation,Dispensed,Need follow up appointment
-D003,c37665da-b496-4abc-b5c4-5c14ba74f297,02/04/2024,General Consultation,Dispensed,NIL
-D006,6a3beb67-aa56-44fa-9f00-c42c00c7061c,03/04/2024,General Consultation,Dispensed,NIL
-D006,b6bcc9e7-9abf-49c6-957b-ea9174d17ce0,03/04/2024,General Consultation,Dispensed,Need follow up appointment
-D003,ce3456f0-26f1-4553-aa0d-dc914fa376e9,04/04/2024,General Consultation,Dispensed,Need follow up appointment
-D005,d811e116-980d-4d9c-a683-22cac8c8f8ae,04/04/2024,General Consultation,Dispensed,Need follow up appointment
-D003,d7f70e24-d803-4429-ae22-a8a83f28612b,08/04/2024,General Consultation,Dispensed,Need follow up appointment
-D006,eb3a9e3b-2668-4a1e-951e-97802078cb08,10/04/2024,General Consultation,Dispensed,Need follow up appointment
-D004,d3559766-2ecf-4888-bc1d-6d623ec2b723,10/04/2024,General Consultation,Dispensed,NIL
-D003,a947a7ea-01cc-44dc-8504-cc45552f0823,11/04/2024,General Consultation,Dispensed,Need follow up appointment
-D002,d9bc9f85-e99a-4ae8-bb33-39c51c514b97,11/04/2024,General Consultation,Dispensed,NIL
-D005,910e1f54-04aa-434b-a6c4-c5b1febb2d4c,12/04/2024,General Consultation,Dispensed,Need follow up appointment
-D005,ba3f37d4-4031-48ad-80e2-58eb77219b85,12/04/2024,General Consultation,Dispensed,NIL
-D003,f6d72bb0-3cc4-42a0-84d9-9866ae35859d,16/04/2024,General Consultation,Dispensed,Need follow up appointment
-D005,09a3bf88-ba44-4cb0-b160-1dc4db7b001d,17/04/2024,General Consultation,Dispensed,Need follow up appointment
-D006,d8a8734f-970d-45a5-9dd0-1cfdfdef892e,17/04/2024,General Consultation,Dispensed,NIL
-D002,1dfada48-7aa8-4f6b-b5cc-37492ea6575b,17/04/2024,General Consultation,Dispensed,Need follow up appointment
-D001,f56880f0-8c71-47d7-85d5-59b9274edfdd,18/04/2024,General Consultation,Dispensed,Need follow up appointment
-D004,ba9862ad-1e54-453f-b4fa-58b847b4a0db,18/04/2024,General Consultation,Dispensed,NIL
-D003,2982964d-6536-40bb-96e4-ebb1906749c9,19/04/2024,General Consultation,Dispensed,NIL
-D006,ae19e163-7d11-49fc-92df-42c11c6516cb,22/04/2024,General Consultation,Dispensed,Need follow up appointment
-D002,9ea4ba6e-2efb-4481-9be5-0355f69e269b,23/04/2024,General Consultation,Dispensed,NIL
-D006,20d29f32-e5a2-446b-acf1-fcaddd6e6978,24/04/2024,General Consultation,Dispensed,NIL
-D004,63e9b8d7-fd72-4cad-956b-27fc1df7e933,24/04/2024,General Consultation,Dispensed,NIL
-D003,d87cc67e-f29f-45aa-b69c-8e8e115f5e8c,25/04/2024,General Consultation,Dispensed,NIL
-D002,d3cbc7d3-4e69-4835-977c-adb250777b67,29/04/2024,General Consultation,Dispensed,Need follow up appointment
-D002,76af2737-122f-46c7-b769-3ded397f73c0,30/04/2024,General Consultation,Dispensed,Need follow up appointment
-D001,c4c096bf-f29b-4a16-84e7-374dd950d650,30/04/2024,General Consultation,Dispensed,Need follow up appointment
-D005,05152bbd-0ab8-4cb7-a4b0-311fa0943fc9,02/05/2024,General Consultation,Dispensed,NIL
-D002,b2632f54-080a-4ef2-be40-05a28b2f1176,06/05/2024,General Consultation,Dispensed,Need follow up appointment
-D003,58ba6be0-8daa-4d6e-910c-06c524458ee1,06/05/2024,General Consultation,Dispensed,Need follow up appointment
-D002,1c13a10d-abbd-489b-9e1a-4b95cdf0a168,07/05/2024,General Consultation,Dispensed,Need follow up appointment
-D001,5f26cb04-b9b5-4d51-8aef-019ea070097e,07/05/2024,General Consultation,Dispensed,NIL
-D004,d7e65bca-cec8-45ef-a13b-7ab079b8911e,08/05/2024,General Consultation,Dispensed,NIL
-D004,fe226b81-f297-4d89-a95d-0c0cdd33b33b,09/05/2024,General Consultation,Dispensed,Need follow up appointment
-D002,cf9f8dde-8efa-4657-9ee4-70eec6d8a452,09/05/2024,General Consultation,Dispensed,Need follow up appointment
-D004,cc411c6d-8676-44ad-9d6e-eeb617189da4,10/05/2024,General Consultation,Dispensed,NIL
-D001,e90dc171-865e-4d94-b8e5-15280cd5f0d8,13/05/2024,General Consultation,Dispensed,Need follow up appointment
-D004,e74ca9f5-574e-48eb-bf1c-e5622520e2c6,14/05/2024,General Consultation,Dispensed,NIL
-D001,83a82f00-9586-49ff-8b11-f7e198768a8d,14/05/2024,General Consultation,Dispensed,Need follow up appointment
-D005,915b9afe-496c-41fe-959d-473bf2d4c89e,15/05/2024,General Consultation,Dispensed,Need follow up appointment
-D001,27442dbc-93c7-4dbb-a64a-769168c2b6ae,16/05/2024,General Consultation,Dispensed,NIL
-D002,b3228c20-0ba4-4beb-b831-1cf3876f7b70,16/05/2024,General Consultation,Dispensed,Need follow up appointment
-D001,ff01c576-623d-4425-b8e9-43acce5673c6,16/05/2024,General Consultation,Dispensed,Need follow up appointment
-D004,deb980ce-376e-47ab-9c10-fee87a8b4092,16/05/2024,General Consultation,Dispensed,Need follow up appointment
-D005,6a071afd-3bbc-4582-8495-d45f3c2d9e70,20/05/2024,General Consultation,Dispensed,NIL
-D005,55fd351f-6171-4cea-9ba5-b02771223b2d,21/05/2024,General Consultation,Dispensed,Need follow up appointment
-D004,6dddeaf9-897f-43d1-a831-35e5c69f7884,22/05/2024,General Consultation,Dispensed,Need follow up appointment
-D001,974e28cc-bade-4f07-98d7-e94a25ff3d82,22/05/2024,General Consultation,Dispensed,Need follow up appointment
-D005,55347ebb-2f0a-44a1-a332-52c6cad5d22c,23/05/2024,General Consultation,Dispensed,Need follow up appointment
-D003,c1935638-ee5d-4dbe-9dd0-3d4b9fd41b71,24/05/2024,General Consultation,Dispensed,NIL
-D001,f1e90b03-5fa9-4047-8066-3abf87d800f3,24/05/2024,General Consultation,Dispensed,NIL
-D002,ed5cd382-c94d-4406-95b8-ed8833e62688,24/05/2024,General Consultation,Dispensed,NIL
-D006,5323d32d-2eaa-4d7c-97ee-05a69c393c08,27/05/2024,General Consultation,Dispensed,NIL
-D001,61648f71-fdfb-4edd-a102-dee6d6a88e50,27/05/2024,General Consultation,Dispensed,Need follow up appointment
-D001,3e43d306-7269-400f-a59b-dc25054efa44,28/05/2024,General Consultation,Dispensed,NIL
-D003,10d6e3a3-c59a-4f8a-97e8-efd7c7cc4fc7,28/05/2024,General Consultation,Dispensed,NIL
-D006,6d491f72-3426-409a-b167-85e2895e40f4,28/05/2024,General Consultation,Dispensed,Need follow up appointment
-D003,5706c581-0e48-4891-9d56-1d0a4d2eec54,28/05/2024,General Consultation,Dispensed,NIL
-D001,a7e9fc2f-ade0-4fc9-9fc1-e1c9dff3b421,30/05/2024,General Consultation,Dispensed,NIL
-D002,ca293747-edb3-4ffd-a39b-35e695910f12,30/05/2024,General Consultation,Dispensed,Need follow up appointment
-D003,a58b5d91-1146-4e04-a03f-b94ca54c23f3,31/05/2024,General Consultation,Dispensed,NIL
-D004,88f40416-419b-4485-943c-d55f32c546ac,03/06/2024,General Consultation,Dispensed,NIL
-D001,23bb1bd5-4a25-4b38-8d7a-09de4e560696,03/06/2024,General Consultation,Dispensed,Need follow up appointment
-D002,4385400f-f4e4-4a6e-b519-eda955900b93,05/06/2024,General Consultation,Dispensed,NIL
-D003,6e902d81-5b68-4450-8554-7667e39ba4f2,05/06/2024,General Consultation,Dispensed,Need follow up appointment
-D005,f2cae593-2448-4363-89ad-6427f4f3f8e2,05/06/2024,General Consultation,Dispensed,NIL
-D006,9ec5dbe6-bf14-46ae-8c09-98f7e3edc93e,05/06/2024,General Consultation,Dispensed,NIL
-D002,ebb5c693-366d-4834-8eb1-e2e1d44f6e3c,05/06/2024,General Consultation,Dispensed,NIL
-D004,785eae28-f2f4-469e-a24e-8b47f1f23602,06/06/2024,General Consultation,Dispensed,NIL
-D006,cdb082f8-fb82-4ffe-bcf3-8cb594877de3,07/06/2024,General Consultation,Dispensed,Need follow up appointment
-D001,72724765-2990-45e7-8c8b-f1a9920c4a44,11/06/2024,General Consultation,Dispensed,NIL
-D005,bb7c6573-e78d-4769-8c0d-f82adf59d108,12/06/2024,General Consultation,Dispensed,NIL
-D004,d6a3d36c-6614-47d7-abaf-960d064b0b9f,12/06/2024,General Consultation,Dispensed,Need follow up appointment
-D005,74c9440e-ded0-47f7-8f08-3ac73f88c53a,13/06/2024,General Consultation,Dispensed,Need follow up appointment
-D002,5ba8eafa-b6b3-400e-8bfa-1e0c7cdf717c,13/06/2024,General Consultation,Dispensed,Need follow up appointment
-D004,cd107744-1437-46ca-84d2-e6c07067da92,17/06/2024,General Consultation,Dispensed,Need follow up appointment
-D005,27202d93-fff5-41ef-830b-ac918391b25a,17/06/2024,General Consultation,Dispensed,Need follow up appointment
-D003,faf6849b-2aec-4e3a-ada7-c32530e42c13,18/06/2024,General Consultation,Dispensed,Need follow up appointment
-D005,a0754ba5-34b6-408f-bd4a-a6a3f809f29c,20/06/2024,General Consultation,Dispensed,NIL
-D004,0bc0ed71-2dcb-485a-b06c-56e138ef0b23,21/06/2024,General Consultation,Dispensed,NIL
-D001,856f049a-3321-4bce-a886-dc357957028b,24/06/2024,General Consultation,Dispensed,Need follow up appointment
-D004,e2727087-f027-4411-9f6b-1afd39fff047,24/06/2024,General Consultation,Dispensed,NIL
-D005,ec6a7ed0-2e3b-4918-b988-8126fc9b45f3,25/06/2024,General Consultation,Dispensed,NIL
-D002,aa8b4fa2-f7e3-4f07-92ab-b4590f445d64,26/06/2024,General Consultation,Dispensed,Need follow up appointment
-D006,12ca4fb1-b97e-4c29-a692-3ad6f165de26,26/06/2024,General Consultation,Dispensed,Need follow up appointment
-D002,29e18d53-df40-40a3-a74d-91b746cabe28,26/06/2024,General Consultation,Dispensed,NIL
-D004,2ec04a2b-6b7f-4f35-a3bc-bbaa928c4713,26/06/2024,General Consultation,Dispensed,NIL
-D006,8cc6d09b-eeee-40b8-9155-c6d455cb617e,27/06/2024,General Consultation,Dispensed,Need follow up appointment
-D002,ce607ae3-50ae-4ca3-9cfd-d569e55d63fe,01/07/2024,General Consultation,Dispensed,Need follow up appointment
-D005,70be3f6f-7441-42c8-ac85-333d8b8a99b7,01/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,0df1c474-b1ed-4263-9916-6c67335bbd6a,01/07/2024,General Consultation,Dispensed,NIL
-D005,d17dad75-4727-4eb1-b022-d11ebb0e9426,01/07/2024,General Consultation,Dispensed,NIL
-D006,57dd9079-c489-40f0-bce8-e27f7db4f3b1,02/07/2024,General Consultation,Dispensed,NIL
-D001,7e84ee18-9bad-4cdf-a95b-676f24fc43cb,03/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,153e88fd-c1e4-4de9-b4e7-548082638b65,03/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,75b38439-2135-4ed1-9e72-01a174edd980,03/07/2024,General Consultation,Dispensed,NIL
-D001,237d84e7-a649-4b92-90fc-701c21301ab2,03/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,42b94414-2261-465f-a9d7-f3e1bc65db17,04/07/2024,General Consultation,Dispensed,NIL
-D002,bb9d6069-3937-423e-a6c0-34e2859bf16b,04/07/2024,General Consultation,Dispensed,Need follow up appointment
-D005,cb2abe0f-4a89-4f0f-b1df-07becc2c62f0,05/07/2024,General Consultation,Dispensed,NIL
-D004,26ee1d35-6e99-41fe-8383-72cc21f6b99c,08/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,cef5e6b1-fde2-46c3-b3df-6d0892a0f410,09/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,9a9db896-acd9-43df-b7e9-4d6f4ca134fa,09/07/2024,General Consultation,Dispensed,Need follow up appointment
-D006,a7dcfe0f-0f18-46ac-ab83-58fbc8a14dbe,10/07/2024,General Consultation,Dispensed,NIL
-D005,af2c64c4-7af2-4d60-ac5e-c3236c1e1e10,10/07/2024,General Consultation,Dispensed,NIL
-D006,ff23caa2-9b53-406a-ada3-69de47545d44,11/07/2024,General Consultation,Dispensed,NIL
-D001,23b6a608-61f5-46b1-8b52-0ef0210e0d95,11/07/2024,General Consultation,Dispensed,NIL
-D002,0c057f37-f320-42b9-a651-d62e9937b044,11/07/2024,General Consultation,Dispensed,NIL
-D001,b6575840-f813-44ad-865a-cca11cffb6bb,11/07/2024,General Consultation,Dispensed,NIL
-D002,e890a056-a81e-4758-8cd1-5719d43c4618,12/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,d85bc4f0-3b19-46e7-ae46-85cebfaac91f,15/07/2024,General Consultation,Dispensed,Need follow up appointment
-D006,a5ffff79-0466-4b09-be00-190856cdca62,16/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,ac4bdc5c-cb88-4c1e-b0ed-04c54c52df3f,16/07/2024,General Consultation,Dispensed,NIL
-D002,34f34a51-831d-4f19-a929-5474490d0c75,17/07/2024,General Consultation,Dispensed,NIL
-D002,f9b008f2-6e8a-4e68-9ed8-27e5b9dc7f2d,18/07/2024,General Consultation,Dispensed,NIL
-D006,03fd4400-ce82-4dd4-8721-9644657d47a7,18/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,ac636072-47ce-45a3-99bc-d6c2abf5f63f,18/07/2024,General Consultation,Dispensed,NIL
-D004,aed2e5b0-0906-49d8-876c-9ead48f1c983,19/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,f1d4f76d-cc89-45ce-a3cf-defc74c331d9,22/07/2024,General Consultation,Dispensed,Need follow up appointment
-D003,36e3164c-962d-4027-aaa5-8a7d85341ea0,22/07/2024,General Consultation,Dispensed,NIL
-D004,c67a64b0-248f-45b6-8d1f-73a1c9e6a520,22/07/2024,General Consultation,Dispensed,NIL
-D006,f4b75fd9-495b-453f-8314-68b2ed006493,22/07/2024,General Consultation,Dispensed,NIL
-D002,8de57a75-b822-4d6f-827a-6ba581b047b2,24/07/2024,General Consultation,Dispensed,NIL
-D001,39516ae4-777a-45d7-9170-9c21978760fe,25/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,841a2a10-9bf8-45e1-8d3f-50d4d4a1a35b,25/07/2024,General Consultation,Dispensed,Need follow up appointment
-D005,a1a88042-e3ee-4987-994e-34e60909905e,25/07/2024,General Consultation,Dispensed,Need follow up appointment
-D006,1b5109ae-20c8-4609-861c-9dd4f418c39a,25/07/2024,General Consultation,Dispensed,NIL
-D002,df042351-ea5e-40c6-9840-23c73f6b4fff,26/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,e5fd03e7-a5fa-4de2-98df-150aac163ed7,26/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,3196e6c3-a21e-4ef6-bc5f-cd31374839b6,29/07/2024,General Consultation,Dispensed,NIL
-D001,bd4e85a7-3df2-4ddd-9be0-43249c75a41c,29/07/2024,General Consultation,Dispensed,Need follow up appointment
-D001,5c02dc49-c6dd-453f-a294-98d97d6c5aea,29/07/2024,General Consultation,Dispensed,Need follow up appointment
-D006,ecd6b710-86c9-4419-9ef5-5704f540c2dc,30/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,89a62098-2dd4-4b41-a0a5-808e7aa27998,30/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,f77635ff-e37e-4f63-9095-c7178c666b66,30/07/2024,General Consultation,Dispensed,NIL
-D002,aef671dd-070a-438c-b0cb-8f8a8ef09186,31/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,7d2efc07-4fb7-4b73-9e13-56f99d1c9bdf,31/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,81b6b4d0-2234-4c99-a7f9-d79e907d0446,31/07/2024,General Consultation,Dispensed,Need follow up appointment
-D002,586885e1-d136-4914-b5a6-056bb020534d,31/07/2024,General Consultation,Dispensed,NIL
-D001,f745352e-5577-48c7-ba2c-8120553c7e59,31/07/2024,General Consultation,Dispensed,Need follow up appointment
-D004,10b58efc-e16d-4c34-a188-54408206c486,01/08/2024,General Consultation,Dispensed,Need follow up appointment
-D003,ceada4de-c692-46f3-96c3-7e4e262b4535,01/08/2024,General Consultation,Dispensed,NIL
-D006,384e4c4b-b771-42f2-8a6f-0a9a80ad314c,02/08/2024,General Consultation,Dispensed,Need follow up appointment
-D002,986b592e-995f-4045-bd2a-877263f5ed47,02/08/2024,General Consultation,Dispensed,NIL
-D004,e63e3279-1693-4452-a5a9-2a69d88ab566,05/08/2024,General Consultation,Dispensed,Need follow up appointment
-D005,d2a43c7b-6526-4a9d-b0a1-59b1350b706d,05/08/2024,General Consultation,Dispensed,NIL
-D004,10b52f64-8f16-4777-a65a-68c90727c9a2,06/08/2024,General Consultation,Dispensed,Need follow up appointment
-D004,a39bcc5c-3ac2-4844-a24f-0dff4810fcd3,06/08/2024,General Consultation,Dispensed,Need follow up appointment
-D005,95634a52-471d-4589-ad10-7c0b4f673376,07/08/2024,General Consultation,Dispensed,Need follow up appointment
-D005,30a75082-b575-4b37-bad8-2e3cc1268500,07/08/2024,General Consultation,Dispensed,NIL
-D006,46f6dac1-dba1-45a7-81e8-9709b8dace56,07/08/2024,General Consultation,Dispensed,NIL
-D001,0b1c3501-65f0-4e61-8f0e-1426d343ffbf,07/08/2024,General Consultation,Dispensed,NIL
-D002,e302fca5-83ab-4eaa-a04b-a7fb0c3988d7,08/08/2024,General Consultation,Dispensed,NIL
-D006,76db15b5-a179-4ecf-8f0c-49123b98b1a9,12/08/2024,General Consultation,Dispensed,Need follow up appointment
-D004,ed4da06f-c46c-47fd-85d3-168d68f3eb2d,12/08/2024,General Consultation,Dispensed,Need follow up appointment
-D002,3cc540f8-a7c9-4bf0-a5f1-4cafc922bd09,12/08/2024,General Consultation,Dispensed,Need follow up appointment
-D006,a421f093-81b6-4133-87e9-725e46b31234,12/08/2024,General Consultation,Dispensed,NIL
-D006,d230a264-21f3-44e9-aa96-73e14cc8519d,13/08/2024,General Consultation,Dispensed,NIL
-D001,4a316aaf-4f5f-4a22-960b-c6ed39386389,14/08/2024,General Consultation,Dispensed,NIL
-D005,c6873e84-38ba-4d3b-b9fb-cc53d7cc2280,14/08/2024,General Consultation,Dispensed,Need follow up appointment
-D002,81b955eb-ec43-4dab-9d8e-3173fb66e949,15/08/2024,General Consultation,Dispensed,Need follow up appointment
-D001,5a33230a-66d7-4a7f-a217-fb1544062b3d,15/08/2024,General Consultation,Dispensed,NIL
-D002,9fe88fa7-4157-4ca1-9095-9e20f527d914,16/08/2024,General Consultation,Dispensed,NIL
-D005,6f44552a-2684-43e8-ab97-7f1c28d2c0a8,16/08/2024,General Consultation,Dispensed,Need follow up appointment
-D002,4aaf6f04-2de8-4306-84aa-e5acc4bb2917,20/08/2024,General Consultation,Dispensed,Need follow up appointment
-D003,8fccac42-c5ae-401d-87af-be87af4fb060,20/08/2024,General Consultation,Dispensed,NIL
-D003,9f8ea215-3ce5-424e-895a-6c88ee2dc9c0,20/08/2024,General Consultation,Dispensed,Need follow up appointment
-D002,ea2c8921-c821-4abb-96d6-c985c49b202f,23/08/2024,General Consultation,Dispensed,Need follow up appointment
-D006,f211cb86-5152-4a4a-8f8e-480038e4ead3,28/08/2024,General Consultation,Dispensed,Need follow up appointment
-D001,41271342-07a1-432b-a15c-bb4404996d08,28/08/2024,General Consultation,Dispensed,NIL
-D005,787fc9be-04ca-4bfd-882c-bc6dda7f902b,28/08/2024,General Consultation,Dispensed,NIL
-D006,fb9296e0-6615-410f-8113-0ead07f05607,28/08/2024,General Consultation,Dispensed,NIL
-D002,c5173834-61f1-4e71-8340-36e535201a0c,29/08/2024,General Consultation,Dispensed,Need follow up appointment
-D001,06917edc-9a07-47ae-a4a1-72bfce2049b4,29/08/2024,General Consultation,Dispensed,NIL
-D005,e260653d-e26c-40a1-8f1f-d4db161a0497,30/08/2024,General Consultation,Dispensed,NIL
-D006,2f63c6cd-4ca2-4f81-8aac-ed20c03531e0,30/08/2024,General Consultation,Dispensed,NIL
-D001,8a82cad6-5cd5-48d7-bc7c-d0899354c632,30/08/2024,General Consultation,Dispensed,NIL
-D005,94b57b09-74e0-4b1b-83bd-6454d35075bb,02/09/2024,General Consultation,Dispensed,NIL
-D006,07f8882e-9f05-408c-b71f-13a5d78ab2a1,02/09/2024,General Consultation,Dispensed,NIL
-D001,d17a8da1-4db0-4f3f-818f-03bd4c6d24fe,02/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,0b081da4-9c66-456e-8252-b90e238be31d,03/09/2024,General Consultation,Dispensed,NIL
-D006,1d3670a0-b45e-4134-b52f-70742d041cce,03/09/2024,General Consultation,Dispensed,NIL
-D006,06f370ce-ac24-4a08-90d6-af2996fbd4c0,03/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,3775a8f1-3b61-48d9-83bf-dede8ee64f58,04/09/2024,General Consultation,Dispensed,NIL
-D001,c9cb8aeb-0538-4e5f-9f75-7579fbde5d74,04/09/2024,General Consultation,Dispensed,Need follow up appointment
-D005,bedb09b7-cec0-49f9-9dbb-334ea580742f,05/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,fd80ab31-f7b6-4459-b04e-f6f0dbf309cc,05/09/2024,General Consultation,Dispensed,Need follow up appointment
-D005,596805c3-cf81-48c4-8739-f2ec1b5ddbeb,05/09/2024,General Consultation,Dispensed,NIL
-D002,112cc3e3-fafb-47c2-8d37-a711fe9452e8,05/09/2024,General Consultation,Dispensed,NIL
-D005,ae480039-6a60-437c-8c05-c2fdc65e5e20,05/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,650d2f20-0248-4231-b0e8-09fd401e282d,06/09/2024,General Consultation,Dispensed,Need follow up appointment
-D004,5f6e99c3-c028-4b97-98e6-b928673ed96f,06/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,48d8bb2b-a110-4659-b762-1e5267ab254a,06/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,843e07b0-adc5-40f5-8c81-c4f5e9f63063,09/09/2024,General Consultation,Dispensed,NIL
-D003,e3787a44-73da-481b-a123-297d6489f6bb,09/09/2024,General Consultation,Dispensed,NIL
-D003,6f4a5852-5231-4110-a008-35f545db02de,09/09/2024,General Consultation,Dispensed,NIL
-D001,23072735-fa34-4ec8-9e49-72cdb9322246,09/09/2024,General Consultation,Dispensed,NIL
-D003,de36993d-e73b-4f1e-a811-6b7408d66c10,09/09/2024,General Consultation,Dispensed,NIL
-D006,15693881-0165-4e71-90aa-c495ace7888d,09/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,483d508a-c7f3-4ffa-91f8-5a725947bf3a,10/09/2024,General Consultation,Dispensed,Need follow up appointment
-D003,eadfe614-0a99-410b-8c1e-7f78c7309540,10/09/2024,General Consultation,Dispensed,NIL
-D001,d0bcdcc5-b87c-46bd-a22f-bc72ba16893a,10/09/2024,General Consultation,Dispensed,NIL
-D004,116dbb40-4990-4cf0-a1c7-0d832c244036,10/09/2024,General Consultation,Dispensed,Need follow up appointment
-D005,c94ab843-aa2c-4d22-a4bf-7650b77d1908,10/09/2024,General Consultation,Dispensed,NIL
-D001,71aa51c1-dc28-4406-9902-996d7a96cd5c,11/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,a03ba685-dee2-4ba8-861e-dcecade21d43,11/09/2024,General Consultation,Dispensed,NIL
-D004,08fe3d82-b7c2-45a5-bc86-535acd9a6031,11/09/2024,General Consultation,Dispensed,NIL
-D001,6b9ebbcd-c85b-459b-8538-5ae1825db640,12/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,3cb0a3cd-a39c-4f98-a767-7dacf53bacf3,13/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,9c4f1574-6917-4d7a-9bb1-e0c798531891,13/09/2024,General Consultation,Dispensed,NIL
-D006,54883d14-b87d-4d3b-a638-787c4b34c3d4,13/09/2024,General Consultation,Dispensed,NIL
-D005,2d8b147d-d3bf-4716-9b56-be49a11a4a2a,13/09/2024,General Consultation,Dispensed,NIL
-D004,0b968eef-b3ff-4992-b2ef-990c5fdab738,16/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,a77da8dd-ef6f-4e2a-a649-dca6ba7aa1a0,16/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,26d951b1-edd2-489c-82dd-2c668732fd29,17/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,4d493c0a-4b76-43c9-bf42-77832e4d205c,17/09/2024,General Consultation,Dispensed,NIL
-D001,14ca4f78-eefb-4f09-a2d9-3fda7558094d,19/09/2024,General Consultation,Dispensed,NIL
-D004,cd85a5f6-757f-48ea-9957-759bc18960b9,20/09/2024,General Consultation,Dispensed,Need follow up appointment
-D005,d37db07a-164b-4877-9a30-814748297f38,23/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,ddc371d5-1d78-4275-ae0d-2e533dd8e888,23/09/2024,General Consultation,Dispensed,Need follow up appointment
-D005,03eaf840-7530-4eb9-a32b-07029c98196a,23/09/2024,General Consultation,Dispensed,Need follow up appointment
-D003,d9ae4e79-9c6c-42f2-b387-bb79997d767e,23/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,bf403dc2-5d87-479e-80dc-002c9ff7d9d2,24/09/2024,General Consultation,Dispensed,Need follow up appointment
-D001,700aca75-d9aa-4806-b089-9e06c3c550d1,24/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,b31d2542-8f52-45d2-8136-8e283feed8c4,26/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,9a8d5c13-8f81-407f-b2ee-661142873ae2,27/09/2024,General Consultation,Dispensed,NIL
-D005,da9b24df-5f6b-417c-980f-1969086f54f7,27/09/2024,General Consultation,Dispensed,NIL
-D003,5ad4ba45-baeb-4557-bda6-16174d65f2b2,27/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,4caea357-607e-4bf1-925a-7e67f9612628,27/09/2024,General Consultation,Dispensed,Need follow up appointment
-D002,9ae69688-0bd5-41db-ac73-05e6f648ca68,30/09/2024,General Consultation,Dispensed,NIL
-D004,1554daf0-9085-4533-a0dc-dd68fbdc3d2d,30/09/2024,General Consultation,Dispensed,Need follow up appointment
-D006,51fc09ee-b580-408f-8f50-e54835b6a1c0,01/10/2024,General Consultation,Dispensed,Need follow up appointment
-D006,fc321ec0-d14a-4387-93f9-1056641aacdb,01/10/2024,General Consultation,Dispensed,NIL
-D003,9c7d78bb-0c78-4dea-9fc2-e4dd47b4879a,01/10/2024,General Consultation,Dispensed,Need follow up appointment
-D003,43e4bcb4-47a8-4187-b75d-d43497e0451a,02/10/2024,General Consultation,Dispensed,NIL
-D001,7bd74d5c-a6e1-4906-a8e4-4d188365baa0,03/10/2024,General Consultation,Dispensed,Need follow up appointment
-D005,90efdd85-cd3e-411b-b714-4ee17e9408b2,03/10/2024,General Consultation,Dispensed,Need follow up appointment
-D002,112ceaae-5f9c-468c-96b5-b9409712a855,03/10/2024,General Consultation,Dispensed,Need follow up appointment
-D002,e31e47cd-ee73-481a-85b8-e2031512bbd8,03/10/2024,General Consultation,Dispensed,NIL
-D004,811d7aab-1ab1-4891-bc96-fa1d2986479a,04/10/2024,General Consultation,Dispensed,NIL
-D002,be325c12-eabe-441a-a6f8-9c0a471e62dc,04/10/2024,General Consultation,Dispensed,NIL
-D001,0c526544-5d66-453d-bd1f-7dcb4102bfe2,07/10/2024,General Consultation,Dispensed,NIL
-D001,b8892340-67db-4618-9b27-a64fbe4147f0,07/10/2024,General Consultation,Dispensed,NIL
-D005,d62230c0-79cc-4c74-bc61-16d9e314346d,08/10/2024,General Consultation,Dispensed,Need follow up appointment
-D005,0d64cd53-96dc-4dab-b920-4be6407bbc4d,08/10/2024,General Consultation,Dispensed,NIL
-D005,ae69d6e7-9e41-42d5-97ea-0114d2d00592,08/10/2024,General Consultation,Dispensed,Need follow up appointment
-D001,cb982de4-7415-43b2-ad00-7da5b53fb3f1,09/10/2024,General Consultation,Dispensed,NIL
-D005,594ec23e-972e-415e-95b6-f883d1f36f08,09/10/2024,General Consultation,Dispensed,Need follow up appointment
-D003,9d1d36a3-693d-4690-b7fa-f0cd9e2acfb9,09/10/2024,General Consultation,Dispensed,NIL
-D006,b030dc3d-d9b8-401a-b115-9a572d805b26,09/10/2024,General Consultation,Dispensed,NIL
-D001,22b34254-df81-4d7d-9619-d92deb81b375,10/10/2024,General Consultation,Dispensed,NIL
-D002,ba9b38c9-407a-43c9-a681-f6916f86f5fd,11/10/2024,General Consultation,Dispensed,NIL
-D006,29d95bc4-6c0c-402d-824a-5132c57e5b43,11/10/2024,General Consultation,Dispensed,NIL
-D005,64bec187-01a3-4923-88be-3b32b523023f,11/10/2024,General Consultation,Dispensed,Need follow up appointment
-D001,193b1f03-e7e7-41de-9ac9-d24349043b14,14/10/2024,General Consultation,Dispensed,NIL
-D001,738221d4-5d38-4a45-8849-2f0efc3866b9,16/10/2024,General Consultation,Dispensed,NIL
-D003,fb1a9658-281a-4262-ba76-73bd1f5a810e,16/10/2024,General Consultation,Dispensed,NIL
-D006,ff0b269d-47a7-48fa-9a5b-edd6c9467de0,16/10/2024,General Consultation,Dispensed,Need follow up appointment
-D004,28c94d81-0876-4df2-ad08-b5398cc6bdf4,17/10/2024,General Consultation,Dispensed,Need follow up appointment
-D002,c70c6b00-c343-4c39-99eb-e542e43f292e,18/10/2024,General Consultation,Dispensed,NIL
-D005,19197f8e-3476-4f7f-ac4b-1f0d7b89e6a0,18/10/2024,General Consultation,Dispensed,Need follow up appointment
-D004,bcfac100-829e-40dc-a93c-2bd6c3dc7adb,22/10/2024,General Consultation,Dispensed,Need follow up appointment
-D003,ec91cb0a-bebd-40f9-84a4-ddefb917150c,22/10/2024,General Consultation,Dispensed,NIL
-D002,c56fee9d-d11f-4ead-9552-b09301d3c7a2,23/10/2024,General Consultation,Dispensed,Need follow up appointment
-D004,6eb1c215-ab35-4289-b150-9e91d4d812c2,23/10/2024,General Consultation,Dispensed,Need follow up appointment
-D004,f8fa501c-842a-4dba-8013-c9cad994369f,24/10/2024,General Consultation,Dispensed,NIL
-D001,c11b01cf-8ecd-4f09-b24e-fede1b0cc77b,24/10/2024,General Consultation,Dispensed,NIL
-D004,06df0fa9-09ca-4675-8619-8327d78b9a04,24/10/2024,General Consultation,Dispensed,Need follow up appointment
-D001,98869a09-0e85-45f6-99fa-d509d0a1cda9,25/10/2024,General Consultation,Dispensed,Need follow up appointment
-D005,38a12c31-d5ab-4928-9335-2551d9680a28,25/10/2024,General Consultation,Dispensed,Need follow up appointment
-D004,9995ca47-92e1-4fe7-b1a8-af8094be41b5,25/10/2024,General Consultation,Dispensed,NIL
-D001,d7634963-048a-445b-b71a-09c83bde957f,25/10/2024,General Consultation,Dispensed,Need follow up appointment
-D005,86f3f912-c32b-4858-8e35-fd344212ec89,28/10/2024,General Consultation,Dispensed,Need follow up appointment
-D002,460a60ba-ac75-4790-a64e-da91a438874c,29/10/2024,General Consultation,Dispensed,Need follow up appointment
-D005,57abd714-95ef-4bd3-8547-7af12e878d80,29/10/2024,General Consultation,Dispensed,NIL
-D004,de20ceed-87d3-4cee-a1f4-04325986b672,30/10/2024,General Consultation,Dispensed,NIL
-D001,4e167f53-08a4-4246-9156-354bdfe96ed0,30/10/2024,General Consultation,Dispensed,Need follow up appointment
-D003,b8e48a5e-3836-4372-96b4-eb6c096e6fec,01/11/2024,General Consultation,Dispensed,Need follow up appointment
-D004,300b4684-cbe0-43b1-b4d0-bb958b320837,01/11/2024,General Consultation,Dispensed,NIL
-D005,99a5ac1d-447c-4e71-a07f-72788ee55e28,01/11/2024,General Consultation,Dispensed,NIL
-D004,090fa6c6-f6c5-4c30-b051-8796ce6a2d48,01/11/2024,General Consultation,Dispensed,NIL
-D006,50843aae-9aa1-4c46-92df-eb3fd8041f8e,01/11/2024,General Consultation,Dispensed,Need follow up appointment
-D003,8cc871f5-d424-480d-b01c-e917abf1db68,04/11/2024,General Consultation,Dispensed,NIL
-D006,eaccbe4d-2e6d-4585-a6d1-4055b92a3cf0,07/11/2024,General Consultation,Dispensed,Need follow up appointment
-D003,5bd74a3f-c95e-48ff-b1ad-71e50a32fa94,08/11/2024,General Consultation,Dispensed,NIL
-D006,110ecae9-fd3c-4807-a79c-2c3e9c73fa95,08/11/2024,General Consultation,Dispensed,Need follow up appointment
-D005,1bdd7726-5f2f-4a6b-99ea-711cbd9d2bf1,08/11/2024,General Consultation,Dispensed,Need follow up appointment
-D002,9381f8e8-130d-453c-8b9a-ebb77659e7c5,12/11/2024,General Consultation,Dispensed,NIL
-D001,55aeae72-951b-4676-8577-b73e13d707d6,12/11/2024,General Consultation,Dispensed,Need follow up appointment
-D005,14fa30c5-8467-4b10-8e37-68abd0f79d45,12/11/2024,General Consultation,Dispensed,Need follow up appointment
-D005,527caae5-4758-46d6-b916-4136e6e16fba,12/11/2024,General Consultation,Dispensed,Need follow up appointment
-D003,4a28f0a3-4137-42fd-9ea7-d2a84e6c9023,13/11/2024,General Consultation,Dispensed,NIL
-D003,e6f8935e-346f-4f98-b098-bad10c6a15d1,13/11/2024,General Consultation,Dispensed,NIL
-D004,a57a8fc1-e551-4c1b-9515-41fce4966ce7,13/11/2024,General Consultation,Dispensed,Need follow up appointment
-D005,012cdcb6-70b9-45a4-b446-ec2435668547,13/11/2024,General Consultation,Dispensed,NIL
-D006,0148c004-73c7-4580-a05e-77dab650d8b3,14/11/2024,General Consultation,Dispensed,Need follow up appointment
-D003,a490c7a6-f82a-45b2-b772-f4ddd082117a,14/11/2024,General Consultation,Dispensed,NIL
-D002,4052fa42-2355-4797-8a65-71059a8697d0,15/11/2024,General Consultation,Dispensed,NIL
-D004,20da93bf-6783-4451-b5c8-c8704d3bf203,15/11/2024,General Consultation,Dispensed,NIL
-D006,112ff71f-7c78-4d9e-82cf-32d79acf156c,15/11/2024,General Consultation,Dispensed,NIL
+D001,3160b088-77a0-473d-baa8-9b42fdd8b3ba,03/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,b06085ac-1ef7-4863-a6bc-fc666de5d02a,15/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,641b50cd-956a-4608-8383-9af3b4ba1979,28/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,bd504b59-09ec-4b09-a775-5aa00b724826,29/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,6ca03017-db71-4ffb-84e9-827e84672269,30/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,c6c0ee32-e95a-4793-8cf7-f05b033d5528,01/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,5138317a-75d9-4bc9-8bf6-b13edb6c9921,04/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,545418bf-3908-471a-968b-686c6eef60d6,06/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,8d359d00-86aa-444d-a35d-1eb34bbec787,07/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,10f2ce1a-91aa-4eb9-8f3d-beefc4342aae,11/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,b81a4c30-1cee-4e38-ae50-532ec5c88a92,12/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,2b0fcb04-1594-46d2-9c4c-72d381a0de4a,15/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,7bf84f51-05cd-4066-b164-8f675dee81a0,20/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,5c529b19-cb1e-464a-838a-df739d5782a2,24/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,5aa404c1-e69a-4411-a3eb-0db6fc2311e0,01/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,13c5fabc-9b63-4654-b48a-1b594529986e,02/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,22997ba0-678a-4f8f-8845-555a33e26613,03/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,1c4aac78-94cb-47eb-bf83-9782b601e0d1,06/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,1ec82018-e89e-4555-96c9-de758be6a99a,07/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,87572e3d-73c5-4a10-b4eb-9ec64fa06822,08/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,0593bca7-bec1-45bd-ab14-0038c6d2df61,19/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,9ad9412d-12d4-4a26-ab11-893b47b8d1ba,24/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,055d541d-ae27-4649-9040-e2a1fa0abae0,24/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,2874b32e-d407-46ac-88a2-359922d7014e,27/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,d105ebb2-1a57-4351-a920-237d61c11c16,27/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,35f9fee7-cc13-463e-a3aa-e45755ed32dc,29/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,82047e93-e45f-4453-8576-16e33bbc04b0,05/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,30885cc4-51b7-46ac-9fc0-9f937c769d75,07/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,7f1d4f43-77b5-4224-a6fb-2f947255f8d1,07/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,cd066111-ef25-4897-af8c-630445240c4c,11/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,5195c2ec-5bbe-4570-a626-521229c8ff7d,20/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,87f43b5a-2547-44f5-9e38-3e70ed87b655,20/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,366c979e-92fd-44d9-9b2a-da31f582a221,25/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,f09292b9-4f15-4bb2-93f2-70a24edf40c7,29/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,feaee53f-dd55-44cd-bfde-5533e76551c0,30/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,0071e8d7-29e0-4021-a671-eabfa74519da,02/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,8598671b-2e24-49c3-9e53-47be61b1c9cf,03/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,c8fc5f48-5a22-4380-956f-bfea685ee771,06/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,76556588-3104-4876-be79-a968f1bd06b1,07/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,ca2c0db5-a8e5-4c94-9f80-dce19599df45,13/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,2732d546-04e7-4ba7-ac63-69cd826881ce,13/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,f18cdae4-9507-4fad-8252-049dcac55987,15/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,e7b965d6-befa-4164-8f9d-121ebcb71afa,17/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,37f3874f-b75a-441d-a6d9-48f2b5820e6d,20/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,cd0757cc-1917-4f9d-b79d-198ac2251565,21/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,d5882d47-bcf7-4247-9088-67154c348588,22/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,2bf22f23-c799-4d1f-9da9-8a1face5b7e3,22/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,f50088ae-6287-4dc4-9185-3cd372844e82,28/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,eab11406-8d74-4f1a-bd41-a3ec9dbd320d,31/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,93b4bce6-c22c-4b73-9eb5-09cb249ab3b2,01/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,3bc8e130-8439-48ce-9e34-6733b09d14ae,02/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,967c7f60-cdb1-4c17-a687-36e376dd3ed5,02/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,d41d0632-0847-4302-9acb-42f27e8fa192,04/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,a1cd1807-71e5-4424-a109-cac35c88306c,07/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,061dc661-108f-4249-b3ef-c469b750b8fe,08/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,c0c0d584-8c2d-4e79-8dcb-1328185902f2,12/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,23c3025d-3752-43f0-9e4b-1f168cd3ed10,12/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,2328c9e8-3297-4002-a8e5-b2970f4f9ea8,13/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,7fca0d28-010a-4978-a76e-d8d1ebc2c247,14/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,b687a21f-9be0-4058-a175-4ec8fba10f29,17/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,7f39cf6b-d2e6-4aa9-bc20-ba38d78138d9,20/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,69a8cd86-1644-4a30-ac49-5cb35e67d640,24/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,ad49cf53-4e86-4287-ae10-46a1fe455e64,26/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,3cc9fea4-c6fe-4b3b-a60f-5d24c76e7f7b,03/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,107ae208-91b2-4af0-900c-135bd28ac291,04/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,34a724ec-8fc5-4dd2-8fb0-f64b7af9ac39,07/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,c8079984-69f7-4460-b451-2baae94740dc,12/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,b4064f86-671f-4111-98f0-e3af02dfe620,13/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,d02ec769-a94e-432e-a7bc-68ba3a2b39c0,16/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,36f69d7d-2e9d-4355-8163-679124be4925,17/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,e040264c-948f-4ea7-a60a-b4efe7496bd7,19/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,b6ed44d0-a0da-4fcd-bcc4-b1cdccc5b77d,21/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,34f4fa1d-d989-492e-a537-0a5d957587fc,23/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,b7133cee-2789-41f9-8825-411ecbc05046,31/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,5a3f0196-1c1e-46ee-822c-2a16eb724623,01/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,c6345645-81b1-42a2-b5a4-6b2d3a79d76c,02/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,dfa41495-eae5-463a-b7f4-12950447e73f,07/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,cbfcf3d0-6873-4c7b-ae8c-a8bfca7727a4,09/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,11233241-fbbc-4fc7-b526-87b017a65568,11/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,ab28e3c9-b266-41e8-b1f2-7364a090bb45,12/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,890285e9-a65b-4b67-bfdc-5b11d8d85ddb,12/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,0297c7ad-6116-44e5-8a6f-0306cec0911e,20/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,7abbd60b-59ba-4ac2-aabf-2f9cecd9b440,20/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,1da1ee38-fd69-4750-8784-0162832ec3a3,23/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,50695bd0-10fc-4487-8c1f-4e4fe9095d7a,24/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,419bc172-4342-492f-8931-eed7263606df,25/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,f1dd404c-3fdc-43b1-b894-8ff61996efe8,02/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,2d49e1e6-f774-4d9b-bb1c-61e64de82bf0,04/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,959111ef-31f4-453c-bb44-c6860475ecf6,07/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,1657cb16-19de-4e41-bfdc-d3cda6ad9edc,08/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,cec531ff-a8e2-4bb3-bf34-a7df1d934765,11/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,c252fdb9-8b84-45e2-bcd8-c346ecc96cab,12/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,6acb942b-37f8-4c3d-83aa-86f797186819,14/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,57a836f0-fc2c-4f4f-9f2f-773a1d17f4cb,18/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,942245bd-f690-4c84-8f4b-fa46a56734c5,18/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,222365a0-67ab-4860-a6b0-08fc8eeefc46,18/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,622a0e4e-e9e3-46f7-8fe1-de562f3ee5a3,20/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,058ecca0-35cc-4c7e-a203-8f8ba11babe5,27/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,9af7eb09-1774-47a6-bf76-0e62953115fe,02/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,19ad3e41-9bd8-4bff-8bbc-d0e40b86a6a8,07/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,42cf2f52-891a-4c45-99b4-2da6a3e876f9,09/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,99709314-eb0d-42d2-b5f9-a206ac1ba617,09/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,f342e381-fdb8-410f-940d-b0f075fea087,13/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,4ae3c8a5-a666-4acb-abcd-8795ddeae896,13/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,36bffbbf-5702-4c81-a87f-bacd8ea6782f,13/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,31fd44d9-a8e1-4f28-9d2f-33ae83759f5b,13/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D001,d1b0a0c0-1c03-494e-8254-853f6f751b6e,15/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,5697c8c4-85bd-430f-a7b9-2f68674e6418,17/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D001,25f9ffe5-a407-424f-99ad-3b8bd58692ea,19/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,bd3225d2-e60a-4bf8-a1c7-82ed447d11ad,23/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,473aec09-3a9c-4db5-9897-62aa83becf24,23/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D001,0195cdde-3fac-44b0-90d4-1c1271143d2b,27/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D001,e961f3b3-3fb1-4864-8a45-d43c1fba1d7a,29/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,101d64f9-6842-4210-a8ca-b87d9a73d4ba,29/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,e079bbb0-662b-4573-977f-cd7d86581806,08/11/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,b63c44a9-5b15-44d2-9298-8782c4f91489,09/11/2024,X-Ray,DISPENSED,Need follow up appointment
+D001,0f3dd8e8-c519-4d61-8a31-4959059ba679,11/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D001,2d9ea59e-c294-4dde-89d0-c31fa6ae759c,14/11/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,ca6e63b5-1b23-4b4d-8384-c4e5e0885e5f,01/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,0aff5526-4ae1-4b62-b7d2-2350ed716c60,04/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,dd131d32-e617-465a-8c1e-865d8274a98f,08/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,1cc8b41b-e294-4724-bc0c-0f6760c4682e,11/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,10a7f13e-aaa0-4879-b33f-d6c36a63952c,12/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,8d5b81a4-c56a-48ea-8f19-f2059a36a711,14/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,da556f58-ddd6-4858-a10f-8b3500d59b7e,15/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,a6b3026a-b08b-494a-8afb-971224a761b3,24/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,083f193f-bc31-42d7-a1fa-cc43bc16fd76,24/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,d570d390-1176-47a6-b6b5-be4ed632977b,24/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,746415c2-b62a-4aaf-9c51-81b310a203a4,26/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,854c20c6-a8fe-46e1-91d0-71c70e975b51,31/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,6ce7b8a3-0712-4480-bf11-9eafa689759b,04/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,8176123d-5541-4628-839a-be06746052db,05/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,41df30b2-1a1c-473f-84be-49a562691047,06/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,0a83c5e4-a0f5-4f44-918f-4edc18079312,07/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,50ffdb3c-5871-48df-aed7-73c5aa3ee85e,07/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,36fa1ab0-3278-4bde-8b48-bddc062f0ebe,07/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,8862c6ff-5284-4697-8c6f-a91052c2e084,10/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,6d1d80b1-aa43-4df9-8831-fcfad62abf1e,12/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,7b761c90-be19-48aa-ab32-73726b6b8e26,14/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,18327961-f144-4b50-9f5e-09fce6a02b81,16/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,ffc42827-d408-4f20-8c42-5659a10e9174,25/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,6df4d495-8bea-463d-9605-fdee75a2eb4c,28/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,80d712cd-a7a1-4c4f-9eb8-81bcab408e77,02/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,ecc60d5e-d180-46e1-8346-1c19087b551e,06/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,214a37bd-6da8-4e91-9e11-469fe6d5c56a,08/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,02db1f4c-b677-44f5-a1d7-e711a607d1e7,08/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,066ffad8-98da-43ff-bba6-52596523e2c8,09/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,5a2acc41-dfb2-47a4-aef6-4f4bec94fa00,12/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,39dc3e9f-a869-4bf1-9a3f-65dd8fd3e919,14/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,68504886-4fca-49ec-9c12-c8027187536e,15/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,cd00a9a7-17eb-4279-aace-7257c14118e6,17/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,287d7d1f-01f4-4e74-9577-8d3c93f1f4b2,17/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,6475a78a-f133-4d1e-bbad-014ad268cf62,18/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,3fb4a746-e9cb-45a3-8c8d-2c9d92a2f060,21/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,4fb99470-9188-444c-86ed-d830baf88f15,22/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,5581338b-3e58-4dec-9db7-a4ef9dd3715d,23/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,fb3ef6a4-1f91-40b1-ad3f-e1b789c331cf,04/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,6b8340e3-8eae-4343-a11a-d5c51b87412d,05/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,2c4fdedc-80a6-4503-bed4-263b2cc722c0,10/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,e8bec245-91ac-43e7-8f6f-24dd92258372,11/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,278a6c1a-1d91-4320-a8a1-2cead6d2c7dd,11/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,24716f8f-a06c-4f91-842c-933acfcec012,12/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,5aee0586-4141-4479-afec-feb1e41e7bd6,12/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,ab47b7b3-52c6-4092-9d76-412d9391589c,17/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,35ce369a-a3f0-4e4b-b3ca-f4e5037566b4,17/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,24dea3f5-e717-485f-9b8c-d756ae6416d2,18/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,c9d85dda-4a12-44d5-928b-4b8af6c753bf,18/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,e9add8a7-c63e-4635-b6a3-65c821a5526c,24/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,78de8f21-8cde-4854-88f4-ba39b6996c0d,26/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,3b045a4c-1615-41a3-8844-adc78ad36eaf,07/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,80ac2743-8047-40c6-9e6d-709040d64c22,13/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,759f9ab9-77f4-47ac-bccc-84bb5f762ade,15/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,17018ec3-4d9f-442d-b82d-e11af7546fed,17/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,d03ee8fd-1659-46c7-92d6-5739441b0cf6,20/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,056a0963-c6ec-49c7-93d6-5e5cf19a6561,20/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,0ee8c591-46d5-4c64-951a-b0c6fa973097,21/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,da1c5499-8b30-41a1-ad53-08287c75256b,22/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,e3168934-d443-4c76-897b-db0c45ef8b7d,23/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,3cbb8293-0d6d-4398-926f-97de7a340d04,25/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,6e628628-bff2-4b1c-a120-75f4b67a6b5b,26/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,bbcca47b-80b6-4dc0-bc05-f0086b5c195f,26/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,40bb6bf6-15de-438f-b1dd-904b1145e5f3,28/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,d7f410bf-5499-4e35-9533-4e6ff7055293,31/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,e915cb26-87dc-4257-bacc-93cc0fe5add8,05/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,50ffd98c-b31a-4c20-82c4-5fd581033e6f,08/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,e54a8492-1894-470b-8561-eb2b3093fb14,11/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,c02e48fe-299e-49b7-9dfd-74a272f878da,16/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,9326800d-b3f9-4c10-af2f-d45b8fbf1ce9,17/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,fb988983-7da2-48b4-9dd3-cd7afc989f46,18/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,a0861df3-0d4e-4d98-8bdc-55cd1644b99b,22/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,ea3f1084-4caf-4e64-b7cb-77bcabbce3bf,22/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,3180fa8a-3d80-42d1-b05a-fd6803ef02ce,24/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,061a88ad-abf7-48dc-8ea9-f7efdf03f3f4,24/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,52dfb927-078a-4dd0-8e83-9daf70917f15,28/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,6a98320e-4245-41eb-9bf3-c3f73f23d28b,01/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,aa78fd09-d92f-4884-81ae-bad3148fe524,02/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,442ce92b-6b6e-46c2-819c-f9ec00bf32ab,05/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,fe4bd4fe-cd37-4a6b-914a-a01cfdaa48ce,07/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,36013331-0a30-47e6-8696-e741e2a628c0,13/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,36cce97a-53db-486b-853d-16f0012cee83,15/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,9f97a9fa-ba38-4896-9359-faed00b511be,16/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,056672b4-53ae-4c6b-ac5c-3fe06acb6cfc,21/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,2ef8f393-2ef4-4b65-8144-6cac1106cf5a,23/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,8c844da5-92a2-439e-b323-f23ad10d7236,27/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,ea7aa088-e26e-4ea5-968a-4cdf9b5abbc5,29/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,29406d98-786e-4c79-9e94-8cd1bf65dbe6,30/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,0c7d8032-085a-4807-8f8b-3670aec435ba,30/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,36a55664-203d-44bb-8c57-b48583111f36,08/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,4bd8ae31-aa49-4acc-88db-12b037a91db5,08/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,620a4d0a-50fb-40f5-9ae4-3a6e8a59d00c,10/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,1a7734a8-a89f-4fa6-9494-e0a01aef75b3,11/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,0ae262db-140c-42ea-894b-474d6ed98e87,16/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,df43c374-7285-4668-9cdc-c61438dc4879,24/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,69538571-c462-4655-a13c-dd6a2be9b898,29/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,8db19f4c-79fd-4303-b5ed-1de3ef5163b4,31/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,e4e9dcba-1551-4804-9d7f-42665e83f82c,01/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,76c16522-94e9-4b60-8e8b-3c74253a3bb3,03/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,9778f9b8-c50a-4243-ab6f-173ba7685448,04/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,064e12ae-47b2-4088-bb4e-8d6227debeb5,10/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,62325720-1c42-49fa-91d1-c14c245c9538,13/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,91fe6db2-5387-4286-98d9-b7da1e459389,14/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,214f1c59-0a56-40f3-8485-df6241f57142,15/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,68771af3-643c-4ed6-ae3b-a541f6b434cb,18/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,7f557368-5208-4a80-9d37-c83a91ed5312,18/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,b04b19ed-adb2-451a-8321-0356fcd4507f,19/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,7218f2d9-fc5e-42cc-8552-4bd2146bad8e,21/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,c6f55938-acc4-4c54-bc6c-df8aa833280d,22/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,28017afe-2ea3-40da-bfcd-b826c8cbf2d9,23/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,85eeecda-83ff-4a92-9b02-eb3bf70daf79,23/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,7b7e20ad-ecc9-4fd3-95a8-d585f27345dd,24/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,bafd9a14-ed50-4a63-8a0b-4a318d4b245e,28/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D002,08aacdfd-e825-42c6-ad47-29ef3fe53b7d,30/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,649d9868-3b60-4f52-bbad-aa0bde894718,01/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,b2b1a335-bfd9-444a-b659-8c0985f312d8,01/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D002,228458ed-c4f9-4523-a0f4-3d4b2df67d2f,02/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,ea7bff43-3ed1-4f8a-8b2b-620ab296f7f9,03/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,235759d2-adf6-43b4-9bb8-1c737c6630f4,03/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,26006107-2f16-4332-87b3-ea5ad29be86c,04/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,0fd4d0e9-c8f3-484b-a1e2-d20559d327f7,07/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,6fa29611-e2b0-4a84-878f-a5350e15498f,12/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,412adaca-01d4-4e30-9023-22a199e53259,13/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D002,cefcfcc0-b612-4201-9332-98958a8a801b,25/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,f754e311-e56d-4da4-a4eb-f561b3c0c1bb,28/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,ae974a13-2303-45c1-a8df-a81c5be591d3,29/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,fadf784f-a28b-4d3f-89b4-b1489e857de4,31/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,a0eea6a8-cec2-43cc-9f84-e8695cd7e988,01/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D002,894fd5b4-53ff-4bbf-986e-018b038b28f0,06/11/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D002,a3cd384c-0607-4a2d-9558-82273bd9a8f6,10/11/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D002,3dea2cb5-1ae3-4e23-88ba-6e0338a489b6,14/11/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,1d3a0701-5339-47a3-805d-c0df8cf080a4,01/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,ec4323d9-b375-426c-9cac-b7d9ee68a1d1,01/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,004d19cd-84ba-4795-9886-00ee40611f1c,02/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,1db90dae-d111-45a2-b4b2-666ead334f9a,05/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,b4924cd4-632f-4336-9ea9-ef4030941f3a,07/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,7fe8d659-08e7-40f7-8441-ab6187c362bf,12/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,55055b6d-8b12-40ec-be79-1e3c28fa0dc3,12/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,0d63c0df-5ac7-4085-ae87-689d74dce762,14/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,b8c49631-7990-4ea7-95f8-4c3b8ccd09d0,17/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,56866eeb-c5fb-46f9-b3c1-3c10f17ddf18,18/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,844c6744-3c7f-43d8-9f0b-46f7caab6235,19/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,f2a87572-2bf5-4f70-90b4-6eee1b566f72,22/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,929167e4-94e3-492d-b3f5-7d7a7c5f8fc0,24/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,d73c3178-bd8a-46f7-9132-34af2c4c64dd,25/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,b2255a7c-162d-4d55-b712-f44ab70896bb,25/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,af08dc18-985a-4e59-a6c9-393ba63f7bea,02/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,627a7650-61f7-4215-a989-3ab12ae3932c,04/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,8f119cbe-1dd9-4b6a-989e-61a7bdaddd2a,06/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,ad040750-ebb5-4fa4-8bc2-c91fa1de5891,09/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,f5e69ddb-6bb1-45ef-82fa-5239ddc64aaf,09/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,5101b47d-011f-4396-a71c-f09637262233,10/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,c82834a9-688c-42f0-86ec-9363fd73a577,22/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,ac92a709-e096-46fd-99a2-829ab96dec84,24/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,42d6a370-1909-4d13-91b7-6fb0a49a5e8e,25/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,954cecf3-f51c-4585-b930-ff942db48ab2,27/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,016e8c00-0aa3-40c7-bef4-45d5658f24aa,03/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,dfa8e083-78b9-471a-a45d-19b05646396c,04/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,3e2c36e0-1b55-401f-a6a8-e39438389446,05/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,8b55308b-0542-4ee6-ac8a-575466928231,12/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,156f786f-3e08-43f0-8530-463fc4a2aa20,20/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,2a75b63d-89ec-4f47-a818-3a90eee68c98,20/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,3ff09d14-e5e8-42d0-abce-14865d83c7bd,23/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,daa0a6c7-f84b-4519-854b-0ae29979c684,27/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,bb1e6128-10fc-4b33-8ff5-87b7e32ae536,28/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,52a675a2-36f9-4d0d-913b-5a2588622eae,29/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,77a5cd9e-b925-48e3-a914-d92035e8aa5b,31/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,89554313-2e3c-45f6-8042-4d2608d002d3,31/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,edefa6f7-9588-4fd0-b64e-b29ac4438a42,01/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,6d4d8e9e-584a-4a85-86da-96e146e0c29c,01/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,7f0a56ea-2fe6-40af-9e4d-85ae71dd9c3e,08/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,27b82ae2-6e7d-4e15-8375-62f0b7251264,11/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,6ecde7cc-787e-4e2c-be9a-13085db1ab05,12/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,18adb8a3-ff50-4974-87c2-61ea7cbf687d,13/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,9327b81b-9a26-4332-9487-e32187e5e89c,16/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,136831d5-c378-41e5-90b7-44dfdc68651e,19/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,4cff73ae-d8f5-450c-a828-753adc3ab0ad,20/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,1b65310a-6ebc-4709-a162-df1d05189246,23/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,76aba892-e6d7-42ea-959a-34a7c0bc9cb7,23/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,3d5d9723-7c29-4007-9112-cadfa49d901d,03/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,09a3b738-1216-4de2-87c1-d4aef5cd796e,05/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,3314a411-e0a5-4c6c-9c2a-231d51c76e10,13/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,e2df88f6-9a0f-4f32-8d7b-4f0f72851db6,17/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,d214269a-f097-4ae2-97f8-156ca29dacb8,17/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,cd1dc121-bed7-4034-9762-c1f2397ba34d,18/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,960c3be5-744f-4fd9-9a9a-b22fefb31a7d,20/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,39fc8baf-891c-4fe0-9c3d-612096fcd460,23/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,d6b4828c-79d1-41dc-b03e-445fbe36e529,30/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,34b31c4f-110c-4f92-881b-e631a349b7c0,31/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,7e584f70-2a68-4a56-8597-9e389a524810,31/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,596b755c-b27f-4ce6-9040-80cb4e011b48,01/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,98f1fb13-962e-4e91-8122-f38ec7cf3816,02/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,a1242b0d-a1e7-4974-bc5b-82f951513bbd,09/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,8d4577be-54a8-4bee-8248-4e510dd88636,12/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,bb22bdfb-cee4-4cec-a5d0-9da8ed54a12d,13/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,429d31ad-c9d2-44a1-a2ca-278dbf1da695,19/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,0b3618f9-8a65-4cc9-8f94-c04614cd7e94,26/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,724f3547-2c91-4dc8-bb96-66299016aad8,27/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,22f102ed-85cf-41b3-958d-364243470d85,02/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,a26c73ef-127c-4fae-8bf3-264cd5b00e05,11/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,d0ee06c0-8b48-47a2-ac2b-9eecd5605b4c,17/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,aad4dd2f-1faa-4d9c-b05a-4726b4a0aca8,17/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,137f2e58-9f6b-43d6-a94e-cb3aed4fb626,18/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,05bd6749-188a-4ab9-b13f-0093542e64b6,22/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,b1688cf5-6c01-421d-988c-b89603b0ac32,24/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,5b36aea8-84d8-473c-8ce1-24f73f2138d8,25/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,493ff33c-d547-4930-8628-104169440fa9,01/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,69925a83-a6a8-40ac-9bd2-54b0358e1a76,05/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,2924dd50-30f9-4c74-84e8-fb9f91d83a59,06/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,6c1c98d7-a02c-4630-b753-ead8ea4a5f60,09/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,9f11ca4f-9e71-4368-a6fa-01b32cd21b2f,09/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,18d6ffa3-f914-4109-bda4-1790d3c3169b,13/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,def6cc38-0c31-4cbf-8124-da87551b65f9,14/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,4a2d7d5c-5abe-430b-828f-02d11687917c,15/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,d30dc800-b1a8-4a08-9257-068d39778da9,15/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,7d0b904c-1983-46a0-bef3-49401e215593,15/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,c12f31b6-20ae-4830-ab50-68b595bfbd48,16/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,e6f81c4f-688b-41de-a6f5-f812042c7ef4,17/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,eec65f93-89ff-4cc6-a9ba-740b766f59c9,18/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,957bcaca-116f-42d6-908f-0a37651be4cb,19/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,4486021e-9edd-4bdc-8c6a-9639e8d5ec5a,25/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,80e4b449-566e-408a-8f83-b325b64aa5bd,30/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,4c863388-2f6b-42f8-b0fc-9c063be014a3,04/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,65cb25ff-d65b-4030-8d76-0fc259e0167b,04/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,cf18ef90-1636-4c80-a2e3-6fccf78845f2,05/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,0e784b3e-5560-40a8-9b4f-da3b87ee082d,06/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,a809f4d4-9afe-40af-b061-fc51899cb925,09/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,d436107d-1181-42c2-be44-3100a35d24fc,09/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,493fdfcf-3d4f-4716-84a9-b002e149586b,10/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,c221c1cc-f6da-4136-9bc2-6ec725e2d328,23/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,54186289-56d6-4e2c-91c0-65c3c5d15426,23/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,65256329-0caf-437c-9cc0-9c7f69ded35c,23/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,da712058-8f09-4747-aa92-120551a7ce9a,25/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,94402370-b66b-4cb9-be02-f6b55a04a407,04/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,9b9b666f-9fd4-415c-875a-83aff2c873b7,07/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,87d3be30-b27f-4df4-a84b-93d9879e35db,10/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,17d7b52c-b89a-4f1b-9d0d-985f20164734,11/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,4c338269-6631-4243-9975-d259dae6295e,13/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,6e5e8857-0cbf-48f4-90b5-e77612d11f57,14/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,c5c5d0c6-ab45-4da0-b7b7-f78ba7392a6e,15/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,be5094d0-debd-45d9-afca-d464ca7defea,15/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,c6c00d1c-e8ff-437d-bf10-b15ab873daa5,16/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,6fd796e0-c8a6-44ef-9145-60fb966271f0,18/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,445af85d-bc0b-4c95-a110-963e19c22193,24/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,f7d7c1e2-c8c8-44e1-b2c9-7190dcd82392,29/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,d873fcb0-9a9e-46dc-b4f2-a8aea93eccda,31/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,f9ac444e-875d-41d0-aed1-b8795370bee1,31/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,7d8b8221-2d5b-4cb3-8093-e98ec7ae5a13,01/11/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D003,54e8008f-81f8-440f-841b-9201a526ef92,02/11/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,087c8085-868d-4737-99be-186517a19ded,04/11/2024,X-Ray,DISPENSED,Need follow up appointment
+D003,24a6d3db-0199-48e1-adc7-e5bca37c48ca,06/11/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,f82b9acd-3478-48c0-9fe4-71b482aaf24f,06/11/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D003,4fb724f9-e244-4af7-a54d-13838bbfa243,06/11/2024,General Consultation,DISPENSED,Need follow up appointment
+D003,aeddb5b6-01d9-4034-b090-8e7dda77bd18,10/11/2024,Blood Test,DISPENSED,Need follow up appointment
+D003,fd4e0a07-36dd-4679-b46a-f905f2098611,11/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D003,a5d2e0f8-8d6f-45ab-8d82-0907d245d9a9,12/11/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,b4a63107-0a0d-45cc-adec-baab4ca3789f,07/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,29beb6d4-e39e-40af-ac9e-7ff154c583b0,07/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,e07edfb7-8a75-4240-a3f7-c76cbdd06b6e,08/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,ecb6dd99-db9b-4036-a472-1f8dc23f0dd6,14/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,3d6c1b79-1fb9-42a7-becd-ce86d1b37d09,15/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,43ba4dfe-a56c-4482-a777-1ca22431121b,17/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,33ab7552-4d86-4bf3-9973-8fa52c6e8935,17/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,8220c745-de4f-43c0-b26b-49c67606eeb9,18/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,92f4c092-de9c-45b2-8cab-360ac696c563,20/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,098565f3-ca02-4e91-b0ca-3f57e9d15455,21/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,fd39994f-42a6-4139-8de5-3e532bad0d98,28/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,ee9f72f5-877f-4073-a008-c3fd3230a57e,29/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,54a14dea-b923-468f-a198-c213753343b0,31/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,1b976fd9-f6c3-4c28-90b8-49d2aba058bb,07/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,cfb39fd6-d45b-4c55-91ac-4bb8a6fc014c,08/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,5c8ae5d3-1e67-48f7-882c-08ddbd8cd830,09/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,3acc966d-5c9b-4f6a-a463-5798502d07c8,09/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,36fb68cd-65eb-4887-8baf-50b47a976a74,13/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,21a5bf61-9072-4696-9f83-a804cbd7a071,14/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,6ef52a49-f322-472f-8715-9435be1960de,15/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,3d4e1bd7-9135-4a54-ac99-658a17b227a5,15/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,728677de-7065-472e-bebb-714813c32571,22/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,de93d597-7851-4f15-8b85-db7c3db7a789,23/02/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,e6ecae4f-6692-4705-a250-9a2b5e4d9449,24/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,e0eef702-45e2-4381-b183-dcb16d8ec34d,24/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,90e78877-f771-4505-affb-4bd28654bef8,25/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,c925d038-cc50-4242-ac62-dab4920a01d2,26/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,4054f8b1-46c1-4295-8531-e4a6d37d29a4,29/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,f156d734-18cc-4aba-a1d1-2570228fff24,06/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,f1f604ad-398b-41df-b519-2b1b8d14c90f,09/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,77ac9e87-9ffe-4ad1-87b7-9f42b206f8f9,11/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,42669878-e93c-4312-aa02-9e002d32e10f,12/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,29e4f87c-4960-46d2-9288-de26244b9e73,14/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,710c7d27-c1f8-49f1-b1b2-b884508b1ea7,17/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,a1359dda-6f37-4567-8a72-268e193830f8,19/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,4d2120cc-bb22-4104-a6b5-c1008c76ac2e,25/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,d8132222-85a0-4008-a05c-e7b79b11e922,31/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,7c3c523c-df3e-40f2-b3f7-979abfe2e6dc,02/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,ae4556d5-e910-478b-abf4-a62a8c81f671,03/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,1059c4fd-7212-4949-b87a-148c969d1300,04/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,51f3d674-6512-4dc9-a3a7-a336196feba2,05/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,e64ff071-fbd5-4de5-9192-afdda53f0e60,06/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,7f7e0a60-7883-4a3b-b162-1009c1206477,06/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,2c42fba3-7cb2-4694-abbe-d00ab2a39f0d,09/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,838dcece-4678-413b-990d-497698269c60,09/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,26965268-e62e-4722-b593-139267351023,15/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,238da0de-9232-4cbf-851e-f9e58111dde2,20/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,fe924cfb-c55d-4c66-aafc-73f789a0d0d4,23/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,005373d0-0b46-4e45-a161-dd67ada9cacd,24/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,e64f0e10-2aa7-44fb-b9ce-92c4406441a1,25/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,e0011d43-f841-4f81-b846-f372e31cd29c,30/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,2e190449-5e2e-49b3-9b98-f492c03dba37,01/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,3ea3a507-5638-4b0b-8cea-34ad16c75837,02/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,392dc7d4-e554-496d-9e16-04bf4ccdd3bc,02/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,f6f51f8a-a4f4-445c-a2da-9dc4b1d5b58a,05/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,45749b79-9f9f-4006-9ea5-f9f7255c6bc7,06/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,0cf058fc-d8e4-4f3b-953c-f56a2217b59c,07/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,bc04bc94-bff4-4342-b8a6-45759dbb6c02,10/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,e6c70069-407d-491d-8c79-b49bf30d7db9,10/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,1ea83714-66d6-4d98-ae46-969de5c63291,11/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,072cecda-f871-40a9-9ab9-817a7e5d8737,17/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,dcb5c55f-3404-4cec-8c13-9f0bed036cd8,18/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,2935c7b8-43dd-497a-9aa3-8012faa51091,19/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,6545d198-93f9-4d51-bf65-1f85f8c0a7de,20/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,6f7c21f9-b354-4067-b401-a576677bc57a,24/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,fde9028b-6151-4f1a-b5a4-e6c3321f536f,28/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,e72980c1-93f5-4440-a486-77394f3e9cf9,12/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,fca8a168-b6c3-4faa-b152-665085f045f2,14/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,cf883980-3aaf-4d44-8db3-bc326393d64e,18/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,258d7beb-1e3d-4207-8bb6-78e715bed24e,19/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,f12c03f6-add4-4788-b10f-0ad41094e2ff,21/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,6207d792-4580-48a5-b3dc-9092f839e2e2,23/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,457ef522-33f3-4596-bed9-5848b85f2758,04/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,0738bb64-4a60-4123-b4ad-85f44272de18,05/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,a9ef1d01-bcfb-4fca-bc9d-8e72426d943c,07/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,0544d0ca-ec14-4d3e-bb12-20af01bb060e,12/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,f316d75b-46fd-4c46-89ac-47fb2154f030,14/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,8c6942d4-6b20-4800-95ac-e24020b9a90b,15/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,6fdcf8c1-360d-407c-b813-e8e41dfb60e7,17/07/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,f194159d-a589-4b64-9d36-350ae2f77421,19/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,1e3e6571-b3e0-43d2-8d53-0fc15665264f,24/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,d27c59de-f8f5-4da9-af91-a23dff6f7475,03/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,fe021c47-d990-42e7-bce3-115583dac92e,05/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,6e3e8e9b-e75e-4420-94f0-0de279791be8,06/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,5858bb65-d2b0-4e0f-8f81-895c6841edad,10/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,aefaa6db-403e-4764-bb66-2b31802f0f1b,11/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,2739f62a-5fa1-41ec-9075-8c442b9b7be9,21/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,5dcf7904-1794-442d-a728-76ae0d2c7808,22/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,2697765a-b943-44e7-85c6-ddd4df3f9a2e,22/08/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,586784e9-3a89-4011-88cc-2a803c0298d5,23/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,5ddc00ca-52a1-4eeb-b9ad-7943d38affdf,25/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,df23e232-da52-4daa-867a-67843f69ba52,27/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,1d0b6700-49e8-4897-bcc4-3680362d6f77,29/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,d1611b38-ec74-459b-a34d-5180c9bacc16,01/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,5e24a899-ee08-42e9-a41c-a9eb8298978f,02/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,5e3cf365-8a6e-48fc-9585-aab0bb624e56,03/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,7bb99b4d-bae2-4ed5-ae2a-d53b418eb017,04/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,fcbc36b2-1e55-4069-bdd2-439c6736a90f,07/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,327c8339-2e49-4143-82bf-4035628a0230,07/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,dbf04166-bb07-4fa3-ba95-e45bec50c7b7,08/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,a3ac6ec2-ab7e-4f9d-900f-2e144f24da16,09/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,b4dd4528-7cfd-4592-86ba-aaa9ecd5105d,11/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,8e29d377-3756-4a5d-8f4f-75c70c31a6b7,12/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,e7de2991-9a9f-4dde-9f17-c56dbb58a0df,13/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,03d89a70-6425-4a6b-bdc3-907cc4cb0cf7,18/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,abd5466c-bb83-4c1e-8a61-1f7d27e9cbeb,20/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,f7779a06-e681-45b4-96c1-92fe37db66d5,21/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,0963542c-5a86-4224-97e1-bdc5dd19c018,22/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,b2c39f2f-a5c7-40ae-9148-8788993f9c98,22/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,9da72e21-8eb8-4b17-b556-20ef0503bb61,25/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,c3080f32-c1ed-445c-bda1-f2f9fff4a040,29/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,c23fcdc8-f592-49f1-a4bc-7bd0ddd5b3ba,08/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,b6a82b94-e815-45e5-9144-d24e0c46050d,12/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,80015e6a-7440-4fc9-846e-1b3012c4af6e,13/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,b7c0a0f6-89dc-42d6-aa39-beb5f4e62c29,13/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D004,20f376ca-56d0-468e-a5c0-987aeb96e851,21/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,c70d5a27-aadd-4215-b72f-b44512844d59,23/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,70cb8f07-b4ca-4f86-985e-aa8afc81e6f9,24/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,690c32bf-3cad-4dd0-bb0a-065aa1a26911,25/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,b8cd9f68-18d1-43ef-bffe-df1be7f48804,25/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D004,7d8e3c55-77d7-40bc-a037-87852dff73de,27/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,3e253f30-053f-4598-af32-976e2d3cb219,28/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D004,c51d0880-ca4b-4bba-89e8-2e64191bd421,29/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,b41c7e6b-a994-45ed-807d-45dbfcf06539,02/11/2024,General Consultation,DISPENSED,Need follow up appointment
+D004,e8f104a8-d0fa-4429-a867-6e2ae92eb30e,03/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D004,cc823df0-784b-4729-b8c1-661bdb16b46b,06/11/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,64e13c8d-20f9-4042-aaa4-9868026393e4,09/11/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,b97a899b-1593-43f0-9e4a-03ae2194d5fe,10/11/2024,Blood Test,DISPENSED,Need follow up appointment
+D004,e89fbfe3-749d-4ebe-8947-a6c68c94efd7,13/11/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,98ec5696-3912-483c-b6a2-8d7ed3853091,14/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,14c2857f-4a01-41ba-a898-ab30c46f1f25,16/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,48a2ddc6-e15e-4482-a91b-6146f3b02221,17/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,d92fcb01-feda-4a5e-8e81-5f8512c296e2,22/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,eab08676-c557-4c78-beb4-22255e37bda2,23/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,62182f4e-e59e-496a-ba08-1c7932e63102,24/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,75c1fd62-2bf1-4450-afe0-b4406cd6ecd6,26/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,f040c79e-b6bf-41ed-98ab-70d9f8464ca0,26/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,94dc191f-4a8b-40ab-83a2-4a6d221a66b2,27/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,282578ea-e0b8-4f71-a8c3-03d16b654047,29/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,b56c28fe-b978-491e-bad9-c0980e42330c,31/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,9bcde7e4-af3a-497e-9b4d-292243a75703,02/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,add602f0-477b-4918-a7cd-0e592de6ba00,05/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,8fc891b0-6b81-46e7-897a-d4e72ba529c1,08/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,00487cd1-a795-407f-911b-e8ac7550da95,12/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,2dc81174-966d-4fa3-8937-0a53157dea3a,16/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,59ac7ef0-1cfd-473d-a24b-090b14a32364,17/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,0eeee324-33e5-4f6f-89c3-59a767ba6627,19/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,3f5dcef2-8f16-4add-b488-02b17fc9476c,24/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,aca0f8ef-900d-4928-8197-b50ba3a41813,25/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,daac3f42-d647-4aba-85b4-8ef6256b974a,01/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,a6a82980-e2a1-4b22-bfd7-03c7b6e7b2fb,01/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,f4cdc540-2300-4878-a05d-3c8db96fedaa,03/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,abe30712-ae91-4520-9146-1cb7afdae9a1,04/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,053b41e6-94f5-4acd-b0f0-11942db11b83,05/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,8b4acb2d-07a1-4c5a-a48a-ee4c343ece3d,08/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,32b9cd85-2c79-4e54-b1b6-d3dc368ae06d,14/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,179b5259-acec-4222-9294-00828f6a0e3a,16/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,f0151096-56b0-46bc-96ba-a038a94d3453,16/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,ea2e6eea-2abf-4e80-b7b5-7e14a745f6cf,17/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,90391e6d-bd9a-4156-99a9-522e85aa8d47,17/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,2c616d8f-3322-4bcf-8a03-aacdb9c8e9ae,22/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,d2cb0eca-bfdc-4995-b174-f7182167991d,24/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,6d9a7cd1-2232-4db1-9514-f8cb144176be,24/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,1f42a79e-3fd8-43ee-a437-4b6520e6444f,25/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,6872ca33-95fa-4a82-a298-8d9f69ea51f9,02/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,20775554-f7e8-4127-8e02-0818d0490fd7,04/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,eb4fb036-eadb-438a-8abd-8a12f6aa0b7e,05/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,0cf2eab5-6510-43b2-8376-993dc58793c3,08/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,0a3a1338-cdcf-4442-9004-98b0ce63f55c,13/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,e9a1e19a-9e2b-4e8b-a6b0-2b47908cd2cb,17/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,13427d19-290a-4636-8c07-fb93f4974567,17/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,243cd768-1627-4093-84b1-c3f615b877e9,18/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,387c924e-b5ca-49ee-be66-4338bfa28329,22/04/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,220b586f-0030-4723-9639-895975d874ab,23/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,0567ea77-88c4-42c5-a456-492cf811edee,24/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,7b1d7390-d4f6-47d7-b38c-2d827295ad95,26/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,d7320c97-625d-45ba-9222-7c540bae35d8,01/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,77790707-7019-4503-a2a9-003a8a2827e5,03/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,3e7a1e88-d714-4794-bab4-88b5cf0aff43,04/05/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,ea7886de-2168-4461-a7fa-d9defe0aeb96,05/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,af8c9ebf-1381-408a-92f9-f9494f2778ed,11/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,c5f275e2-4f7c-475d-99de-7901f5f2c302,14/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,9e010391-4feb-47a7-ad93-b3989a7aee01,16/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,b31396e6-7006-4c80-b2ab-dbdb5b372eda,26/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,97e2813c-5679-4ec5-a425-c139d26d909c,27/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,41c2f6b0-48a0-4df5-889a-2223cb01de6f,28/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,9d0ef136-5e5e-4b92-8997-e0c259ec9294,06/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,d91baaf5-a05f-4b52-ab4f-97e5e6c0a49b,14/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,2980af07-573b-4a33-a8ae-9a48c8334722,16/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,78e4a1d8-ae9e-46b7-b7bd-4a15292467de,17/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,aaf97681-c6cd-4003-b393-807a14cb2c2c,26/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,df2a102b-15a5-4d58-a3fd-174a405a850c,29/06/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,803defee-f9e1-49e7-aa3c-1295a8343a5c,05/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,564e397b-279b-4c5a-bb42-4ae653d6bb24,06/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,7d888323-81a2-4da3-a542-600ec8e55bf3,06/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,a264438c-3229-4525-b808-e84949f0c71b,15/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,9cfcc3f3-73aa-493b-af0b-e2029987fc76,18/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,c5027517-c58a-4bb6-9205-268a25e992b8,22/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,7ebefabe-b2ed-413d-a824-2925c55c5e62,23/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,893598ec-a3f5-42bd-afe6-7f10189fd173,29/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,5f87c622-bd56-4d8f-83e3-4329d66fa7b1,30/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,61ee85dd-acb1-4670-862a-a5d04339466b,01/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,38ffd1f3-8ffc-479f-a86b-c007ca1e682f,04/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,acb50b84-7e98-4345-8dc1-65e07c0f6994,06/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,1bac9a79-ca29-4b98-9cdd-2e479cc00fcf,07/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,e97ba043-6b6c-418e-b4a0-e59b91834114,08/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,4d8be356-2e8d-4195-ad1d-702adb5cc141,10/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,fa1ddeff-da3f-441f-9834-ed667ab6fdf9,14/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,aa9ec81e-9a6f-4d91-b907-a18c117c6381,14/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,c2674c7c-7355-49cc-879f-e29b61c5c6c1,18/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,0db7e5dc-1357-4109-8bc3-fc3587f98c16,20/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,4ac5bec8-9a51-4d0d-9aa6-2af8697079e6,23/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,51ce97e2-7815-4cbf-87d6-7a9e4131110b,25/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,4d9ba9de-92da-4583-a770-d3e4ff7e0d81,29/08/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,03560411-28b4-449c-8146-0852d7b78796,29/08/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,f35ed434-4fa2-4f64-a936-0efcb05a21f4,31/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D005,ca849b05-71ef-4581-9d0a-1eef5ef329fe,01/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,404647d9-d7af-4588-ba97-07cb41455ee7,02/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,21b261ef-d580-4d2b-972f-be0b61785914,02/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,bb9e2d21-bd64-4719-a6b7-dcc330e2713e,04/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,6e330b04-f5ac-4870-a129-696885053792,05/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,89452da5-4e8d-45bd-ab89-3e7debf16719,06/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,8fa3ad25-25be-4a8a-8d20-3c273a9b4475,09/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,f64fff98-5e36-4b5d-83fe-4fa7c5e8e1de,10/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,6c6a4dbc-3ad1-4c62-9dd5-bb6a9470cfec,13/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,9f34941f-6d0b-4a58-b442-5d54376ccf55,13/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,e0ea23a1-8926-4e15-9b81-b56571f71ff1,14/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,d69c9300-c7ee-4fa1-ae2d-e02f4116d8da,16/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,e6679dbb-8ba1-4da2-9712-6aab232c1e17,16/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,f24626b2-f9ab-4d87-9115-e0c62f366ecf,17/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,f85fc7ba-96eb-4564-a0c8-6a3d295b722a,19/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,2b256ceb-f018-4d73-91b3-4c705cc45dd9,21/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,563251cb-4e09-4e20-a7d7-093fdad184f9,24/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,39444319-cb8e-4a1f-9751-9f8dea92a672,28/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D005,acfd6836-98d0-4678-8bcf-6a2a0eccc8f7,03/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,37e315d9-b3e0-4c7f-be09-13b39e1ffe82,17/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,5cfba370-7e87-44e7-afd7-4adedf0631bb,21/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,b1d8b9bc-37ef-4700-9b55-d915ddfb896e,24/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,b1813876-0b8b-4839-b48f-816783c1eefd,24/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,f9c7db65-5095-447b-8207-799519d681c0,31/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D005,8181e5b9-0d9b-48fd-9709-873002bd68f5,02/11/2024,Blood Test,DISPENSED,Need follow up appointment
+D005,da053e4d-ca7e-4902-b65d-c3feed40c6bb,03/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,6e0145ff-f9c4-45be-942f-ad339aeccf2e,07/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,f81a80bf-5e50-4c3a-b404-e4315f951412,10/11/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D005,ad80fa4d-d920-49c0-a1b5-34b9e82ba313,11/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D005,51ce62f6-d2e4-416d-9548-9f7be2e7e3c4,11/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,1240d078-6a4b-4280-a56f-e2584612105a,01/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,a64bda23-f6e1-4959-bdfc-6d885dc41ca3,07/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,4745cfe7-fe18-4d78-a40b-8a5167e2902c,08/01/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,cd2cf9b1-31b1-4a96-80ca-bd11197a37dd,08/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,abab9be9-8131-4ec1-9377-6571e727f18f,10/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,524cd535-0b8e-436b-aecd-27202b04d003,11/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,bf6a2a6d-90d5-42db-9794-3112f95123c3,13/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,68f2d6f6-22bd-4f6d-978b-0d8ec01e5fa0,22/01/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,4ab0d884-6f66-411e-b7f3-b5cc8dd4f400,23/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,6b4c5412-3044-4f69-be21-f8b898c91276,23/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,b63d3b13-6c49-49d5-b015-453e40e8f230,26/01/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,542fbc56-560a-425f-8632-a3fe3509e459,28/01/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,b57876d7-c23c-4c96-b5f2-2a828744403f,29/01/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,3bc8b2c8-9586-43ad-a55b-32b3f29c52b5,30/01/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,9a14afb3-8fb5-402b-b287-8dfe9224b3bc,01/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,8f845966-622e-434f-8f69-7c63a4d6c8df,02/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,1bdb3a86-b09f-4c8e-b452-87f5ea15caea,06/02/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,62a6da47-1d4c-4fe3-90fd-8500ec4e26f7,08/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,feb7084b-7bb5-4362-8a96-f6cd1578c7a8,08/02/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,f597b019-8135-4b66-97d4-15ee9bca227d,10/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,4c04dca6-7ed1-48ec-93e8-1c8f50b42665,15/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,7af72e27-ac66-4e0f-bb1a-4db04a5eaece,21/02/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,31c3d51b-a55d-4b38-9b41-9f8848f93436,23/02/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,77af1ed9-4af7-40a3-89e0-c5f754f96ce5,26/02/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,ef18839e-7220-43d6-99e9-6e07a69498e2,03/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,66879377-400a-4f31-a014-31e226621bf1,05/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,6f5edbb0-a98e-4123-b277-3100275a5744,06/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,53698e14-5912-4389-9649-447b6e01c196,06/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,8b32fcda-b8e1-4959-8b8a-4b1b87746e11,11/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,ea707e2f-85da-4071-bf5f-11e94ca223ae,11/03/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,f8cae313-2a2e-4b38-b036-dcbb646a2893,12/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,2d258907-bca9-4b72-8a19-fdc44e13d3a2,12/03/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,3140b389-7c54-4800-af7d-c4c3b1669cd9,15/03/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,5be4e582-1e15-4bba-b120-e8bf13116ee1,16/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,88c3a079-5271-4bc1-a167-d8a0e3d1f226,21/03/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,d420736f-9391-411c-ae54-e67d26a23aab,27/03/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,0701f256-5b2d-48ae-9ee5-1ac48a11222a,31/03/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,b7846bc3-4021-4022-abad-5126dac9bc76,13/04/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,2e9a8af2-3aa9-4b6d-82ca-c476afc3b5c7,13/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,796722ae-bb7f-4a69-b1d4-f16aac58127a,14/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,f0bb1292-d7b8-412e-b100-75d810c24acc,17/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,03abf75f-ed1e-46b9-9ac5-fa7cf1332230,17/04/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,35cc4db0-f448-4fa3-9d7b-e900e239d9a3,19/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,c43ea9a1-b6e8-4907-b15a-676dc0713125,20/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,4af3b0a0-24d0-4651-9c24-215765b0a85c,22/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,547a899d-08d0-40ed-a55a-2dc7f4b3b03d,26/04/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,c6199d0d-8f8a-446a-8302-e7909c61104b,26/04/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,42f3f019-dbe1-4c9b-a712-552b6382726c,27/04/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,2eb7b28c-2162-4bcc-b9df-0cfe9e6ecd17,03/05/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,15b1575d-84bf-4c5a-8700-3c64c0235830,03/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,adbe4f96-c5d9-479f-bd9d-cdcbeb86d7d4,03/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,4bad2c1e-c3d0-4af0-a65a-4319035eb8c2,05/05/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,b9711009-808b-4aa4-a4a3-160726d86029,13/05/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,f076e3c1-b8ed-4d1f-a76b-4099059f9980,14/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,19d81a13-0088-4230-9c0b-f2fd6bb7b555,16/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,048b1752-bca4-4775-bc62-c91548f50c50,16/05/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,e50754db-6d65-432b-bdf0-c6f9f586a4b7,31/05/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,a593e36c-00e1-41a1-8e4f-64058153427e,01/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,6760275d-092c-43a4-b1f5-219d89f611d5,03/06/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,3fcc56f9-560b-48ff-8adf-e59d1defd238,10/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,4f47b03c-2792-4ada-8636-9410ad32e2e4,15/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,59aa4ea7-551e-4e6b-b80c-ccb38889308b,17/06/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,b9a0e763-153a-4926-b92c-1c5b70368a33,21/06/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,9998a6df-1c48-4f72-871f-f12f1fe4ad5a,27/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,20257cab-d0b5-4be2-8b75-31bb6a1f190a,28/06/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,4a3299d7-3c89-4674-8936-24fd0923c8cb,29/06/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,09fd3072-7dde-4a7c-b6e9-dc4e30ef931c,01/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,0cb57e57-139d-4720-a9ab-7949fc2c3dc3,03/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,c18756d6-8307-4b0e-acd7-26efda06174e,08/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,402c420d-8853-480a-a1ff-be16b15b7f52,14/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,d5264e1c-8b93-441b-a3d9-2c1eb73e6738,15/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,46ad7c15-556e-435b-baaa-45eb4da601de,17/07/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,a7c6a5fc-5629-40f2-b172-159dba47ee7b,19/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,176ea479-850a-4b07-9dae-f6e628fd7025,19/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,e4d8df47-be4f-4dc4-ad10-f0d5d7f55f63,23/07/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,8c894d4c-d7c5-4324-830e-5f7eb7fb4a63,26/07/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,b2899ab1-3ae0-4a05-a37d-f986bf182bb7,28/07/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,faad1dbc-aa9f-4c69-9037-4dbc44f37b61,29/07/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,b45e4c32-ee93-40a9-a759-2969819064ba,04/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,05462f2f-fb40-41c8-a190-84967b4ccbe0,08/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,6761c5cb-b4aa-4815-96ec-f2634f17020a,15/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,675e9a35-ee48-4e86-822a-c1306bb77a1c,18/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,9d4c4d55-0172-48b3-86f4-f25cadf0267e,19/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,716a0a94-9283-4b79-bf13-c9b4ca86fe52,23/08/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,9f6ef1c9-8d9f-4007-82bf-6c5161d53d22,28/08/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,741dac7c-495c-45a6-9e2d-e4f0d8492992,30/08/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,112be18a-8b87-4202-88f5-62d107723ee8,01/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,3a23b43a-dfe0-48ae-b90c-dba1de52bd75,02/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,8a3960a0-5cfe-4382-98c8-8aaccbd443d1,06/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,b369de0a-f0b8-4061-a133-65ec7d22854f,08/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,b9c632b5-8a30-4a96-8665-8044a24fa4c6,08/09/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,4ff7ed1b-aa15-408a-9633-106b2747cd32,10/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,26699d9a-5d98-4ed3-bae4-4795dd2c19ce,15/09/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,c4951df1-32f5-4bbc-ab36-e0588472fe31,17/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,9bd9c043-71d7-4d56-ae6d-85d927bc2007,20/09/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,3ed36d79-b926-4647-a0e5-52d7bd4bf3c3,21/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,e57658a9-cf1a-4799-bc1b-e912f3f022c2,26/09/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,4afbed97-fcca-4be7-9d8a-cd12f82908a4,26/09/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,b2ed4c03-ecc3-44c6-9e52-a83dd31ea1a1,28/09/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,188b0280-34d7-499f-aa87-ddcbe60e315d,01/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,0687169c-e616-4ab4-a4ee-753fbf6b0653,02/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,f2c2edcd-bbf5-4677-9024-eeafcc2ec7c0,06/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,37acdc9e-b3cb-4097-81c1-98e6cdd13629,11/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,2465c7aa-d48d-41df-ad7b-f2ddbd744c58,12/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,6c27b494-32a1-43d2-a6d8-e4107f9639cd,13/10/2024,General Consultation,DISPENSED,Follow up appointment not necessary
+D006,c0285aee-77b2-4635-882e-b05fc8ffc7d8,15/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,0da2a617-ab16-4f95-87e1-2cc372c5f4dd,18/10/2024,Blood Test,DISPENSED,Follow up appointment not necessary
+D006,500e4ef3-8bb9-465c-9bce-c6ce2dacbc20,26/10/2024,X-Ray,DISPENSED,Follow up appointment not necessary
+D006,a133374a-39cf-4e8c-b482-720af36b42f9,27/10/2024,Blood Test,DISPENSED,Need follow up appointment
+D006,087bb93f-8182-4fdc-bc05-2e8286c3e995,28/10/2024,X-Ray,DISPENSED,Need follow up appointment
+D006,79ae78d9-98f4-4f5d-828f-32b44baa510c,28/10/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,d387cde0-ce02-45b4-a489-358ee4faeac3,05/11/2024,General Consultation,DISPENSED,Need follow up appointment
+D006,dce22461-9090-4f27-9483-e5284f223f5c,07/11/2024,General Consultation,DISPENSED,Follow up appointment not necessary
