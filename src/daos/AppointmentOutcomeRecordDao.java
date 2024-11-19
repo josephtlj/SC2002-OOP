@@ -39,6 +39,13 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    // CONSTRUCTOR
+    public AppointmentOutcomeRecordDao(int ID) {
+        if (ID.charAt(0) == 'D') {
+            return;
+        }
 
         // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
         File treatmentRecDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
@@ -53,21 +60,35 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         List<String> updatedLines = new ArrayList<>();
         boolean recordUpdated = false;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(appointmentOutcomeRecordFile))) {
-            String line;
+        try (BufferedReader br = new BufferedReader(new FileReader(appointmentOutcomeRecordFile))) {
+            List<String> lines = new ArrayList<>();
+            boolean appointmentOutcomeRecord = false;
 
-            // Read the file line by line
-            while ((line = reader.readLine()) != null) {
-                String[] fields = line.split(","); // Assuming CSV fields are comma-separated
-                if (fields.length > 0 && fields[0].equals(record.getAppointmentId())) {
-                    // Found the matching row, update service type and consultation notes
-                    fields[2] = record.getServiceType(); // Update service type
-                    fields[3] = record.getConsultationNotes(); // Update consultation notes
-                    line = String.join(",", fields); // Reconstruct the line
-                    recordUpdated = true;
-                }
-                updatedLines.add(line); // Add line to the updated content
+            // SKIP HEADER ROW
+            String header = br.readLine();
+            // KEEP HEADER ROW IN OUTPUT
+            lines.add(header);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(",");
+                if (fields.length == 9 && fields[0].equals(record.get())
             }
+
+            // String line;
+
+            // // Read the file line by line
+            // while ((line = reader.readLine()) != null) {
+            // String[] fields = line.split(","); // Assuming CSV fields are comma-separated
+            // if (fields.length > 0 && fields[0].equals(record.getAppointmentId())) {
+            // // Found the matching row, update service type and consultation notes
+            // fields[2] = record.getServiceType(); // Update service type
+            // fields[3] = record.getConsultationNotes(); // Update consultation notes
+            // line = String.join(",", fields); // Reconstruct the line
+            // recordUpdated = true;
+            // }
+            // updatedLines.add(line); // Add line to the updated content
+            // }
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -195,5 +216,73 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         }
 
         return completedAppointments;
+    }
+
+    public List<AppointmentOutcomeRecord> getAllAppointmentOutcomeRecords() {
+        List<AppointmentOutcomeRecord> appointmentOutcomeRecordList = new ArrayList<>();
+
+        // Locate all CSV files in the directory
+        File directory = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
+        if (!directory.exists() || !directory.isDirectory()) {
+            System.err.println("Directory does not exist: " + APPOINTMENTOUTCOMERECORDDB_PATH);
+            return appointmentOutcomeRecordList;
+        }
+
+        File[] csvFiles = directory.listFiles((dir, name) -> name.endsWith(".csv")); // Filter CSV files
+
+        System.out.println(csvFiles.length);
+
+        if (csvFiles == null || csvFiles.length == 0) {
+            System.err.println("No CSV files found in the directory.");
+            return appointmentOutcomeRecordList;
+        }
+
+        // Read each CSV file
+        for (File csvFile : csvFiles) {
+            try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+                System.out.println("Reading file: " + csvFile.getName());
+
+                // Skip header row
+                br.readLine();
+
+                String line;
+                while ((line = br.readLine()) != null) {
+                    AppointmentOutcomeRecord appointmentOutcomeRecord = parseAppointmentOutcomeRecord(line);
+                    if (appointmentOutcomeRecord != null) {
+                        appointmentOutcomeRecordList.add(appointmentOutcomeRecord);
+                    }
+                }
+            } catch (IOException e) {
+                System.err.println("Error reading file: " + csvFile.getName() + " - " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
+        return appointmentOutcomeRecordList;
+    }
+
+    // HELPER METHOD TO PARSE A APPOINTMENTOUTCOMERECORD OBJECT FROM A CSV LINE
+    private AppointmentOutcomeRecord parseAppointmentOutcomeRecord(String line) {
+        try {
+            String[] fields = line.split(",");
+            if (fields.length != 6) {
+                System.err.println("Invalid record format: " + line);
+                return null;
+            }
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+            String appointmentId = fields[1];
+            LocalDate date = LocalDate.parse(fields[2], formatter);
+            String serviceType = fields[3];
+            String medicationStatus = fields[4];
+            String consultationNotes = fields[5];
+
+            return new AppointmentOutcomeRecord(appointmentId, date, serviceType, medicationStatus, consultationNotes);
+
+        } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException e) {
+            System.err.println("Error parsing record: " + line + " - " + e.getMessage());
+            return null;
+        }
     }
 }

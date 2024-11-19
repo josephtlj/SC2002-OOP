@@ -14,6 +14,11 @@ public class AppointmentOutcomeRecordController
     AppointmentOutcomeRecordServices appointmentOutcomeRecordServices;
 
     //CONSTRUCTOR
+
+    public AppointmentOutcomeRecordController(int lorem){
+        // insert in normal instantiation
+    }
+
     public AppointmentOutcomeRecordController(String patientID)
     {
         this.appointmentOutcomeRecordServices= new AppointmentOutcomeRecordServices(patientID);
@@ -51,6 +56,10 @@ public class AppointmentOutcomeRecordController
     public boolean checkDate(LocalDate date)
     {
         return appointmentOutcomeRecordServices.checkDate(date);
+    }
+
+    public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay(){
+        return appointmentOutcomeRecordServices.readAllAppointmentOutcomeRecordsByDay();
     }
     
 }
