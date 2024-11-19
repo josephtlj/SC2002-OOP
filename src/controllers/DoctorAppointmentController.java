@@ -24,7 +24,7 @@ public class DoctorAppointmentController
     {
         this.actionType= actionType;
         this.appointments=getAllAppointments(doctorID);
-        doctorAppointmentServices= new DoctorAppointmentServices(doctorID);
+        this.doctorAppointmentServices= new DoctorAppointmentServices(doctorID);
         this.doctorID=doctorID;
 
     }

@@ -168,6 +168,10 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface
                 {
                     // Parse the Date, Start Time, and End Time fields
                     LocalDate lineDate = LocalDate.parse(parts[0], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                    if(parts[1]=="NA"&& parts[2]=="NA")
+                    {
+                        continue;
+                    }
                     LocalTime startTime = LocalTime.parse(parts[1], DateTimeFormatter.ofPattern("HH:mm"));
                     LocalTime endTime = LocalTime.parse(parts[2], DateTimeFormatter.ofPattern("HH:mm"));
 

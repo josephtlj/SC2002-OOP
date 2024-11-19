@@ -28,6 +28,7 @@ public class DoctorAppointmentView implements DoctorAppointmentViewInterface
         switch(actionType)
         {
             case VIEW:
+                System.out.println("Testing.");
                 viewUpcomingAppointments();
                 break;
             case SET_AVAILABILITY:
