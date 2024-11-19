@@ -1,7 +1,14 @@
 package src.models;
 
 import java.util.List;
+
+import javax.print.Doc;
+
 import src.daos.DoctorDao;
+import src.daos.MedicalRecordDao;
+import src.interfaces.MedicalRecordDaoInterface;
+import src.interfaces.MedicalRecordServiceInterface;
+import src.services.MedicalRecordService;
 import src.views.AppointmentOutcomeRecordView;
 import src.views.DiagnosisTreatmentRecordView;
 import src.views.DoctorAppointmentView;
@@ -11,7 +18,9 @@ import src.utils.ENUM.DoctorAppointmentActionType;
 import src.utils.ENUM.DoctorDepartment;
 import src.utils.ENUM.DoctorMedicalRecordActionType;
 
-public class Doctor extends User
+import src.controllers.MedicalRecordController;
+
+public class Doctor extends Staff
 {
     //ATTRIBUTES
     private Calendar doctorCalendar;
@@ -19,11 +28,12 @@ public class Doctor extends User
     private DoctorDao doctorDao;
     
     //CONSTRUCTOR
-    public Doctor(String ID, String name, String department,String password, boolean IsFirstLogin, byte[] salt) 
+    // public Doctor(String ID, String name, String department,String password, boolean IsFirstLogin, byte[] salt) 
+    public Doctor(String hospitalId, String password, Role role, byte[] salt,boolean isFirstLogin, String name, Gender gender, int age, DoctorDepartment department)
     {
-        super(ID, password, Role.valueOf("Doctor"),salt, IsFirstLogin); 
-        this.department= DoctorDepartment.valueOf(department); 
-        this.doctorCalendar= new Calendar(ID);
+        super(hospitalId, password, role, salt, isFirstLogin, name, gender, age);
+        this.department = department;
+        this.doctorCalendar= new Calendar(hospitalId);
     }
 
     //GET METHODS
@@ -58,15 +68,20 @@ public class Doctor extends User
     }
 
     //MANAGE MEDICAL RECORD
+
+    MedicalRecordDaoInterface medicalRecordDao = new MedicalRecordDao();
+    MedicalRecordServiceInterface medicalRecordService = new MedicalRecordService(medicalRecordDao);
+    MedicalRecordController medicalRecordController = new MedicalRecordController(medicalRecordService);
+
     public void ManageMedicalRecord(DoctorMedicalRecordActionType medicalRecordActionType)
     {
         if(medicalRecordActionType== DoctorMedicalRecordActionType.VIEW)
-        {
-            DoctorMedicalRecordView medicalRecordView= new DoctorMedicalRecordView();
+        {   
+            DoctorMedicalRecordView medicalRecordView= new DoctorMedicalRecordView(medicalRecordController);
         }
         else
         {
-            DiagnosisTreatmentRecordView treatmentRecordView= new DiagnosisTreatmentRecordView();
+            DiagnosisTreatmentRecordView treatmentRecordView= new DiagnosisTreatmentRecordView(medicalRecordController);
         }
     }
 

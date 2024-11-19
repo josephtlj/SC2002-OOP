@@ -2,6 +2,7 @@ package src.services;
 
 import src.utils.ENUM.PasswordErrorType;
 
+import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Objects;
 
@@ -23,6 +24,15 @@ public class DoctorPasswordService
         this.doctorDao= new DoctorDao();
     }
 
+    public Doctor readDoctorByHospitalId(String hospitalId){
+        Doctor doctor = doctorDao.getDoctorByHospitalId(hospitalId);
+        if (doctor == null) {
+            throw new IllegalArgumentException("Doctor not found.");
+        }
+        System.out.print(doctor.getHospitalId());
+        return doctor;
+    }
+
     public ChangePasswordOutcome updateDoctorPassword(String newPassword, String confirmPassword, String ID)
     {
         ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);//why is there an error here
@@ -39,6 +49,12 @@ public class DoctorPasswordService
                 passwordOutcome.setPasswordErrorType(PasswordErrorType.SAME_AS_OLD);
                 return passwordOutcome;
             }
+            else{
+                byte[] newSalt = generateSalt();
+                String hashedNewPassword = hashPassword(confirmPassword, newSalt);
+
+                doctorDao.updateDoctorPasswordByHospitalId(hashedNewPassword, newSalt, ID);
+            }
         }
         //no password change error
         passwordOutcome.setOutcome(true);
@@ -46,6 +62,16 @@ public class DoctorPasswordService
     }
 
     // SUPPORTING METHODS
+    private byte[] generateSalt() {
+        byte[] salt = new byte[16];
+        try {
+            SecureRandom.getInstanceStrong().nextBytes(salt);
+        } catch (Exception e) {
+            throw new RuntimeException("Error generating salt!", e);
+        }
+        return salt;
+    }
+
     public String hashPassword(String password, byte[] salt) {
         try {
             PBEKeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);

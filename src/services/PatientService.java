@@ -23,7 +23,7 @@ public class PatientService implements PatientServiceInterface {
     public Patient readPatientByHospitalId(String hospitalId) {
         Patient patient = patientDao.getPatientByHospitalId(hospitalId);
         if (patient == null) {
-            throw new IllegalArgumentException("Medical Record not found.");
+            throw new IllegalArgumentException("Patient not found.");
         }
 
         return patient;

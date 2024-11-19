@@ -1,10 +1,17 @@
 package src.daos;
 
 import java.io.*;
+import java.security.SecureRandom;
+import java.text.SimpleDateFormat;
 import java.util.*;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
 
 import src.interfaces.DoctorDaoInterface;
 import src.models.Doctor;
+import src.models.User;
+import src.utils.ENUM.DoctorDepartment;
 
 public class DoctorDao implements DoctorDaoInterface {
     // LOAD NECESSARY PATHS FROM CONFIG.PROPERTIES
@@ -36,16 +43,17 @@ public class DoctorDao implements DoctorDaoInterface {
                 {
                     // Parse CSV fields
                     String id = parts[0];
-                    String name = parts[1];
-                    String department = parts[2];
-                    String gender = parts[3];
-                    int age = Integer.parseInt(parts[4]);
-                    String password = parts[5];
-                    boolean isFirstLogin = Boolean.parseBoolean(parts[6]);
-                    byte[] salt = Base64.getDecoder().decode(parts[7]);
+                    String password = parts[1];
+                    Doctor.Role role = Doctor.Role.valueOf(parts[2]);
+                    byte[] salt = Base64.getDecoder().decode(parts[3]);
+                    boolean isFirstLogin = Boolean.parseBoolean(parts[4]);
+                    String name = parts[5];
+                    Doctor.Gender gender = Doctor.Gender.valueOf(parts[6]);
+                    int age = Integer.parseInt(parts[7]);
+                    DoctorDepartment department = DoctorDepartment.valueOf(parts[8]);
 
                     // Create Doctor object and add to the list
-                    Doctor doctor = new Doctor(id, name, department, password, isFirstLogin, salt);
+                    Doctor doctor = new Doctor(id, password, role, salt, isFirstLogin, name, gender, age, department);
                     doctors.add(doctor);
                 }
             }
@@ -64,21 +72,26 @@ public class DoctorDao implements DoctorDaoInterface {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Split the line by commas
-                if (parts.length == 8) // Ensure the correct number of columns
+                if (parts.length == 9) // Ensure the correct number of columns
                 {
+
                     // Parse CSV fields
                     String id = parts[0];
-                    String name = parts[1];
-                    String department = parts[2];
-                    String gender = parts[3];
-                    int age = Integer.parseInt(parts[4]);
-                    String password = parts[5];
-                    boolean isFirstLogin = Boolean.parseBoolean(parts[6]);
-                    byte[] salt = Base64.getDecoder().decode(parts[7]);
+                    String password = parts[1];
+                    Doctor.Role role = Doctor.Role.valueOf(parts[2]);
+                    byte[] salt = Base64.getDecoder().decode(parts[3]);
+                    boolean isFirstLogin = Boolean.parseBoolean(parts[4]);
+                    String name = parts[5];
+                    Doctor.Gender gender = Doctor.Gender.valueOf(parts[6]);
+                    int age = Integer.parseInt(parts[7]);
+                    DoctorDepartment department = DoctorDepartment.valueOf(parts[8]);
 
                     // IF HOSPITALID FOUND, RETURN DOCTOR DATA AS USER OBJECT
                     if (id.equals(doctorHospitalId)) {
-                        return new Doctor(id, name, department, password, isFirstLogin, salt);
+                        System.out.println(true);
+                        Doctor test = new Doctor(id, password, role, salt, isFirstLogin, name, gender, age, department);
+                        System.out.println(test);
+                        return test;
                     }
                 }
             }
@@ -92,37 +105,79 @@ public class DoctorDao implements DoctorDaoInterface {
     }
 
     // UPDATE DOCTOR'S PASSWORD USING HOSPITALID
-    public void updateDoctorPasswordByHospitalId(String doctorNewPassword, String doctorHospitalId) {
-        List<Doctor> doctors = getAllDoctors();
-
-        // UPDATE DOCTOR'S PASSWORD WITH MATCHING HOSPITALID
-        for (Doctor doctor : doctors) {
-            if (doctor.getHospitalId().equals(doctorHospitalId)) {
-                doctor.setPassword(doctorNewPassword);
-                doctor.setIsFirstLogin(false);
-                break; // Exit the loop once the doctor is found and updated
+    public void updateDoctorPasswordByHospitalId(String doctorNewPassword, byte[] newSalt, String doctorHospitalId) {
+        List<String> lines = new ArrayList<>();
+        boolean doctorFound = false;
+    
+        // Read the file line by line
+        try (BufferedReader br = new BufferedReader(new FileReader(DOCTORDB_PATH))) {
+            // Read and store the header
+            String header = br.readLine();
+            lines.add(header);
+    
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(",");
+    
+                // Validate the record format (number of fields matches your Doctor model)
+                if (fields.length == 9 && fields[0].equals(doctorHospitalId)) {
+                    // Update the doctor record
+                    Doctor updatedDoctor = new Doctor(
+                            fields[0],                             // hospitalId
+                            doctorNewPassword,                    // password
+                            Doctor.Role.valueOf(fields[2]),       // role
+                            newSalt,                              // salt
+                            false,                   // isFirstLogin (updated)
+                            fields[5],                            // name
+                            Doctor.Gender.valueOf(fields[6]),     // gender
+                            Integer.parseInt(fields[7]),          // age
+                            DoctorDepartment.valueOf(fields[8])   // department
+                    );
+    
+                    // Convert updated doctor back to CSV format
+                    String updatedLine = formatDoctorToCSV(updatedDoctor);
+                    lines.add(updatedLine);
+                    doctorFound = true;
+                } else {
+                    // Keep the existing line if it's not the target record
+                    lines.add(line);
+                }
             }
-        }
-
-        // WRITE BACK TO DOCTORDB.CSV
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(DOCTORDB_PATH))) {
-            writer.write("ID,Name,Department,Age,Gender,Password,IsFirstLogin,salt\n");
-
-            // Write each doctor's data
-            for (Doctor doctor : doctors) {
-                StringBuilder sb = new StringBuilder();
-                sb.append(doctor.getHospitalId()).append(",")
-                        .append(doctor.getRole().name()).append(",")
-                        .append(doctor.getDepartment()).append(",")
-                        .append(doctor.getGender()).append(",")
-                        .append(doctor.getAge()).append(",")
-                        .append(doctor.getPassword()).append(",")
-                        .append(doctor.getIsFirstLogin()).append("\n")
-                        .append(Base64.getEncoder().encodeToString(doctor.getSalt())).append(",");
-                writer.write(sb.toString());
+    
+            if (!doctorFound) {
+                throw new IllegalArgumentException(
+                        "Doctor with hospitalId " + doctorHospitalId + " not found.");
             }
         } catch (IOException e) {
+            System.err.println("Error reading the doctor database: " + e.getMessage());
+            e.printStackTrace();
+            return;
+        }
+    
+        // Write all lines back to the file
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(DOCTORDB_PATH))) {
+            for (String outputLine : lines) {
+                bw.write(outputLine);
+                bw.newLine();
+            }
+            System.out.println("Doctor password updated successfully.");
+        } catch (IOException e) {
+            System.err.println("Error writing to the doctor database: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    
+
+    private String formatDoctorToCSV(Doctor doctor) {
+        return String.join(",",
+                doctor.getHospitalId(),
+                doctor.getPassword(),
+                doctor.getRole().name(),
+                Base64.getEncoder().encodeToString(doctor.getSalt()),
+                String.valueOf(doctor.getIsFirstLogin()),
+                doctor.getName(),
+                doctor.getGender().name(),
+                String.valueOf(doctor.getAge()),
+                doctor.getDepartment());
     }
 }

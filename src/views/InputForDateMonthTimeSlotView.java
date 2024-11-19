@@ -66,10 +66,10 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
                 if (date.getYear() == LocalDate.now().getYear()) {
                     validInput = true;
                 } else {
-                    System.out.println("❌ The date is not in the current year. Please try again.");
+                    System.out.println("The date is not in the current year. Please try again.");
                 }
             } catch (Exception e) {
-                System.out.println("❌ Invalid date format. Please use dd/MM/yyyy.");
+                System.out.println("Invalid date format. Please use dd/MM/yyyy.");
                 validInput = false;
             }
         } while (!validInput);

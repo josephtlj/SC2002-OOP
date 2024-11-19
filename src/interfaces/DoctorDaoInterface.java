@@ -10,7 +10,7 @@ public interface DoctorDaoInterface
 
     Doctor getDoctorByHospitalId(String doctorHospitalId);
 
-    void updateDoctorPasswordByHospitalId(String doctorNewPassword, String doctorHospitalId);
+    void updateDoctorPasswordByHospitalId(String doctorNewPassword, byte[] newSalt, String doctorHospitalId);
 
     
 }

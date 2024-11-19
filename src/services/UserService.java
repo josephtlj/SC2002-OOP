@@ -38,7 +38,6 @@ public class UserService implements UserServiceInterface {
         String rolePrefix = hospitalId.substring(0, 2);
 
         User user = null;
-        ;
 
         switch (rolePrefix) {
             case "PA":
@@ -51,8 +50,18 @@ public class UserService implements UserServiceInterface {
                 user = administratorService.readAdministratorByHospitalId(hospitalId);
                 break;
             default:
+                DoctorPasswordService doctorPasswordService = new DoctorPasswordService(hospitalId);
+                try {
+                    user = doctorPasswordService.readDoctorByHospitalId(hospitalId);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+
                 break;
         }
+
+        System.out.println(hashPassword(password, user.getSalt()));
+        System.out.println(user.getPassword());
 
         if (user == null || !Objects.equals(hashPassword(password, user.getSalt()), user.getPassword())) {
             throw new IllegalArgumentException("Invalid credentials!");

@@ -1,6 +1,10 @@
 package src.app;
 
+import src.models.Doctor;
 import src.models.Session;
+
+import src.services.DoctorPasswordService;
+import src.views.DoctorView;
 
 import src.views.PharmacistView;
 import src.views.AdministratorView;
@@ -91,6 +95,8 @@ public class HMSApp {
         PharmacistView pharmacistView = new PharmacistView(pharmacistController);
         PatientView patientView = new PatientView(patientController);
         UserView userView = new UserView(userController);
+        
+        DoctorView doctorView = new DoctorView();
 
         // MAIN PROGRAM
         boolean programStart = true;
@@ -114,14 +120,15 @@ public class HMSApp {
                     patientView.showMainMenu();
                     break;
                 case DOCTOR:
+                    DoctorPasswordService doctorService = new DoctorPasswordService(Session.getCurrentSession().getCurrentUser().getHospitalId());
+                    Doctor doctor = doctorService.readDoctorByHospitalId(Session.getCurrentSession().getCurrentUser().getHospitalId());
+                    doctorView.displayDoctorLoginView(doctor);
                     break;
                 case PHARMACIST:
                     pharmacistView.showMainMenu();
                     break;
                 case ADMINISTRATOR:
                     administratorView.showMainMenu();
-                    break;
-                default:
                     break;
             }
         }

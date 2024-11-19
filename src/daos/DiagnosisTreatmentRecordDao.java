@@ -34,7 +34,7 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
         {
             Properties prop = new Properties();
             prop.load(input);
-            DIAGNOSISTREATMENTRECORDDB_PATH = prop.getProperty("DIAGNOSISTREATMENTRECORDDB_PATH", "data/DiagnosisTreatmentRecords");
+            DIAGNOSISTREATMENTRECORDDB_PATH = prop.getProperty("DIAGNOSISTREATMENTRECORDDB_PATH", "src/data/DiagnosisTreatmentRecords");
         } 
         catch (IOException ex) 
         {
@@ -45,7 +45,7 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
         File treatmentRecDir = new File(DIAGNOSISTREATMENTRECORDDB_PATH);
         if (treatmentRecDir.exists() && treatmentRecDir.isDirectory()) 
         {
-            File[] files = treatmentRecDir.listFiles(name -> name.equals(ID + "_TreatRec.csv"));
+            File[] files = treatmentRecDir.listFiles(file -> file.getName().equals(ID + "_TreatRec.csv"));
             this.diagnosisTreatmentRecordFile = files[0]; //ASSIGN MATCHING FILE
     
         }
