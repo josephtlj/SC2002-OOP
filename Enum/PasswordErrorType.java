@@ -4,6 +4,7 @@ public enum PasswordErrorType
 {
     NO_MATCH,
     SAME_AS_OLD,
-    NILL;
+    NILL,
+    NOT_ENOUGH_CHAR;
 }
 

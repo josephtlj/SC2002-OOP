@@ -18,7 +18,13 @@ public class DoctorPasswordService
 
     public ChangePasswordOutcome updateDoctorPassword(String newPassword, String confirmPassword, String ID)
     {
-        ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);//why is there an error here
+        ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);
+
+        if (newPassword.length() < 8 || confirmPassword.length() < 8) 
+        {
+            passwordOutcome.setPasswordErrorType(PasswordErrorType.NOT_ENOUGH_CHAR);
+            return passwordOutcome;
+        }
         if(!newPassword.equals(confirmPassword))
         {
             passwordOutcome.setPasswordErrorType(PasswordErrorType.NO_MATCH);
