@@ -1,1 +1,1 @@
-AppointmentRecordID,AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
+AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status

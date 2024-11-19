@@ -1,2 +1,2 @@
-AppointmentRecordID,AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
-e1c4d571-f8c3-47d5-88f6-0f3788a750a4,e9ba9165-25a5-4e67-9f79-8e71751afd6c,D001,PA672bda,16/11/2024,14:30,15:00,No,Yes,CONFIRMED
+AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
+f0187c43-9bdf-44ba-8e5c-d4b26b51983c,D001,PA03c629,17/11/2024,16:00,16:30,No,Yes,CONFIRMED
