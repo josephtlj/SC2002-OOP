@@ -24,7 +24,7 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
 
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {
-        List<Appointment> completedAppointments = appointmentOutcomeRecordDao.getCompletedAppointments(patientID);
+        List<Appointment> completedAppointments = appointmentOutcomeRecordDao.getCompletedAppointmentsByPatientId(patientID);
 
         Optional<Appointment> appointmentOptional = completedAppointments.stream()
                 .filter(a -> a.getAppointmentDate().equals(date)
@@ -54,6 +54,7 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
     }
 
     public List<Appointment> getCompletedAppointmentsInMonth(int month, List<Appointment> appointments) {
+
         return appointments.stream()
                 .filter(appointment -> appointment.getAppointmentDate().getMonthValue() == month)
                 .collect(Collectors.toList());

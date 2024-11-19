@@ -159,9 +159,11 @@ public class CalendarDao implements CalendarDaoInterface {
 
         try (BufferedReader br = new BufferedReader(new FileReader(CalendarFile))) {
             String line;
+            br.readLine();
             while ((line = br.readLine()) != null) {
                 lines.add(line);
                 String[] parts = line.split(",");
+                
                 LocalDate existingDate = LocalDate.parse(parts[0],
                         java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 if (existingDate.equals(date)) {

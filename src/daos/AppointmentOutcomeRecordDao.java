@@ -24,6 +24,8 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     private static String DOCTORAPPOINTMENTSLOTSDB_PATH;
     private File doctorAppointmentSlotsFile;
 
+    private static String COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH;
+
     // CONSTRUCTOR
     public AppointmentOutcomeRecordDao(String ID) {
         if (ID.charAt(0) == 'D') {
@@ -39,20 +41,31 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+
+        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
+        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
+            Properties prop = new Properties();
+            prop.load(input);
+            COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
+                    "src/data/CollatedAppointmentOutcomeRecord.csv");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     // CONSTRUCTOR
     // public AppointmentOutcomeRecordDao(int ID) {
-    //     if (ID.charAt(0) == 'D') {
-    //         return;
-    //     }
+    // if (ID.charAt(0) == 'D') {
+    // return;
+    // }
 
-    //     // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
-    //     File treatmentRecDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
-    //     if (treatmentRecDir.exists() && treatmentRecDir.isDirectory()) {
-    //         File[] files = treatmentRecDir.listFiles(file -> file.getName().equals(ID + "_AppOutRec.csv"));
-    //         this.appointmentOutcomeRecordFile = files[0]; // ASSIGN MATCHING FILE
-    //     }
+    // // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
+    // File treatmentRecDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
+    // if (treatmentRecDir.exists() && treatmentRecDir.isDirectory()) {
+    // File[] files = treatmentRecDir.listFiles(file -> file.getName().equals(ID +
+    // "_AppOutRec.csv"));
+    // this.appointmentOutcomeRecordFile = files[0]; // ASSIGN MATCHING FILE
+    // }
     // }
 
     public boolean updateAppointmentOutcomeRecord(AppointmentOutcomeRecord record) {
@@ -73,10 +86,10 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             // Read the file line by line
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(","); // Assuming CSV fields are comma-separated
-                if (fields.length > 0 && fields[0].equals(record.getAppointmentId())) {
+                if (fields.length == 8 && fields[1].equals(record.getAppointmentId())) {
                     // Found the matching row, update service type and consultation notes
-                    fields[2] = record.getServiceType(); // Update service type
-                    fields[3] = record.getConsultationNotes(); // Update consultation notes
+                    fields[5] = record.getServiceType(); // Update service type
+                    fields[7] = record.getConsultationNotes(); // Update consultation notes
                     line = String.join(",", fields); // Reconstruct the line
                     recordUpdated = true;
                 }
@@ -120,17 +133,19 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
 
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
-                if (parts.length == 6) { // Ensure there are enough columns
+                if (parts.length == 8) { // Ensure there are enough columns
+                    String appointmentRecordId = parts[0].trim();
                     String appointmentId = parts[1].trim();
-                    String recordDate = parts[2].trim();
-                    String serviceType = parts[3].trim();
-                    String consultationNotes = parts[5].trim();
+                    String recordDate = parts[4].trim();
+                    String serviceType = parts[5].trim();
+                    String consultationNotes = parts[7].trim();
 
                     // Match date and time slot
 
                     if (recordDate.equals(formattedDate)) {
                         // Create and return the record if matches are found
                         return new AppointmentOutcomeRecord(
+                                UUID.fromString(appointmentRecordId),
                                 appointmentId,
                                 date,
                                 serviceType,
@@ -163,6 +178,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
         if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
             File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals(doctorID + "_appSlot.csv"));
+
             if (files != null && files.length > 0) {
                 doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
             } else {
@@ -178,7 +194,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile))) {
             String line;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            LocalDate cutoffDate = LocalDate.parse("16/11/2024", formatter);
+            
 
             // Skip the header row
             br.readLine();
@@ -187,19 +203,87 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Assuming CSV fields are comma-separated
 
-                if (parts.length == 7) {
+                if (parts.length == 9) {
 
-                    String date = parts[0].trim();
-                    String startTime = parts[1].trim();
-                    String endTime = parts[2].trim();
-                    String patientID = parts[5].trim();
-                    String status = parts[6].trim();
+                    String date = parts[3].trim();
+                    String startTime = parts[4].trim();
+                    String endTime = parts[5].trim();
+                    String patientID = parts[2].trim();
+                    String status = parts[8].trim();
 
                     // Parse date and check if it's before cutoff date and CONFIRMED
                     LocalDate appointmentDate = LocalDate.parse(date, formatter);
-                    if (appointmentDate.isBefore(cutoffDate) && status.equals("CONFIRMED")) {
+                    if (status.equals("CONFIRMED")) {
                         Appointment appointment = new Appointment(
                                 status, date, startTime, endTime, patientID, doctorID);
+                        completedAppointments.add(appointment);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return completedAppointments;
+    }
+
+    // RETURN LIST OF COMPLETED APPOINTMENTS
+    public List<Appointment> getCompletedAppointmentsByPatientId(String patientId) {
+        List<Appointment> completedAppointments = new ArrayList<>();
+
+        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
+        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
+            Properties prop = new Properties();
+            prop.load(input);
+            COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
+                    "src/data/CollatedAppointmentRecordDB.csv");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return completedAppointments; // Return empty list if configuration fails
+        }
+
+        // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
+        File appointmentSlotsDir = new File(COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH);
+        if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
+            File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals("CollatedAppointmentOutcomeRecord.csv"));
+
+            if (files != null && files.length > 0) {
+                doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
+            } else {
+                System.err.println("No matching file found for ID: " + patientId);
+                return completedAppointments; // Return empty list if file is not found
+            }
+        } else {
+            System.err.println("Appointment Slots directory does not exist.");
+            return completedAppointments; // Return empty list if directory is not found
+        }
+
+        // PARSE THE CSV FILE TO FIND COMPLETED APPOINTMENTS
+        try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile))) {
+            String line;
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            
+
+            // Skip the header row
+            br.readLine();
+
+            // Read and process each line
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(","); // Assuming CSV fields are comma-separated
+
+                if (parts.length == 9) {
+
+                    String date = parts[3].trim();
+                    String startTime = parts[4].trim();
+                    String endTime = parts[5].trim();
+                    String patientID = parts[2].trim();
+                    String status = parts[8].trim();
+
+                    // Parse date and check if it's before cutoff date and CONFIRMED
+                    LocalDate appointmentDate = LocalDate.parse(date, formatter);
+                    if (status.equals("CONFIRMED")) {
+                        Appointment appointment = new Appointment(
+                                status, date, startTime, endTime, patientID, patientId);
                         completedAppointments.add(appointment);
                     }
                 }

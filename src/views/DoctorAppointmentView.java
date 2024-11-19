@@ -248,6 +248,7 @@ public class DoctorAppointmentView implements DoctorAppointmentViewInterface
         else
         {
             int month=inputForDateMonthTimeSlotView.viewWhichMonth();
+            
             List<Appointment> appointments=appointmentManager.getConfirmedAppointments(month);
             if(appointments.isEmpty())
             {

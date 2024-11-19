@@ -111,12 +111,6 @@ public class AppointmentOutcomeRecordView {
 
         LocalDate date = viewInputForDateMonthTimeSlot.viewWhichDate();
 
-        boolean isDateOk = manager.checkDate(date);
-        if (!isDateOk) {
-            System.out.println("You have entered a date in the future. The date today is 16/11/2024.");
-            return null;
-        }
-
         AppointmentTimeSlot timeSlot = viewInputForDateMonthTimeSlot.viewWhichTimeSlot();
 
         AppointmentOutcomeRecord outcomeRecord = manager.findOutcomeRecord(patientID, date, timeSlot);
@@ -143,7 +137,6 @@ public class AppointmentOutcomeRecordView {
 
         } else {
             appointmentView.printAppointmentInAMonthView(appointments);
-
         }
     }
 }

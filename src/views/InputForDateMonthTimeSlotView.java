@@ -94,7 +94,7 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
             }
             catch (Exception e) 
             {
-                System.out.println("❌ Invalid input for month.");
+                System.out.println("Invalid input for month.");
                 validInput=false;
             }
         }while(!validInput);
