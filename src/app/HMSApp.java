@@ -16,6 +16,7 @@ import src.controllers.ReplenishmentRequestController;
 import src.controllers.MedicalRecordController;
 import src.controllers.MedicineController;
 import src.controllers.AdministratorController;
+import src.controllers.AppointmentOutcomeRecordController;
 import src.controllers.PharmacistController;
 import src.controllers.PatientController;
 import src.controllers.UserController;
@@ -26,6 +27,7 @@ import src.interfaces.ReplenishmentRequestServiceInterface;
 import src.interfaces.MedicineServiceInterface;
 import src.interfaces.MedicalRecordServiceInterface;
 import src.interfaces.AdministratorServiceInterface;
+import src.interfaces.AppointmentOutcomeRecordServiceInterface;
 import src.interfaces.PharmacistServiceInterface;
 import src.interfaces.PatientServiceInterface;
 import src.interfaces.UserServiceInterface;
@@ -35,6 +37,7 @@ import src.services.ReplenishmentRequestService;
 import src.services.MedicineService;
 import src.services.MedicalRecordService;
 import src.services.AdministratorService;
+import src.services.AppointmentOutcomeRecordServices;
 import src.services.PharmacistService;
 import src.services.PatientService;
 import src.services.UserService;
@@ -95,7 +98,7 @@ public class HMSApp {
         PharmacistView pharmacistView = new PharmacistView(pharmacistController);
         PatientView patientView = new PatientView(patientController);
         UserView userView = new UserView(userController);
-        
+
         DoctorView doctorView = new DoctorView();
 
         // MAIN PROGRAM
@@ -120,8 +123,10 @@ public class HMSApp {
                     patientView.showMainMenu();
                     break;
                 case DOCTOR:
-                    DoctorPasswordService doctorService = new DoctorPasswordService(Session.getCurrentSession().getCurrentUser().getHospitalId());
-                    Doctor doctor = doctorService.readDoctorByHospitalId(Session.getCurrentSession().getCurrentUser().getHospitalId());
+                    DoctorPasswordService doctorService = new DoctorPasswordService(
+                            Session.getCurrentSession().getCurrentUser().getHospitalId());
+                    Doctor doctor = doctorService
+                            .readDoctorByHospitalId(Session.getCurrentSession().getCurrentUser().getHospitalId());
                     doctorView.displayDoctorLoginView(doctor);
                     break;
                 case PHARMACIST:

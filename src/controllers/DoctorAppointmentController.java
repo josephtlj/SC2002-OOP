@@ -22,9 +22,9 @@ public class DoctorAppointmentController
     //CONSTRUCTOR
     public DoctorAppointmentController(String doctorID, DoctorAppointmentActionType actionType)
     {
+        this.doctorAppointmentServices= new DoctorAppointmentServices(doctorID);
         this.actionType= actionType;
         this.appointments=getAllAppointments(doctorID);
-        doctorAppointmentServices= new DoctorAppointmentServices(doctorID);
         this.doctorID=doctorID;
 
     }

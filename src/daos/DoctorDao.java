@@ -88,10 +88,7 @@ public class DoctorDao implements DoctorDaoInterface {
 
                     // IF HOSPITALID FOUND, RETURN DOCTOR DATA AS USER OBJECT
                     if (id.equals(doctorHospitalId)) {
-                        System.out.println(true);
-                        Doctor test = new Doctor(id, password, role, salt, isFirstLogin, name, gender, age, department);
-                        System.out.println(test);
-                        return test;
+                        return new Doctor(id, password, role, salt, isFirstLogin, name, gender, age, department);
                     }
                 }
             }

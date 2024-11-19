@@ -168,7 +168,7 @@ public class DoctorAppointmentView implements DoctorAppointmentViewInterface
             return;
         }
 
-        boolean outcome= appointmentManager.updateAppointmentStatus("Confirmed",date,timeSlot,patientID);
+        boolean outcome= appointmentManager.updateAppointmentStatus("CONFIRMED",date,timeSlot,patientID);
 
         if(outcome)
         {
@@ -213,7 +213,7 @@ public class DoctorAppointmentView implements DoctorAppointmentViewInterface
             return;
         }
 
-        boolean outcome= appointmentManager.updateAppointmentStatus("Declined",date,timeSlot,patientID);
+        boolean outcome= appointmentManager.updateAppointmentStatus("DECLINED",date,timeSlot,patientID);
 
         if(outcome)
         {

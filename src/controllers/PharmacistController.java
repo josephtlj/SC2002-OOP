@@ -2,6 +2,7 @@ package src.controllers;
 
 import java.util.List;
 
+import src.models.AppointmentOutcomeRecord;
 import src.models.Medicine;
 import src.models.Prescription;
 
@@ -11,12 +12,14 @@ public class PharmacistController {
     private final PharmacistServiceInterface pharmacistService;
     private final MedicineController medicineController;
     private final ReplenishmentRequestController replenishmentRequestController;
+    // private final AppointmentOutcomeRecordController appointmentOutcomeRecordController;
 
     public PharmacistController(PharmacistServiceInterface pharmacistService,
             MedicineController medicineController, ReplenishmentRequestController replenishmentRequestController) {
         this.pharmacistService = pharmacistService;
         this.medicineController = medicineController;
         this.replenishmentRequestController = replenishmentRequestController;
+        // this.appointmentOutcomeRecordController = new AppointmentOutcomeRecordController(null);
     }
 
     public boolean handleUpdatePassword(String hospitalId, String newPassword, String confirmPassword) {
@@ -37,6 +40,15 @@ public class PharmacistController {
             return null;
         }
     }
+
+    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecords() {
+    //     try {
+    //         return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecords();
+    //     } catch (IllegalArgumentException e) {
+    //         System.out.println(e.getMessage());
+    //         return null;
+    //     }
+    // }
 
     public boolean handleSubmitReplenishmentRequest(String medicineName, int replenishmentQuantity) {
         try {

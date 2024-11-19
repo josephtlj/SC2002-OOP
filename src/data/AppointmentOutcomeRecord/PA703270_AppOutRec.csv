@@ -1,5 +1,4 @@
 Doctor ID,Appointment ID,Date,Service Type,Medication Status,Consultation Notes
-DoctorID,3a3eed54-85c2-439f-9fad-b3375644f3b8,Appointment Date,General Consultation,Dispensed,NIL
 D005,9b6a8aa2-9761-408b-aca8-ebaff5ca6385,02/01/2024,General Consultation,Dispensed,Need follow up appointment
 D001,8c869ccf-8592-4593-877b-c0ddc37566b3,04/01/2024,General Consultation,Dispensed,NIL
 D004,f28492db-a119-41f2-820e-5d7688fb013c,05/01/2024,General Consultation,Dispensed,Need follow up appointment

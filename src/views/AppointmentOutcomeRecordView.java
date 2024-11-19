@@ -6,33 +6,30 @@ import src.controllers.AppointmentOutcomeRecordController;
 import src.models.Appointment;
 import src.models.AppointmentOutcomeRecord;
 import src.models.AppointmentTimeSlot;
+import src.models.Session;
 
 import java.time.*;
 
-public class AppointmentOutcomeRecordView 
-{
-    //ATTRIBUTES
-    Scanner scanner= new Scanner(System.in);
-    InputForDateMonthTimeSlotView viewInputForDateMonthTimeSlot= new InputForDateMonthTimeSlotView();
-    AppointmentView appointmentView= new AppointmentView();
+public class AppointmentOutcomeRecordView {
+    // ATTRIBUTES
+    Scanner scanner = new Scanner(System.in);
+    InputForDateMonthTimeSlotView viewInputForDateMonthTimeSlot = new InputForDateMonthTimeSlotView();
+    AppointmentView appointmentView = new AppointmentView();
     AppointmentOutcomeRecordController manager;
 
-    //CONSTRUCTOR
-    public AppointmentOutcomeRecordView(String doctorID)
-    {
+    // CONSTRUCTOR
+    public AppointmentOutcomeRecordView(String doctorID) {
+        this.manager = new AppointmentOutcomeRecordController(doctorID);
         printAppointmentOutcomeRecordView(doctorID);
     }
 
-    //METHODS
-    public void printAppointmentOutcomeRecordView(String doctorID)
-    {
+    // METHODS
+    public void printAppointmentOutcomeRecordView(String doctorID) {
         int choice = -1;
-        boolean validInput=false;
+        boolean validInput = false;
 
-        do
-        {
-            try
-            {
+        do {
+            try {
                 System.out.println("""
                         =============================================================
                         |             Hospital Management System (HMS)!             |
@@ -51,41 +48,36 @@ public class AppointmentOutcomeRecordView
                 System.out.println("Your Choice: ");
                 choice = scanner.nextInt();
                 scanner.nextLine();
-                validInput=true;
+                validInput = true;
 
-                switch (choice) 
-                {
-                    
+                switch (choice) {
+
                     case 1:
                         viewUpdateOutcomeRecord(doctorID);
                         break;
 
                     case 2:
-                       return;
+                        return;
 
                     default:
                         System.out.println("Please enter a valid choice!\n");
-                        validInput=false;
+                        validInput = false;
                         break;
                 }
 
-            } 
-            catch (InputMismatchException inputMismatchException) 
-            {
+            } catch (InputMismatchException inputMismatchException) {
                 System.out.println("Please enter a valid integer only!");
-                validInput=false;
+                validInput = false;
             }
 
         } while (!validInput);
     }
 
-    public void viewUpdateOutcomeRecord(String doctorID)
-    {
-        viewCompletedAppointments(doctorID);
-        AppointmentOutcomeRecord appointmentOutcomeRecord= viewFindOutcomeRecord(doctorID);
+    public void viewUpdateOutcomeRecord(String doctorID) {
 
-        if(appointmentOutcomeRecord==null)
-        {
+        AppointmentOutcomeRecord appointmentOutcomeRecord = viewFindOutcomeRecord(doctorID);
+
+        if (appointmentOutcomeRecord == null) {
             System.out.println("Unable to find requested Appointment Outcome Record.");
             return;
         }
@@ -93,77 +85,65 @@ public class AppointmentOutcomeRecordView
         System.out.println("To update the appointment outcome record, please provide the following details:");
 
         System.out.println("Enter service type:");
-        String serviceType= scanner.nextLine();
+        String serviceType = scanner.nextLine();
 
         System.out.println("Enter consulation notes:");
-        String notes= scanner.nextLine();
+        String notes = scanner.nextLine();
 
-        boolean outcome= manager.updateOutcomeRecord(appointmentOutcomeRecord,serviceType,notes);
-        if(outcome)
-        {
+        boolean outcome = manager.updateOutcomeRecord(appointmentOutcomeRecord, serviceType, notes);
+        if (outcome) {
             System.out.println("Appointment Outcome Record succcessfully updated.");
-        }
-        else
-        {
-            System.out.println("Unable to update Appointment Outcome Record."); 
+        } else {
+            System.out.println("Unable to update Appointment Outcome Record.");
         }
     }
 
-    public AppointmentOutcomeRecord viewFindOutcomeRecord(String ID)
-    {
+    public AppointmentOutcomeRecord viewFindOutcomeRecord(String ID) {
 
         viewCompletedAppointments(ID);
 
         System.out.println("To find the Appointment Outcome Record requested, please provide the following details:");
-    
-        LocalDate date= viewInputForDateMonthTimeSlot.viewWhichDate();
-
-        boolean isDateOk= manager.checkDate(date);
-        if(!isDateOk)
-        {
-            System.out.println("You have entered a date in the future. The date today is 16/11/2024.");
-            return null;
-        }
-
-        AppointmentTimeSlot timeSlot= viewInputForDateMonthTimeSlot.viewWhichTimeSlot();
 
         System.out.print("Enter the patient ID: ");
         String patientID = scanner.nextLine().trim();
 
-        this.manager= new AppointmentOutcomeRecordController(patientID);
+        this.manager = new AppointmentOutcomeRecordController(patientID);
 
-        AppointmentOutcomeRecord outcomeRecord= manager.findOutcomeRecord(patientID, date, timeSlot);
-        if(outcomeRecord==null)
-        {
-            System.out.println("Unable to find requested Appointment Outcome Record.");
+        LocalDate date = viewInputForDateMonthTimeSlot.viewWhichDate();
+
+        boolean isDateOk = manager.checkDate(date);
+        if (!isDateOk) {
+            System.out.println("You have entered a date in the future. The date today is 16/11/2024.");
+            return null;
         }
-        else
-        {
+
+        AppointmentTimeSlot timeSlot = viewInputForDateMonthTimeSlot.viewWhichTimeSlot();
+
+        AppointmentOutcomeRecord outcomeRecord = manager.findOutcomeRecord(patientID, date, timeSlot);
+        if (outcomeRecord == null) {
+            System.out.println("Unable to find requested Appointment Outcome Record.");
+        } else {
             System.out.println("Requested Appointment Outcome Record found.");
         }
         return outcomeRecord;
 
     }
 
-    public void viewCompletedAppointments(String doctorID)
-    {
-        System.out.println("Before updating an Appointment Outcome Record(AOR), please view the completed appointments.");
+    public void viewCompletedAppointments(String doctorID) {
+        System.out
+                .println("Before updating an Appointment Outcome Record(AOR), please view the completed appointments.");
         System.out.println("Note: You are ONLY allowed to update an AOR AFTER the scheduled appointment");
 
-        int choice=viewInputForDateMonthTimeSlot.viewByDateOrMonth();
+        int choice = viewInputForDateMonthTimeSlot.viewByDateOrMonth();
 
-        List<Appointment> appointments= manager.getCompletedAppointments(doctorID);
-        
-        if(choice==1)
-        {
+        List<Appointment> appointments = manager.getCompletedAppointments(doctorID);
+
+        if (choice == 1) {
             appointmentView.printAppointmentOnADateView(appointments);
-        }
-        else
-        {
+
+        } else {
             appointmentView.printAppointmentInAMonthView(appointments);
+
         }
-
     }
-
-
 }

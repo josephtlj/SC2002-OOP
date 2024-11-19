@@ -60,9 +60,6 @@ public class UserService implements UserServiceInterface {
                 break;
         }
 
-        System.out.println(hashPassword(password, user.getSalt()));
-        System.out.println(user.getPassword());
-
         if (user == null || !Objects.equals(hashPassword(password, user.getSalt()), user.getPassword())) {
             throw new IllegalArgumentException("Invalid credentials!");
         }

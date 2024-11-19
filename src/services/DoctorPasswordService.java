@@ -29,7 +29,6 @@ public class DoctorPasswordService
         if (doctor == null) {
             throw new IllegalArgumentException("Doctor not found.");
         }
-        System.out.print(doctor.getHospitalId());
         return doctor;
     }
 

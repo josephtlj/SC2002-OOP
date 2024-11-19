@@ -35,8 +35,10 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface
         File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
         if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) 
         {
-            File[] files = appointmentSlotsDir.listFiles(name -> name.equals(ID + "_appSlot.csv"));
+            File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals(ID + "_appSlot.csv"));
             this.doctorAppointmentSlotsFile = files[0]; //ASSIGN MATCHING FILE
+
+            System.out.println("Record OFUND!");
     
         }
 
@@ -167,6 +169,7 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface
                 if (parts.length == 7) // Ensure the correct number of columns
                 {
                     // Parse the Date, Start Time, and End Time fields
+
                     LocalDate lineDate = LocalDate.parse(parts[0], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                     LocalTime startTime = LocalTime.parse(parts[1], DateTimeFormatter.ofPattern("HH:mm"));
                     LocalTime endTime = LocalTime.parse(parts[2], DateTimeFormatter.ofPattern("HH:mm"));
@@ -186,7 +189,7 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface
                                 break;
 
                             case CONFIRMED:
-                                parts[6] = "PENDING"; // Change status to PENDING
+                                parts[6] = "CONFIRMED"; // Change status to PENDING
                                 break;
 
                             case DECLINED:

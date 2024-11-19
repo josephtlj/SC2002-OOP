@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import src.models.Session;
+import src.models.AppointmentOutcomeRecord;
 import src.models.Medicine;
 import src.controllers.PharmacistController;
 
@@ -42,7 +43,7 @@ public class PharmacistView {
                             showUpdatePassword();
                             break;
                         case 2:
-                            // showAppointmentOutcomeRecord();
+                            // showAppointmentOutcomeRecords();
                             break;
                         case 3:
                             // showUpdatePrescriptionStatus();
@@ -101,8 +102,14 @@ public class PharmacistView {
         }
     }
 
-    private void showAppointmentOutcomeRecord() {
-
+    private void showAppointmentOutcomeRecords() {
+        System.out.println("""
+                =============================================================
+                |             Hospital Management System (HMS)!             |
+                |            View Appointment Outcome Record(s)             |
+                =============================================================
+                """);
+        // List<AppointmentOutcomeRecord> appointmentOutcomeRecordList = pharmacistController.handleViewAppointmentOutcomeRecords();
     }
 
     private void showMedicationInventory() {
