@@ -113,7 +113,7 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
                 DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
                 startTime = timeFormatter.format(timeFormatter.parse(startTimeInput));
             } catch (Exception e) {
-                System.out.println("❌ Invalid time format. Please use HH:mm.");
+                System.out.println("Invalid time format. Please use HH:mm.");
             }
         }
         final String StartTime=startTime;
@@ -127,7 +127,7 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
                 DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
                 endTime = timeFormatter.format(timeFormatter.parse(endTimeInput));
             } catch (Exception e) {
-                System.out.println("❌ Invalid time format. Please use HH:mm.");
+                System.out.println("Invalid time format. Please use HH:mm.");
             }
         }
         final String EndTime=endTime;

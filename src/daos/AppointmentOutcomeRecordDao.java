@@ -25,6 +25,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     private File doctorAppointmentSlotsFile;
 
     private static String COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH;
+    private File collatedAppointmentSlotsFile;
 
     // CONSTRUCTOR
     public AppointmentOutcomeRecordDao(String ID) {
@@ -47,7 +48,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             Properties prop = new Properties();
             prop.load(input);
             COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
-                    "src/data/CollatedAppointmentOutcomeRecord.csv");
+                    "src/data/AppointmentOutcomeRecord");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -117,6 +118,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     // FIND APPOINTMENT OUTCOME RECORD
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {
+                
         if (appointmentOutcomeRecordFile == null) {
             System.err.println("Appointment outcome record file not initialized.");
             return null;
@@ -144,6 +146,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
 
                     if (recordDate.equals(formattedDate)) {
                         // Create and return the record if matches are found
+                        
                         return new AppointmentOutcomeRecord(
                                 UUID.fromString(appointmentRecordId),
                                 appointmentId,
@@ -236,7 +239,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             Properties prop = new Properties();
             prop.load(input);
             COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
-                    "src/data/CollatedAppointmentRecordDB.csv");
+                    "src/data/AppointmentOutcomeRecord");
         } catch (IOException ex) {
             ex.printStackTrace();
             return completedAppointments; // Return empty list if configuration fails
@@ -263,14 +266,12 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
             String line;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             
-
             // Skip the header row
             br.readLine();
 
             // Read and process each line
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Assuming CSV fields are comma-separated
-
                 if (parts.length == 9) {
 
                     String date = parts[3].trim();
@@ -278,7 +279,6 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
                     String endTime = parts[5].trim();
                     String patientID = parts[2].trim();
                     String status = parts[8].trim();
-
                     // Parse date and check if it's before cutoff date and CONFIRMED
                     LocalDate appointmentDate = LocalDate.parse(date, formatter);
                     if (status.equals("CONFIRMED")) {
