@@ -41,14 +41,14 @@ public class PharmacistController {
         }
     }
 
-    public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay() {
-        try {
-            return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecordsByDay();
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
-    }
+    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay() {
+    //     try {
+    //         return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecordsByDay();
+    //     } catch (IllegalArgumentException e) {
+    //         System.out.println(e.getMessage());
+    //         return null;
+    //     }
+    // }
 
     public boolean handleSubmitReplenishmentRequest(String medicineName, int replenishmentQuantity) {
         try {
