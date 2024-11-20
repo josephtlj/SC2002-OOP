@@ -1,3 +1,2 @@
 AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
 84f6731e-d35e-492c-908e-27eb3295b521,D003,PA4d3e2b,15/11/2024,10:00,10:30,No,Yes,CONFIRMED
-23669697-9a87-4835-adba-9409c556e2fb,D003,PA440eab,21/11/2024,09:00,09:30,No,Yes,PENDING

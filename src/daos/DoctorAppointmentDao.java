@@ -105,6 +105,13 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
                             parts[2] = "NA"; // PatientID
                             parts[8] = "NA"; // Status
                         }
+
+                        if(availability.equalsIgnoreCase("Yes"))
+                        {
+                            parts[7]="No";
+                            parts[2]="NA";
+                            parts[8]="NA";
+                        }
                     }
                     // Rebuild the line and add it to updatedLines
                     updatedLines.add(String.join(",", parts));
