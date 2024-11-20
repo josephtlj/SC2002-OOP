@@ -21,6 +21,10 @@ public class UserView {
                 """);
     }
 
+    
+    /** 
+     * @return int
+     */
     public int showInitialMenu() {
         while (true) {
             try {

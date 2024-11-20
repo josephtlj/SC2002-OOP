@@ -14,6 +14,10 @@ public class PrescriptionService implements PrescriptionServiceInterface {
         this.prescriptionDao = prescriptionDao;
     }
 
+    
+    /** 
+     * @return List<Prescription>
+     */
     @Override
     public List<Prescription> readAllPrescription() {
         try {

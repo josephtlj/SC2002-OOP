@@ -20,6 +20,13 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
         appointmentOutcomeRecordDao = new AppointmentOutcomeRecordDao(patientID);
     }
 
+    
+    /** 
+     * @param patientID
+     * @param date
+     * @param timeSlot
+     * @return AppointmentOutcomeRecord
+     */
     // SERVICES
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {

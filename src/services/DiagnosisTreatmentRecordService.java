@@ -16,6 +16,10 @@ public class DiagnosisTreatmentRecordService
         this.diagnosisTreatmentRecordDao= new DiagnosisTreatmentRecordDao(patientID);
     }
 
+    
+    /** 
+     * @param treatRec
+     */
     //METHODS
     public void addDiagnosisTreatmentRecord(DiagnosisTreatmentRecord treatRec)
     {

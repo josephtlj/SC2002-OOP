@@ -28,6 +28,10 @@ public class PrescriptionDao implements PrescriptionDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<Prescription>
+     */
     @Override
     public List<Prescription> getAllPrescriptions() {
         List<Prescription> prescriptions = new ArrayList<>();

@@ -17,6 +17,10 @@ public class PrescriptionDAO {
         this.status = status;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // Getter and Setter methods
     public UUID getPrescriptionId() {
         return prescriptionId;

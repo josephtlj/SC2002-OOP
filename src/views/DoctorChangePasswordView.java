@@ -18,6 +18,10 @@ public class DoctorChangePasswordView {
         ChangePasswordView(passwordManager);
     }
 
+    
+    /** 
+     * @param passwordManager
+     */
     // METHODS
     public void ChangePasswordView(DoctorPasswordController passwordManager) {
         System.out.println("""

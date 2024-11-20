@@ -15,6 +15,10 @@ public class ChangePasswordOutcome
         this.errorType= errorType;
     }
 
+    
+    /** 
+     * @param outcome
+     */
     //SET METHODS
     public void setOutcome(boolean outcome)
     {

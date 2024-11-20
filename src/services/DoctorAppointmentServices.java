@@ -19,6 +19,11 @@ public class DoctorAppointmentServices implements DoctorAppointmentServicesInter
     {
         this.doctorAppointmentDao= new DoctorAppointmentDao(doctorID);
     }
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     //METHODS
 
     public List<Appointment> getAllAppointments(String doctorID)

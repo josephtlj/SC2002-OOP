@@ -14,6 +14,10 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
     //ATTRIBUTES
     Scanner scanner= new Scanner(System.in);
 
+    
+    /** 
+     * @return int
+     */
     //METHODS
 
     //CHOOSE TO VIEW DAY OR MONTH

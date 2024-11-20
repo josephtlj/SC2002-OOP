@@ -23,6 +23,10 @@ public class Prescription {
         this.medicineId = medicineId;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // GETTERS AND SETTERS
     public UUID getPrescriptionId(){
         return this.prescriptionId;

@@ -18,6 +18,13 @@ public class DoctorPasswordController
         this.doctorPasswordService= new DoctorPasswordService(ID);
     }
 
+    
+    /** 
+     * @param newPassword
+     * @param confirmPassword
+     * @param ID
+     * @return ChangePasswordOutcome
+     */
     //METHODS
     public ChangePasswordOutcome updateDoctorPassword(String newPassword, String confirmPassword, String ID)
     {

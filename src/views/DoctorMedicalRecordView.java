@@ -55,6 +55,10 @@ public class DoctorMedicalRecordView implements DoctorMedicalRecordViewInterface
         }while(!validInput);
     }
 
+    
+    /** 
+     * @param medicalRecord
+     */
     public void printMedicalRecord(MedicalRecord medicalRecord)
     {
         System.out.println("""

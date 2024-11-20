@@ -52,6 +52,10 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         }
     }
 
+    
+    /** 
+     * @return boolean
+     */
     // CONSTRUCTOR
     // public AppointmentOutcomeRecordDao(int ID) {
     // if (ID.charAt(0) == 'D') {

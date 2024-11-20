@@ -92,6 +92,12 @@ public class Calendar
         }
     }
 
+    
+    /** 
+     * @param month
+     * @param day
+     * @return Optional<CalendarDay>
+     */
     //GET METHODS
     public Optional<CalendarDay> getDay(int month, int day) 
     {

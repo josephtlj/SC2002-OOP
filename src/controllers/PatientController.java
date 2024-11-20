@@ -12,6 +12,11 @@ public class PatientController {
         this.medicalRecordController = medicalRecordController;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return MedicalRecord
+     */
     public MedicalRecord handleViewMedicalRecord(String hospitalId) {
         try {
             return medicalRecordController.handleViewMedicalRecord(hospitalId);

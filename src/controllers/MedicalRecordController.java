@@ -10,6 +10,11 @@ public class MedicalRecordController {
         this.medicalRecordService = medicalRecordService;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return MedicalRecord
+     */
     public MedicalRecord handleViewMedicalRecord(String hospitalId){
         try {
             

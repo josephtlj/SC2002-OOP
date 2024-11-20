@@ -19,6 +19,11 @@ public class PatientService implements PatientServiceInterface {
         this.patientDao = patientDao;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Patient
+     */
     @Override
     public Patient readPatientByHospitalId(String hospitalId) {
         Patient patient = patientDao.getPatientByHospitalId(hospitalId);

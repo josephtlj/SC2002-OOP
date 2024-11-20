@@ -13,6 +13,10 @@ public class Session {
     private Session() {
     }
 
+    
+    /** 
+     * @return Session
+     */
     public static Session getCurrentSession() {
         if (currentSession == null) {
             currentSession = new Session();

@@ -41,6 +41,11 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
 
     }
 
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     // READ ALL APPOINTMENTSLOTS
     public List<Appointment> getAllAppointments(String doctorID) {
         List<Appointment> appointments = new ArrayList<>();

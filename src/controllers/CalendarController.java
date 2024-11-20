@@ -20,6 +20,11 @@ public class CalendarController
         this.calendarService= new CalendarService(ID);
     }
 
+    
+    /** 
+     * @param date
+     * @return ApplyAnnualLeaveError
+     */
     //METHODS
 
     //APPLY ANNUAL LEAVE

@@ -29,6 +29,12 @@ public class AdministratorService implements AdministratorServiceInterface {
         this.doctorDao = doctorDao;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPassword
+     * @param confirmPassword
+     */
     @Override
     public void updatePassword(String hospitalId, String newPassword, String confirmPassword) {
         if (!newPassword.equals(confirmPassword)) {

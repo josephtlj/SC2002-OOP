@@ -30,6 +30,12 @@ public class MedicineDao implements MedicineDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param medicineQuantity
+     * @param medicineAlert
+     */
     @Override
     public void createMedicine(String medicineName, int medicineQuantity, int medicineAlert) {
         Medicine medicine = new Medicine(UUID.randomUUID(), medicineName, medicineQuantity, medicineAlert);

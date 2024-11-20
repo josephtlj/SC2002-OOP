@@ -23,6 +23,13 @@ public class PharmacistController {
         this.appointmentOutcomeRecordController = new AppointmentOutcomeRecordController(0);
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPassword
+     * @param confirmPassword
+     * @return boolean
+     */
     public boolean handleUpdatePassword(String hospitalId, String newPassword, String confirmPassword) {
         try {
             pharmacistService.updatePassword(hospitalId, newPassword, confirmPassword);

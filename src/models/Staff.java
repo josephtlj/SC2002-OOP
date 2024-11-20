@@ -21,11 +21,19 @@ public class Staff extends User {
         this.age = age;
     }
 
+    
+    /** 
+     * @return String
+     */
     // GETTERS AND SETTERS
     public String getName() {
         return this.name;
     }
 
+    
+    /** 
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }

@@ -23,6 +23,10 @@ public class AppointmentOutcomeRecordView {
         printAppointmentOutcomeRecordView(doctorID);
     }
 
+    
+    /** 
+     * @param doctorID
+     */
     // METHODS
     public void printAppointmentOutcomeRecordView(String doctorID) {
         int choice = -1;

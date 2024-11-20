@@ -9,6 +9,10 @@ import src.interfaces.UserDaoInterface;
 // import java.util.Properties;
 
 public class UserDao implements UserDaoInterface {
+    
+    /** 
+     * @return User
+     */
     // private static String PATIENTDB_PATH;
 
     // static {

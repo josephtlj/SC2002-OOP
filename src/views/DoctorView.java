@@ -13,6 +13,10 @@ public class DoctorView implements DoctorViewInterface
 {
     private Scanner doctorScanner = new Scanner(System.in);
 
+    
+    /** 
+     * @param doctor
+     */
     public void displayDoctorLoginView(Doctor doctor) 
     {
 

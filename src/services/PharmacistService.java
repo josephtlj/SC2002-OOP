@@ -19,6 +19,11 @@ public class PharmacistService implements PharmacistServiceInterface {
         this.pharmacistDao = pharmacistDao;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Pharmacist
+     */
     @Override
     public Pharmacist readPharmacistByHospitalId(String hospitalId){
         Pharmacist pharmacist = pharmacistDao.getPharmacistByHospitalId(hospitalId);

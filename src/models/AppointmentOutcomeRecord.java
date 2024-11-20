@@ -22,6 +22,10 @@ public class AppointmentOutcomeRecord {
         this.consultationNotes = notes;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // Getters and Setters for attributes
     public UUID getAppointmentRecordId() {
         return this.appointmentRecordId;

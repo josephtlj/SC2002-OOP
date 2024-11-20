@@ -21,6 +21,13 @@ public class AdministratorController {
         this.medicineController = medicineController;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPassword
+     * @param confirmPassword
+     * @return boolean
+     */
     public boolean handleUpdatePassword(String hospitalId, String newPassword, String confirmPassword) {
         try {
             administratorService.updatePassword(hospitalId, newPassword, confirmPassword);

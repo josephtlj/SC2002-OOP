@@ -24,6 +24,13 @@ public class AppointmentOutcomeRecordController
         this.appointmentOutcomeRecordServices= new AppointmentOutcomeRecordServices(patientID);
     }
 
+    
+    /** 
+     * @param outcomeRecord
+     * @param serviceType
+     * @param notes
+     * @return boolean
+     */
     //METHODS
 
     public boolean updateOutcomeRecord(AppointmentOutcomeRecord outcomeRecord, String serviceType ,String notes )

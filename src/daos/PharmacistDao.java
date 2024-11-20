@@ -30,6 +30,11 @@ public class PharmacistDao implements PharmacistDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Pharmacist
+     */
     @Override
     public Pharmacist getPharmacistByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(PHARMACISTDB_PATH))) {

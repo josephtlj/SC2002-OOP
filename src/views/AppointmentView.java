@@ -9,6 +9,10 @@ import java.time.*;
 
 public class AppointmentView implements AppointmentViewInterface {
 
+    
+    /** 
+     * @param appointments
+     */
     public void printAppointmentOnADateView(List<Appointment> appointments) {
         // Print header
         String headerFormat = "| %-15s | %-21s | %-15s |\n";

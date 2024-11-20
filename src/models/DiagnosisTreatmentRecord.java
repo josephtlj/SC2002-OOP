@@ -20,6 +20,10 @@ public class DiagnosisTreatmentRecord {
         this.appointment = appointment;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // Methods
     public UUID getDiagnosisTreatmentRecordId() {
         return this.diagnosisTreatmentRecordId;

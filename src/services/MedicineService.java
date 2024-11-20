@@ -16,6 +16,10 @@ public class MedicineService implements MedicineServiceInterface {
         this.medicineDao = medicineDao;
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     @Override
     public List<Medicine> readAllMedication() {
         try {

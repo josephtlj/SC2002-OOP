@@ -13,6 +13,10 @@ public class MedicineController {
         this.medicineService = medicineService;
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     public List<Medicine> handleViewMedicationInventory() {
         try {
             return medicineService.readAllMedication();

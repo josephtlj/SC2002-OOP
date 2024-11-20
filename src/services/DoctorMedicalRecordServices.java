@@ -10,6 +10,11 @@ public class DoctorMedicalRecordServices
     //ATTRIBUTES
     MedicalRecordDao medicalRecordDao= new MedicalRecordDao();
 
+    
+    /** 
+     * @param patientID
+     * @return MedicalRecord
+     */
     //METHODS
     public MedicalRecord getMedicalRecord(String patientID)
     {

@@ -40,6 +40,11 @@ public class CalendarDao implements CalendarDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param date
+     * @return CalendarDayStatus
+     */
     // METHOD TO GET STATUS FOR SPECIFIC DATE
     public CalendarDayStatus getStatus(LocalDate date) {
         try (BufferedReader br = new BufferedReader(new FileReader(CalendarFile))) {

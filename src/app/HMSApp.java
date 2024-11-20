@@ -62,6 +62,10 @@ import src.daos.PatientDao;
 import src.daos.UserDao;
 
 public class HMSApp {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         // INSTANTIATE DEPENDENCIES
         PrescriptionDaoInterface prescriptionDao = new PrescriptionDao();

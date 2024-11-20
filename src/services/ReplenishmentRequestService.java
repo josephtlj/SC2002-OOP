@@ -20,6 +20,11 @@ public class ReplenishmentRequestService implements ReplenishmentRequestServiceI
         this.medicineDao = medicineDao;
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param replenishmentQuantity
+     */
     @Override
     public void createReplenishmentRequest(String medicineName, int replenishmentQuantity) {
 

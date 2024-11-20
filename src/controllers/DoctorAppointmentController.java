@@ -27,6 +27,10 @@ public class DoctorAppointmentController {
 
     }
 
+    
+    /** 
+     * @return DoctorAppointmentActionType
+     */
     public DoctorAppointmentActionType getActionType() {
         return actionType;
     }

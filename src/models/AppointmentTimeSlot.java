@@ -14,6 +14,10 @@ public class AppointmentTimeSlot
         this.endTime=LocalTime.parse(endTime);
     }
 
+    
+    /** 
+     * @return LocalTime
+     */
     // Getters
     public LocalTime getStartTime() 
     {

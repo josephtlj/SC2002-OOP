@@ -30,6 +30,12 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
         }
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param replenishmentQuantity
+     * @param medicineId
+     */
     @Override
     public void createReplenishmentRequest(String medicineName, int replenishmentQuantity, UUID medicineId) {
         ReplenishmentRequest replenishmentRequest = new ReplenishmentRequest(UUID.randomUUID(), medicineName,

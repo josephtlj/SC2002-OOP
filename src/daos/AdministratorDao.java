@@ -30,6 +30,11 @@ public class AdministratorDao implements AdministratorDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Administrator
+     */
     @Override
     public Administrator getAdministratorByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(ADMINISTRATORDB_PATH))) {

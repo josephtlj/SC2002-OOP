@@ -27,6 +27,10 @@ public class Appointment {
         this.doctorID = doctorID;
     }
 
+    
+    /** 
+     * @return AppointmentTimeSlot
+     */
     // GET METHODS
     public AppointmentTimeSlot getAppointmentTimeSlot() {
         return timeSlot;

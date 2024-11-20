@@ -16,6 +16,10 @@ public class DiagnosisTreatmentRecordController
         this.diagnosisTreatmentRecordService= new DiagnosisTreatmentRecordService(patientID);
     }
 
+    
+    /** 
+     * @param treatRec
+     */
     //METHODS
 
     //EDIT DIAGNOSIS TREATMENT RECORD

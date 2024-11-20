@@ -17,6 +17,10 @@ public class CalendarService
         this.calendarDao= new CalendarDao(ID);
     }
 
+    
+    /** 
+     * @return List<LocalDate>
+     */
     //METHODS
 
     public List<LocalDate> getMedicalLeaveDates()

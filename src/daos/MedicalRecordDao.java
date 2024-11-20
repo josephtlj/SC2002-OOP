@@ -31,6 +31,10 @@ public class MedicalRecordDao implements MedicalRecordDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<MedicalRecord>
+     */
     @Override
     public List<MedicalRecord> getAllMedicalRecords() {
         List<MedicalRecord> medicalRecords = new ArrayList<>();

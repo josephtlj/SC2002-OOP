@@ -33,6 +33,12 @@ public class UserService implements UserServiceInterface {
         this.administratorService = administratorService;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param password
+     * @return User
+     */
     @Override
     public User login(String hospitalId, String password) {
         String rolePrefix = hospitalId.substring(0, 2);

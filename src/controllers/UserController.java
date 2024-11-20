@@ -9,6 +9,12 @@ public class UserController {
         this.userService = userService;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param password
+     * @return boolean
+     */
     public boolean handleLogin(String hospitalId, String password) {
         try {
             userService.login(hospitalId, password);

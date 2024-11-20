@@ -18,6 +18,10 @@ public class Medicine {
         this.medicineAlert = medicineAlert;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // INSTANCE METHODS
     public UUID getMedicineId() {
         return this.medicineId;

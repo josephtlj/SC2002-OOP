@@ -17,6 +17,10 @@ public class AppointmentOutcomeRecordDAO {
         this.medicationStatus = "Pending";  // Default status
     }
 
+    
+    /** 
+     * @return String
+     */
     // Getters and setters
     public String getAppointmentId() {
         return appointmentId;

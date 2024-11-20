@@ -102,6 +102,10 @@ public class CalendarView
 
     }
 
+    
+    /** 
+     * @param date
+     */
     public void printCalendarDate(LocalDate date)
     {
         CalendarDayStatus status = calendarManager.getStatusForDate(date); 

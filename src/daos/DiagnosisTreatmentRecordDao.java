@@ -48,6 +48,14 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
 
     }
 
+    
+    /** 
+     * @param diagnosis
+     * @param prescription
+     * @param treatmentPlan
+     * @param date
+     * @return boolean
+     */
     // UPDATE DIAGNOSIS TREATMENT RECORD FOR PATIENT ON SPECIFIC DATE
     public boolean updateDiagnosisTreatmentRecord(String diagnosis, String prescription, String treatmentPlan,
             LocalDate date) {

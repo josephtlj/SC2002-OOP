@@ -24,6 +24,11 @@ public class DoctorPasswordService
         this.doctorDao= new DoctorDao();
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Doctor
+     */
     public Doctor readDoctorByHospitalId(String hospitalId){
         Doctor doctor = doctorDao.getDoctorByHospitalId(hospitalId);
         if (doctor == null) {

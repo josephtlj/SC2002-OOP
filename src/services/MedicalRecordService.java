@@ -11,6 +11,11 @@ public class MedicalRecordService implements MedicalRecordServiceInterface {
         this.medicalRecordDao = medicalRecordDao;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return MedicalRecord
+     */
     @Override
     public MedicalRecord readMedicalRecord(String hospitalId) {
         MedicalRecord medicalRecord = medicalRecordDao.getMedicalRecordByHospitalId(hospitalId);

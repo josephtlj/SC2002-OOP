@@ -29,6 +29,10 @@ public class DoctorDao implements DoctorDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<Doctor>
+     */
     // READ ALL DOCTORS
     public List<Doctor> getAllDoctors() {
         List<Doctor> doctors = new ArrayList<>();

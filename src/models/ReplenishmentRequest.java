@@ -28,6 +28,10 @@ public class ReplenishmentRequest {
         this.medicineId = medicineId;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     // GETTERS AND SETTERS
     public UUID getRequestId() {
         return this.requestId;

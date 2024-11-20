@@ -36,6 +36,10 @@ public class Doctor extends Staff
         this.doctorCalendar= new Calendar(hospitalId);
     }
 
+    
+    /** 
+     * @return String
+     */
     //GET METHODS
     public String getDepartment()
     {

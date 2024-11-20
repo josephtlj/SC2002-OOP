@@ -29,6 +29,11 @@ public class PatientDao implements PatientDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Patient
+     */
     @Override
     public Patient getPatientByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(PATIENTDB_PATH))) {

@@ -73,6 +73,10 @@ public class MedicalRecord {
         this.patient = patient;
     }
 
+    
+    /** 
+     * @return UUID
+     */
     public UUID getMedicalRecordId() {
         return this.medicalRecordId;
     }

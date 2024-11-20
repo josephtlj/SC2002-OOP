@@ -11,6 +11,10 @@ public class CalendarDay
         this.dayStatus = CalendarDayStatus.AVAILABLE; //DEFAULT
     }
 
+    
+    /** 
+     * @return CalendarDayStatus
+     */
     //GET AND SET METHODS
     public CalendarDayStatus getDayStatus() 
     {

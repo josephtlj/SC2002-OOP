@@ -16,6 +16,12 @@ public class ReplenishmentRequestController {
         this.medicineController = medicineController;
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param replenishmentQuantity
+     * @return boolean
+     */
     public boolean handleSubmitReplenishmentRequest(String medicineName, int replenishmentQuantity) {
         try {
             replenishmentRequestService.createReplenishmentRequest(medicineName, replenishmentQuantity);

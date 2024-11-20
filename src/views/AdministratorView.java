@@ -435,6 +435,10 @@ public class AdministratorView {
         }
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     private List<Medicine> showViewMedicineInventory() {
         List<Medicine> medicineList = administratorController.handleViewMedicationInventory();
 

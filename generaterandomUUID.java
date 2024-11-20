@@ -5,6 +5,10 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
 public class generaterandomUUID {
+    
+    /** 
+     * @param args
+     */
     public  static void main(String[] args){
         for (int i=0; i<10; i++){
             // UUID variable = UUID.randomUUID();
