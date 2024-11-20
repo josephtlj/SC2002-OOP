@@ -24,7 +24,7 @@ public class AppointmentOutcomeRecord {
 
     // Getters and Setters for attributes
     public UUID getAppointmentRecordId() {
-        return this.getAppointmentRecordId();
+        return this.appointmentRecordId;
     }
 
     public void setAppointmentRecordId(UUID appointmentRecordId) {

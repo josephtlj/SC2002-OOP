@@ -1,11 +1,14 @@
 package src.views;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.Scanner;
 
 import src.models.MedicalRecord;
 import src.models.Session;
 import src.controllers.PatientController;
+import src.daos.AppointmentOutcomeRecordDao;
+import src.models.AppointmentOutcomeRecord;
 
 public class PatientView {
     private final PatientController patientController;
@@ -63,7 +66,7 @@ public class PatientView {
 
                             break;
                         case 8:
-
+                            showViewPastAppointmentOutcomeRecords();
                             break;
                         case 9:
                             Session.getCurrentSession().logout();
@@ -219,6 +222,36 @@ public class PatientView {
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
         }
+    }
 
+    private void showViewPastAppointmentOutcomeRecords() {
+        try {
+            String patientHospitalId = Session.getCurrentSession().getCurrentUser().getHospitalId();
+
+            System.out.println("""
+                    =============================================================
+                    |             Hospital Management System (HMS)!             |
+                    |          View Past Appointment Outcome Records            |
+                    =============================================================
+                    """);
+            AppointmentOutcomeRecordDao apptOutRecDao = new AppointmentOutcomeRecordDao(patientHospitalId);
+            List<AppointmentOutcomeRecord> apptOutRecList = apptOutRecDao
+                    .getAllAppointmentOutcomeRecords(patientHospitalId);
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+            for (AppointmentOutcomeRecord apptOutRec : apptOutRecList) {
+                System.out.println("-".repeat(60));
+                System.out.printf("%-25s %-30s\n", "Appointment Record Id:", apptOutRec.getAppointmentRecordId());
+                System.out.printf("%-25s %-30s\n", "Date:", apptOutRec.getDate());
+                System.out.printf("%-25s %-30s\n", "Services Provided:", apptOutRec.getServiceType());
+                System.out.printf("%-25s %-30s\n", "Consultation Notes:", apptOutRec.getConsultationNotes());
+                System.out.println("-".repeat(60));
+            }
+            return;
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a number.");
+        }
     }
 }

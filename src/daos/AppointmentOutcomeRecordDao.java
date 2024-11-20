@@ -285,6 +285,64 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         return completedAppointments;
     }
 
+    public List<AppointmentOutcomeRecord> getAllAppointmentOutcomeRecords(String patientId) {
+        List<AppointmentOutcomeRecord> allRecords = new ArrayList<>();
+    
+        // Locate the directory containing all _AppOutRec.csv files
+        File recordsDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
+        if (!recordsDir.exists() || !recordsDir.isDirectory()) {
+            System.err.println("Directory does not exist: " + APPOINTMENTOUTCOMERECORDDB_PATH);
+            return allRecords; // Return empty list if directory is not found
+        }
+    
+        // Get all files ending with _AppOutRec.csv
+        File[] files = recordsDir.listFiles(file -> file.getName().equals(patientId +"_AppOutRec.csv"));
+        if (files == null || files.length == 0) {
+            System.err.println("No appointment outcome record files found in the directory.");
+            return allRecords; // Return empty list if no files are found
+        }
+    
+        // Parse each file
+        for (File file : files) {
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                String line;
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    
+                // Skip the header row
+                br.readLine();
+    
+                while ((line = br.readLine()) != null) {
+                    String[] parts = line.split(","); // Assuming fields are comma-separated
+                    if (parts.length == 8) { // Ensure correct format
+                        // Extract fields
+                        String appointmentRecordId = parts[0].trim();
+                        String appointmentId = parts[1].trim();
+
+                        LocalDate date = LocalDate.parse(parts[4].trim(), formatter);
+                        String serviceType = parts[5].trim();
+                        String medicationStatus = parts[6].trim();
+                        String consultationNotes = parts[7].trim();
+    
+                        // Create and add the record
+                        AppointmentOutcomeRecord record = new AppointmentOutcomeRecord(
+                                UUID.fromString(appointmentRecordId),
+                                appointmentId,
+                                date,
+                                serviceType,
+                                consultationNotes);
+                        allRecords.add(record);
+                    }
+                }
+            } catch (IOException e) {
+                System.err.println("Error reading file: " + file.getName() + " - " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    
+        return allRecords;
+    }
+    
+
 //     public List<AppointmentOutcomeRecord> getAllAppointmentOutcomeRecordsByDay(LocalDate date) {
 //         List<AppointmentOutcomeRecord> recordsByDay = new ArrayList<>();
 
