@@ -1,22 +1,32 @@
 package src.services;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Comparator;
+import java.util.List;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
 import src.models.Administrator;
+import src.models.Staff;
 
 import src.interfaces.AdministratorServiceInterface;
-
+import src.interfaces.DoctorDaoInterface;
+import src.interfaces.PharmacistDaoInterface;
 import src.interfaces.AdministratorDaoInterface;
 
 public class AdministratorService implements AdministratorServiceInterface {
     private final AdministratorDaoInterface administratorDao;
+    private final PharmacistDaoInterface pharmacistDao;
+    private final DoctorDaoInterface doctorDao;
 
-    public AdministratorService(AdministratorDaoInterface administratorDao) {
+    public AdministratorService(AdministratorDaoInterface administratorDao, PharmacistDaoInterface pharmacistDao,
+            DoctorDaoInterface doctorDao) {
         this.administratorDao = administratorDao;
+        this.pharmacistDao = pharmacistDao;
+        this.doctorDao = doctorDao;
     }
 
     @Override
@@ -40,6 +50,39 @@ public class AdministratorService implements AdministratorServiceInterface {
         administrator.setSalt(newSalt);
         administrator.setPassword(hashedPassword);
         administratorDao.updateAdministrator(administrator);
+    }
+
+    @Override
+    public List<Staff> readHospitalStaffByFilter(int filter) {
+        List<Staff> allStaff = new ArrayList<>();
+
+        List<Staff> administratorList = administratorDao.getAllStaffAdministrators();
+        List<Staff> pharmacistList = pharmacistDao.getAllStaffPharmacists();
+        List<Staff> doctorList = doctorDao.getAllStaffDoctors();
+
+        allStaff.addAll(administratorList);
+        allStaff.addAll(pharmacistList);
+        allStaff.addAll(doctorList);
+
+        switch (filter) {
+            case 1:
+                allStaff.sort(Comparator.comparing(Staff::getName));
+                break;
+            case 2:
+                allStaff.sort(Comparator.comparing(Staff::getRole));
+                break;
+            case 3:
+                allStaff.sort(Comparator.comparing(Staff::getGender));
+                break;
+            case 4:
+                allStaff.sort(Comparator.comparing(Staff::getAge));
+                break;
+
+            default:
+                break;
+        }
+
+        return allStaff;
     }
 
     @Override

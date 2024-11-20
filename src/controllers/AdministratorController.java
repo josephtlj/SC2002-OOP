@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import src.models.ReplenishmentRequest;
+import src.models.Staff;
 import src.models.Medicine;
 
 import src.interfaces.AdministratorServiceInterface;
@@ -27,6 +28,15 @@ public class AdministratorController {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return false;
+        }
+    }
+
+    public List<Staff> handleViewHospitalStaff(int filter){
+        try {
+            return administratorService.readHospitalStaffByFilter(filter);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return null;
         }
     }
 

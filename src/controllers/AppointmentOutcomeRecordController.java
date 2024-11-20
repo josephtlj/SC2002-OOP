@@ -58,8 +58,8 @@ public class AppointmentOutcomeRecordController
         return appointmentOutcomeRecordServices.checkDate(date);
     }
 
-    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay(){
-    //     return appointmentOutcomeRecordServices.readAllAppointmentOutcomeRecordsByDay();
+    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay(LocalDate date){
+    //     return appointmentOutcomeRecordServices.readAllAppointmentOutcomeRecordsByDay(date);
     // }
     
 }

@@ -1,5 +1,6 @@
 package src.controllers;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import src.models.AppointmentOutcomeRecord;
@@ -41,9 +42,9 @@ public class PharmacistController {
         }
     }
 
-    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay() {
+    // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay(LocalDate date) {
     //     try {
-    //         return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecordsByDay();
+    //         return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecordsByDay(date);
     //     } catch (IllegalArgumentException e) {
     //         System.out.println(e.getMessage());
     //         return null;

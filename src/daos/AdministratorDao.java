@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Properties;
 
 import src.models.Administrator;
-
+import src.models.Staff;
 import src.interfaces.AdministratorDaoInterface;
 
 public class AdministratorDao implements AdministratorDaoInterface {
@@ -52,6 +52,33 @@ public class AdministratorDao implements AdministratorDaoInterface {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public List<Staff> getAllStaffAdministrators() {
+        List<Staff> administrators = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(ADMINISTRATORDB_PATH))) {
+            // Skip the header row
+            br.readLine();
+
+            // Read each line from the CSV and create a Pharmacist object
+            String line;
+            while ((line = br.readLine()) != null) {
+                Administrator administrator = parseAdministrator(line);
+
+                // Create Staff object and add to the list
+                Staff StaffAdministrator = new Staff(administrator.getHospitalId(), administrator.getPassword(),
+                        administrator.getRole(), administrator.getSalt(), administrator.getIsFirstLogin(),
+                        administrator.getName(), administrator.getGender(), administrator.getAge());
+                administrators.add(StaffAdministrator);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return administrators;
     }
 
     @Override

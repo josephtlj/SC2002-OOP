@@ -55,6 +55,7 @@ import src.daos.PrescriptionDao;
 import src.daos.MedicineDao;
 import src.daos.MedicalRecordDao;
 import src.daos.AdministratorDao;
+import src.daos.DoctorDao;
 import src.daos.PharmacistDao;
 import src.daos.PatientDao;
 import src.daos.UserDao;
@@ -71,12 +72,14 @@ public class HMSApp {
         PatientDaoInterface patientDao = new PatientDao();
         UserDaoInterface userDao = new UserDao();
 
+        DoctorDao doctorDao = new DoctorDao();
+
         PrescriptionServiceInterface prescriptionService = new PrescriptionService(prescriptionDao);
         MedicineServiceInterface medicineService = new MedicineService(medicineDao);
         ReplenishmentRequestServiceInterface replenishmentRequestService = new ReplenishmentRequestService(
                 replenishmentRequestDao, medicineDao);
         MedicalRecordServiceInterface medicalRecordService = new MedicalRecordService(medicalRecordDao);
-        AdministratorServiceInterface administratorService = new AdministratorService(administratorDao);
+        AdministratorServiceInterface administratorService = new AdministratorService(administratorDao, pharmacistDao, doctorDao);
         PharmacistServiceInterface pharmacistService = new PharmacistService(pharmacistDao);
         PatientServiceInterface patientService = new PatientService(patientDao);
         UserServiceInterface userService = new UserService(userDao, patientService, pharmacistService,

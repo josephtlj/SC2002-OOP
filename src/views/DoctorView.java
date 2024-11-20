@@ -112,7 +112,7 @@ public class DoctorView implements DoctorViewInterface
                 doctorScanner.nextLine();
             }
 
-        } while (doctorChoice != 9);
+        } while (doctorChoice != 8);
             
         }
 }

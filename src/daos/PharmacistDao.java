@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Properties;
 
 import src.models.Pharmacist;
-
+import src.models.Staff;
 import src.interfaces.PharmacistDaoInterface;
 
 public class PharmacistDao implements PharmacistDaoInterface {
@@ -52,6 +52,34 @@ public class PharmacistDao implements PharmacistDaoInterface {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public List<Staff> getAllStaffPharmacists(){
+        List<Staff> pharmacists = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(PHARMACISTDB_PATH))) {
+            // Skip the header row
+            br.readLine();
+
+            // Read each line from the CSV and create a Pharmacist object
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(","); // Split the line by commas
+                if (parts.length == 8) // Ensure the correct number of columns
+                {
+                    Pharmacist pharmacist = parsePharmacist(line);
+
+                    // Create Staff object and add to the list
+                    Staff Staffpharmacist = new Staff(pharmacist.getHospitalId(), pharmacist.getPassword(), pharmacist.getRole(), pharmacist.getSalt(), pharmacist.getIsFirstLogin(), pharmacist.getName(), pharmacist.getGender(), pharmacist.getAge());
+                    pharmacists.add(Staffpharmacist);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return pharmacists;
     }
 
     @Override

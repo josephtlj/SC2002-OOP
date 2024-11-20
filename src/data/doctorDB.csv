@@ -1,7 +1,7 @@
 hospitalId,password,role,salt,isFirstLogin,name,gender,age,department
 D001,LsS8eS/Htuqrpsw7FTxYOg==,DOCTOR,8+g8VM8yq8S9Jp1u5b7Euw==,false,John Smith,MALE,45,CARDIOLOGY
-D002,/Eahxif4o/fUlIDL9ugAIw==,DOCTOR,7Ql3XukTqnyaLpETGE0CKA==,true,Emily Clarke,Female,38,PHYSIOTHERAPY
-D003,5GIQ9uXrbjKFsT+yWGKqrQ==,DOCTOR,0hS2HDO6cMmLyA3NYiAktQ==,true,Ben Stone,Male,47,RADIOLOGY
+D002,/Eahxif4o/fUlIDL9ugAIw==,DOCTOR,7Ql3XukTqnyaLpETGE0CKA==,true,Emily Clarke,FEMALE,38,PHYSIOTHERAPY
+D003,5GIQ9uXrbjKFsT+yWGKqrQ==,DOCTOR,0hS2HDO6cMmLyA3NYiAktQ==,true,Ben Stone,MALE,47,RADIOLOGY
 D004,cuqOBlUqXlnDHcwZjGaR2w==,DOCTOR,7D4GnCzlCZboYtZ3thrdkA==,true,Sanvi Bhal,FEMALE,27,ORTHOPEDICS
 D005,frTEkvK5Jwx8DKQpOh4QAg==,DOCTOR,10m6KvdL1shCce+RQcJOng==,true,Alex Bates,MALE,52,GENERAL_SURGERY
 D006,AghXa0q1eSnvwfXOhHHedA==,DOCTOR,f6FARDAqmyOPoKx6od2J2Q==,true,Elizabeth Zott,FEMALE,31,RADIOLOGY

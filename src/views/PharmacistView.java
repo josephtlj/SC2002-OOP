@@ -1,5 +1,7 @@
 package src.views;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -103,13 +105,35 @@ public class PharmacistView {
     }
 
     private void showAppointmentOutcomeRecords() {
-        System.out.println("""
-                =============================================================
-                |             Hospital Management System (HMS)!             |
-                |            View Appointment Outcome Record(s)             |
-                =============================================================
-                """);
-        // List<AppointmentOutcomeRecord> appointmentOutcomeRecordList = pharmacistController.handleViewAppointmentOutcomeRecords();
+        // System.out.println("""
+        //         =============================================================
+        //         |             Hospital Management System (HMS)!             |
+        //         |            View Appointment Outcome Record(s)             |
+        //         =============================================================
+        //         """);
+
+        // boolean viewApptOutRec = false;
+        // LocalDate date;
+
+        // while (!viewApptOutRec) {
+        //     System.out.println("Enter the day which you wish to view Appointment Outcome Records (dd/MM/yyyy)");
+        //     String viewDate = scanner.nextLine();
+
+        //     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            
+        //     try {
+        //         // Try to parse the input string
+        //         date = LocalDate.parse(viewDate, formatter);
+        //         viewApptOutRec = true; // Set flag to true if parsing succeeds
+        //         System.out.println("Valid date: " + date);
+        //     } catch (Exception e) {
+        //         // Handle invalid date format
+        //         System.out.println("Invalid date format. Please try again using the format dd/MM/yyyy.");
+        //     }
+        // }
+
+        // List<AppointmentOutcomeRecord> appointmentOutcomeRecordList = pharmacistController
+        //         .handleViewAppointmentOutcomeRecordsByDay(date);
     }
 
     private void showMedicationInventory() {

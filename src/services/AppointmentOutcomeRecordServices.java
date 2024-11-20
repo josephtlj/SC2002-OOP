@@ -21,7 +21,6 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
     }
 
     // SERVICES
-
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {
         List<Appointment> completedAppointments = appointmentOutcomeRecordDao.getCompletedAppointmentsByPatientId(patientID);
@@ -74,4 +73,8 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
             return false;
         }
     }
+
+    // public List<AppointmentOutcomeRecord> readAllAppointmentOutcomeRecordsByDay(LocalDate date){
+    //     return appointmentOutcomeRecordDao.getAllAppointmentOutcomeRecordsByDay(date);
+    // }
 }

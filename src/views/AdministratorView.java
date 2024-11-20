@@ -1,10 +1,11 @@
 package src.views;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import src.models.Session;
-
+import src.models.Staff;
 import src.models.Administrator;
 import src.models.Pharmacist;
 import src.models.ReplenishmentRequest;
@@ -48,7 +49,7 @@ public class AdministratorView {
                             showUpdatePassword();
                             break;
                         case 2:
-                            // showViewAndManageHospitalStaff();
+                            showViewAndManageHospitalStaff();
                             break;
                         case 3:
                             // showViewAppointmentDetails();
@@ -108,26 +109,111 @@ public class AdministratorView {
     }
 
     private void showViewAndManageHospitalStaff() {
-        System.out.println("""
-                =============================================================
-                |             Hospital Management System (HMS)!             |
-                |              View and Manage Hospital Staff               |
-                =============================================================
-                (1) View Hospital Staff
-                (2) Manage Hospital Staff
-                """);
-        // List<Administrator> administratorList;
-        // List<Pharmacist> pharmacistList;
+        int administratorChoice = 99999;
+        while (administratorChoice != 3) {
+            try {
+                System.out.println("""
+                        =============================================================
+                        |             Hospital Management System (HMS)!             |
+                        |              View and Manage Hospital Staff               |
+                        =============================================================
+                        (1) View Hospital Staff
+                        (2) Manage Hospital Staff
+                        (3) Go back to previous page
+                        """);
+                System.out.print("Your choice: ");
+                String input = scanner.nextLine();
 
-        // for (Medicine medicine : administratorList) {
-        // System.out.printf("%-25s %-25s\n", "Medicine Name:",
-        // medicine.getMedicineName());
-        // System.out.printf("%-25s %-25s\n", "Medicine Quantity:",
-        // medicine.getMedicineQuantity());
-        // System.out.printf("%-25s %-25s\n", "Medicine Alert:",
-        // medicine.getMedicineAlert());
-        // System.out.println("-".repeat(51));
-        // }
+                try {
+                    administratorChoice = Integer.parseInt(input);
+
+                    if (administratorChoice >= 1 && administratorChoice <= 3) {
+                        switch (administratorChoice) {
+                            case 1:
+                                showViewHospitalStaff();
+                                break;
+
+                            case 2:
+                                // showManageHospitalStaff();
+                                break;
+
+                            default:
+                                break;
+                        }
+                    } else {
+                        System.out.println("Invalid choice. Please enter a choice between 1 and 3.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                }
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred. Please try again.");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void showViewHospitalStaff() {
+        List<Staff> staffList = new ArrayList<>();
+        int administratorChoice = 99999;
+        while (administratorChoice != 5) {
+            try {
+                System.out.println("""
+                        =============================================================
+                        |             Hospital Management System (HMS)!             |
+                        |                   View Hospital Staff                     |
+                        =============================================================
+                        (1) View all Staff without filter
+                        (2) Filter by role
+                        (3) Filter by gender
+                        (4) Filter by age
+                        (5) Go back to previous page
+                        """);
+
+                System.out.print("Your choice: ");
+                String input = scanner.nextLine();
+
+                try {
+                    administratorChoice = Integer.parseInt(input);
+
+                    if (administratorChoice >= 1 && administratorChoice <= 5) {
+                        switch (administratorChoice) {
+                            case 1:
+                                staffList = administratorController.handleViewHospitalStaff(1);
+                                break;
+                            case 2:
+                                staffList = administratorController.handleViewHospitalStaff(2);
+                                break;
+                            case 3:
+                                staffList = administratorController.handleViewHospitalStaff(3);
+                                break;
+                            case 4:
+                                staffList = administratorController.handleViewHospitalStaff(4);
+                                break;
+
+                            default:
+                                break;
+                        }
+                        for (Staff staff : staffList) {
+                            System.out.println("-".repeat(60));
+                            System.out.printf("%-25s %-25s\n", "Staff Name:", staff.getName());
+                            System.out.printf("%-25s %-25s\n", "Staff Role:", staff.getRole());
+                            System.out.printf("%-25s %-25s\n", "Staff Gender:", staff.getGender());
+                            System.out.printf("%-25s %-25s\n", "Staff Age:", staff.getAge());
+                            System.out.println("-".repeat(60));
+                        }
+                    } else {
+                        System.out.println("Invalid choice. Please enter a choice between 1 and 5.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                }
+
+            } catch (Exception e) {
+                System.out.println("An unexpected error occurred. Please try again.");
+                e.printStackTrace();
+            }
+        }
     }
 
     private void showViewAndManageMedicationInventory() {

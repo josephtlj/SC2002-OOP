@@ -2,10 +2,11 @@ package src.models;
 
 public class User {
     public enum Role {
-        PATIENT,
+        ADMINISTRATOR, 
         DOCTOR,
+        PATIENT,
         PHARMACIST,
-        ADMINISTRATOR
+
     }
 
     // INSTANCE VARIABLES

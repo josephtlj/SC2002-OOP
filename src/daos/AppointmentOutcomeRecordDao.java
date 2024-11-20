@@ -27,30 +27,28 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     private static String COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH;
     private File collatedAppointmentSlotsFile;
 
-    // CONSTRUCTOR
-    public AppointmentOutcomeRecordDao(String ID) {
-        if (ID.charAt(0) == 'D') {
-            return;
-        }
-
-        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
+    static {// LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
         try (InputStream input = new FileInputStream("src/resources/config.properties")) {
             Properties prop = new Properties();
             prop.load(input);
             APPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("APPOINTMENTOUTCOMERECORDDB_PATH",
                     "src/data/AppointmentOutcomeRecord");
+
+            DOCTORAPPOINTMENTSLOTSDB_PATH = prop.getProperty("DOCTORAPPOINTMENTSLOTSDB_PATH",
+                    "src/data/AppointmentSlots");
+
+            COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
+                    "src/data/AppointmentOutcomeRecord");
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
 
-        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
-        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
-            Properties prop = new Properties();
-            prop.load(input);
-            COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
-                    "src/data/AppointmentOutcomeRecord");
-        } catch (IOException ex) {
-            ex.printStackTrace();
+    // CONSTRUCTOR
+    public AppointmentOutcomeRecordDao(String ID) {
+        if (ID.charAt(0) == 'D') {
+            return;
         }
     }
 
@@ -118,7 +116,21 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     // FIND APPOINTMENT OUTCOME RECORD
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {
-                
+        File appointmentOutcomeDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
+        if (appointmentOutcomeDir.exists() && appointmentOutcomeDir.isDirectory()) {
+            File[] files = appointmentOutcomeDir.listFiles(file -> file.getName().equals(patientID + "_AppOutRec.csv"));
+
+            if (files != null && files.length > 0) {
+                appointmentOutcomeRecordFile = files[0]; // ASSIGN MATCHING FILE
+            } else {
+                System.err.println("No matching file found for ID: " + patientID);
+                return null; // Return empty list if file is not found
+            }
+        } else {
+            System.err.println("Appointment Slots directory does not exist.");
+            return null; // Return empty list if directory is not found
+        }
+
         if (appointmentOutcomeRecordFile == null) {
             System.err.println("Appointment outcome record file not initialized.");
             return null;
@@ -146,7 +158,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
 
                     if (recordDate.equals(formattedDate)) {
                         // Create and return the record if matches are found
-                        
+
                         return new AppointmentOutcomeRecord(
                                 UUID.fromString(appointmentRecordId),
                                 appointmentId,
@@ -165,17 +177,6 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     // RETURN LIST OF COMPLETED APPOINTMENTS
     public List<Appointment> getCompletedAppointments(String doctorID) {
         List<Appointment> completedAppointments = new ArrayList<>();
-
-        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
-        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
-            Properties prop = new Properties();
-            prop.load(input);
-            DOCTORAPPOINTMENTSLOTSDB_PATH = prop.getProperty("DOCTORAPPOINTMENTSLOTSDB_PATH",
-                    "src/data/AppointmentSlots");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return completedAppointments; // Return empty list if configuration fails
-        }
 
         // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
         File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
@@ -197,7 +198,6 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile))) {
             String line;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            
 
             // Skip the header row
             br.readLine();
@@ -234,21 +234,11 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
     public List<Appointment> getCompletedAppointmentsByPatientId(String patientId) {
         List<Appointment> completedAppointments = new ArrayList<>();
 
-        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
-        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
-            Properties prop = new Properties();
-            prop.load(input);
-            COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH = prop.getProperty("COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH",
-                    "src/data/AppointmentOutcomeRecord");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return completedAppointments; // Return empty list if configuration fails
-        }
-
         // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
-        File appointmentSlotsDir = new File(COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH);
-        if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
-            File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals("CollatedAppointmentOutcomeRecord.csv"));
+        File collatedRecordsDir = new File(COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH);
+        if (collatedRecordsDir.exists() && collatedRecordsDir.isDirectory()) {
+            File[] files = collatedRecordsDir
+                    .listFiles(file -> file.getName().equals("CollatedAppointmentOutcomeRecord.csv"));
 
             if (files != null && files.length > 0) {
                 doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
@@ -265,7 +255,7 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile))) {
             String line;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            
+
             // Skip the header row
             br.readLine();
 
@@ -294,6 +284,90 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
 
         return completedAppointments;
     }
+
+//     public List<AppointmentOutcomeRecord> getAllAppointmentOutcomeRecordsByDay(LocalDate date) {
+//         List<AppointmentOutcomeRecord> recordsByDay = new ArrayList<>();
+
+//         // Locate the file
+//         File collatedRecordsDir = new File(COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH);
+//         if (!collatedRecordsDir.exists() || !collatedRecordsDir.isDirectory()) {
+//             System.err.println("Directory does not exist: " + COLLATEDAPPOINTMENTOUTCOMERECORDDB_PATH);
+//             return recordsByDay;
+//         }
+
+//         File[] files = collatedRecordsDir
+//                 .listFiles(file -> file.getName().equals("CollatedAppointmentOutcomeRecord.csv"));
+//         if (files == null || files.length == 0) {
+//             System.err.println("CollatedAppointmentOutcomeRecord.csv not found.");
+//             return recordsByDay;
+//         }
+
+//         File collatedFile = files[0];
+//         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//         String formattedDate = date.format(formatter);
+
+//         // Read and parse the file
+//         try (BufferedReader br = new BufferedReader(new FileReader(collatedFile))) {
+//             String line;
+
+//             // Skip the header row
+//             br.readLine();
+
+//             while ((line = br.readLine()) != null) {
+//                 String[] parts = line.split(","); // Assuming CSV fields are comma-separated
+//                 if (parts.length == 9) {
+//                     String recordDate = parts[3].trim();
+
+//                     // Check if the record matches the given date
+//                     if (recordDate.equals(formattedDate)) {
+//                         String appointmentId = parts[0].trim();
+//                         String doctorId = parts[1].trim();
+//                         String patientId = parts[2].trim();
+//                         recordDate = parts[3].trim();
+//                         String startTime = parts[4].trim();
+//                         String endTime = parts[5].trim();
+//                         String availability = parts[6].trim();
+//                         String appointment = parts[7].trim();
+//                         String status = parts[8].trim();
+
+//                         // Locate the file
+//                         File appOutDir = new File(APPOINTMENTOUTCOMERECORDDB_PATH);
+//                         if (!appOutDir.exists() || !appOutDir.isDirectory()) {
+//                             System.err.println("Directory does not exist: " + APPOINTMENTOUTCOMERECORDDB_PATH);
+// ;
+//                         }
+
+//                         File[] files = collatedRecordsDir
+//                                 .listFiles(file -> file.getName().equals("CollatedAppointmentOutcomeRecord.csv"));
+//                         if (files == null || files.length == 0) {
+//                             System.err.println("CollatedAppointmentOutcomeRecord.csv not found.");
+//                             return recordsByDay;
+//                         }
+
+//                         File collatedFile = files[0];
+
+//                         try (BufferedReader reader = new BufferedReader(new FileReader(collatedFile))) {
+//                         }
+
+//                         // Create an AppointmentOutcomeRecord object
+//                         AppointmentOutcomeRecord record = new AppointmentOutcomeRecord(
+//                                 UUID.randomUUID(),
+//                                 appointmentId,
+//                                 date,
+//                                 serviceType,
+//                                 consultationNotes);
+
+//                         recordsByDay.add(record); // Add the matching record to the list
+//                     }
+//                 }
+//             }
+//         } catch (IOException e) {
+//             System.err.println("Error reading CollatedAppointmentOutcomeRecord.csv: " + e.getMessage());
+//             e.printStackTrace();
+//         }
+
+//         return recordsByDay;
+//     }
 
     // public List<AppointmentOutcomeRecord> getAllAppointmentOutcomeRecords() {
     // List<AppointmentOutcomeRecord> appointmentOutcomeRecordList = new

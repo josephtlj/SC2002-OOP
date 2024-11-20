@@ -10,6 +10,7 @@ import javax.crypto.spec.PBEKeySpec;
 
 import src.interfaces.DoctorDaoInterface;
 import src.models.Doctor;
+import src.models.Staff;
 import src.models.User;
 import src.utils.ENUM.DoctorDepartment;
 
@@ -60,6 +61,44 @@ public class DoctorDao implements DoctorDaoInterface {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return doctors;
+    }
+
+    public List<Staff> getAllStaffDoctors(){
+        List<Staff> doctors = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(DOCTORDB_PATH))) {
+            // Skip the header row
+            br.readLine();
+
+            // Read each line from the CSV and create a Doctor object
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(","); // Split the line by commas
+                if (parts.length == 9) // Ensure the correct number of columns
+                {
+                    // Parse CSV fields
+                    String id = parts[0];
+                    String password = parts[1];
+                    Doctor.Role role = Doctor.Role.valueOf(parts[2]);
+                    byte[] salt = Base64.getDecoder().decode(parts[3]);
+                    boolean isFirstLogin = Boolean.parseBoolean(parts[4]);
+                    String name = parts[5];
+                    Doctor.Gender gender = Doctor.Gender.valueOf(parts[6]);
+                    int age = Integer.parseInt(parts[7]);
+                    DoctorDepartment department = DoctorDepartment.valueOf(parts[8]);
+
+                    // Create Staff object and add to the list
+                    Staff doctor = new Staff(id, password, role, salt, isFirstLogin, name, gender, age);
+                    
+                    
+                    doctors.add(doctor);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return doctors;
     }
 
