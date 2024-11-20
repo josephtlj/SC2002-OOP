@@ -1,0 +1,7 @@
+hospitalId,password,role,salt,isFirstLogin,name,gender,age
+PH4f8e23,PUMQVQ8WGUpzU0P5WOuiRw==,PHARMACIST,sEJ2yNDfUFfzZZ3wozTkow==,true,Zachary Lim,MALE,34
+PH9d3a76,qzXdHNY49iO/NkTSE2+nvQ==,PHARMACIST,rAHoBJnbdY61ttH+E8QOxw==,true,Yvonne Tan,FEMALE,28
+PH2bc8f1,OSYZ+JPNFJ91XkAr/RA7cw==,PHARMACIST,/rGGGjpo0ORLQWCo7snYEw==,true,Xavier Chua,MALE,26
+PH7a5c39,2zux+f/WHe0Q3MgfYLOyxQ==,PHARMACIST,i8/FXV1SdZvKlrk4c5hznA==,true,Wendy Goh,FEMALE,31
+PH1e6d42,R02fEGP7U59LopTNhRSVPw==,PHARMACIST,BCQzW918rKxr9YHfDfF2sA==,true,Victor Ong,MALE,45
+PH5f9b87,o5jfjlppKRZ0GQp4VKWzag==,PHARMACIST,0/ky3VVwyxbd8nX70Mv22g==,true,Ursula Ng,FEMALE,23

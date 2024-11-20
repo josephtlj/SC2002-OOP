@@ -50,6 +50,7 @@ public class PharmacistService implements PharmacistServiceInterface {
         String hashedPassword = hashPassword(newPassword, newSalt);
         pharmacist.setSalt(newSalt);
         pharmacist.setPassword(hashedPassword);
+        pharmacist.setIsFirstLogin(false);
         pharmacistDao.updatePharmacist(pharmacist);
     }
 

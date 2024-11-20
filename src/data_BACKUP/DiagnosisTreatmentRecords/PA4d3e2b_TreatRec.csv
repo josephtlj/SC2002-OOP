@@ -1,0 +1,3 @@
+Diagnosis Treatment Record ID,Appointment ID,DoctorID,Appointment Date,Appointment Time Slot,Diagnosis,Prescription,Treatment Plan
+8dbf57e5-d6c3-4f8a-8c18-f81a6c58c211,84f6731e-d35e-492c-908e-27eb3295b521,D003,15/11/2024,10:00-10:30,Conjunctivitis,Eye Drops,Put 1 to 2 drops into affected eye
+54d3b17f-8fd7-4e26-bc63-3c9da3b9e6e5,a76b9842-4f93-4895-b401-0b83c5da7db4,D004,17/11/2024,09:30-10:00,Headache,Panadol,Take 1 tablet 3 times a day

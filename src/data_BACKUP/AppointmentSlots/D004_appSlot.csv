@@ -1,0 +1,2 @@
+AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
+a76b9842-4f93-4895-b401-0b83c5da7db4,D004,PA4d3e2b,17/11/2024,09:30,10:00,No,Yes,CONFIRMED

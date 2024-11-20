@@ -25,6 +25,10 @@ public class AdministratorView {
     public void showMainMenu() {
         int administratorChoice = 99999;
         while (administratorChoice != 6) {
+            if (Session.getCurrentSession().getCurrentUser().getIsFirstLogin()) {
+                System.out.println("As this is your first login, kindly reset your password.");
+                showUpdatePassword();
+            }
             try {
                 System.out.println("""
                         =============================================================

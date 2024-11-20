@@ -8,7 +8,12 @@ import src.models.MedicalRecord;
 import src.models.Session;
 import src.controllers.PatientController;
 import src.daos.AppointmentOutcomeRecordDao;
+import src.daos.DoctorAppointmentDao;
+import src.models.Appointment;
 import src.models.AppointmentOutcomeRecord;
+import src.models.AppointmentTimeSlot;
+
+import src.daos.DoctorAppointmentDao;
 
 public class PatientView {
     private final PatientController patientController;
@@ -22,6 +27,12 @@ public class PatientView {
         int patientChoice = 99999;
         while (patientChoice != 9) {
             try {
+
+                if(Session.getCurrentSession().getCurrentUser().getIsFirstLogin()){
+                    System.out.println("As this is your first login, kindly reset your password.");
+                    showUpdatePassword();
+                }
+
                 System.out.println("""
                         =============================================================
                         |             Hospital Management System (HMS)!             |
@@ -51,6 +62,7 @@ public class PatientView {
                             showUpdatePersonalInformation();
                             break;
                         case 3:
+                            showViewAppointmentSlots();
 
                             break;
                         case 4:
@@ -140,31 +152,7 @@ public class PatientView {
                 if (patientChoice >= 1 && patientChoice <= 4) {
                     switch (patientChoice) {
                         case 1:
-                            boolean updatePassword = false;
-
-                            while (!updatePassword) {
-                                System.out.println("""
-                                        =============================================================
-                                        |             Hospital Management System (HMS)!             |
-                                        |                      Update Password                      |
-                                        =============================================================
-                                        """);
-
-                                System.out.println("Enter your new password:");
-                                String newPassword = scanner.nextLine();
-                                System.out.println("Confirm your new password:");
-                                String confirmPassword = scanner.nextLine();
-
-                                updatePassword = patientController.handleUpdatePassword(patientHospitalId, newPassword,
-                                        confirmPassword);
-                            }
-
-                            System.out.println("""
-                                    =============================================================
-                                    |             Hospital Management System (HMS)!             |
-                                    |              Successfully updated password!               |
-                                    =============================================================
-                                    """);
+                            showUpdatePassword();
                             break;
                         case 2:
                             boolean updateEmailAddress = false;
@@ -178,7 +166,8 @@ public class PatientView {
                                 System.out.println("Enter your new email address:");
                                 String newEmailAddress = scanner.nextLine();
 
-                                patientController.handleUpdateEmailAddress(patientHospitalId, newEmailAddress);
+                                updateEmailAddress = patientController.handleUpdateEmailAddress(patientHospitalId, newEmailAddress);
+                                
                             }
 
                             System.out.println("""
@@ -200,7 +189,7 @@ public class PatientView {
                                 System.out.println("Enter your new phone number:");
                                 String newPhoneNumber = scanner.nextLine();
 
-                                patientController.handleUpdatePhoneNumber(patientHospitalId, newPhoneNumber);
+                                updatePhoneNumber = patientController.handleUpdatePhoneNumber(patientHospitalId, newPhoneNumber);
                             }
 
                             System.out.println("""
@@ -217,6 +206,33 @@ public class PatientView {
                 } else {
                     System.out.println("Invalid choice. Please enter a choice between 1 and 4.");
                 }
+            }
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a number.");
+        }
+    }
+
+    private void showViewAppointmentSlots() {
+        try {
+            String patientHospitalId = Session.getCurrentSession().getCurrentUser().getHospitalId();
+
+            System.out.println("""
+                    =============================================================
+                    |             Hospital Management System (HMS)!             |
+                    |           View Available Appointment Time Slots            |
+                    =============================================================
+                    """);
+
+            DoctorAppointmentDao appointSlotDao = new DoctorAppointmentDao(patientHospitalId);
+            List<Appointment> availableTimeSlots = appointSlotDao.getAvailableAppointmentSlots();
+
+            for (Appointment appointment : availableTimeSlots) {
+                System.out.println("-".repeat(60));
+                System.out.printf("%-25s %-30s\n", "Date:", appointment.getAppointmentDate());
+                System.out.printf("%-25s %-30s\n", "Appointment Time Slot:", appointment.getAppointmentTimeSlot());
+                System.out.printf("%-25s %-30s\n", "Doctor ID:", appointment.getDoctorID());
+                System.out.println("-".repeat(60));
             }
 
         } catch (NumberFormatException e) {
@@ -253,5 +269,34 @@ public class PatientView {
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
         }
+    }
+
+    private void showUpdatePassword() {
+        boolean updatePassword = false;
+        String patientHospitalId = Session.getCurrentSession().getCurrentUser().getHospitalId();
+
+        while (!updatePassword) {
+            System.out.println("""
+                    =============================================================
+                    |             Hospital Management System (HMS)!             |
+                    |                      Update Password                      |
+                    =============================================================
+                    """);
+
+            System.out.println("Enter your new password:");
+            String newPassword = scanner.nextLine();
+            System.out.println("Confirm your new password:");
+            String confirmPassword = scanner.nextLine();
+
+            updatePassword = patientController.handleUpdatePassword(patientHospitalId, newPassword,
+                    confirmPassword);
+        }
+
+        System.out.println("""
+                =============================================================
+                |             Hospital Management System (HMS)!             |
+                |              Successfully updated password!               |
+                =============================================================
+                """);
     }
 }

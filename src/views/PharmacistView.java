@@ -22,6 +22,12 @@ public class PharmacistView {
         int pharmacistChoice = 99999;
         while (pharmacistChoice != 6) {
             try {
+
+                if(Session.getCurrentSession().getCurrentUser().getIsFirstLogin()){
+                    System.out.println("As this is your first login, kindly reset your password.");
+                    showUpdatePassword();
+                }
+
                 System.out.println("""
                         =============================================================
                         |             Hospital Management System (HMS)!             |

@@ -49,6 +49,7 @@ public class PatientService implements PatientServiceInterface {
         String hashedPassword = hashPassword(newPassword, newSalt);
         patient.setSalt(newSalt);
         patient.setPassword(hashedPassword);
+        patient.setIsFirstLogin(false);
         patientDao.updatePatient(patient);
     }
 

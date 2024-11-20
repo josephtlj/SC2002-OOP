@@ -1,0 +1,2 @@
+AppointmentID,DoctorID,PatientID,Date,Start Time,End Time,Availability,Appointment,Status
+c0d780cd-a00c-444c-8243-14519f4beca7,D005,PA698316,14/12/2024,17:30,18:00,No,Yes,PENDING

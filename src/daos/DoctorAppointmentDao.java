@@ -17,22 +17,26 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
 
     // CONSTRUCTOR
     public DoctorAppointmentDao(String ID) {
-        // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
-        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
-            Properties prop = new Properties();
-            prop.load(input);
-            DOCTORAPPOINTMENTSLOTSDB_PATH = prop.getProperty("DOCTORAPPOINTMENTSLOTSDB_PATH",
-                    "data/Doctor/AppointmentSlots");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        if (ID.substring(0, 2).equals("PA")) {
+            return;
+        } else {
+            // LOAD CONFIGURATION FROM CONFIG.PROPERTIES FILE
+            try (InputStream input = new FileInputStream("src/resources/config.properties")) {
+                Properties prop = new Properties();
+                prop.load(input);
+                DOCTORAPPOINTMENTSLOTSDB_PATH = prop.getProperty("DOCTORAPPOINTMENTSLOTSDB_PATH",
+                        "data/Doctor/AppointmentSlots");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
 
-        // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
-        File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
-        if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
-            File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals(ID + "_appSlot.csv"));
-            this.doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
+            // LOCATE THE CORRECT CSV FILE WITH MATCHING ID
+            File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
+            if (appointmentSlotsDir.exists() && appointmentSlotsDir.isDirectory()) {
+                File[] files = appointmentSlotsDir.listFiles(file -> file.getName().equals(ID + "_appSlot.csv"));
+                this.doctorAppointmentSlotsFile = files[0]; // ASSIGN MATCHING FILE
 
+            }
         }
 
     }
@@ -40,8 +44,7 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
     // READ ALL APPOINTMENTSLOTS
     public List<Appointment> getAllAppointments(String doctorID) {
         List<Appointment> appointments = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile)))
-        {
+        try (BufferedReader br = new BufferedReader(new FileReader(doctorAppointmentSlotsFile))) {
             // Skip the header row
             br.readLine();
 
@@ -197,6 +200,77 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public List<Appointment> getAvailableAppointmentSlots() {
+        List<Appointment> availableSlots = new ArrayList<>();
+
+        // Load the configuration from config.properties
+        try (InputStream input = new FileInputStream("src/resources/config.properties")) {
+            Properties prop = new Properties();
+            prop.load(input);
+            DOCTORAPPOINTMENTSLOTSDB_PATH = prop.getProperty("DOCTORAPPOINTMENTSLOTSDB_PATH",
+                    "data/AppointmentSlots");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return availableSlots; // Return empty list if configuration fails
+        }
+
+        // Locate the directory containing all _appSlot.csv files
+        File appointmentSlotsDir = new File(DOCTORAPPOINTMENTSLOTSDB_PATH);
+        if (!appointmentSlotsDir.exists() || !appointmentSlotsDir.isDirectory()) {
+            System.err.println("Directory does not exist: " + DOCTORAPPOINTMENTSLOTSDB_PATH);
+            return availableSlots; // Return empty list if directory is not found
+        }
+
+        // Get all files ending with _appSlot.csv
+        File[] files = appointmentSlotsDir.listFiles(file -> file.getName().endsWith("_appSlot.csv"));
+        if (files == null || files.length == 0) {
+            System.err.println("No appointment slot files found in the directory.");
+            return availableSlots; // Return empty list if no files are found
+        }
+
+        // Parse each file
+        for (File file : files) {
+            String doctorId = file.getName().split("_")[0];
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                String line;
+
+                // Skip the header row
+                br.readLine();
+
+                while ((line = br.readLine()) != null) {
+                    String[] parts = line.split(","); // Assuming fields are comma-separated
+                    if (parts.length == 9) { // Ensure correct format
+                        // Extract relevant fields
+                        String availability = parts[6].trim();
+                        String appointment = parts[7].trim();
+
+                        // Check conditions
+                        if ("Yes".equalsIgnoreCase(availability) && "No".equalsIgnoreCase(appointment)) {
+                            // Extract other fields for creating AppointmentTimeSlot
+                            String date = parts[3].trim();
+                            String startTime = parts[4].trim();
+                            String endTime = parts[5].trim();
+
+                            // Create an AppointmentTimeSlot object
+                            // AppointmentTimeSlot slot = new AppointmentTimeSlot(
+                            // LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy")),
+                            // startTime,
+                            // endTime);
+
+                            Appointment slot = new Appointment("CONFIRMED", date, startTime, endTime, "NA", doctorId);
+                            availableSlots.add(slot);
+                        }
+                    }
+                }
+            } catch (IOException e) {
+                System.err.println("Error reading file: " + file.getName() + " - " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
+        return availableSlots;
     }
 
 }

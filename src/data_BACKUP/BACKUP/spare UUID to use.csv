@@ -1,0 +1,3 @@
+hospitalId,password,role,salt,isFirstLogin,name,department,gender,age
+
+9c944adc-d387-4a31-91b5-d67d5a07b101,o5jfjlppKRZ0GQp4VKWzag==,DOCTOR,0/ky3VVwyxbd8nX70Mv22g==,true,Elizabeth Zott,Radiology,FEMALE,31

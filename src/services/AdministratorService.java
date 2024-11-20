@@ -49,6 +49,7 @@ public class AdministratorService implements AdministratorServiceInterface {
         String hashedPassword = hashPassword(newPassword, newSalt);
         administrator.setSalt(newSalt);
         administrator.setPassword(hashedPassword);
+        administrator.setIsFirstLogin(false);
         administratorDao.updateAdministrator(administrator);
     }
 

@@ -1,0 +1,6 @@
+hospitalId,password,role,salt,isFirstLogin,name,gender,age
+AD1a23b4,PUMQVQ8WGUpzU0P5WOuiRw==,ADMINISTRATOR,sEJ2yNDfUFfzZZ3wozTkow==,true,Melissa Tan,FEMALE,28
+AD7c5b8e,qzXdHNY49iO/NkTSE2+nvQ==,ADMINISTRATOR,rAHoBJnbdY61ttH+E8QOxw==,true,Nicholas Lim,MALE,35
+AD3f6d21,OSYZ+JPNFJ91XkAr/RA7cw==,ADMINISTRATOR,rGGGjpo0ORLQWCo7snYEw==,true,Olivia Chua,FEMALE,32
+AD48b3c9,2zux+f/WHe0Q3MgfYLOyxQ==,ADMINISTRATOR,FXV1SdZvKlrk4c5hznA==,true,Patrick Goh,MALE,40
+AD9e6a5f,R02fEGP7U59LopTNhRSVPw==,ADMINISTRATOR,BCQzW918rKxr9YHfDfF2sA==,true,Quinn Ong,FEMALE,29
