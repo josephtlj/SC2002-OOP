@@ -38,6 +38,10 @@ public class Staff extends User {
         this.name = name;
     }
 
+    
+    /** 
+     * @return Gender
+     */
     public Gender getGender() {
         return this.gender;
     }

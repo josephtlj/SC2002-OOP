@@ -77,6 +77,10 @@ public class AppointmentOutcomeRecordView {
         } while (!validInput);
     }
 
+    
+    /** 
+     * @param doctorID
+     */
     public void viewUpdateOutcomeRecord(String doctorID) {
 
         AppointmentOutcomeRecord appointmentOutcomeRecord = viewFindOutcomeRecord(doctorID);

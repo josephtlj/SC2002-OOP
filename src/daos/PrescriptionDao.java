@@ -54,6 +54,11 @@ public class PrescriptionDao implements PrescriptionDaoInterface {
         return prescriptions;
     }
 
+    
+    /** 
+     * @param line
+     * @return Prescription
+     */
     // HELPER METHOD TO PARSE A PRESCRIPTION OBJECT FROM A CSV LINE
     private Prescription parsePrescription(String line) {
         try {

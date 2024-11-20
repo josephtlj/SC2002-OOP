@@ -21,6 +21,10 @@ public class DoctorMedicalRecordServices
         return medicalRecordDao.getMedicalRecordByHospitalId(patientID);
     }
 
+    
+    /** 
+     * @return List<MedicalRecord>
+     */
     public List<MedicalRecord> getAllMedicalRecords()
     {
         return medicalRecordDao.getAllMedicalRecords();

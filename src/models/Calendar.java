@@ -105,6 +105,11 @@ public class Calendar
         return (days != null) ? Optional.ofNullable(days.get(day)) : Optional.empty();
     }
 
+    
+    /** 
+     * @param month
+     * @return int
+     */
     public int getDaysInMonth(int month) 
     {
         int year = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);

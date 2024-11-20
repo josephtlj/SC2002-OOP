@@ -84,6 +84,10 @@ public class DiagnosisTreatmentRecordView implements DiagnosisTreatmentRecordVie
         System.out.println("Diagnosis has been successfully updated.");
     }
 
+    
+    /** 
+     * @param date
+     */
     public void printUpdatePrescription(LocalDate date) {
         System.out.print("Enter the new prescription: ");
         String prescription = scanner.nextLine().trim(); // Trim whitespace

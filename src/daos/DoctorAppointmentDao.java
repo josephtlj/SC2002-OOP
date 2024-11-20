@@ -84,6 +84,12 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
         return appointments;
     }
 
+    
+    /** 
+     * @param date
+     * @param availability
+     * @return boolean
+     */
     // UPDATE APPOINTMENT AVAILABILITY
     public boolean updateAppointmentAvailability(LocalDate date, String availability) {
         List<String> updatedLines = new ArrayList<>();

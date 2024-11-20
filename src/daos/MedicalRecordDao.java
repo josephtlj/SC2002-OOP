@@ -55,6 +55,11 @@ public class MedicalRecordDao implements MedicalRecordDaoInterface {
         return medicalRecords;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return MedicalRecord
+     */
     @Override
     public MedicalRecord getMedicalRecordByHospitalId(String hospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(MEDICALRECORDDB_PATH))) {

@@ -55,6 +55,10 @@ public class MedicineDao implements MedicineDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     @Override
     public List<Medicine> getAllMedicine() {
         List<Medicine> medicines = new ArrayList<>();

@@ -32,6 +32,10 @@ public class Prescription {
         return this.prescriptionId;
     }
 
+    
+    /** 
+     * @param prescriptionId
+     */
     public void setPrescriptionId(UUID prescriptionId){
         this.prescriptionId = prescriptionId;
     }

@@ -31,6 +31,11 @@ public class DiagnosisTreatmentRecordController
     }
 
 
+    
+    /** 
+     * @param date
+     * @return String
+     */
     //GET METHODS
 
     public String getDiagnosis(LocalDate date)

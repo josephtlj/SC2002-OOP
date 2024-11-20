@@ -32,6 +32,11 @@ public class ReplenishmentRequestController {
         }
     }
 
+    
+    /** 
+     * @param status
+     * @return List<ReplenishmentRequest>
+     */
     public List<ReplenishmentRequest> handleGetReplenishmentRequestsByStatus(ReplenishmentRequest.Status status) {
         try {
             return replenishmentRequestService.readAllReplenishmentRequestsByStatus(status);

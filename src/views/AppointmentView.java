@@ -35,6 +35,10 @@ public class AppointmentView implements AppointmentViewInterface {
         System.out.println("+-----------------+-----------------------+-----------------+");
     }
 
+    
+    /** 
+     * @param appointments
+     */
     public void printAppointmentInAMonthView(List<Appointment> appointments) {
         // Print header
         String headerFormat = "| %-15s | %-21s | %-15s |\n";

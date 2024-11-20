@@ -37,6 +37,13 @@ public class DoctorPasswordService
         return doctor;
     }
 
+    
+    /** 
+     * @param newPassword
+     * @param confirmPassword
+     * @param ID
+     * @return ChangePasswordOutcome
+     */
     public ChangePasswordOutcome updateDoctorPassword(String newPassword, String confirmPassword, String ID)
     {
         ChangePasswordOutcome passwordOutcome= new ChangePasswordOutcome(false, PasswordErrorType.NILL);//why is there an error here

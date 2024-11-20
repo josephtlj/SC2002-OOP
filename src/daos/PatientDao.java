@@ -58,6 +58,10 @@ public class PatientDao implements PatientDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param patient
+     */
     public void updatePatient(Patient patient) {
         List<String> lines = new ArrayList<>();
         boolean patientFound = false;

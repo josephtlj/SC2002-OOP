@@ -64,6 +64,12 @@ public class CalendarDao implements CalendarDaoInterface {
         return CalendarDayStatus.NA; // Date will always be found
     }
 
+    
+    /** 
+     * @param calendarFile
+     * @param status
+     * @return List<LocalDate>
+     */
     // METHOD TO READ DATES FOR SPECIFIC STATUS
     public List<LocalDate> getDatesByStatus(File calendarFile, CalendarDayStatus status) {
         List<LocalDate> dates = new ArrayList<>();

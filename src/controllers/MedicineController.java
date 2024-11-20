@@ -26,6 +26,12 @@ public class MedicineController {
         }
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param medicineQuantity
+     * @param medicineAlert
+     */
     public void handleAddNewMedication(String medicineName, int medicineQuantity, int medicineAlert) {
         try {
             medicineService.createNewMedicine(medicineName, medicineQuantity, medicineAlert);

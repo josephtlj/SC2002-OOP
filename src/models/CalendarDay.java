@@ -21,6 +21,10 @@ public class CalendarDay
         return dayStatus;
     }
 
+    
+    /** 
+     * @param dayStatus
+     */
     public void setDayStatus(CalendarDayStatus dayStatus) 
     {
         this.dayStatus = dayStatus;

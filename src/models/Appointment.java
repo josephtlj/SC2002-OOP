@@ -36,6 +36,10 @@ public class Appointment {
         return timeSlot;
     }
 
+    
+    /** 
+     * @return AppointmentStatus
+     */
     public AppointmentStatus getAppointmentStatus() {
         return status;
     }

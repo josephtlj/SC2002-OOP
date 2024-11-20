@@ -65,6 +65,10 @@ public class DoctorChangePasswordView {
 
     }
 
+    
+    /** 
+     * @param passwordManager
+     */
     public void PasswordErrorNoMatchView(DoctorPasswordController passwordManager) {
         System.out.println("Passwords do not match. Kindly try again.");
     }

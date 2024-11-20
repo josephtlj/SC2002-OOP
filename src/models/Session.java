@@ -24,6 +24,10 @@ public class Session {
         return currentSession;
     }
 
+    
+    /** 
+     * @return User
+     */
     // GETTERS AND SETTERS
     public User getCurrentUser() {
         return currentUser;

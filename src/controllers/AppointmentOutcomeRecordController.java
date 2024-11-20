@@ -40,6 +40,13 @@ public class AppointmentOutcomeRecordController
         return appointmentOutcomeRecordServices.updateAppointmentOutcomeRecord(outcomeRecord);
     }
 
+    
+    /** 
+     * @param patientID
+     * @param date
+     * @param timeSlot
+     * @return AppointmentOutcomeRecord
+     */
     public AppointmentOutcomeRecord findOutcomeRecord(String patientID, LocalDate date, AppointmentTimeSlot timeSlot)
     {
         return appointmentOutcomeRecordServices.findAppointmentOutcomeRecord(patientID,date,timeSlot);

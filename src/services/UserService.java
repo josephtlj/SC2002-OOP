@@ -80,6 +80,11 @@ public class UserService implements UserServiceInterface {
         Session.getCurrentSession().logout();
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return boolean
+     */
     @Override
     public boolean isFirstLogin(String hospitalId) {
         User user = userDao.getUserByHospitalId(hospitalId);

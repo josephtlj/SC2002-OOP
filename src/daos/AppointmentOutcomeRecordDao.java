@@ -117,6 +117,13 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         return true;
     }
 
+    
+    /** 
+     * @param patientID
+     * @param date
+     * @param timeSlot
+     * @return AppointmentOutcomeRecord
+     */
     // FIND APPOINTMENT OUTCOME RECORD
     public AppointmentOutcomeRecord findAppointmentOutcomeRecord(String patientID, LocalDate date,
             AppointmentTimeSlot timeSlot) {

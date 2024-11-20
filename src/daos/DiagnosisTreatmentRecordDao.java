@@ -129,6 +129,11 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
         return true;
     }
 
+    
+    /** 
+     * @param date
+     * @return DiagnosisTreatmentRecord
+     */
     // READ DIAGNOSIS TREATMENT RECORD FOR PATIENT ON SPECIFIC DATE
     public DiagnosisTreatmentRecord getDiagnosisTreatmentRecord(LocalDate date) {
         DiagnosisTreatmentRecord diagnosisRecord = null;

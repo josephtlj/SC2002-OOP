@@ -31,6 +31,10 @@ public class AppointmentOutcomeRecord {
         return this.appointmentRecordId;
     }
 
+    
+    /** 
+     * @param appointmentRecordId
+     */
     public void setAppointmentRecordId(UUID appointmentRecordId) {
         this.appointmentRecordId = appointmentRecordId;
     }

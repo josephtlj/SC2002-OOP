@@ -31,6 +31,10 @@ public class DoctorView implements DoctorViewInterface
             }
     }
 
+    
+    /** 
+     * @param doctor
+     */
     public void printMenu(Doctor doctor)
     {
         // FUNCTION EXECUTES TILL USER WANTS TO GO BACK TO HOMEPAGE

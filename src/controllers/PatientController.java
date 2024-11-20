@@ -26,6 +26,13 @@ public class PatientController {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPassword
+     * @param confirmPassword
+     * @return boolean
+     */
     public boolean handleUpdatePassword(String hospitalId, String newPassword, String confirmPassword) {
         try {
             patientService.updatePassword(hospitalId, newPassword, confirmPassword);

@@ -35,6 +35,11 @@ public class DoctorAppointmentController {
         return actionType;
     }
 
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     // RETRIEVE ALL APPOINTMENTS FROM DATABASE
     public List<Appointment> getAllAppointments(String doctorID) {
         return doctorAppointmentServices.getAllAppointments(doctorID);

@@ -47,6 +47,10 @@ public class Doctor extends Staff
     }
 
 
+    
+    /** 
+     * @return List<Doctor>
+     */
     //RETRIEVE ALL DOCTORS FROM DATABASE
     public List<Doctor> getAllDoctors()
     {

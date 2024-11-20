@@ -37,6 +37,10 @@ public class ReplenishmentRequest {
         return this.requestId;
     }
 
+    
+    /** 
+     * @param requestId
+     */
     public void setRequestId(UUID requestId) {
         this.requestId = requestId;
     }

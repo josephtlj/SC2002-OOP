@@ -59,6 +59,11 @@ public class AdministratorService implements AdministratorServiceInterface {
         administratorDao.updateAdministrator(administrator);
     }
 
+    
+    /** 
+     * @param filter
+     * @return List<Staff>
+     */
     @Override
     public List<Staff> readHospitalStaffByFilter(int filter) {
         List<Staff> allStaff = new ArrayList<>();

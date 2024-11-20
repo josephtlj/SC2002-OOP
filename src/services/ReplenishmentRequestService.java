@@ -51,6 +51,11 @@ public class ReplenishmentRequestService implements ReplenishmentRequestServiceI
                 medicineFound.getMedicineId());
     }
 
+    
+    /** 
+     * @param status
+     * @return List<ReplenishmentRequest>
+     */
     @Override
     public List<ReplenishmentRequest> readAllReplenishmentRequestsByStatus(ReplenishmentRequest.Status status) {
         try {

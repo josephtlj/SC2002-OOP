@@ -25,6 +25,10 @@ public class ChangePasswordOutcome
         this.outcome= outcome;
     }
 
+    
+    /** 
+     * @param errorType
+     */
     public void setPasswordErrorType(PasswordErrorType errorType)
     {
         this.errorType= errorType;

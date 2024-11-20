@@ -29,6 +29,10 @@ public class DiagnosisTreatmentRecord {
         return this.diagnosisTreatmentRecordId;
     }
 
+    
+    /** 
+     * @param diagnosisTreatmentRecordId
+     */
     public void setDiagnosisTreatmentRecordId(UUID diagnosisTreatmentRecordId){
         this.diagnosisTreatmentRecordId = diagnosisTreatmentRecordId;
     }

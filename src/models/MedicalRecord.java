@@ -81,6 +81,10 @@ public class MedicalRecord {
         return this.medicalRecordId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return this.name;
     }

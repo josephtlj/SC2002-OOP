@@ -59,6 +59,10 @@ public class PharmacistDao implements PharmacistDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<Staff>
+     */
     @Override
     public List<Staff> getAllStaffPharmacists(){
         List<Staff> pharmacists = new ArrayList<>();

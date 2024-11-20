@@ -38,6 +38,11 @@ public class AdministratorController {
         }
     }
 
+    
+    /** 
+     * @param filter
+     * @return List<Staff>
+     */
     public List<Staff> handleViewHospitalStaff(int filter){
         try {
             return administratorService.readHospitalStaffByFilter(filter);

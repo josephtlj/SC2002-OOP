@@ -26,6 +26,11 @@ public class DiagnosisTreatmentRecordService
         diagnosisTreatmentRecordDao.addDiagnosisTreatmentRecord(treatRec);
     }
 
+    
+    /** 
+     * @param date
+     * @return String
+     */
     //GET METHODS
 
     public String getDiagnosis(LocalDate date)

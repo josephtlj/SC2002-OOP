@@ -59,6 +59,10 @@ public class AdministratorDao implements AdministratorDaoInterface {
         }
     }
 
+    
+    /** 
+     * @return List<Staff>
+     */
     @Override
     public List<Staff> getAllStaffAdministrators() {
         List<Staff> administrators = new ArrayList<>();

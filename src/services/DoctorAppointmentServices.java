@@ -31,6 +31,14 @@ public class DoctorAppointmentServices implements DoctorAppointmentServicesInter
         return doctorAppointmentDao.getAllAppointments(doctorID);
     }
 
+    
+    /** 
+     * @param appointments
+     * @param patientID
+     * @param date
+     * @param timeSlot
+     * @return boolean
+     */
     public boolean checkIfAppointmentInAppointments(List<Appointment> appointments, String patientID, LocalDate date, AppointmentTimeSlot timeSlot)
     {
         Optional<Appointment> appointmentOptional = appointments.stream()

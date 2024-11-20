@@ -34,6 +34,12 @@ public class PatientService implements PatientServiceInterface {
         return patient;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPassword
+     * @param confirmPassword
+     */
     @Override
     public void updatePassword(String hospitalId, String newPassword, String confirmPassword) {
         if (!newPassword.equals(confirmPassword)) {

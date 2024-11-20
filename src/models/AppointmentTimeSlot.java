@@ -24,6 +24,10 @@ public class AppointmentTimeSlot
         return startTime;
     }
 
+    
+    /** 
+     * @return LocalTime
+     */
     public LocalTime getEndTime() 
     {
         return endTime;

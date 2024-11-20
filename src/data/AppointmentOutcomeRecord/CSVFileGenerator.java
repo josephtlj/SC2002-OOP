@@ -34,6 +34,11 @@ public class CSVFileGenerator {
         }
     }
 
+    
+    /** 
+     * @param patientID
+     * @return List<String[]>
+     */
     // Method to read TreatRec CSV
     private static List<String[]> readTreatRecCSV(String patientID) {
         List<String[]> treatRecData = new ArrayList<>();

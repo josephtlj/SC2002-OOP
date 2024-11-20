@@ -53,6 +53,10 @@ public class InputForDateMonthTimeSlotView implements InputForDateMonthTimeSlotV
     }
 
 
+    
+    /** 
+     * @return LocalDate
+     */
     //CHOOSE MONTH
     public LocalDate viewWhichDate() 
     {

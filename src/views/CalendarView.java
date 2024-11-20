@@ -119,6 +119,10 @@ public class CalendarView
         System.out.println("----------------------------------");
     }
 
+    
+    /** 
+     * @param month
+     */
     public void printCalendarMonth(int month)
     {
         System.out.println("\n📅 Calendar for " + LocalDate.of(LocalDate.now().getYear(), month, 1).format(DateTimeFormatter.ofPattern("MMMM yyyy")));

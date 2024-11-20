@@ -40,6 +40,10 @@ public class PharmacistController {
         }
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     public List<Medicine> handleViewMedicationInventory() {
         try {
             return medicineController.handleViewMedicationInventory();

@@ -27,6 +27,10 @@ public class Medicine {
         return this.medicineId;
     }
 
+    
+    /** 
+     * @param medicineId
+     */
     public void setMedicineId(UUID medicineId) {
         this.medicineId = medicineId;
     }

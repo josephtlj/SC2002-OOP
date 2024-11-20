@@ -57,6 +57,11 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
         }
     }
 
+    
+    /** 
+     * @param requestId
+     * @return ReplenishmentRequest
+     */
     @Override
     public ReplenishmentRequest getReplenishmentRequestByRequestId(UUID requestId) {
         try (BufferedReader br = new BufferedReader(new FileReader(REPLENISHMENTREQUESTDB_PATH))) {

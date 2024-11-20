@@ -32,6 +32,10 @@ public class UserDao implements UserDaoInterface {
         return null;
     }
 
+    
+    /** 
+     * @param user
+     */
     @Override
     public void updateUser(User user) {
         // userDatabase.put(user.getHospitalId(), user);

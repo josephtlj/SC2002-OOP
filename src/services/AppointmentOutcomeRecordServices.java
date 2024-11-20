@@ -47,6 +47,11 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
 
     }
 
+    
+    /** 
+     * @param appointmentOutcomeRecord
+     * @return boolean
+     */
     public boolean updateAppointmentOutcomeRecord(AppointmentOutcomeRecord appointmentOutcomeRecord) {
         // CHECKING VALIDITY NOT NECESSARY AS findAppointmentOutcomeRecord() HAS ALREADY
         // DONE IT

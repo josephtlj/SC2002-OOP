@@ -30,6 +30,12 @@ public class MedicineService implements MedicineServiceInterface {
         }
     }
 
+    
+    /** 
+     * @param medicineName
+     * @param medicineQuantity
+     * @param medicineAlert
+     */
     @Override
     public void createNewMedicine(String medicineName, int medicineQuantity, int medicineAlert) {
         List<Medicine> medicineList = medicineDao.getAllMedicine();

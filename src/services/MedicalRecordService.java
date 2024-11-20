@@ -26,6 +26,11 @@ public class MedicalRecordService implements MedicalRecordServiceInterface {
         return medicalRecord;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newEmailAddress
+     */
     @Override
     public void updateEmailAddress(String hospitalId, String newEmailAddress) {
         MedicalRecord medicalRecord = medicalRecordDao.getMedicalRecordByHospitalId(hospitalId);

@@ -52,6 +52,11 @@ public class CalendarController
         }
     }
 
+    
+    /** 
+     * @param date
+     * @return boolean
+     */
     //APPLY MEDICAL LEAVE
     public boolean applyMedicalLeave(LocalDate date)
     {
