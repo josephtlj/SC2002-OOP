@@ -47,6 +47,11 @@ public class MedicalRecordService implements MedicalRecordServiceInterface {
         medicalRecordDao.updateMedicalRecord(medicalRecord);
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPhoneNumber
+     */
     @Override
     public void updatePhoneNumber(String hospitalId, String newPhoneNumber) {
         MedicalRecord medicalRecord = medicalRecordDao.getMedicalRecordByHospitalId(hospitalId);

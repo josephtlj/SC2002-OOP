@@ -116,6 +116,12 @@ public class Calendar
         return YearMonth.of(year, month).lengthOfMonth();
     }
 
+    
+    /** 
+     * @param month
+     * @param day
+     * @param status
+     */
     //SET METHODS
     public void setDayStatus(int month, int day, CalendarDayStatus status) 
     {

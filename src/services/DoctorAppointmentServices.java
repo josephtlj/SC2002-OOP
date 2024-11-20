@@ -54,6 +54,15 @@ public class DoctorAppointmentServices implements DoctorAppointmentServicesInter
         return true;
     }
 
+    
+    /** 
+     * @param status
+     * @param date
+     * @param timeSlot
+     * @param patientID
+     * @param doctorID
+     * @return boolean
+     */
     public boolean updateAppointmentStatus(String status, LocalDate date, AppointmentTimeSlot timeSlot, String patientID, String doctorID)
     {
 

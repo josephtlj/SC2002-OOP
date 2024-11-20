@@ -185,6 +185,11 @@ public class AppointmentOutcomeRecordDao implements AppointmentOutcomeRecordDaoI
         return null; // WILL NEVER REACH HERE AS SERVICES ENSURES VALIDITY
     }
 
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     // RETURN LIST OF COMPLETED APPOINTMENTS
     public List<Appointment> getCompletedAppointments(String doctorID) {
         List<Appointment> completedAppointments = new ArrayList<>();

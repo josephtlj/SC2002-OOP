@@ -106,6 +106,11 @@ public class AppointmentOutcomeRecordView {
         }
     }
 
+    
+    /** 
+     * @param ID
+     * @return AppointmentOutcomeRecord
+     */
     public AppointmentOutcomeRecord viewFindOutcomeRecord(String ID) {
 
         viewCompletedAppointments(ID);

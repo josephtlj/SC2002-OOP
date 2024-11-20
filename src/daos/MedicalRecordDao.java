@@ -84,6 +84,10 @@ public class MedicalRecordDao implements MedicalRecordDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param medicalRecord
+     */
     @Override
     public void updateMedicalRecord(MedicalRecord medicalRecord) {
         List<String> lines = new ArrayList<>();

@@ -64,6 +64,10 @@ public class PatientService implements PatientServiceInterface {
         patientDao.updatePatient(patient);
     }
 
+    
+    /** 
+     * @return byte[]
+     */
     // SUPPORTING METHODS
     private byte[] generateSalt() {
         byte[] salt = new byte[16];

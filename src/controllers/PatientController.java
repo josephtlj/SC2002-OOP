@@ -43,6 +43,12 @@ public class PatientController {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newEmailAddress
+     * @return boolean
+     */
     public boolean handleUpdateEmailAddress(String hospitalId, String newEmailAddress) {
         try {
             medicalRecordController.handleUpdateEmailAddress(hospitalId, newEmailAddress);

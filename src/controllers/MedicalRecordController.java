@@ -41,6 +41,12 @@ public class MedicalRecordController {
         }
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @param newPhoneNumber
+     * @return boolean
+     */
     public boolean handleUpdatePhoneNumber(String hospitalId, String newPhoneNumber) {
         try {
             medicalRecordService.updatePhoneNumber(hospitalId, newPhoneNumber);

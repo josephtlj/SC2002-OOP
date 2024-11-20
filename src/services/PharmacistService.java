@@ -65,6 +65,10 @@ public class PharmacistService implements PharmacistServiceInterface {
         pharmacistDao.updatePharmacist(pharmacist);
     }
 
+    
+    /** 
+     * @return byte[]
+     */
     // SUPPORTING METHODS
     private byte[] generateSalt() {
         byte[] salt = new byte[16];

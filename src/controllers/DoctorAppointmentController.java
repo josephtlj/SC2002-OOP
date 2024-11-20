@@ -45,6 +45,14 @@ public class DoctorAppointmentController {
         return doctorAppointmentServices.getAllAppointments(doctorID);
     }
 
+    
+    /** 
+     * @param appointments
+     * @param patientID
+     * @param date
+     * @param timeSlot
+     * @return boolean
+     */
     // CHECK IF APPOINTMENT IS IN LIST OF SIEVED (PENDING OR CONFIRMED ETC)
     // APPOINTMENTS
     public boolean checkIfAppointmentInAppointments(List<Appointment> appointments, String patientID, LocalDate date,

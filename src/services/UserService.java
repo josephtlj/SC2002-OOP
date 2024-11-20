@@ -91,6 +91,12 @@ public class UserService implements UserServiceInterface {
         return user != null && user.getIsFirstLogin();
     }
 
+    
+    /** 
+     * @param password
+     * @param salt
+     * @return String
+     */
     // SUPPORTING METHODS
     public String hashPassword(String password, byte[] salt) {
         try {

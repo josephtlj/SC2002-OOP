@@ -90,6 +90,10 @@ public class AdministratorDao implements AdministratorDaoInterface {
         return administrators;
     }
 
+    
+    /** 
+     * @param administrator
+     */
     @Override
     public void updateAdministrator(Administrator administrator) {
         List<String> lines = new ArrayList<>();

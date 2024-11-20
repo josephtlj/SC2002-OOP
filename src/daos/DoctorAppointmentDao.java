@@ -139,6 +139,11 @@ public class DoctorAppointmentDao implements DoctorAppointmentDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param appointment
+     * @return boolean
+     */
     // UPDATE APPOINTMENT STATUS
     public boolean updateAppointmentStatus(Appointment appointment) {
         // Retrieve appointment details

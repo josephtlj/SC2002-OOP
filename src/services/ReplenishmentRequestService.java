@@ -66,6 +66,11 @@ public class ReplenishmentRequestService implements ReplenishmentRequestServiceI
         }
     }
 
+    
+    /** 
+     * @param requestId
+     * @param status
+     */
     @Override
     public void updateReplenishmentRequest(UUID requestId, ReplenishmentRequest.Status status){
         ReplenishmentRequest replenishmentRequest = replenishmentRequestDao.getReplenishmentRequestByRequestId(requestId);

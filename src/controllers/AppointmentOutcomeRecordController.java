@@ -52,6 +52,11 @@ public class AppointmentOutcomeRecordController
         return appointmentOutcomeRecordServices.findAppointmentOutcomeRecord(patientID,date,timeSlot);
     }
 
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     public List<Appointment> getCompletedAppointments(String doctorID)
     {
         return appointmentOutcomeRecordServices.getCompletedAppointments(doctorID);

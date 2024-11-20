@@ -33,6 +33,10 @@ public class AppointmentTimeSlot
         return endTime;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() 
     {

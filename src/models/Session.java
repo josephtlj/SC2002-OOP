@@ -33,6 +33,10 @@ public class Session {
         return currentUser;
     }
 
+    
+    /** 
+     * @param user
+     */
     public void setCurrentUser(User user) {
         currentUser = user;
     }

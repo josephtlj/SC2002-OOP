@@ -53,6 +53,10 @@ public class PharmacistController {
         }
     }
 
+    
+    /** 
+     * @return boolean
+     */
     // public List<AppointmentOutcomeRecord> handleViewAppointmentOutcomeRecordsByDay(LocalDate date) {
     //     try {
     //         return appointmentOutcomeRecordController.handleViewAppointmentOutcomeRecordsByDay(date);

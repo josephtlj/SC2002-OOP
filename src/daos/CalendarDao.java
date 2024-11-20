@@ -91,6 +91,11 @@ public class CalendarDao implements CalendarDaoInterface {
         return dates;
     }
 
+    
+    /** 
+     * @param date
+     * @return int
+     */
     // METHOD TO GET THE NUMBER OF USERS WHO HAVE APPLIED FOR ANNUAL LEAVE ON A
     // SPECIFIC DATE
     public int getNumberOfAnnualLeaveDays(LocalDate date) {

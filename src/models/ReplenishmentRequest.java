@@ -45,6 +45,10 @@ public class ReplenishmentRequest {
         this.requestId = requestId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMedicineName(){
         return this.medicineName;
     }

@@ -91,6 +91,10 @@ public class PharmacistDao implements PharmacistDaoInterface {
         return pharmacists;
     }
 
+    
+    /** 
+     * @param pharmacist
+     */
     @Override
     public void updatePharmacist(Pharmacist pharmacist) {
         List<String> lines = new ArrayList<>();

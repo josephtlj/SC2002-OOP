@@ -46,6 +46,13 @@ public class ReplenishmentRequestController {
         }
     }
 
+    
+    /** 
+     * @param requestId
+     * @param requestedQuantity
+     * @param status
+     * @param medicineId
+     */
     // ACCEPTED REPLENISHMENT REQUEST
     public void handleReplenishmentRequest(UUID requestId, int requestedQuantity, ReplenishmentRequest.Status status, UUID medicineId){
         try {

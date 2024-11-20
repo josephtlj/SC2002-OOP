@@ -39,6 +39,10 @@ public class AppointmentOutcomeRecord {
         this.appointmentRecordId = appointmentRecordId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getAppointmentId() {
         return appointmentId;
     }

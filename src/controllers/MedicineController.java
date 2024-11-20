@@ -40,6 +40,12 @@ public class MedicineController {
         }
     }
 
+    
+    /** 
+     * @param medicineQuantity
+     * @param medicineAlert
+     * @param medicineId
+     */
     public void handleUpdateMedication(int medicineQuantity, int medicineAlert, UUID medicineId) {
         try {
             medicineService.updateMedicine(medicineQuantity, medicineAlert, medicineId);

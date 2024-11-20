@@ -60,6 +60,12 @@ public class MedicineService implements MedicineServiceInterface {
         medicineDao.createMedicine(medicineName, medicineQuantity, medicineAlert);
     }
 
+    
+    /** 
+     * @param medicineQuantity
+     * @param medicineAlert
+     * @param medicineId
+     */
     @Override
     public void updateMedicine(int medicineQuantity, int medicineAlert, UUID medicineId) {
         try {

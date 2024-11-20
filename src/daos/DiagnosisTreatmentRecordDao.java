@@ -180,6 +180,11 @@ public class DiagnosisTreatmentRecordDao implements DiagnosisTreatmentRecordDaoI
         return diagnosisRecord;
     }
 
+    
+    /** 
+     * @param patientID
+     * @return List<DiagnosisTreatmentRecord>
+     */
     // READ ALL DIAGNOSIS TREATMENT RECORDS OF A PATIENT
     public List<DiagnosisTreatmentRecord> getAllDiagnosisTreatmentRecords(String patientID) {
         List<DiagnosisTreatmentRecord> records = new ArrayList<>();

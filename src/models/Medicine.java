@@ -35,6 +35,10 @@ public class Medicine {
         this.medicineId = medicineId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMedicineName() {
         return this.medicineName;
     }

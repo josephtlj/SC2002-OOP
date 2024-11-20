@@ -57,6 +57,12 @@ public class CSVFileGenerator {
         return treatRecData;
     }
 
+    
+    /** 
+     * @param patientID
+     * @param treatRecData
+     * @param dateFormatter
+     */
     // Method to generate AppOutRec CSV based on TreatRec data
     private static void generateAppOutRecCSV(String patientID, List<String[]> treatRecData,
             DateTimeFormatter dateFormatter) {

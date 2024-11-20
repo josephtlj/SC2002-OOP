@@ -81,6 +81,11 @@ public class MedicineDao implements MedicineDaoInterface {
         return medicines;
     }
 
+    
+    /** 
+     * @param medicineId
+     * @return Medicine
+     */
     @Override
     public Medicine getMedicineByMedicineId(UUID medicineId) {
         try (BufferedReader br = new BufferedReader(new FileReader(MEDICINEDB_PATH))) {

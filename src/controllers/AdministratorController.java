@@ -52,6 +52,10 @@ public class AdministratorController {
         }
     }
 
+    
+    /** 
+     * @return List<Medicine>
+     */
     public List<Medicine> handleViewMedicationInventory() {
         try {
             return medicineController.handleViewMedicationInventory();

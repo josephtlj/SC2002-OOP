@@ -110,6 +110,11 @@ public class DoctorDao implements DoctorDaoInterface {
         return doctors;
     }
 
+    
+    /** 
+     * @param doctorHospitalId
+     * @return Doctor
+     */
     // READ DOCTOR BY HOSPITAL ID
     public Doctor getDoctorByHospitalId(String doctorHospitalId) {
         try (BufferedReader br = new BufferedReader(new FileReader(DOCTORDB_PATH))) {

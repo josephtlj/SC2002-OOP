@@ -41,6 +41,10 @@ public class UserDao implements UserDaoInterface {
         // userDatabase.put(user.getHospitalId(), user);
     }
 
+    
+    /** 
+     * @param hospitalId
+     */
     @Override
     public void deleteUser(String hospitalId) {
         // userDatabase.remove(hospitalId);

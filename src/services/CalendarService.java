@@ -37,6 +37,10 @@ public class CalendarService
         return calendarDao.getMedicalLeaveDates();
     }
 
+    
+    /** 
+     * @return List<LocalDate>
+     */
     public List<LocalDate> getMeetingDates()
     {
         return calendarDao.getMeetingDates();

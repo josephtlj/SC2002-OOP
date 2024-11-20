@@ -46,6 +46,10 @@ public class Staff extends User {
         return this.gender;
     }
 
+    
+    /** 
+     * @param gender
+     */
     public void setGender(Gender gender) {
         this.gender = gender;
     }

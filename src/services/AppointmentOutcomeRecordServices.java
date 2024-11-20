@@ -59,6 +59,11 @@ public class AppointmentOutcomeRecordServices implements AppointmentOutcomeRecor
         return appointmentOutcomeRecordDao.updateAppointmentOutcomeRecord(appointmentOutcomeRecord);
     }
 
+    
+    /** 
+     * @param doctorID
+     * @return List<Appointment>
+     */
     public List<Appointment> getCompletedAppointments(String doctorID) {
         // VALIDITY OF DOCTORID NOT NECESSARY AS IT IS VALIDATED DURING LOGIN
         return appointmentOutcomeRecordDao.getCompletedAppointments(doctorID);

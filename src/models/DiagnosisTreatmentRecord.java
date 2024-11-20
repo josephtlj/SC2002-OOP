@@ -37,6 +37,10 @@ public class DiagnosisTreatmentRecord {
         this.diagnosisTreatmentRecordId = diagnosisTreatmentRecordId;
     }
 
+    
+    /** 
+     * @param appointment
+     */
     public void setAppointment(Appointment appointment) {
         this.appointment = appointment;
     }

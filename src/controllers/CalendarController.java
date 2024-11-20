@@ -72,6 +72,10 @@ public class CalendarController
         }
     }
 
+    
+    /** 
+     * @param date
+     */
     //CANCEL ANNUAL LEAVE
     public void cancelAnnualLeave(LocalDate date)
     {

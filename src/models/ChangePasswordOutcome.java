@@ -34,6 +34,10 @@ public class ChangePasswordOutcome
         this.errorType= errorType;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     //GET METHODS
     public boolean getOutcome()
     {

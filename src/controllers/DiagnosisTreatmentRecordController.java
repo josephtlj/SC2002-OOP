@@ -43,6 +43,11 @@ public class DiagnosisTreatmentRecordController
         return diagnosisTreatmentRecordService.getDiagnosis(date);
     }
 
+    
+    /** 
+     * @param date
+     * @return String
+     */
     public String getPrescription(LocalDate date)
     {
         return diagnosisTreatmentRecordService.getPrescription(date);

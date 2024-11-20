@@ -72,6 +72,10 @@ public class DoctorPasswordService
         return passwordOutcome;
     }
 
+    
+    /** 
+     * @return byte[]
+     */
     // SUPPORTING METHODS
     private byte[] generateSalt() {
         byte[] salt = new byte[16];

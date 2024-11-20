@@ -73,6 +73,10 @@ public class DoctorChangePasswordView {
         System.out.println("Passwords do not match. Kindly try again.");
     }
 
+    
+    /** 
+     * @param passwordManager
+     */
     public void PasswordErrorSameAsOldView(DoctorPasswordController passwordManager) {
         System.out.println("New password must not be the same as old password. Kindly try again.");
     }

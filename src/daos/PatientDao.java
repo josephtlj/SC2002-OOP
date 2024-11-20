@@ -108,6 +108,11 @@ public class PatientDao implements PatientDaoInterface {
         }
     }
 
+    
+    /** 
+     * @param line
+     * @return Patient
+     */
     // HELPER METHOD TO PARSE A PATIENT OBJECT FROM A CSV LINE
     private Patient parsePatient(String line) {
         try {

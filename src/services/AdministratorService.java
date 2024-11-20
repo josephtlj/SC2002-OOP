@@ -97,6 +97,11 @@ public class AdministratorService implements AdministratorServiceInterface {
         return allStaff;
     }
 
+    
+    /** 
+     * @param hospitalId
+     * @return Administrator
+     */
     @Override
     public Administrator readAdministratorByHospitalId(String hospitalId) {
         Administrator administrator = administratorDao.getAdministratorByHospitalId(hospitalId);

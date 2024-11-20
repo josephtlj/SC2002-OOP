@@ -44,6 +44,10 @@ public class Appointment {
         return status;
     }
 
+    
+    /** 
+     * @return LocalDate
+     */
     public LocalDate getAppointmentDate() {
         return date;
     }

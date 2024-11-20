@@ -40,6 +40,10 @@ public class Prescription {
         this.prescriptionId = prescriptionId;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMedicineName(){
         return this.medicineName;
     }

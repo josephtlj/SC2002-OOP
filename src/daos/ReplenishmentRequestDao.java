@@ -86,6 +86,11 @@ public class ReplenishmentRequestDao implements ReplenishmentRequestDaoInterface
         }
     }
 
+    
+    /** 
+     * @param status
+     * @return List<ReplenishmentRequest>
+     */
     @Override
     public List<ReplenishmentRequest> getAllReplenishmentRequestsByStatus(ReplenishmentRequest.Status status) {
         List<ReplenishmentRequest> replenishmentRequests = new ArrayList<>();

@@ -38,6 +38,11 @@ public class DiagnosisTreatmentRecordService
         return diagnosisTreatmentRecordDao.getDiagnosisTreatmentRecord(date).getDiagnosis();
     }
 
+    
+    /** 
+     * @param date
+     * @return String
+     */
     public String getPrescription(LocalDate date)
     {
         return diagnosisTreatmentRecordDao.getDiagnosisTreatmentRecord(date).getPrescription();

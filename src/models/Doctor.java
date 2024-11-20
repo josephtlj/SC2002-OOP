@@ -63,6 +63,10 @@ public class Doctor extends Staff
         DoctorChangePasswordView changePasswordView = new DoctorChangePasswordView(super.getHospitalId());
     }
 
+    
+    /** 
+     * @param actionType
+     */
     //MANAGE APPOINTMENTS
     public void ManageAppointments(DoctorAppointmentActionType actionType)
     {
